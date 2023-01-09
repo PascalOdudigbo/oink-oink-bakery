@@ -9,12 +9,14 @@ function NavBar() {
 
     return (
         <div className='navBar'>
-            <h3 className='bakeryTitle'>
-                <img className="navBarLogo" src={logo} alt="Oink Oink Bakery" /> Oink Oink Bakery
-            </h3>
+            <div className='logoAndTitleContainer'>
+            <img className="navBarLogo" src={logo} alt="Oink Oink Bakery" title='Appeasing your pallet one slice at a time.'/>
+            <h3 className='bakeryTitle'>Oink Oink Bakery</h3>
+            </div>
+           
             <div className="flexibleGrow" />
             <Tooltip title="Show cart items" arrow>
-                <button className="btn-addToCart">
+                <button className="btn-showCartItems">
                     <IconContext.Provider value={{ size: '26px' }}>
                     <Badge badgeContent={2} color="secondary">
                         <MdShoppingCart style={ButtonsIconStyle} />

@@ -1,0 +1,48 @@
+.navBar{
+    top: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    margin-bottom: 5px;
+    background-color: white;
+    .logoAndTitleContainer{
+        display: flex;
+        flex-direction: row;
+        margin-left: 5px;
+        .navBarLogo{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        .bakeryTitle{
+            margin-left: 5px;
+            text-align: center;
+            // font-family: "Brush Script MT", "Brush Script Std", cursive;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+           
+        }
+    }
+
+    .btn-showCartItems{
+        margin-right: 10px;
+        height: 40px;
+        width: fit-content;
+        // width: 30px;
+        border: none;
+        background: none;
+        margin-bottom: 3px;
+        &:hover {
+            cursor: pointer;
+            background-color: #FFACFC;
+            border-radius: 50%;
+        }
+    }
+}

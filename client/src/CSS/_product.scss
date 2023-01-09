@@ -15,7 +15,7 @@
     }
 
     .productContent{
-        background-color: #FFACFC;
+        // background-color: #FFACFC;
         .productNameAndPrice{
             // background-color: green;
             display: flex;
@@ -57,7 +57,7 @@
     }
 
     .productButtonsAndIconsContainer{
-        background-color: #FFACFC;
+        // background-color: #FFACFC;
         .btn-addToCart{
             margin-left: 5px;
             margin-top: 25px;
@@ -68,7 +68,7 @@
             margin-bottom: 3px;
             &:hover {
                 cursor: pointer;
-                background-color: white;
+                background-color: #FFACFC;
                 border-radius: 50%;
             }
         }
