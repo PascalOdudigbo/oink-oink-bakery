@@ -7,7 +7,8 @@
 
     .productMedia{
         width: 310px;
-        height: 200px;
+        height: 180px;
+        object-fit: cover;
         border-radius: 5px;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
@@ -23,7 +24,10 @@
             justify-content: space-between;
             .productName{
                 text-align: left;
-                font-size: 28px;
+                // font-size: 28px;
+                font-size: 1.5rem;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-weight: 400;
                 margin-left: 5px;
                 margin-top: 5px;
                 margin-bottom: 10px;
@@ -33,9 +37,11 @@
                 height: fit-content;
                 text-align: right;
                 margin-right: 5px;
-                margin-top: 10px;
+                margin-top: 5px;
                 margin-bottom: auto;
-                font-size: 20px;
+                font-size: 1.5rem;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-weight: 400;
             }
         }
 
@@ -43,8 +49,9 @@
             margin-top: 10px;
             margin-left: 5px;
             color: rgb(49, 49, 49);
-            font-size: small;
-            font-weight: lighter;
+            font-size: 0.875rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
         }
 
     }
@@ -53,14 +60,16 @@
         background-color: #FF8AFA;
         .btn-addToCart{
             margin-left: 5px;
-            // background-color: white;
+            margin-top: 25px;
+            height: 35px;
+            // width: 30px;
             border: none;
             background: none;
             margin-bottom: 3px;
             &:hover {
                 cursor: pointer;
                 background-color: white;
-                border-radius: 48%;
+                border-radius: 50%;
             }
         }
     }
