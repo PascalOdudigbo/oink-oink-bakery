@@ -5,7 +5,7 @@
     border-bottom: 1px solid rgb(196, 196, 196);
     width: fit-content;
     background-color: white;
-
+    justify-content: space-between;
     .productMedia{
         width: 310px;
         height: 180px;
@@ -13,6 +13,14 @@
         border-radius: 5px;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
+
+        &:hover{
+            cursor: zoom-in;
+        }
+        &:active{
+            width: 420px;
+            height: 420px;
+        }
     }
 
     .productContent{
@@ -26,10 +34,11 @@
             .productName{
                 text-align: left;
                 // font-size: 28px;
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 font-family: "Roboto", "Helvetica", "Arial", sans-serif;
                 font-weight: 400;
                 margin-left: 10px;
+                margin-right: 60px;
                 margin-top: 5px;
                 margin-bottom: 10px;
                 height: fit-content;
@@ -37,10 +46,10 @@
             .productprice{
                 height: fit-content;
                 text-align: right;
-                margin-right: 10px;
+                margin-right: 15px;
                 margin-top: 5px;
                 margin-bottom: auto;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 font-family: "Roboto", "Helvetica", "Arial", sans-serif;
                 font-weight: 400;
             }
@@ -62,7 +71,7 @@
         // background-color: #FFACFC;
         .btn-addToCart{
             margin-left: 5px;
-            margin-top: 25px;
+            margin-top: 20px;
             height: 35px;
             // width: 30px;
             border: none;
