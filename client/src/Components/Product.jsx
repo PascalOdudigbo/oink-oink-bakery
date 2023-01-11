@@ -4,7 +4,7 @@ import { IconContext } from "react-icons/lib";
 import { MdAddShoppingCart } from "react-icons/md";
 
 
-function Product({ product }) {
+function Product({ product, onAddToCart}) {
   const ButtonsIconStyle = { color: "black" };
 
   return (
@@ -20,7 +20,7 @@ function Product({ product }) {
       </div>
       <div className='productButtonsAndIconsContainer'>
         <Tooltip title="Add to cart" arrow>
-          <button className="btn-addToCart">
+          <button className="btn-addToCart" onClick={()=>{onAddToCart(product.id, 1)}}>
             <IconContext.Provider value={{ size: '24px' }}>
               <MdAddShoppingCart style={ButtonsIconStyle}/>
             </IconContext.Provider>

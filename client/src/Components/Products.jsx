@@ -1,7 +1,7 @@
 import React from 'react'
 import Product from './Product';
 
-function Products({products}) {
+function Products({products, onAddToCart}) {
     // const products = [
     //     {id: 1, name: "Chocolate Cake", description: "A lovely spongy Chocolete delicacy", image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/easy_chocolate_cake-b62f92c.jpg?quality=90&webp=true&resize=300,272", price: "$34"},
     //     {id: 2, name: "Vanilla Cake", description: "A lovely spongy Vanilla delicacy", image: "https://www.recipetineats.com/wp-content/uploads/2020/08/My-best-Vanilla-Cake_9.jpg?resize=650,910", price: "$34"},
@@ -11,7 +11,7 @@ function Products({products}) {
     // ]
   return (
     <div className='productsContainer'>
-      {products.map(product=><Product key={product.id} product={product}/>)}
+      {products.map(product=><Product key={product.id} product={product} onAddToCart={onAddToCart}/>)}
     </div>
   )
 }

@@ -4,7 +4,7 @@ import Tooltip from '@mui/material/Tooltip';
 import { IconContext } from "react-icons/lib";
 import { Badge } from '@mui/material';
 import {MdShoppingCart} from 'react-icons/md';
-function NavBar() {
+function NavBar({totalItems}) {
     const ButtonsIconStyle = { color: "black" };
 
     return (
@@ -18,7 +18,7 @@ function NavBar() {
             <Tooltip title="Show cart items" arrow>
                 <button className="btn-showCartItems">
                     <IconContext.Provider value={{ size: '26px' }}>
-                    <Badge badgeContent={2} color="secondary">
+                    <Badge badgeContent={totalItems} color="secondary">
                         <MdShoppingCart style={ButtonsIconStyle} />
                     </Badge>
                     </IconContext.Provider>
