@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  resources :line_items
+  resources :carts
+  resources :reviews
+  resources :customers
+  resources :product_variants
   resources :product_images
   resources :products
   resources :discounts
