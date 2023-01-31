@@ -1,6 +1,9 @@
 import React from "react";
+// import logo from "../assets/BakeryLogo.jpeg";
+import { Link } from "react-router-dom";
 
 function CustomerLogin() {
+    // console.log(window.location.href)
     return (
         <div className="customerLoginContainer">
 
@@ -11,12 +14,18 @@ function CustomerLogin() {
             </div>
 
             <div className="customerLoginFormContainer">
-                <form>
+                {/* <img className="loginLogo" src={logo} alt="logo"/> */}
+                <form className="customerLoginForm">
+                    <h1 className="formTitle">LOGIN</h1>
                     <label className="customerLoginFormLabel">Email:</label>
                     <input className="customerLoginFormInput" type="email" required />
                     <label className="customerLoginFormLabel">Password:</label>
                     <input className="customerLoginFormInput" type="password" required />
+                    <Link className="forgotPasswordLink" to={"/forgot-password"}>
+                        forgot password?
+                    </Link>
                     <button className="customerLoginButton">Login</button>
+                    <p>or</p>
                     <button className="customerSignUpButton">Sign Up</button>
                 </form>
             </div>
