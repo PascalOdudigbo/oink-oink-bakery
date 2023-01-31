@@ -9,11 +9,11 @@
     background-color: rgb(230, 230, 230);
 
     .textContainer{
-        margin-left: 35px;
+        margin-left: 45px;
    
         .loginBakeryTitle{
             color: #A3006B;
-            font-size: 40px;
+            font-size: 60px;
             font-style: bold;
         }
         .loginBakeryMoto{
@@ -23,10 +23,10 @@
     }
 
     .customerLoginFormContainer{
-        margin-right: 35px;
+        margin-right: 45px;
         background-color: white;
         align-items: center;
-        width: 40%;
+        width: 35%;
         border-radius: 10px;
         justify-content: center;
 
@@ -46,7 +46,7 @@
             display: flex;
             flex-direction: column;
             text-align: left;
-            margin-left: 30px;
+            margin-left: 50px;
             margin-right: 30px;
             
 
@@ -67,7 +67,7 @@
             }
 
             .customerLoginFormInput{
-                width: 95%;
+                width: 90%;
                 height: 15px;
                 padding: 10px 0;
                 font-size: 1rem;
@@ -101,7 +101,7 @@
                 display: inline-block;
                 margin-left: auto;
                 margin-right: auto;
-                width: 35%;
+                width: 40%;
                 font-style: bold;
                 font-size: large;
                 background-color: #A3006B;
@@ -136,7 +136,7 @@
                 display: inline-block;
                 margin-left: auto;
                 margin-right: auto;
-                width: 35%;
+                width: 45%;
                 font-style: bold;
                 font-size: large;
                 background-color: #A3006B;

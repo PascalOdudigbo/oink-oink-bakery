@@ -18,11 +18,15 @@ function NavBar({ totalItems }) {
 
             <div className="flexibleGrow" />
 
-            {window.location.href.includes("login") || window.location.href.includes("sign-up") ? null : <div className='loginAndSignUpLinksContainer'>
-                <Link className='loginAndSignUpLinks' to={"/login"}>Login </Link>
-                <p>&nbsp; / &nbsp;</p>
-                <Link className='loginAndSignUpLinks' to={"/sign-up"}>Sign Up</Link>
-            </div>}
+            {
+                window.location.href.includes("login") || 
+                window.location.href.includes("sign-up") ? null : 
+                <div className='loginAndSignUpLinksContainer'>
+                    <Link className='loginAndSignUpLinks' to={"/login"}>Login </Link>
+                    <p>&nbsp; / &nbsp;</p>
+                    <Link className='loginAndSignUpLinks' to={"/sign-up"}>Sign Up</Link>
+                </div>
+            }
 
             {
                     window.location.href.includes("cart") ||

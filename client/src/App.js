@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import {Products, NavBar, CustomerLogin} from "./Components";
+import {Products, NavBar, CustomerLogin, CustomerSignUp} from "./Components";
 import {commerce} from "./lib/commerce"; 
 
 
@@ -36,6 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Products products={products} onAddToCart={handleAddToCart}/>}/>
         <Route path="/login" element={<CustomerLogin/>}/>
+        <Route path="/sign-up" element={<CustomerSignUp/>}/>
       </Routes>
       
     </div>
