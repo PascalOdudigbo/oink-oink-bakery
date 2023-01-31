@@ -1,9 +1,10 @@
 import React from "react";
-// import logo from "../assets/BakeryLogo.jpeg";
-import { Link } from "react-router-dom";
+import logo from "../assets/BakeryLogo.jpeg";
+import { Link, useNavigate} from "react-router-dom";
 
 function CustomerLogin() {
     // console.log(window.location.href)
+    const navigate = useNavigate();
     return (
         <div className="customerLoginContainer">
 
@@ -14,7 +15,7 @@ function CustomerLogin() {
             </div>
 
             <div className="customerLoginFormContainer">
-                {/* <img className="loginLogo" src={logo} alt="logo"/> */}
+                <img className="loginLogo" src={logo} alt="logo"/>
                 <form className="customerLoginForm">
                     <h1 className="formTitle">LOGIN</h1>
                     <label className="customerLoginFormLabel">Email:</label>
@@ -26,7 +27,7 @@ function CustomerLogin() {
                     </Link>
                     <button className="customerLoginButton">Login</button>
                     <p>or</p>
-                    <button className="customerSignUpButton">Sign Up</button>
+                    <button className="customerSignUpButton" onClick={()=>{navigate("/sign-up")}}>Sign Up</button>
                 </form>
             </div>
 

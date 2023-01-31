@@ -1,8 +1,9 @@
 import React from "react";
+import logo from "../assets/BakeryLogo.jpeg";
 
 
-function CustomerSignUp(){
-    return(
+function CustomerSignUp() {
+    return (
         <div className="customerSignUpContainer">
             <div className="textContainer">
                 <h1 className="signUpBakeryTitle">Oink Oink Bakery</h1>
@@ -11,7 +12,8 @@ function CustomerSignUp(){
             </div>
 
             <div className="customerSignUpFormContainer">
-            <form className="customerSignUpForm">
+                <img className="signUpLogo" src={logo} alt="logo"/>
+                <form className="customerSignUpForm">
                     <h1 className="formTitle">SIGN UP</h1>
                     <label className="customerSignUpFormLabel">First Name:</label>
                     <input className="customerSignUpFormInput" type="email" required />
@@ -24,7 +26,7 @@ function CustomerSignUp(){
                     <label className="customerSignUpFormLabel">Confirm Password:</label>
                     <input className="customerSignUpFormInput" type="password" required />
                     <button className="customerSignUpButton">Create Account</button>
-            </form>
+                </form>
 
             </div>
 
