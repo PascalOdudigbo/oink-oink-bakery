@@ -25,7 +25,7 @@ function CustomerLogin() {
                     <Link className="forgotPasswordLink" to={"/forgot-password"}>
                         forgot password?
                     </Link>
-                    <button className="customerLoginButton">Login</button>
+                    <button className="customerLoginButton" type="submit">Login</button>
                     <p>or</p>
                     <button className="customerSignUpButton" onClick={()=>{navigate("/sign-up")}}>Sign Up</button>
                 </form>

@@ -25,7 +25,7 @@ function CustomerSignUp() {
                     <input className="customerSignUpFormInput" type="password" required />
                     <label className="customerSignUpFormLabel">Confirm Password:</label>
                     <input className="customerSignUpFormInput" type="password" required />
-                    <button className="customerSignUpButton">Create Account</button>
+                    <button className="customerSignUpButton" type="submit">Create Account</button>
                 </form>
 
             </div>

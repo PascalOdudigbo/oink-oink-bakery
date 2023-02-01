@@ -31,7 +31,8 @@ function NavBar({ totalItems }) {
             {
                     window.location.href.includes("cart") ||
                     window.location.href.includes("login") ||
-                    window.location.href.includes("sign-up") ? null :
+                    window.location.href.includes("sign-up") ||
+                    window.location.href.includes("forgot-password") ? null :
                     <Tooltip title="Show cart items" arrow>
                         <button className="btn-showCartItems">
                             <IconContext.Provider value={{ size: '26px' }}>
