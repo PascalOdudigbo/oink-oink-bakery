@@ -3,6 +3,7 @@
 @import "./navbar";
 @import "./customerLogin";
 @import "./customerSignUp";
+@import "./forgotPassword";
 
 body{
     top: 0;
@@ -16,4 +17,5 @@ body{
     overflow-x: hidden; 
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     background-color: rgb(243, 243, 243);
+    // background-image: url("../assets/BakeryBackground.jpg");
 }
