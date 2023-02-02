@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import {Products, NavBar, CustomerLogin, CustomerSignUp, ForgotPassword, BakerLogin} from "./Components";
+import {
+  Products, NavBar, CustomerLogin, CustomerSignUp, 
+  ForgotPassword, BakerLogin, BakeryPortal
+
+} from "./Components";
 import {commerce} from "./lib/commerce"; 
 
 
@@ -74,6 +78,13 @@ function App() {
           <>
             <NavBar totalItems={cart?.total_items}/>
             <BakerLogin/>
+          </>
+        
+        }/>
+        <Route path="/bakery-portal" element={
+          <>
+            {/* <NavBar totalItems={cart?.total_items}/> */}
+            <BakeryPortal/>
           </>
         
         }/>
