@@ -1,0 +1,50 @@
+.bakeryPortalContainer{
+     margin-top: 71px;
+     height: 89vh;
+     width: 100vw;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+    //  background-color: #FFACFC;
+
+    .bakerHomeNavBar{
+        background-color: white;
+        border-right: 1px solid rgb(196, 196, 196);
+        height: 100%;
+        width: 17%;
+
+        .buttonsContainer{
+            margin-top: 50px;            
+
+            .iconAndButtonContainer{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 10px;
+                height: 55px;
+                margin-left: 12px;
+                margin-right: 10px;
+                border-radius: 5px;
+                
+                &:active{
+                    background-color: rgb(240, 240, 240);
+                }
+
+                &:hover{
+                    background-color: rgb(240, 240, 240);
+                }
+
+                .navigationButtons{
+                    border: none;
+                    background-color: transparent;
+                    font-size: 0.95em;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+        }
+    }
+
+}

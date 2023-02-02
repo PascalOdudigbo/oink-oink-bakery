@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {MdDashboard, MdReviews} from 'react-icons/md';
 import {FaFileInvoiceDollar} from 'react-icons/fa';
 import {HiUsers} from 'react-icons/hi';
@@ -8,45 +9,45 @@ import {TbDiscount2} from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
 
 function BakerHome(){
-    const iconStyles = { marginRight: "10px", color: "black" };
+    const iconStyles = { marginRight: "10px", marginLeft: "6px", color: "black" };
     return(
-        <div className="bakerHomeContainer">
+        <div className="bakeryPortalContainer">
             <div className="bakerHomeNavBar">
                 <div className="buttonsContainer">
                     <IconContext.Provider value={{ size: "25px" }}>
                         <div className="iconAndButtonContainer">
                             <MdDashboard style={iconStyles}/>
-                            <button className="navigationButtons">DASHBOARD</button>
+                            <Link className="navigationButtons" to="/bakery-portal">DASHBOARD</Link>
                         </div>
                        
                         <div className="iconAndButtonContainer">
                             <FaFileInvoiceDollar style={iconStyles}/>
-                            <button className="navigationButtons">ORDERS</button>
+                            <Link className="navigationButtons" to="/bakery-portal/orders">ORDERS</Link>
                         </div>
 
                         <div className="iconAndButtonContainer">
                             <HiUsers style={iconStyles}/>
-                            <button className="navigationButtons">CUSTOMERS</button>
+                            <Link className="navigationButtons" to="/bakery-portal/customers">CUSTOMERS</Link>
                         </div>
 
                         <div className="iconAndButtonContainer">
                              <GiShoppingBag style={iconStyles}/>
-                            <button className="navigationButtons">PRODUCTS</button>
+                            <Link className="navigationButtons" to="/bakery-portal/products">PRODUCTS</Link>
                         </div>
                         
                         <div className="iconAndButtonContainer">
                              <AiFillDiff style={iconStyles}/>
-                            <button className="navigationButtons">PRODUCT VARIANTS</button>
+                            <Link className="navigationButtons" to="/bakery-portal/product-variants">PRODUCT VARIANTS</Link>
                         </div>
 
                         <div className="iconAndButtonContainer">
                             <TbDiscount2 style={iconStyles}/>
-                            <button className="navigationButtons">DISCOUNTS</button>
+                            <Link className="navigationButtons"to="/bakery-portal/discounts">DISCOUNTS</Link>
                         </div>
 
                         <div className="iconAndButtonContainer">
                             <MdReviews style={iconStyles}/>
-                            <button className="navigationButtons">REVIEWS</button>
+                            <Link className="navigationButtons" to="/bakery-portal/reviews">REVIEWS</Link>
                         </div>
                         
                     </IconContext.Provider>

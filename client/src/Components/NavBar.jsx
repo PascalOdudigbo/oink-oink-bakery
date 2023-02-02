@@ -46,7 +46,8 @@ function NavBar({ totalItems }) {
                     window.location.href.includes("login") ||
                     window.location.href.includes("sign-up") ||
                     window.location.href.includes("forgot-password") ||
-                    window.location.href.includes("admin") ? null :
+                    window.location.href.includes("admin") ||
+                    window.location.href.includes("bakery-portal") ? null :
                     <Tooltip title="Show cart items" arrow>
                         <button className="btn-showCartItems">
                             <IconContext.Provider value={{ size: '26px' }}>

@@ -81,9 +81,9 @@ function App() {
           </>
         
         }/>
-        <Route path="/bakery-portal" element={
+        <Route path="/bakery-portal/*" element={
           <>
-            {/* <NavBar totalItems={cart?.total_items}/> */}
+            <NavBar totalItems={cart?.total_items}/>
             <BakeryPortal/>
           </>
         
