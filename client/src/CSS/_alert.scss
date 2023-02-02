@@ -1,0 +1,32 @@
+.alertContainer{
+    margin-top: 10px;
+    position: absolute;
+    display: inline-block;
+    height: 40px;
+    border-radius: 15px;
+    color: white;
+    z-index: 99 !important; 
+    
+
+    .iconAndMessageContainer{
+        display: flex;
+        flex-direction: row;
+        .alertIcon{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        .alertMessage{
+            margin-top: 7.5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 1.2em;
+            font-weight: lighter;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+    }
+    
+
+}
