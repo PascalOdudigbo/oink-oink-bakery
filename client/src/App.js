@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import {Products, NavBar, CustomerLogin, CustomerSignUp, ForgotPassword} from "./Components";
+import {Products, NavBar, CustomerLogin, CustomerSignUp, ForgotPassword, BakerLogin} from "./Components";
 import {commerce} from "./lib/commerce"; 
 
 
@@ -32,12 +32,51 @@ function App() {
 
   return (
     <div>
-      <NavBar totalItems={cart?.total_items}/>
+      {/* <NavBar totalItems={cart?.total_items}/> */}
       <Routes>
-        <Route path="/" element={<Products products={products} onAddToCart={handleAddToCart}/>}/>
-        <Route path="/login" element={<CustomerLogin/>}/>
-        <Route path="/sign-up" element={<CustomerSignUp/>}/>
-        <Route path="/forgot-password" element={<ForgotPassword/>}/>
+        <Route path="/" element={
+          <>
+             <NavBar totalItems={cart?.total_items}/>
+            <Products products={products} onAddToCart={handleAddToCart}/>
+          </> 
+        }/>
+        <Route path="/login" element={
+          <>
+            <NavBar totalItems={cart?.total_items}/>
+            <CustomerLogin/>
+          </>
+          
+        }/>
+        <Route path="/sign-up" element={
+          <>
+            <NavBar totalItems={cart?.total_items}/>
+            <CustomerSignUp/>
+          </>
+       
+        
+        }/>
+        <Route path="/forgot-password" element={
+          <>
+              <NavBar totalItems={cart?.total_items}/>
+              <ForgotPassword/>
+          </>
+       
+        }/>
+    
+        <Route path="/admin-forgot-password" element={
+          <>
+              <NavBar totalItems={cart?.total_items}/>
+              <ForgotPassword/>
+          </>
+       
+        }/>
+        <Route path="/admin-login" element={
+          <>
+            <NavBar totalItems={cart?.total_items}/>
+            <BakerLogin/>
+          </>
+        
+        }/>
       </Routes>
       
     </div>

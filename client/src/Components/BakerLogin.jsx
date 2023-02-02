@@ -1,10 +1,10 @@
 import React from "react";
 import logo from "../assets/BakeryLogo.jpeg";
-import { Link, useNavigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function BakerLogin() {
     // console.log(window.location.href)
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     return (
         <div className="bakerLoginContainer">
 
@@ -22,12 +22,12 @@ function BakerLogin() {
                     <input className="bakerLoginFormInput" type="email" required />
                     <label className="bakerLoginFormLabel">Password:</label>
                     <input className="bakerLoginFormInput" type="password" required />
-                    <Link className="forgotPasswordLink" to={"/forgot-password"}>
+                    <Link className="forgotPasswordLink" to={"/admin-forgot-password"}>
                         forgot password?
                     </Link>
                     <button className="bakerLoginButton" type="submit">Login</button>
-                    <p>or</p>
-                    <button className="bakerSignUpButton" onClick={()=>{navigate("/sign-up")}}>Sign Up</button>
+                    {/* <p>or</p>
+                    <button className="bakerSignUpButton" onClick={()=>{navigate("/sign-up")}}>Sign Up</button> */}
                 </form>
             </div>
 

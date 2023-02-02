@@ -106,12 +106,12 @@
                 display: inline-block;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 30px;
                 width: 40%;
                 font-style: bold;
                 font-size: large;
                 background-color: #A3006B;
-                border: none;
-                
+                border: none;                
         
                 &:hover {
                   cursor: pointer;
@@ -129,31 +129,8 @@
                 
               }
         
-              .bakerSignUpButton {
-                cursor: pointer;
-                color: #feffff;
-                padding: 10px 12px;
-                border-radius: 10px;
-                text-align: center;
-                margin-top: 10px;
-                margin-bottom: 30px;
-                text-decoration: none;
-                display: inline-block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 45%;
-                font-style: bold;
-                font-size: large;
-                background-color: #A3006B;
-                border: none;
-                
-        
-                &:hover {
-                  cursor: pointer;
-                  background-color: #FFACFC;
-                  color: black;
-                }
-              }
+             
+              
         }
 
         

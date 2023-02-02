@@ -19,20 +19,34 @@ function NavBar({ totalItems }) {
             <div className="flexibleGrow" />
 
             {
-                window.location.href.includes("login") || 
-                window.location.href.includes("sign-up") ? null : 
-                <div className='loginAndSignUpLinksContainer'>
-                    <Link className='loginAndSignUpLinks' to={"/login"}>Login </Link>
-                    <p>&nbsp; / &nbsp;</p>
-                    <Link className='loginAndSignUpLinks' to={"/sign-up"}>Sign Up</Link>
-                </div>
+                window.location.href.includes("/login") ||
+                    window.location.href.includes("/sign-up") ||
+                    window.location.href.includes("/admin-login") ? null :
+                    <div className='loginAndSignUpLinksContainer'>
+                        {
+                            window.location.href.includes("admin-forgot-password") ?
+                                <Link className='loginAndSignUpLinks' to={"/admin-login"}>Login </Link> :
+                                <Link className='loginAndSignUpLinks' to={"/login"}>Login </Link>
+                        }
+                        {
+                            window.location.href.includes("/admin-forgot-password") ?
+                                null : <p>&nbsp; / &nbsp;</p>
+                        }
+                        {
+                            window.location.href.includes("/admin-login") ||
+                            window.location.href.includes("/admin-forgot-password") 
+                            ? null :
+                                <Link className='loginAndSignUpLinks' to={"/sign-up"}>Sign Up</Link>
+                        }
+                    </div>
             }
 
             {
-                    window.location.href.includes("cart") ||
+                window.location.href.includes("cart") ||
                     window.location.href.includes("login") ||
                     window.location.href.includes("sign-up") ||
-                    window.location.href.includes("forgot-password") ? null :
+                    window.location.href.includes("forgot-password") ||
+                    window.location.href.includes("admin") ? null :
                     <Tooltip title="Show cart items" arrow>
                         <button className="btn-showCartItems">
                             <IconContext.Provider value={{ size: '26px' }}>
