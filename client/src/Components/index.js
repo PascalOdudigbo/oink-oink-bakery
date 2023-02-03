@@ -9,3 +9,4 @@ export {default as BakerLogin} from './BakerLogin';
 export {default as BakeryPortal} from './BakeryPortal';
 export {default as BakeryDashboard} from './BakeryDashboard';
 export {default as BakeryCustomers} from './BakeryCustomers/BakeryCustomers';
+export {default as BakeryCustomer} from './BakeryCustomers/BakeryCustomer/BakeryCustomer';

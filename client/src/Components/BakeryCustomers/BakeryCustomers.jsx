@@ -11,9 +11,9 @@ function BakeryCustomers(){
                     <th className="tableHeader">TOTAL ORDERS</th>
                     <th className="tableHeader">TOTAL SPENT</th>
                 </tr>
-                <tr>
-                    {/* {map through data here} */}
-                </tr>
+                
+                {/* {map through data here} */}
+               
 
             </table>
 
