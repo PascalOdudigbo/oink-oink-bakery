@@ -1,5 +1,5 @@
 import React from "react";
-import {BakeryCustomer} from "../../Components";
+import {BakeryCustomer, Search} from "../../Components";
 
 function BakeryCustomers(){
     const customersArray = [
@@ -32,10 +32,13 @@ function BakeryCustomers(){
 
     return(
         <div className="bakeryCustomersContainer">
-            
+
             <h1 className="bakeryCustomersPageTitle">CUSTOMERS</h1>
 
             <table className="bakeryCustomersTable">
+                <div className="tableSearchContainer">
+                    <Search placeholderText={"Input first name"}/>
+                </div>
                 <tr className="tableHeadersContainer">
                     <th className="tableHeader">EMAIL ADDRESS</th>
                     <th className="tableHeader">FIRST NAME</th>
