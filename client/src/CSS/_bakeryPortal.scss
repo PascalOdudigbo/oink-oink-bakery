@@ -8,7 +8,7 @@
      justify-content: space-between;
     //  background-color: #FFACFC;
 
-    .bakerHomeNavBar{
+    .bakeryPortalNavBar{
         background-color: white;
         border-right: 1px solid rgb(196, 196, 196);
         height: 100%;
@@ -45,6 +45,12 @@
             }
 
         }
+    }
+
+    .bakeryPortalPagesContainer{
+        height: 100%;
+        background-color: red;
+        width: 83%;
     }
 
 }

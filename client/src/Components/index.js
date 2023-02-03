@@ -7,3 +7,4 @@ export {default as ForgotPassword} from './ForgotPassword';
 export {default as Alert} from './Alert';
 export {default as BakerLogin} from './BakerLogin';
 export {default as BakeryPortal} from './BakeryPortal';
+export {default as BakeryDashboard} from './BakeryDashboard';
