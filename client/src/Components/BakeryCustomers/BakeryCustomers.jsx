@@ -34,11 +34,10 @@ function BakeryCustomers(){
         <div className="bakeryCustomersContainer">
 
             <h1 className="bakeryCustomersPageTitle">CUSTOMERS</h1>
-
-            <table className="bakeryCustomersTable">
-                <div className="tableSearchContainer">
+            <div className="tableSearchContainer">
                     <Search placeholderText={"Input first name"}/>
-                </div>
+            </div>
+            <table className="bakeryCustomersTable">
                 <tr className="tableHeadersContainer">
                     <th className="tableHeader">EMAIL ADDRESS</th>
                     <th className="tableHeader">FIRST NAME</th>
