@@ -1,0 +1,46 @@
+.bakeryDashboardContainer{
+    // background-color: #f0f2f5;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .bakeryDashboardStatisticsContainer{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        .bakeryDashboardStatistic{
+            background-color: white;
+            margin-top: 25%;
+            height: 180px;
+            width: 280px;
+            border-radius: 5px;
+            
+
+            .statisticTitle{
+                background-color: #9C27B0;
+                height: 40px;
+                text-align: center;
+                margin-top: auto;
+                font-size: medium;
+                padding-top: 15px;
+                border-radius: 5px;
+                border-bottom: 1px solid rgb(196, 196, 196);
+            }
+
+            .statisticValue{
+                text-align: center;
+                margin-top: 20%;
+                font-size: 1em;
+            }
+
+        }
+    }
+
+}

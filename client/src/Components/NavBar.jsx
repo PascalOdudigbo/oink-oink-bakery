@@ -21,7 +21,8 @@ function NavBar({ totalItems }) {
             {
                 window.location.href.includes("/login") ||
                     window.location.href.includes("/sign-up") ||
-                    window.location.href.includes("/admin-login") ? null :
+                    window.location.href.includes("/admin-login") ||
+                    window.location.href.includes("bakery-portal") ? null :
                     <div className='loginAndSignUpLinksContainer'>
                         {
                             window.location.href.includes("admin-forgot-password") ?

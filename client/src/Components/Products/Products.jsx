@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from './Product';
+import Product from './Product/Product';
 
 function Products({products, onAddToCart}) {
     // const products = [

@@ -7,6 +7,7 @@
 @import "./alert";
 @import "./bakerLogin";
 @import "./bakeryPortal";
+@import "./bakeryDashboard";
 body{
     top: 0;
     bottom: 0;
@@ -18,6 +19,6 @@ body{
     box-sizing: border-box;
     overflow-x: hidden; 
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    background-color: rgb(243, 243, 243);
+    background-color: #f0f2f5;
     // background-image: url("../assets/BakeryBackground.jpg");
 }
