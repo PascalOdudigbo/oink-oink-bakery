@@ -7,7 +7,7 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { AiFillDiff } from 'react-icons/ai';
 import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
-import {BakeryDashboard} from "../Components";
+import {BakeryDashboard, BakeryCustomers} from "../Components";
 
 function BakerHome() {
     const iconStyles = { marginRight: "10px", marginLeft: "6px", color: "black" };
@@ -61,6 +61,10 @@ function BakerHome() {
                 <Routes>
                     <Route path="/" element={
                         <BakeryDashboard/>
+                    } />
+
+                    <Route path="/customers" element={
+                        <BakeryCustomers/>
                     } />
 
                 </Routes>

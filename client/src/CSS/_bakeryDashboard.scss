@@ -3,6 +3,15 @@
     height: 100%;
     width: 100%;
     position: relative;
+    overflow-y: scroll;
+
+    .bakeryDashboardPageTitle{
+        margin-left: 23px;
+        font-size: 1.5em;
+        font-weight: 800;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
 
     .bakeryDashboardStatisticsContainer{
         display: grid;
@@ -32,6 +41,7 @@
                 padding-top: 15px;
                 border-radius: 5px;
                 border-bottom: 1px solid rgb(196, 196, 196);
+                color: white;
             }
 
             .statisticValue{
