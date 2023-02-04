@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from './Product/Product';
+import {Product, Search} from '../../Components';
 
 function Products({products, onAddToCart}) {
     // const products = [
@@ -10,9 +10,16 @@ function Products({products, onAddToCart}) {
     //     {id: 5, name: "BlueBerry Cake", description: "A lovely spongy Blueberry delicacy", image: "https://buttermilkbysam.com/wp-content/uploads/2021/06/blueberry-cake-10.jpg",  price: "$34"}
     // ]
   return (
-    <div className='productsContainer'>
+    <>
+      <div className='productsSearchContainer'>
+        <Search placeholderText={"Search cakes..."}/>
+      </div>
+      <div className='productsContainer'>
       {products.map(product=><Product key={product.id} product={product} onAddToCart={onAddToCart}/>)}
-    </div>
+      </div>
+    
+    </>
+    
   )
 }
 
