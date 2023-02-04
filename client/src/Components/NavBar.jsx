@@ -31,7 +31,7 @@ function NavBar({ totalItems }) {
                         }
                         {
                             window.location.href.includes("/admin-forgot-password") ?
-                                null : <p>&nbsp; / &nbsp;</p>
+                                null : <p className='linkDemarcation'>/</p>
                         }
                         {
                             window.location.href.includes("/admin-login") ||

@@ -1,13 +1,13 @@
 import React from "react";
 
-function BakeryCustomer({emailAddress, firstName, lastName, totalOrders, totalSpent}) {
+function BakeryCustomer({customer}) {
     return (
         <tr className="customerDataRow">
-            <td className="customerDataCell">{emailAddress}</td>
-            <td className="customerDataCell">{firstName}</td>
-            <td className="customerDataCell">{lastName}</td>
-            <td className="customerDataCell">{totalOrders}</td>
-            <td className="customerDataCell">{`KSH ${totalSpent}`}</td>
+            <td className="customerDataCell">{customer.email}</td>
+            <td className="customerDataCell">{customer.firstName}</td>
+            <td className="customerDataCell">{customer.lastName}</td>
+            <td className="customerDataCell">{customer.totalOrders}</td>
+            <td className="customerDataCell">{`KSH ${customer.totalSpent}`}</td>
         </tr>
     );
 

@@ -35,7 +35,7 @@ function BakeryCustomers(){
 
             <h1 className="bakeryCustomersPageTitle">CUSTOMERS</h1>
             <div className="tableSearchContainer">
-                    <Search placeholderText={"Input first name"}/>
+                    <Search placeholderText={"Search customers..."}/>
             </div>
             <table className="bakeryCustomersTable">
                 <tr className="tableHeadersContainer">
@@ -49,11 +49,7 @@ function BakeryCustomers(){
                 {customersArray.map(customer => 
                 <BakeryCustomer 
                     key={customer.id}
-                    emailAddress={customer.email}
-                    firstName={customer.firstName}
-                    lastName={customer.lastName}
-                    totalOrders={customer.totalOrders}
-                    totalSpent={customer.totalSpent}
+                    customer={customer}
                 />)}
                
 
