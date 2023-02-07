@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_24_143803) do
+ActiveRecord::Schema.define(version: 2023_02_07_174816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,12 +55,12 @@ ActiveRecord::Schema.define(version: 2023_01_24_143803) do
     t.bigint "cart_id", null: false
     t.bigint "product_id", null: false
     t.integer "quantity"
-    t.bigint "product_variant_id", null: false
+    t.bigint "variant_option_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
     t.index ["product_id"], name: "index_line_items_on_product_id"
-    t.index ["product_variant_id"], name: "index_line_items_on_product_variant_id"
+    t.index ["variant_option_id"], name: "index_line_items_on_variant_option_id"
   end
 
   create_table "product_images", force: :cascade do |t|
@@ -70,15 +70,6 @@ ActiveRecord::Schema.define(version: 2023_01_24_143803) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["product_id"], name: "index_product_images_on_product_id"
-  end
-
-  create_table "product_variants", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.string "size"
-    t.float "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["product_id"], name: "index_product_variants_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -102,13 +93,31 @@ ActiveRecord::Schema.define(version: 2023_01_24_143803) do
     t.index ["product_id"], name: "index_reviews_on_product_id"
   end
 
+  create_table "variant_groups", force: :cascade do |t|
+    t.string "name"
+    t.bigint "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_variant_groups_on_product_id"
+  end
+
+  create_table "variant_options", force: :cascade do |t|
+    t.bigint "variant_group_id", null: false
+    t.string "name"
+    t.float "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["variant_group_id"], name: "index_variant_options_on_variant_group_id"
+  end
+
   add_foreign_key "carts", "customers"
   add_foreign_key "line_items", "carts"
-  add_foreign_key "line_items", "product_variants"
   add_foreign_key "line_items", "products"
+  add_foreign_key "line_items", "variant_options"
   add_foreign_key "product_images", "products"
-  add_foreign_key "product_variants", "products"
   add_foreign_key "products", "discounts"
   add_foreign_key "reviews", "customers"
   add_foreign_key "reviews", "products"
+  add_foreign_key "variant_groups", "products"
+  add_foreign_key "variant_options", "variant_groups"
 end

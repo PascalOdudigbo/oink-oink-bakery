@@ -37,21 +37,19 @@ function BakeryProduct({ product }) {
                         </IconContext.Provider>
                         <p className='productActive'>Not active</p>
                     </div>
-
-
             }
             </td>
             <td className="productsDataCell">
                 <div className="dropdown">
                     <IconContext.Provider value={{ size: '20px' }}>
-                        <SlOptions onClick={() => dropdownDisplay === "block" ? setDropdownDisplay("none") : setDropdownDisplay("block")} style={{color: "black"}} />
+                        <SlOptions onClick={() => dropdownDisplay === "block" ? setDropdownDisplay("none") : setDropdownDisplay("block")} style={{ color: "black" }} />
                     </IconContext.Provider>
-                    <div className="dropdown-content" style={{display: dropdownDisplay}}>
+                    <div className="dropdown-content" style={{ display: dropdownDisplay }}>
                         <p onClick={() => {
                             //set target product here
                             navigate("/bakery-portal/edit-product")
                         }}>Edit</p>
-                        <p>Delete</p> 
+                        <p>Delete</p>
                     </div>
                 </div>
             </td>

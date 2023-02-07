@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :variant_options
+  resources :variant_groups
   resources :line_items
   resources :carts
   resources :reviews
