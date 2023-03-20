@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2023_02_07_174816) do
     t.bigint "cart_id", null: false
     t.bigint "product_id", null: false
     t.integer "quantity"
-    t.bigint "variant_option_id", null: false
+    t.bigint "variant_option_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
@@ -77,10 +77,12 @@ ActiveRecord::Schema.define(version: 2023_02_07_174816) do
     t.float "price"
     t.string "description"
     t.bigint "discount_id"
+    t.bigint "variant_group_id"
     t.boolean "active"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["discount_id"], name: "index_products_on_discount_id"
+    t.index ["variant_group_id"], name: "index_products_on_variant_group_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -95,10 +97,8 @@ ActiveRecord::Schema.define(version: 2023_02_07_174816) do
 
   create_table "variant_groups", force: :cascade do |t|
     t.string "name"
-    t.bigint "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["product_id"], name: "index_variant_groups_on_product_id"
   end
 
   create_table "variant_options", force: :cascade do |t|
@@ -116,8 +116,8 @@ ActiveRecord::Schema.define(version: 2023_02_07_174816) do
   add_foreign_key "line_items", "variant_options"
   add_foreign_key "product_images", "products"
   add_foreign_key "products", "discounts"
+  add_foreign_key "products", "variant_groups"
   add_foreign_key "reviews", "customers"
   add_foreign_key "reviews", "products"
-  add_foreign_key "variant_groups", "products"
   add_foreign_key "variant_options", "variant_groups"
 end

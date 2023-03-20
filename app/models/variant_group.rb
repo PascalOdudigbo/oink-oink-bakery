@@ -1,4 +1,4 @@
 class VariantGroup < ApplicationRecord
-  belongs_to :product
+  has_many :products
   has_many :variant_options
 end

@@ -15,7 +15,7 @@ function Products({products, onAddToCart}) {
         <Search placeholderText={"Search cakes..."}/>
       </div>
       <div className='productsContainer'>
-      {products.map(product=><Product key={product.id} product={product} onAddToCart={onAddToCart}/>)}
+      {products?.map(product=><Product key={product.id} product={product} onAddToCart={onAddToCart}/>)}
       </div>
     
     </>

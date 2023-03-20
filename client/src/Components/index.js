@@ -13,4 +13,6 @@ export {default as BakeryCustomer} from './BakeryCustomers/BakeryCustomer/Bakery
 export {default as Search} from './Search';
 export {default as BakeryProducts} from './BakeryProducts/BakeryProducts';
 export {default as BakeryProduct} from './BakeryProducts/BakeryProduct/BakeryProduct';
+export {default as BakeryAddProduct} from './BakeryProducts/BakeryAddProduct/BakeryAddProduct';
+
 
