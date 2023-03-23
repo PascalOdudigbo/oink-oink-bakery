@@ -23,7 +23,7 @@ function BakeryProducts() {
                 <h1 className="bakeryProductsPageTitle">PRODUCTS</h1>
                 <Tooltip title="Add product" arrow>
                     <div className="iconAndButtonContainer">
-                        <IconContext.Provider value={{ size: '20px' }}>
+                        <IconContext.Provider value={{ size: '15px' }}>
                             <RiAddFill style={iconStyles} />
                         </IconContext.Provider>
                         <Link className="addProductLink" to={"/bakery-portal/add-product"}>ADD</Link>

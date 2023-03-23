@@ -6,6 +6,7 @@
     width: fit-content;
     background-color: white;
     justify-content: space-between;
+    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
     .productMedia{
         width: 326px;
         height: 180px;
@@ -34,9 +35,9 @@
             .productName{
                 text-align: left;
                 // font-size: 28px;
-                font-size: 1.4rem;
+                font-size: 1.21rem;
                 font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-                font-weight: 400;
+                font-weight: 600;
                 margin-left: 10px;
                 margin-right: 60px;
                 margin-top: 5px;
@@ -49,7 +50,7 @@
                 margin-right: 15px;
                 margin-top: 5px;
                 margin-bottom: auto;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 font-family: "Roboto", "Helvetica", "Arial", sans-serif;
                 font-weight: 400;
             }
@@ -81,6 +82,8 @@
                 cursor: pointer;
                 background-color: #FFACFC;
                 border-radius: 50%;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+
             }
         }
     }

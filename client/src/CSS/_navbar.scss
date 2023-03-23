@@ -22,14 +22,24 @@
             height: 60px;
             width: 60px;
             border-radius: 50%;
+
         }
         .bakeryTitle{
             margin-left: 5px;
             text-align: center;
             // font-family: "Brush Script MT", "Brush Script Std", cursive;
             font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-            font-weight: 400;
+            font-size: 1.2em;
+            font-weight: 550;
            
+        }
+
+        &:hover .bakeryTitle{
+            color: #FFACFC;
+        }
+
+        &:hover .navBarLogo{
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
         }
     }
 
@@ -54,7 +64,8 @@
         .loginAndSignUpLinks{
             text-decoration: none;
             color: white;
-            font-size: 1em;
+            font-size: 0.9em;
+            font-weight: 800;
             background-color: #9C27B0;
             width: 75px;
             height: 25px;
@@ -66,6 +77,7 @@
                 cursor: pointer;
                 color: black;
                 background-color: #FFACFC;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
             }
         }
 
@@ -83,6 +95,7 @@
             cursor: pointer;
             background-color: #FFACFC;
             border-radius: 50%;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
         }
     }
 }
