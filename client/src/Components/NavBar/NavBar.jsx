@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from "../assets/BakeryLogo.jpeg";
+import logo from "../../assets/BakeryLogo.jpeg";
 import Tooltip from '@mui/material/Tooltip';
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { IconContext } from "react-icons/lib";
 import { Badge } from '@mui/material';
 import { MdShoppingCart } from 'react-icons/md';
+import {LoginOrSignUpDropdown} from '../../Components';
 function NavBar({ totalItems }) {
     const ButtonsIconStyle = { color: "black" };
     const navigate = useNavigate();
@@ -22,24 +23,8 @@ function NavBar({ totalItems }) {
                 window.location.href.includes("/login") ||
                     window.location.href.includes("/sign-up") ||
                     window.location.href.includes("/admin-login") ||
-                    window.location.href.includes("bakery-portal") ? null :
-                    <div className='loginAndSignUpLinksContainer'>
-                        {
-                            window.location.href.includes("admin-forgot-password") ?
-                                <Link className='loginAndSignUpLinks' to={"/admin-login"}>Login </Link> :
-                                <Link className='loginAndSignUpLinks' to={"/login"}>Login </Link>
-                        }
-                        {
-                            window.location.href.includes("/admin-forgot-password") ?
-                                null : <p className='linkDemarcation'>/</p>
-                        }
-                        {
-                            window.location.href.includes("/admin-login") ||
-                            window.location.href.includes("/admin-forgot-password") 
-                            ? null :
-                                <Link className='loginAndSignUpLinks' to={"/sign-up"}>Sign Up</Link>
-                        }
-                    </div>
+                    window.location.href.includes("bakery-portal") ? null : <LoginOrSignUpDropdown/>
+                    
             }
 
             {

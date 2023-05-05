@@ -1,5 +1,6 @@
 class DiscountsController < ApplicationController
   before_action :set_discount, only: [:show, :update, :destroy]
+  
 
   # GET /discounts
   def index
@@ -46,6 +47,6 @@ class DiscountsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def discount_params
-      params.require(:discount).permit(:name, :description, :discount_percent)
+      params.permit(:name, :description, :discount_percent)
     end
 end

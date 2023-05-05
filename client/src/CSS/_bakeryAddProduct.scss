@@ -187,7 +187,119 @@
                 }
             }
 
-            .bakeryAddProductFormImagesContainer {}
+            .bakeryAddProductFormImagesAndButtonContainer {
+                margin-top: 30px;
+                border-radius: 5px;
+                background-color: white;
+                padding-bottom: 10px;
+                box-shadow: 0px 2px 2px rgb(75, 71, 71);
+                height: fit-content;
+                position: relative;
+
+                .bakeryAddProductFormTitle {
+                    text-align: left;
+                    padding-top: 10px;
+                    margin-left: 16px;
+                    font-size: 0.7em;
+                    font-weight: 800;
+                    text-decoration: underline;
+
+                }
+
+                .bakeryAddProductFormImagesContainer {
+                    min-height: 200px;
+                    height: fit-content;
+                    border: solid rgb(207, 207, 207) 1.5px;
+                    border-style: dashed;
+                    margin-bottom: 10px;
+                    width: 96%;
+                    margin-left: 2%;
+                    margin-right: 2%;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+
+                    .imageAndDeleteBtnContainer {
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 10px;
+                        height: fit-content;
+                        width: fit-content;
+
+                        &:hover .deleteImgBtn{
+                            display: Block;
+                            border-radius: 50%;
+                            
+                        }
+
+                        .deleteImgBtn{
+                            display: none;
+                            background-color: transparent;
+                            border: none;
+                            height: 20px;
+                            margin-left: 5px;
+                            margin-right: 2px;
+                            width: fit-content;
+                            float: top;
+
+                            &:hover{
+                                box-shadow: 1px 1px 2px 1px rgb(207, 207, 207);
+                                background-color: rgb(240, 240, 240);
+                            }
+
+                        }
+
+                        .productImage {
+                            width: 150px;
+                            height: 150px;
+
+                        }
+
+                    }
+                }
+
+                .bakeryAddProductFormImagesSelectBtnContainer {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+
+                    .BakeryAddProductsUploadImagebtn {
+                        background-color: white;
+                        box-shadow: 1px 1px 2px 1px rgb(207, 207, 207);
+                        padding: 10px;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+
+                        &:hover {
+                            background-color: rgb(240, 240, 240);
+                        }
+
+
+                        .iconAndTextContainer {
+                            display: flex;
+                            flex-direction: row;
+
+                            .btnText {
+                                padding: 0%;
+                                margin-left: 5px;
+                                font-size: 1em;
+                                font-weight: 800;
+
+                            }
+                        }
+                    }
+
+                    .imageTypeText {
+                        font-size: 0.8em;
+                        font-weight: 800;
+                    }
+                }
+
+            }
+
+
 
             .bakeryAddProductFormVariantGroupContainer {
                 margin-top: 30px;
@@ -208,20 +320,22 @@
                 }
 
                 .bakeryAddProductFormVariantGroupDropdownContainer {
-                    position: relative;
-                    display: inline-block;
-                    align-content: center;
+                    // position: relative;
+                    // display: inline-block;
+                    // align-content: center;
                     margin-left: 17px;
                     margin-right: auto;
+                    display: flex;
+                    flex-direction: row;
 
                     &:hover .bakeryAddProductFormVariantGroupDropdownItemContainer {
                         display: block;
                     }
-                  
+
                     &:hover .bakeryAddProductFormVariantGroupDropdownBtn {
                         background-color: rgb(240, 240, 240);
                     }
-                  
+
 
                     .bakeryAddProductFormVariantGroupDropdownBtn {
                         background-color: white;
@@ -256,7 +370,7 @@
                             margin-top: 0%;
 
                             &:hover {
-                                background-color:  #FFACFC;
+                                background-color: #FFACFC;
                                 cursor: pointer;
                             }
                         }
@@ -265,7 +379,7 @@
                 }
             }
 
-            .bakeryAddProductFormDiscountContainer{
+            .bakeryAddProductFormDiscountContainer {
                 margin-top: 30px;
                 margin-bottom: 30px;
                 border-radius: 5px;
@@ -275,7 +389,7 @@
                 height: fit-content;
 
 
-                .bakeryAddProductFormTitle{
+                .bakeryAddProductFormTitle {
                     text-align: left;
                     padding-top: 10px;
                     margin-left: 16px;
@@ -285,22 +399,24 @@
 
                 }
 
-                .bakeryAddProductFormDiscountDropdownContainer{
-                    position: relative;
-                    display: inline-block;
-                    align-content: center;
+                .bakeryAddProductFormDiscountDropdownContainer {
+                    // position: relative;
+                    // display: inline-block;
+                    // align-content: center;
                     margin-left: 17px;
                     margin-right: auto;
+                    display: flex;
+                    flex-direction: row;
 
                     &:hover .bakeryAddProductFormDiscountDropdownItemContainer {
                         display: block;
                     }
-                  
+
                     &:hover .bakeryAddProductFormDiscountDropdownBtn {
                         background-color: rgb(240, 240, 240);
                     }
 
-                    .bakeryAddProductFormDiscountDropdownBtn{
+                    .bakeryAddProductFormDiscountDropdownBtn {
                         background-color: white;
                         box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
                         color: black;
@@ -314,7 +430,7 @@
 
                     }
 
-                    .bakeryAddProductFormDiscountDropdownItemContainer{
+                    .bakeryAddProductFormDiscountDropdownItemContainer {
                         display: none;
                         box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
                         background-color: #ffffff;
@@ -322,7 +438,7 @@
                         width: 200px;
                         overflow-y: scroll;
 
-                        .bakeryAddProductFormDiscountDropdownItem{
+                        .bakeryAddProductFormDiscountDropdownItem {
                             color: black;
                             padding: 12px 16px;
                             text-decoration: none;
@@ -334,7 +450,7 @@
                             margin-top: 0%;
 
                             &:hover {
-                                background-color:  #FFACFC;
+                                background-color: #FFACFC;
                                 cursor: pointer;
                             }
 
@@ -348,7 +464,7 @@
 
         }
 
-        .bakeryAddProductFormButtonsContainer{
+        .bakeryAddProductFormButtonsContainer {
             border-radius: 5px;
             background-color: white;
             padding-bottom: 10px;
@@ -357,7 +473,7 @@
             margin-right: 23px;
             height: 120px;
 
-            .bakeryAddProductFormSaveButton{
+            .bakeryAddProductFormSaveButton {
                 cursor: pointer;
                 color: #feffff;
                 padding: 10px 12px;
@@ -374,24 +490,24 @@
                 font-weight: 800;
                 background-color: #A3006B;
                 border: none;
-                
-        
+
+
                 &:hover {
-                  cursor: pointer;
-                  background-color: #FFACFC;
-                  color: black;
-                  box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                    cursor: pointer;
+                    background-color: #FFACFC;
+                    color: black;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
 
                 }
             }
 
-            .checkboxContainer{
+            .checkboxContainer {
                 margin-left: 10%;
                 margin-right: 10%;
                 margin-top: 10px;
                 border-top: solid black 1px;
 
-                .checkboxLabel{
+                .checkboxLabel {
                     font-size: 0.9em;
                     font-weight: 800;
                 }

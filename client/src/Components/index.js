@@ -1,6 +1,7 @@
 export {default as Products} from './Products/Products';
 export {default as Product} from './Products/Product/Product';
-export {default as NavBar} from './NavBar';
+export {default as NavBar} from './NavBar/NavBar';
+export {default as LoginOrSignUpDropdown} from './NavBar/LoginOrSignUpDropdown/LoginOrSignUpDropdown';
 export {default as CustomerLogin} from './CustomerLogin';
 export {default as CustomerSignUp} from './CustomerSignUp';
 export {default as ForgotPassword} from './ForgotPassword'; 
