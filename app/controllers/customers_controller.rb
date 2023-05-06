@@ -1,7 +1,7 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :update, :destroy]
 
-  #POST /customer-login
+  # POST /customer-login
   def login
     customer = Customer.find_by(params[:email])
     if customer&.authenticate(params[:password]) 
@@ -10,6 +10,12 @@ class CustomersController < ApplicationController
     else
       render json: {error: "Invalid email or password"}, status: :unauthorized
     end
+  end
+
+  # GET /customer-logged-in
+  def logged_in
+    customer = Customer.find_by(id: session[:customer_id])
+    render json: customer, status: :created
   end
 
   # GET /customers

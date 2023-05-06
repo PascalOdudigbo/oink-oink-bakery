@@ -1,7 +1,7 @@
 class BakersController < ApplicationController
   before_action :set_baker, only: [:show, :update, :destroy]
 
-  #POST /baker-login
+  # POST /baker-login
   def login
     baker = Baker.find_by(params[:email])
     if baker&.authenticate(params[:password])
@@ -10,6 +10,12 @@ class BakersController < ApplicationController
     else 
       render json: {error: "Invalid email or password"}, status: :unauthorized
     end
+  end
+
+  # GET /baker-logged-in
+  def logged_in
+    baker = Baker.find_by(id: session[:baker_id])
+    render json: baker, status: :created
   end
 
   # GET /bakers
