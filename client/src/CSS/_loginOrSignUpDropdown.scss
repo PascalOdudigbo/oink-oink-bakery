@@ -1,8 +1,8 @@
 .loginAndSignUpLinksDropdownContainer{
     position: relative;
     display: inline-block;
-    margin-right: 160px;
-    // justify-content: space-around;
+    margin-right: auto;
+    
 
     &:hover .loginAndSignUpLinksContainer{
         display: flex;
@@ -26,7 +26,6 @@
         z-index: 1;
 
       
-
         .loginAndSignUpLinks{
             text-decoration: none;
             color: black;

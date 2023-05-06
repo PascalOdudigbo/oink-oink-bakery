@@ -1,6 +1,17 @@
 class BakersController < ApplicationController
   before_action :set_baker, only: [:show, :update, :destroy]
 
+  #POST /baker-login
+  def login
+    baker = Baker.find_by(params[:email])
+    if baker&.authenticate(params[:password])
+      session[:baker_id] = baker.id
+      render json: baker, status: :created
+    else 
+      render json: {error: "Invalid email or password"}, status: :unauthorized
+    end
+  end
+
   # GET /bakers
   def index
     @bakers = Baker.all

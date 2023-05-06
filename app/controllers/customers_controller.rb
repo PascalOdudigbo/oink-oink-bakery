@@ -1,6 +1,17 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :update, :destroy]
 
+  #POST /customer-login
+  def login
+    customer = Customer.find_by(params[:email])
+    if customer&.authenticate(params[:password]) 
+      session[:customer_id] = customer.id
+      render json: customer, status: :created
+    else
+      render json: {error: "Invalid email or password"}, status: :unauthorized
+    end
+  end
+
   # GET /customers
   def index
     @customers = Customer.all
