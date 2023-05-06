@@ -15,6 +15,12 @@ function CustomerSignUp() {
     const [isLoading, setIsLoading] = useState(false);
 
 
+    //creating alert management states
+    const[alertDisplay, setAlertDisplay] = useState("none")
+    const [alertStatus, setAlertStatus] = useState(false);
+    const [alertMessage, setAlertMessage] = useState("");
+
+
     function handleSignUp(){
         const customerData = {
             first_name: firstName,
@@ -29,6 +35,8 @@ function CustomerSignUp() {
 
     return (
         <div className="customerSignUpContainer">
+            <Alert requestStatus={requestStatus} alertMessage={alertMessage} display={alertDisplay}/>
+
             <div className="textContainer">
                 <h1 className="signUpBakeryTitle">Oink Oink Bakery</h1>
                 <p className="signUpBakeryMoto">Where flavour and pleasure meet</p>
