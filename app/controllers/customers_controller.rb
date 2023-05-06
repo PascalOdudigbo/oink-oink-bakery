@@ -18,6 +18,12 @@ class CustomersController < ApplicationController
     render json: customer, status: :created
   end
 
+  # DELETE /customer-logout
+  def logout
+    session.delete :customer_id
+    head :no_content
+  end
+
   # GET /customers
   def index
     @customers = Customer.all

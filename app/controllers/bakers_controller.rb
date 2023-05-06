@@ -18,6 +18,12 @@ class BakersController < ApplicationController
     render json: baker, status: :created
   end
 
+  # DELETE /baker-logout
+  def logout
+    session.delete :baker_id
+    head :no_content
+  end
+
   # GET /bakers
   def index
     @bakers = Baker.all
