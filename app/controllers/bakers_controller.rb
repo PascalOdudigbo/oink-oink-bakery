@@ -69,6 +69,6 @@ class BakersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def baker_params
-      params.require(:baker).permit(:first_name, :last_name, :email, :password_digest)
+      params.permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 end
