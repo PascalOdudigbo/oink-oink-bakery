@@ -10,6 +10,18 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
+    .customerSignUpAlertContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        align-self: flex-start;
+        margin-top: 30px;
+        
+    }
+
     .textContainer{
         margin-left: 45px;
    

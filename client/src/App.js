@@ -11,6 +11,7 @@ import {commerce} from "./lib/commerce";
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({})
+  const[alertDisplay, setAlertDisplay] = useState("none")
 
   const fetchProducts = async () => {
     const {data} = await commerce?.products?.list();
@@ -25,6 +26,17 @@ function App() {
     const item = await commerce.cart.add(productId, quantity);
     setCart(item?.cart);
     console.log(cart);
+  }
+
+  function hideAlert(){
+    let timeOut = setTimeout(
+      () => {
+        setAlertDisplay("none");
+        clearTimeout(timeOut);
+      },
+      1000,
+      setAlertDisplay
+    );
   }
   
   useEffect(()=>{
@@ -54,7 +66,7 @@ function App() {
         <Route path="/sign-up" element={
           <>
             <NavBar totalItems={cart?.total_items}/>
-            <CustomerSignUp/>
+            <CustomerSignUp hideAlert={hideAlert} alertDisplay={alertDisplay} setAlertDisplay={setAlertDisplay}/>
           </>
        
         

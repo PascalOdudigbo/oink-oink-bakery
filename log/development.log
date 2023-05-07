@@ -865,3 +865,404 @@ FOREIGN KEY ("variant_option_id")
   [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 17:25:46 +0300
+  [1m[35m (78.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (98.1ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$XALQ5sJd054JXF1qMczOWeKraDJCpLyop7n49Jbji9jRCoiF8Y0Va"], ["created_at", "2023-05-07 14:25:50.011898"], ["updated_at", "2023-05-07 14:25:50.011898"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (28.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 201 Created in 897ms (Views: 89.0ms | ActiveRecord: 312.9ms | Allocations: 15869)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 17:29:30 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (197.87ms)
+Completed 422 Unprocessable Entity in 580ms (Views: 271.8ms | ActiveRecord: 1.5ms | Allocations: 6484)
+
+
+Started GET "/customers" for 127.0.0.1 at 2023-05-07 17:31:12 +0300
+Processing by CustomersController#index as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:31:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 973)
+
+
+Started DELETE "/customers/1" for 127.0.0.1 at 2023-05-07 17:31:27 +0300
+Processing by CustomersController#destroy as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink", "id"=>"1"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mCustomer Destroy (113.7ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+Completed 204 No Content in 159ms (ActiveRecord: 146.4ms | Allocations: 1921)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 17:31:48 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$CiWOjoVGzkZk7ZziHY1IM.ODEYWw3qL.5Fszej8G4lk9mppbjUSv."], ["created_at", "2023-05-07 14:31:48.402872"], ["updated_at", "2023-05-07 14:31:48.402872"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 326ms (Views: 1.6ms | ActiveRecord: 15.8ms | Allocations: 2891)
+
+
+Started DELETE "/customers/2" for 127.0.0.1 at 2023-05-07 17:37:52 +0300
+Processing by CustomersController#destroy as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink", "id"=>"2"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mCustomer Destroy (1.6ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mTRANSACTION (31.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+Completed 204 No Content in 52ms (ActiveRecord: 39.3ms | Allocations: 3907)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 17:38:02 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.7ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$89w2LOIal3cr8DQO6ejVW.jXjrGNQ0ny8NEUxeOc6f703mXK.oPhm"], ["created_at", "2023-05-07 14:38:02.424286"], ["updated_at", "2023-05-07 14:38:02.424286"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (62.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 360ms (Views: 1.1ms | ActiveRecord: 63.6ms | Allocations: 2920)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 17:39:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started DELETE "/customers/3" for 127.0.0.1 at 2023-05-07 17:44:16 +0300
+Processing by CustomersController#destroy as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink", "id"=>"3"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mCustomer Destroy (1.9ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mTRANSACTION (105.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+Completed 204 No Content in 133ms (ActiveRecord: 113.6ms | Allocations: 3841)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 17:44:36 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$492/gsxG/EdraGhKXOC.guNUvQQi6GN9JpgFN7ViM5.N1excrUt0W"], ["created_at", "2023-05-07 14:44:36.325197"], ["updated_at", "2023-05-07 14:44:36.325197"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (1.36ms)
+Completed 201 Created in 324ms (Views: 2.1ms | ActiveRecord: 18.9ms | Allocations: 2912)
+
+
+Started DELETE "/customers/4" for 127.0.0.1 at 2023-05-07 17:47:15 +0300
+Processing by CustomersController#destroy as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink", "id"=>"4"}
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mCustomer Destroy (0.8ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mTRANSACTION (115.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+Completed 204 No Content in 129ms (ActiveRecord: 118.2ms | Allocations: 1742)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 17:47:19 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$LLI2PLtytrX6V3kAekA/O.ywDzl2LtjdX19q1zn.eE77BRx5STRj2"], ["created_at", "2023-05-07 14:47:19.970872"], ["updated_at", "2023-05-07 14:47:19.970872"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 333ms (Views: 1.2ms | ActiveRecord: 18.0ms | Allocations: 2895)
+
+
+Started DELETE "/customers/5" for 127.0.0.1 at 2023-05-07 17:57:55 +0300
+Processing by CustomersController#destroy as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink", "id"=>"5"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mCustomer Destroy (1.4ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+Completed 204 No Content in 42ms (ActiveRecord: 17.9ms | Allocations: 3844)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 17:59:55 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$spJNWEKomwVdp9VyysCipuJlgyXzqD4wXv/uof4lyM5Zvm4WnyvPG"], ["created_at", "2023-05-07 14:59:55.513719"], ["updated_at", "2023-05-07 14:59:55.513719"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 309ms (Views: 1.1ms | ActiveRecord: 20.9ms | Allocations: 2918)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 18:03:17 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Evans", "last_name"=>"Mwangi", "email"=>"pascalodudigbo@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "pascalodudigbo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Evans"], ["last_name", "Mwangi"], ["email", "pascalodudigbo@gmail.com"], ["verified", false], ["password_digest", "$2a$12$ZWu2G2uegR46jdGg/PiQsu6CoRaO.OTDPpyvpZIZfDsvz21qi.OSa"], ["created_at", "2023-05-07 15:03:18.043386"], ["updated_at", "2023-05-07 15:03:18.043386"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (30.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 327ms (Views: 1.1ms | ActiveRecord: 31.3ms | Allocations: 2890)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 18:08:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started DELETE "/customers/6" for 127.0.0.1 at 2023-05-07 18:09:01 +0300
+Processing by CustomersController#destroy as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink", "id"=>"6"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mCustomer Destroy (1.5ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mTRANSACTION (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+Completed 204 No Content in 35ms (ActiveRecord: 23.6ms | Allocations: 3841)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 18:09:40 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$L9SEctKl422wQFiwSn2bxOs4M0q1psZgVd8y3HbiicBMtbARGC5j6"], ["created_at", "2023-05-07 15:09:40.624427"], ["updated_at", "2023-05-07 15:09:40.624427"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 312ms (Views: 1.0ms | ActiveRecord: 20.6ms | Allocations: 2912)
+
+
+Started DELETE "/customers/8" for 127.0.0.1 at 2023-05-07 18:10:54 +0300
+Processing by CustomersController#destroy as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink", "id"=>"8"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mCustomer Destroy (0.7ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `destroy'
+Completed 204 No Content in 27ms (ActiveRecord: 19.9ms | Allocations: 1742)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 18:11:01 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$X0gLCw7Boqoo9foRWuA5WuF9DVBveQnsyE3hMgnudOL378CwQJMW2"], ["created_at", "2023-05-07 15:11:01.774028"], ["updated_at", "2023-05-07 15:11:01.774028"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 316ms (Views: 1.1ms | ActiveRecord: 21.4ms | Allocations: 2891)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 18:13:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 18:18:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 18:18:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (64.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1016.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (1209.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_test"[0m
+  [1m[35m (4421.8ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (1765.1ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_test" ENCODING = 'unicode'[0m
+  [1m[35m (415.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (342.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBakers (20230123201400)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (143.6ms)[0m  [1m[35mCREATE TABLE "bakers" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230123201400"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDiscounts (20230123201653)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (138.5ms)[0m  [1m[35mCREATE TABLE "discounts" ("id" bigserial primary key, "name" character varying, "description" character varying, "discount_percent" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230123201653"]]
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVariantGroups (20230123202100)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (138.2ms)[0m  [1m[35mCREATE TABLE "variant_groups" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230123202100"]]
+  [1m[36mTRANSACTION (78.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProducts (20230123202101)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (148.4ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "price" float, "description" character varying, "discount_id" bigint, "variant_group_id" bigint, "active" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_794aad2cea"
+FOREIGN KEY ("discount_id")
+  REFERENCES "discounts" ("id")
+, CONSTRAINT "fk_rails_a0fe450737"
+FOREIGN KEY ("variant_group_id")
+  REFERENCES "variant_groups" ("id")
+)[0m
+  [1m[35m (102.1ms)[0m  [1m[35mCREATE INDEX "index_products_on_discount_id" ON "products" ("discount_id")[0m
+  [1m[35m (119.4ms)[0m  [1m[35mCREATE INDEX "index_products_on_variant_group_id" ON "products" ("variant_group_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230123202101"]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProductImages (20230123202332)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (150.6ms)[0m  [1m[35mCREATE TABLE "product_images" ("id" bigserial primary key, "product_id" bigint NOT NULL, "image_url" character varying, "image_public_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1c991d3be6"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+)[0m
+  [1m[35m (92.9ms)[0m  [1m[35mCREATE INDEX "index_product_images_on_product_id" ON "product_images" ("product_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230123202332"]]
+  [1m[36mTRANSACTION (39.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCustomers (20230124142704)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (199.3ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "verified" boolean, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230124142704"]]
+  [1m[36mTRANSACTION (57.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20230124142942)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (120.0ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "product_id" bigint NOT NULL, "customer_id" bigint NOT NULL, "review" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_bedd9094d4"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_74e2428a18"
+FOREIGN KEY ("customer_id")
+  REFERENCES "customers" ("id")
+)[0m
+  [1m[35m (103.5ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_product_id" ON "reviews" ("product_id")[0m
+  [1m[35m (231.2ms)[0m  [1m[35mCREATE INDEX "index_reviews_on_customer_id" ON "reviews" ("customer_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230124142942"]]
+  [1m[36mTRANSACTION (225.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCarts (20230124143526)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (448.4ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "customer_id" bigint NOT NULL, "total" float, "active" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e02ab95379"
+FOREIGN KEY ("customer_id")
+  REFERENCES "customers" ("id")
+)[0m
+  [1m[35m (246.1ms)[0m  [1m[35mCREATE INDEX "index_carts_on_customer_id" ON "carts" ("customer_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230124143526"]]
+  [1m[36mTRANSACTION (131.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVariantOptions (20230207174048)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (107.2ms)[0m  [1m[35mCREATE TABLE "variant_options" ("id" bigserial primary key, "variant_group_id" bigint NOT NULL, "name" character varying, "price" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_543345bd81"
+FOREIGN KEY ("variant_group_id")
+  REFERENCES "variant_groups" ("id")
+)[0m
+  [1m[35m (80.3ms)[0m  [1m[35mCREATE INDEX "index_variant_options_on_variant_group_id" ON "variant_options" ("variant_group_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230207174048"]]
+  [1m[36mTRANSACTION (26.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLineItems (20230207174816)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (58.4ms)[0m  [1m[35mCREATE TABLE "line_items" ("id" bigserial primary key, "cart_id" bigint NOT NULL, "product_id" bigint NOT NULL, "quantity" integer, "variant_option_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_af645e8e5f"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+, CONSTRAINT "fk_rails_11e15d5c6b"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_f4554af19c"
+FOREIGN KEY ("variant_option_id")
+  REFERENCES "variant_options" ("id")
+)[0m
+  [1m[35m (54.2ms)[0m  [1m[35mCREATE INDEX "index_line_items_on_cart_id" ON "line_items" ("cart_id")[0m
+  [1m[35m (100.3ms)[0m  [1m[35mCREATE INDEX "index_line_items_on_product_id" ON "line_items" ("product_id")[0m
+  [1m[35m (54.3ms)[0m  [1m[35mCREATE INDEX "index_line_items_on_variant_option_id" ON "line_items" ("variant_option_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230207174816"]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-07 15:21:14.730940"], ["updated_at", "2023-05-07 15:21:14.730940"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/customers" for 127.0.0.1 at 2023-05-07 18:25:29 +0300
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$IcRnYmmDZkHfVIdje6TMweccuSDEDSDehp.vNxaFri6IejPsSiKV6"], ["created_at", "2023-05-07 15:25:30.167593"], ["updated_at", "2023-05-07 15:25:30.167593"]]
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:43:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 344ms (Views: 2.0ms | ActiveRecord: 9.0ms | Allocations: 10002)
+
+
