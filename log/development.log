@@ -1266,3 +1266,24 @@ Processing by CustomersController#create as HTML
 Completed 201 Created in 344ms (Views: 2.0ms | ActiveRecord: 9.0ms | Allocations: 10002)
 
 
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 22:23:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 22:24:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 22:28:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/customers/" for 127.0.0.1 at 2023-05-07 22:28:47 +0300
+Processing by CustomersController#index as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:31:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 46.2ms | Allocations: 2992)
+
+

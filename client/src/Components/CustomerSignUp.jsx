@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay,}) {
+function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay}) {
 
     //creating form input states
     const [firstName, setFirstName] = useState("");
