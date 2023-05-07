@@ -18,7 +18,7 @@ function CustomerConfirmEmail({hideAlert, alertDisplay, setAlertDisplay}){
         setIsLoading(true);
         
         //updating verified status of customer account
-        axios.post(`/customers/${window.location.href[window.location.href.length - 1]}`, {verified: true})
+        axios.patch(`/customers/${window.location.href[window.location.href.length - 1]}`, {verified: true})
         .then(response =>{
             setIsLoading(false);
             setAlertStatus(true);
@@ -26,14 +26,15 @@ function CustomerConfirmEmail({hideAlert, alertDisplay, setAlertDisplay}){
             setAlertDisplay("block");
             hideAlert();
             //navigating to login component on verification success
-            setTimeout(() => navigate("/login"), 6000);
+            setTimeout(() => navigate("/login"), 3000);
         })
         //if updating verified status fails
         .catch(error => {
             setIsLoading(false);
             if(error.response){
+                console.log(error)
                 setAlertStatus(false);
-                setAlertMessage(`${error.response.data.error}`);
+                setAlertMessage(`${error.message}`);
                 setAlertDisplay("block");
                 hideAlert();
             }
@@ -50,12 +51,14 @@ function CustomerConfirmEmail({hideAlert, alertDisplay, setAlertDisplay}){
                     className="customerConfirmEmailBodyLogo"
                     src={logo}
                     alt={"logo"}
+                    title="Oink Oink Bakery"
                     onClick={() => navigate("/")}
+                    
                 />
 
-                <p className="CustomerConfirmEmailBodyText">Click on the button below to verify your email address.</p>
+                <p className="customerConfirmEmailBodyText">Click on the button below to verify your email address.</p>
 
-                <button onClick={handleVerifyEmail}>{isLoading ? "Loading" : "Verify email"}</button>
+                <button className="customerConfirmEmailBodyButton" onClick={handleVerifyEmail}>{isLoading ? "Loading" : "Verify email"}</button>
 
             </div>
 

@@ -1,0 +1,73 @@
+.customerConfirmEmailContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    // justify-content: center;
+    background-image: url("../assets/BakeryBackground2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+    .customerConfirmEmailBody{
+        position: relative;
+        max-width: 380px;
+        padding: 80px 40px 40px;
+        margin-top: 100px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        background-color: #feffff;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+
+        .customerConfirmEmailBodyLogo{
+            cursor: pointer;
+            width: 130px;
+            border-radius: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .customerConfirmEmailBodyText{
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+
+        .customerConfirmEmailBodyButton{
+            cursor: pointer;
+            color: #feffff;
+            padding: 18px 12px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 45%;
+            font-size: 1em;
+            font-weight: 800;
+            background-color: #A3006B;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+                color: black;
+                background-color: #FFACFC;
+            }
+        }
+
+
+    }
+}

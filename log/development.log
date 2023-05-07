@@ -1287,3 +1287,210 @@ Processing by CustomersController#index as */*
 Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 46.2ms | Allocations: 2992)
 
 
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:05:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/confirm-email/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:08:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/confirm-email/babel/parser/lib/index.js"):
+  
+Started POST "/customers/5" for 127.0.0.1 at 2023-05-07 23:14:06 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/5"):
+  
+Started POST "/customers/5" for 127.0.0.1 at 2023-05-07 23:15:01 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/5"):
+  
+Started GET "/confirm-email/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:16:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/confirm-email/babel/parser/lib/index.js"):
+  
+Started POST "/customers/5" for 127.0.0.1 at 2023-05-07 23:16:23 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/5"):
+  
+Started POST "/customers/5" for 127.0.0.1 at 2023-05-07 23:16:27 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/5"):
+  
+Started POST "/customers/5" for 127.0.0.1 at 2023-05-07 23:16:30 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/5"):
+  
+Started POST "/customers/5" for 127.0.0.1 at 2023-05-07 23:16:43 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/5"):
+  
+Started POST "/customers/1" for 127.0.0.1 at 2023-05-07 23:26:02 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/1"):
+  
+Started POST "/customers/1" for 127.0.0.1 at 2023-05-07 23:26:06 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/1"):
+  
+Started POST "/customers/1" for 127.0.0.1 at 2023-05-07 23:26:13 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/1"):
+  
+Started POST "/customers/1" for 127.0.0.1 at 2023-05-07 23:27:54 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/1"):
+  
+Started POST "/customers/1" for 127.0.0.1 at 2023-05-07 23:28:00 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/1"):
+  
+Started GET "/customers/" for 127.0.0.1 at 2023-05-07 23:28:52 +0300
+Processing by CustomersController#index as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink"}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:31:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 8.0ms | Allocations: 3202)
+
+
+Started POST "/customers/1" for 127.0.0.1 at 2023-05-07 23:29:17 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/customers/1"):
+  
+Started PATCH "/customers/5" for 127.0.0.1 at 2023-05-07 23:31:37 +0300
+Processing by CustomersController#update as HTML
+  Parameters: {"verified"=>true, "id"=>"5"}
+  [1m[36mCustomer Load (51.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+Completed 404 Not Found in 294ms (ActiveRecord: 51.3ms | Allocations: 672)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Customer with 'id'=5):
+  
+app/controllers/customers_controller.rb:67:in `set_customer'
+Started PATCH "/customers/1" for 127.0.0.1 at 2023-05-07 23:31:55 +0300
+Processing by CustomersController#update as HTML
+  Parameters: {"verified"=>true, "id"=>"1"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 AND "customers"."id" != $2 LIMIT $3[0m  [["email", "odudigbopascal@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+  [1m[36mCustomer Update (1.5ms)[0m  [1m[33mUPDATE "customers" SET "verified" = $1, "updated_at" = $2 WHERE "customers"."id" = $3[0m  [["verified", true], ["updated_at", "2023-05-07 20:31:55.071537"], ["id", 1]]
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+  [1m[36mTRANSACTION (110.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 287ms (Views: 1.0ms | ActiveRecord: 113.0ms | Allocations: 3480)
+
+
+Started GET "/confirm-email/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:32:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/confirm-email/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:32:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started PATCH "/customers/1" for 127.0.0.1 at 2023-05-07 23:32:32 +0300
+Processing by CustomersController#update as HTML
+  Parameters: {"verified"=>true, "id"=>"1"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+  [1m[36mCustomer Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 AND "customers"."id" != $2 LIMIT $3[0m  [["email", "odudigbopascal@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 2675)
+
+
+Started GET "/confirm-email/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:32:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/confirm-email/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-07 23:32:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started PATCH "/customers/1" for 127.0.0.1 at 2023-05-07 23:32:54 +0300
+Processing by CustomersController#update as HTML
+  Parameters: {"verified"=>true, "id"=>"1"}
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:67:in `set_customer'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+  [1m[36mCustomer Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 AND "customers"."id" != $2 LIMIT $3[0m  [["email", "odudigbopascal@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:52:in `update'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 200 OK in 13ms (Views: 1.7ms | ActiveRecord: 2.0ms | Allocations: 2677)
+
+

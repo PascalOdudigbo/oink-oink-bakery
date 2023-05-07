@@ -4,6 +4,7 @@ export {default as NavBar} from './NavBar/NavBar';
 export {default as LoginOrSignUpDropdown} from './NavBar/LoginOrSignUpDropdown/LoginOrSignUpDropdown';
 export {default as CustomerLogin} from './CustomerLogin';
 export {default as CustomerSignUp} from './CustomerSignUp';
+export {default as CustomerConfirmEmail} from './CustomerConfirmEmail';
 export {default as ForgotPassword} from './ForgotPassword'; 
 export {default as Alert} from './Alert';
 export {default as BakerLogin} from './BakerLogin';

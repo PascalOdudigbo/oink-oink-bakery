@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import {
   Products, NavBar, CustomerLogin, CustomerSignUp, 
-  ForgotPassword, BakerLogin, BakeryPortal
+  ForgotPassword, BakerLogin, BakeryPortal, CustomerConfirmEmail
 
 } from "./Components";
 import {commerce} from "./lib/commerce"; 
@@ -56,6 +56,7 @@ function App() {
             <Products products={products} onAddToCart={handleAddToCart}/>
           </> 
         }/>
+        
         <Route path="/login" element={
           <>
             <NavBar totalItems={cart?.total_items}/>
@@ -63,20 +64,24 @@ function App() {
           </>
           
         }/>
+
         <Route path="/sign-up" element={
           <>
             <NavBar totalItems={cart?.total_items}/>
             <CustomerSignUp hideAlert={hideAlert} alertDisplay={alertDisplay} setAlertDisplay={setAlertDisplay}/>
           </>
        
-        
         }/>
+
+        <Route path="/confirm-email/*" element={
+          <CustomerConfirmEmail hideAlert={hideAlert} alertDisplay={alertDisplay} setAlertDisplay={setAlertDisplay}/>
+        }/>
+
         <Route path="/forgot-password" element={
           <>
               <NavBar totalItems={cart?.total_items}/>
               <ForgotPassword/>
           </>
-       
         }/>
     
         <Route path="/admin-forgot-password" element={
