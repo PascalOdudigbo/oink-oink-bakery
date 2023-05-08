@@ -8,7 +8,7 @@ class CustomersController < ApplicationController
       session[:customer_id] = customer.id
       render json: customer, status: :created
     else
-      render json: {error: "Invalid email or password"}, status: :unauthorized
+      render json: {error: "Invalid email or password!"}, status: :unauthorized
     end
   end
 

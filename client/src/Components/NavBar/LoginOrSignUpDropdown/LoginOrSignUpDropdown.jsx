@@ -30,23 +30,3 @@ function LoginOrSignUpDropdown() {
 
 }
 export default LoginOrSignUpDropdown;
-
-
-
-
-{/* <div className="bakeryAddProductFormVariantGroupDropdownContainer">
-    <button className="bakeryAddProductFormVariantGroupDropdownBtn">{variantGroup?.name ? variantGroup?.name : "Select variant group"}</button>
-    <div className="bakeryAddProductFormVariantGroupDropdownItemContainer">
-        {variantGroups?.map(variantGroup =>
-            <p
-                className="bakeryAddProductFormVariantGroupDropdownItem"
-                key={variantGroup?.id}
-                onClick={() => {
-                    setVariantGroup(variantGroup)
-                }}
-            >
-                {variantGroup?.name}
-            </p>
-        )}
-    </div>
-</div> */}

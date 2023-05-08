@@ -11,7 +11,7 @@ import {commerce} from "./lib/commerce";
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
-  const[alertDisplay, setAlertDisplay] = useState("block");
+  const[alertDisplay, setAlertDisplay] = useState("none");
   const[customerData, setCustomerData] = useState({});
 
   const fetchProducts = async () => {
@@ -61,7 +61,7 @@ function App() {
         <Route path="/login" element={
           <>
             <NavBar totalItems={cart?.total_items}/>
-            <CustomerLogin hideAlert={hideAlert} alertDisplay={alertDisplay} setAlertDisplay={setAlertDisplay}/>
+            <CustomerLogin hideAlert={hideAlert} alertDisplay={alertDisplay} setAlertDisplay={setAlertDisplay} customerData={customerData} setCustomerData={setCustomerData}/>
           </>
           
         }/>

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import logo from "../assets/BakeryLogo.jpeg";
 import { Link, useNavigate} from "react-router-dom";
 import { Alert } from "../Components";
+import axios from "axios";
 
-function CustomerLogin({hideAlert, alertDisplay, setAlertDisplay}) {
+function CustomerLogin({hideAlert, alertDisplay, setAlertDisplay, customerData, setCustomerData}) {
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
 
@@ -21,9 +22,39 @@ function CustomerLogin({hideAlert, alertDisplay, setAlertDisplay}) {
 
 
     //creating function to handle login functionality 
-    function handleLogin(){
-        setIsLoading(true)
-        
+    function handleLogin(e){
+        setIsLoading(true);
+        e.preventDefault();
+
+        //creating an object containing the login data
+        const customerLoginData = {
+            email: email.trim,
+            password: password
+        };
+
+        //sending login data to the server for authentication
+        axios.post("/customer-login", customerLoginData)
+        .then(response => {
+            //if authentication successful
+            setIsLoading(false);
+            setCustomerData(response.data);
+            setAlertStatus(true);
+            setAlertMessage("Login Successful!");
+            setAlertDisplay("block");
+            hideAlert();
+            setTimeout(() => navigate("/"), 2000);
+        })
+        .catch(error => {
+            //if authentication failed 
+            if (error.response){
+                setIsLoading(false);
+                setAlertMessage(error.response.data.error);
+                setAlertStatus(false);
+                setAlertDisplay("block");
+                hideAlert();
+            }
+        })
+
     }
 
     return (
@@ -40,7 +71,7 @@ function CustomerLogin({hideAlert, alertDisplay, setAlertDisplay}) {
 
             <div className="customerLoginFormContainer">
                 <img className="loginLogo" src={logo} alt="logo"/>
-                <form className="customerLoginForm">
+                <form className="customerLoginForm" onSubmit={handleLogin}>
                     <h1 className="formTitle">LOGIN</h1>
                     <label className="customerLoginFormLabel">Email:</label>
                     <input className="customerLoginFormInput" type="email" required value={email} onChange={e => setEmail(e.target.value)}/>
