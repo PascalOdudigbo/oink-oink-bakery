@@ -7,7 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay}) {
+function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
+    alertMessage, setAlertMessage}) {
 
     //creating form input states
     const [firstName, setFirstName] = useState("");
@@ -18,11 +19,6 @@ function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay}) {
 
     //creating loading state
     const [isLoading, setIsLoading] = useState(false);
-
-
-    //creating alert management states
-    const [alertStatus, setAlertStatus] = useState(false);
-    const [alertMessage, setAlertMessage] = useState("");
 
     //declaring a variable function to navigate to login page on successful signUp
     const navigate = useNavigate();

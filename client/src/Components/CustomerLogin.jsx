@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/BakeryLogo.jpeg";
 import { Link, useNavigate} from "react-router-dom";
 import { Alert } from "../Components";
 import axios from "axios";
 
-function CustomerLogin({hideAlert, alertDisplay, setAlertDisplay, customerData, setCustomerData}) {
+function CustomerLogin(
+    {hideAlert, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
+    alertMessage, setAlertMessage, customerData, setCustomerData}
+) {
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
 
@@ -15,10 +18,11 @@ function CustomerLogin({hideAlert, alertDisplay, setAlertDisplay, customerData, 
     //creating loading state
     const [isLoading, setIsLoading] = useState(false);
 
-
-    //creating alert management states
-    const [alertStatus, setAlertStatus] = useState(false);
-    const [alertMessage, setAlertMessage] = useState("");
+    
+    //declaring useEffect to navigate already loggedIn users to the home page
+    useEffect(() => {
+        customerData && setTimeout(() => navigate("/"), 1000);
+    }, [])
 
 
     //creating function to handle login functionality 

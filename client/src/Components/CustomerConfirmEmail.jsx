@@ -4,10 +4,9 @@ import {Alert} from "../Components";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function CustomerConfirmEmail({hideAlert, alertDisplay, setAlertDisplay}){
-    //declaring and initializing state variables
-    const [alertStatus, setAlertStatus] = useState(false);
-    const [alertMessage, setAlertMessage] = useState("");
+function CustomerConfirmEmail({hideAlert, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
+    alertMessage, setAlertMessage}){
+    //declaring and initializing state variable
     const [isLoading, setIsLoading] = useState(false);
 
     //declaring navigation variable
