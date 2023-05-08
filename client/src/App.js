@@ -10,8 +10,9 @@ import {commerce} from "./lib/commerce";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState({})
-  const[alertDisplay, setAlertDisplay] = useState("none")
+  const [cart, setCart] = useState({});
+  const[alertDisplay, setAlertDisplay] = useState("block");
+  const[customerData, setCustomerData] = useState({});
 
   const fetchProducts = async () => {
     const {data} = await commerce?.products?.list();
@@ -56,11 +57,11 @@ function App() {
             <Products products={products} onAddToCart={handleAddToCart}/>
           </> 
         }/>
-        
+
         <Route path="/login" element={
           <>
             <NavBar totalItems={cart?.total_items}/>
-            <CustomerLogin/>
+            <CustomerLogin hideAlert={hideAlert} alertDisplay={alertDisplay} setAlertDisplay={setAlertDisplay}/>
           </>
           
         }/>

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
 
   #adding custom action routes for customers
-
-  
+  post "/customer-login", to: "customers#login"
+  get "/customer-logged-in", to: "customers#logged_in"
+  delete "/customer-logout", to: "customers#logout"
 end

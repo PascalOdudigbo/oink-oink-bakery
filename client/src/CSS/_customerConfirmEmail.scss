@@ -35,6 +35,10 @@
             margin-top: 10px;
             margin-bottom: 10px;
 
+            &:hover{
+                box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(207, 207, 207);
+            }
+
         }
 
         .customerConfirmEmailBodyText{

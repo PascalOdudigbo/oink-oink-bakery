@@ -10,8 +10,21 @@
     }
 
     .loginAndSignUpLinkDropdownBtn{
+        width: max-content;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        // width: 30px;
         border: none;
-        background-color: transparent;
+
+        background: none;
+        margin-bottom: 3px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #FFACFC;
+            border-radius: 50%;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+        }
 
     }
 
