@@ -1,12 +1,70 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import logo from "../assets/BakeryLogo.jpeg";
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
+import axios from "axios";
+import { Alert } from "../Components";
 
-function BakerLogin() {
-    // console.log(window.location.href)
-    // const navigate = useNavigate();
+function BakerLogin({hideAlert, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
+    alertMessage, setAlertMessage, bakerData, setBakerData}) {
+    
+    //declaring and initializing navigate variable function
+    const navigate = useNavigate();
+
+    //declaring and initializing states for form controlled input
+    const[email, setEmail] = useState("");
+    const[password, setPassword] = useState("");
+
+    //creating loading state
+    const [isLoading, setIsLoading] = useState(false);
+
+
+    //declaring useEffect to navigate already loggedIn users to the home page
+    useEffect(() => {
+        bakerData?.first_name && setTimeout(() => navigate("/bakery-portal"), 500);
+    }, [])
+
+
+    //creating function to handle login functionality 
+    function handleLogin(e){
+        setIsLoading(true);
+        e.preventDefault();
+
+        //creating an object containing the login data
+        const customerLoginData = {
+            email: email.trim,
+            password: password
+        };
+
+        //sending login data to the server for authentication
+        axios.post("/baker-login", customerLoginData)
+        .then(response => {
+            //if authentication successful
+            setIsLoading(false);
+            setBakerData(response.data);
+            setAlertStatus(true);
+            setAlertMessage("Login Successful!");
+            setAlertDisplay("block");
+            hideAlert();
+            setTimeout(() => navigate("/bakery-portal"), 1500);
+        })
+        .catch(error => {
+            //if authentication failed 
+            if (error.response){
+                setIsLoading(false);
+                setAlertMessage(error.response.data.error);
+                setAlertStatus(false);
+                setAlertDisplay("block");
+                hideAlert();
+            }
+        })
+
+    }
+    
     return (
         <div className="bakerLoginContainer">
+            <div className="bakerLoginAlertContainer">
+                <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay}/>
+            </div>
 
             <div className="textContainer">
                 <h1 className="loginBakeryTitle">Oink Oink Bakery</h1>
@@ -16,18 +74,16 @@ function BakerLogin() {
 
             <div className="bakerLoginFormContainer">
                 <img className="loginLogo" src={logo} alt="logo"/>
-                <form className="bakerLoginForm">
+                <form className="bakerLoginForm" onSubmit={handleLogin}>
                     <h1 className="formTitle">LOGIN</h1>
                     <label className="bakerLoginFormLabel">Email:</label>
-                    <input className="bakerLoginFormInput" type="email" required />
+                    <input className="bakerLoginFormInput" type="email" required value={email} onChange={e => setEmail(e.target.value)}/>
                     <label className="bakerLoginFormLabel">Password:</label>
-                    <input className="bakerLoginFormInput" type="password" required />
+                    <input className="bakerLoginFormInput" type="password" required value={password} onChange={e => setPassword(e.target.value)}/>
                     <Link className="forgotPasswordLink" to={"/admin-forgot-password"}>
                         forgot password?
                     </Link>
-                    <button className="bakerLoginButton" type="submit">Login</button>
-                    {/* <p>or</p>
-                    <button className="bakerSignUpButton" onClick={()=>{navigate("/sign-up")}}>Sign Up</button> */}
+                    <button className="bakerLoginButton" type="submit">{isLoading ? "Loading..." : "Login"}</button>
                 </form>
             </div>
 

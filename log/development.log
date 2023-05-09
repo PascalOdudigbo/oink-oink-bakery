@@ -5330,3 +5330,306 @@ Processing by CustomersController#logged_in as */*
 Completed 201 Created in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 869)
 
 
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 14:10:55 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 102ms (Views: 0.5ms | ActiveRecord: 48.1ms | Allocations: 3003)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 14:19:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 22ms (Views: 0.7ms | ActiveRecord: 8.6ms | Allocations: 2965)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 14:23:01 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 867)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 14:24:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 14:24:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 14:24:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBaker Exists? (32.2ms)[0m  [1m[34mSELECT 1 AS one FROM "bakers" WHERE "bakers"."email" = $1 LIMIT $2[0m  [["email", "jaynasimiyu@gmail.com"], ["LIMIT", 1]]
+  [1m[36mBaker Create (62.5ms)[0m  [1m[32mINSERT INTO "bakers" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ashley"], ["last_name", "Simiyu"], ["email", "jaynasimiyu@gmail.com"], ["password_digest", "$2a$12$YEj7hQ2OkqWdTMFKWbfF.eUNx.POH5GDXpaiZ4PGWKkIDvsUUHM8e"], ["created_at", "2023-05-09 12:19:21.282253"], ["updated_at", "2023-05-09 12:19:21.282253"]]
+  [1m[36mTRANSACTION (122.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/bakers/" for 127.0.0.1 at 2023-05-09 15:19:38 +0300
+Processing by BakersController#index as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink"}
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers"[0m
+  ↳ app/controllers/bakers_controller.rb:31:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 384ms (Views: 356.1ms | ActiveRecord: 14.5ms | Allocations: 6860)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 15:27:51 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 309ms (Views: 64.5ms | ActiveRecord: 5.4ms | Allocations: 4706)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 15:49:00 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 27ms (Views: 0.8ms | ActiveRecord: 14.4ms | Allocations: 2961)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 15:53:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 15:53:51 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 870)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:00:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 42ms (Views: 2.4ms | ActiveRecord: 12.3ms | Allocations: 2965)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:07:28 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 20ms (Views: 0.6ms | ActiveRecord: 8.3ms | Allocations: 2957)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:10:32 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:10:34 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 857)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 16:13:03 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 349ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 3548)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:14:27 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:14:29 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 869)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:14:34 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:14:39 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.33ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 873)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:14:41 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 871)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:14:44 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 8ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:10 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.26ms)
+Completed 201 Created in 7ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:13 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.13ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:29 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.12ms)
+Completed 201 Created in 9ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:32 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 869)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:15:34 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:17:11 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 863)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:17:44 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 13ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 862)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:17:52 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 11ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 16:18:13 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 335ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 715)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 16:18:45 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 288ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 718)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 16:19:31 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 284ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 716)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-09 16:20:04 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 282ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 961)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 16:21:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 16:21:14 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 871)
+
+

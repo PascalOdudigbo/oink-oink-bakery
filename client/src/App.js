@@ -192,7 +192,17 @@ function App() {
           element={
             <>
               <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
-              <BakerLogin />
+              <BakerLogin  
+                hideAlert={hideAlert}
+                alertDisplay={alertDisplay}
+                setAlertDisplay={setAlertDisplay}
+                alertMessage={alertMessage}
+                setAlertMessage={setAlertMessage}
+                alertStatus={alertStatus}
+                setAlertStatus={setAlertStatus}
+                bakerData={bakerData}
+                setBakerData={setBakerData}
+              />
             </>
           }
         />

@@ -20,4 +20,9 @@ Rails.application.routes.draw do
   post "/customer-login", to: "customers#login"
   get "/customer-logged-in", to: "customers#logged_in"
   delete "/customer-logout", to: "customers#logout"
+
+   #adding custom action routes for baker(s)
+   post "/baker-login", to: "bakers#login"
+   get "/baker-logged-in", to: "bakers#logged_in"
+   delete "/baker-logout", to: "bakers#logout"
 end
