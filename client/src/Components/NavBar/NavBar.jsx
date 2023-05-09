@@ -5,8 +5,8 @@ import {useNavigate } from "react-router-dom";
 import { IconContext } from "react-icons/lib";
 import { Badge } from '@mui/material';
 import { MdShoppingCart } from 'react-icons/md';
-import {LoginOrSignUpDropdown} from '../../Components';
-function NavBar({ totalItems }) {
+import {LoginOrSignUpDropdown, UserSignedInDropdown} from '../../Components';
+function NavBar({ totalItems, bakerData, customerData, handleLogout }) {
     const ButtonsIconStyle = { color: "black" };
     const navigate = useNavigate();
 
@@ -20,10 +20,12 @@ function NavBar({ totalItems }) {
             <div className="flexibleGrow" />
 
             {
+                customerData?.verified == true || bakerData?.first_name ? 
+                <UserSignedInDropdown customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/> : 
                 window.location.href.includes("/login") ||
-                    window.location.href.includes("/sign-up") ||
-                    window.location.href.includes("/admin-login") ||
-                    window.location.href.includes("bakery-portal") ? null : <LoginOrSignUpDropdown/>
+                window.location.href.includes("/admin-login") ||
+                window.location.href.includes("bakery-portal") 
+                ? null : <LoginOrSignUpDropdown/> 
                     
             }
 

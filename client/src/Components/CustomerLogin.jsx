@@ -18,10 +18,10 @@ function CustomerLogin(
     //creating loading state
     const [isLoading, setIsLoading] = useState(false);
 
-    
+
     //declaring useEffect to navigate already loggedIn users to the home page
     useEffect(() => {
-        customerData && setTimeout(() => navigate("/"), 1000);
+        customerData?.verified && setTimeout(() => navigate("/"), 1000);
     }, [])
 
 
@@ -46,7 +46,7 @@ function CustomerLogin(
             setAlertMessage("Login Successful!");
             setAlertDisplay("block");
             hideAlert();
-            setTimeout(() => navigate("/"), 2000);
+            setTimeout(() => navigate("/"), 1500);
         })
         .catch(error => {
             //if authentication failed 

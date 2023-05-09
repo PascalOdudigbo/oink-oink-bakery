@@ -19,14 +19,15 @@ function LoginOrSignUpDropdown() {
                 }
                 
                 {
-                    window.location.href.includes("/admin-login") ||
+                    window.location.href.includes("/sign-up") ? null : window.location.href.includes("/admin-login") ||
                         window.location.href.includes("/admin-forgot-password")
                         ? null : <Link className='loginAndSignUpLinks' to={"/sign-up"}>Sign Up</Link>
                 }
             
             </div>
 
-        </div>);
+        </div>
+    );
 
 }
 export default LoginOrSignUpDropdown;

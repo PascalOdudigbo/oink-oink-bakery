@@ -1,0 +1,89 @@
+.userSignedInDropdownContainer{
+    position: relative;
+    display: inline-block;
+    margin-right: auto;
+    width: fit-content;
+
+
+    &:hover .userSignedInDropdownLinksContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .userSignedInDropdownBtnAndNameContainer{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        border: 1px solid black;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+        }
+
+        .userSignedInDropdownBtn{
+            background-color: #FFACFC;
+
+        }
+
+        .userSignedInDropdownName{
+            margin-right: 5px;
+            margin-left: 5px;
+            font-size: 0.8em;
+            font-weight: 800;
+        }
+
+    }
+
+    .userSignedInDropdownLinksContainer{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: fit-content;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        align-items: center;
+        z-index: 1;
+
+      
+        .loginAndSignUpLinks{
+            text-decoration: none;
+            color: black;
+            font-size: 0.9em;
+            font-weight: 800;
+            width: 80%;
+            height: 25px;
+            padding: 12px 16px;
+            text-align: center;
+            // border-radius: 5px;
+            border-top: 1px solid black;
+
+            &:hover {
+                cursor: pointer;
+                color: black;
+                background-color: #FFACFC;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            }
+        }
+
+        .userSignedInDropdownLogoutBtn{
+            font-size: 0.9em;
+            font-weight: 800;
+            width: 100%;
+            text-align: center;
+            border: none;
+            border-top: 1px solid black;
+            padding: 12px 16px;
+            background-color: transparent;
+
+            &:hover {
+                cursor: pointer;
+                color: black;
+                background-color: #FFACFC;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            }
+        }
+    }
+
+}

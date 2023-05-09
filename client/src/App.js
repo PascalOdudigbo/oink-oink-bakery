@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import {
   Products,
   NavBar,
@@ -12,18 +12,22 @@ import {
   Alert,
 } from "./Components";
 import { commerce } from "./lib/commerce";
-import axios from "axios";
+
 
 function App() {
   //declaring states to manage dynamic data
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [customerData, setCustomerData] = useState({});
+  const [bakerData, setBakerData] = useState({});
 
   //creating alert management states
   const [alertStatus, setAlertStatus] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertDisplay, setAlertDisplay] = useState("none");
+
+  //declarin and initializing navigating function variable
+  const navigate = useNavigate();
 
   const fetchProducts = async () => {
     const { data } = await commerce?.products?.list();
@@ -37,7 +41,7 @@ function App() {
   const handleAddToCart = async (productId, quantity) => {
     const item = await commerce.cart.add(productId, quantity);
     setCart(item?.cart);
-    console.log(cart);
+    fetchCart();
   };
 
   //defining a function to hide alerts
@@ -71,6 +75,22 @@ function App() {
       });
   }
 
+  //defining a function to implement user logout
+  function handleLogout(setIsLoading){
+    fetch("/customer-logout", {
+        method: "DELETE",
+    }).then(() => {
+      setIsLoading(false);
+      setAlertStatus(true);
+      setAlertMessage("Logout successful!");
+      setAlertDisplay("block");
+      hideAlert()
+      customerData?.verified ? setCustomerData({}):  bakerData?.first_name && setBakerData({});
+      setTimeout(() => navigate("/"), 1500)
+    
+    });
+  }
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
@@ -88,7 +108,7 @@ function App() {
               <div className="homePageAlertContainer">
                 <Alert display={alertDisplay} requestStatus={alertStatus} alertMessage={alertMessage}/>
               </div>
-              <NavBar totalItems={cart?.total_items} />
+              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
               <Products products={products} onAddToCart={handleAddToCart} />
             </>
           }
@@ -98,7 +118,7 @@ function App() {
           path="/login"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} />
+              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
               <CustomerLogin
                 hideAlert={hideAlert}
                 alertDisplay={alertDisplay}
@@ -118,7 +138,7 @@ function App() {
           path="/sign-up"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} />
+              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
               <CustomerSignUp
                 hideAlert={hideAlert}
                 alertDisplay={alertDisplay}
@@ -152,7 +172,7 @@ function App() {
           path="/forgot-password"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} />
+              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
               <ForgotPassword />
             </>
           }
@@ -162,7 +182,7 @@ function App() {
           path="/admin-forgot-password"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} />
+              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
               <ForgotPassword />
             </>
           }
@@ -171,7 +191,7 @@ function App() {
           path="/admin-login"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} />
+              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
               <BakerLogin />
             </>
           }
@@ -180,7 +200,7 @@ function App() {
           path="/bakery-portal/*"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} />
+              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
               <BakeryPortal />
             </>
           }

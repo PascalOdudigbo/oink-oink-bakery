@@ -3501,3 +3501,1832 @@ Processing by CustomersController#logged_in as */*
 Completed 201 Created in 15ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 856)
 
 
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 21:04:18 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 201 Created in 6ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 21:05:00 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 872)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 21:05:06 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 21:05:06 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 21:07:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 8ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 853)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 22:36:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 22:45:19 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 96ms (Views: 1.4ms | ActiveRecord: 8.0ms | Allocations: 2990)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:23:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 23:24:10 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 31ms (Views: 1.2ms | ActiveRecord: 5.1ms | Allocations: 3002)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:28:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-08 23:29:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 23:37:47 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 50ms (Views: 1.1ms | ActiveRecord: 37.2ms | Allocations: 2975)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-08 23:38:59 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:10:13 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 25ms (Views: 1.3ms | ActiveRecord: 11.3ms | Allocations: 2958)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:11:25 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 201 Created in 8ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 852)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:11:34 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 850)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:11:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:12:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:12:27 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 5ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 862)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:12:55 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 857)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:13:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:13:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:13:37 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 846)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:13:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:14:00 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 48ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 868)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:14:28 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 6ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:15:19 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 6ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:16:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:16:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:16:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:16:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:16:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:16:58 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 12ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 854)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:17:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:17:41 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 201 Created in 6ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 854)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:17:51 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 201 Created in 7ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:19:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:19:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:19:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:19:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:20:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:20:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:20:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:20:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:20:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:21:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:25:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:30:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:30:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:30:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:30:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:30:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:30:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:31:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:31:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 01:31:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:39:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 20ms (Views: 1.7ms | ActiveRecord: 6.7ms | Allocations: 2989)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:40:17 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 201 Created in 6ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 864)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:42:16 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 8ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:42:56 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 859)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:43:31 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 857)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:45:32 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 7ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 01:52:42 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 22ms (Views: 1.3ms | ActiveRecord: 8.3ms | Allocations: 2953)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:05:59 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 34ms (Views: 1.2ms | ActiveRecord: 8.8ms | Allocations: 2959)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:09:53 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:12:11 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 11ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 849)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:14:21 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 13ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:14:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 857)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:15:21 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 5ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:15:34 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 7ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:16:30 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 852)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:17:27 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 856)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:22:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:23:13 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 201 Created in 20ms (Views: 1.3ms | ActiveRecord: 7.9ms | Allocations: 2978)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:24:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:24:16 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 6ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 848)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:25:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:25:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:25:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:25:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:25:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:33:45 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (21.43ms)
+Completed 201 Created in 429ms (Views: 22.2ms | ActiveRecord: 72.0ms | Allocations: 2954)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:34:24 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 853)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:35:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:35:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:35:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:36:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:36:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:36:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:36:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:36:03 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (4.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 12ms (Views: 1.6ms | ActiveRecord: 4.8ms | Allocations: 847)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:37:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:37:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:37:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:37:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:37:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:37:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:37:37 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 842)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:39:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:39:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:39:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:42:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:43:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:44:41 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 22ms (Views: 0.8ms | ActiveRecord: 9.0ms | Allocations: 2995)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:44:41 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 7ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:45:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:45:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:45:26 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (42.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 143ms (Views: 1.1ms | ActiveRecord: 42.7ms | Allocations: 852)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:45:26 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 868)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:45:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:45:58 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 5ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 844)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:45:58 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (13.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 17ms (Views: 1.0ms | ActiveRecord: 13.1ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:46:07 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 201 Created in 8ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:46:20 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 5ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:46:25 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:46:57 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 4ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:47:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 845)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:47:12 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:47:16 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 851)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:00 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:00 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:00 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:10 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 7ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 851)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:10 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:14 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 5ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:14 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:20 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:23 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:28 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:28 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:50:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:50:52 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 4ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 850)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:51:02 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 10ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 854)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:52:47 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (224.98ms)
+Completed 201 Created in 2548ms (Views: 225.6ms | ActiveRecord: 0.4ms | Allocations: 847)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:54:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:54:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:54:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:54:17 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 982ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 856)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:54:58 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 6ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:55:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:55:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:56:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:56:45 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 77ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:56:56 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 201 Created in 11ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 852)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:56:59 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 848)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:57:39 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 6ms (Views: 1.1ms | ActiveRecord: 1.3ms | Allocations: 853)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:58:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 02:58:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:58:23 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 5ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:58:39 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 855)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-05-09 02:58:44 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/logout"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:59:25 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 850)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 02:59:31 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:00:15 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 857)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-09 03:00:20 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 188)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:00:25 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (15.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.11ms)
+Completed 201 Created in 1065ms (Views: 977.3ms | ActiveRecord: 15.7ms | Allocations: 2082)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 03:01:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 03:02:31 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 341ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 960)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:03:41 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:03:42 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:03:42 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:03:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:03:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 867)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:36 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 201 Created in 5ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 845)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:46 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:46 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:46 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 5ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 849)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:54 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:54 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 5ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:56 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:04:56 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:02 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 851)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:03 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 858)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:09 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:09 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 859)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:17 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 201 Created in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:17 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 857)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:21 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:25 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 851)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:25 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 201 Created in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 869)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:32 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 853)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:05:40 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (1.83ms)
+Completed 201 Created in 7ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-09 03:05:44 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 181)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 03:06:07 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 312ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 956)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:10:05 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 10ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 849)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 03:12:11 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 201 Created in 5ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 861)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-09 03:14:43 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 03:18:37 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 543ms (Views: 0.8ms | ActiveRecord: 169.5ms | Allocations: 3105)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-09 03:19:11 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 04:01:28 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 314ms (Views: 0.7ms | ActiveRecord: 4.7ms | Allocations: 3065)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 11:46:48 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (26.9ms)
+Completed 201 Created in 227ms (Views: 27.6ms | ActiveRecord: 6.9ms | Allocations: 2996)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-09 11:46:59 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:24:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:24:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:25:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:25:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:25:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:26:06 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 19ms (Views: 0.7ms | ActiveRecord: 8.4ms | Allocations: 2964)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:27:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:27:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:30:20 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 5ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 866)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:31:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:31:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 12:32:02 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 311ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 960)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:32:11 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 850)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:34:08 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 857)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:36:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:37:16 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 5ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 856)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:40:07 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 201 Created in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 858)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:40:14 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 863)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:40:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 7ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:40:54 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 8ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 855)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:41:05 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 6ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 847)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:41:12 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 201 Created in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 858)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-09 12:41:47 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 189)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:42:32 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 5ms (Views: 1.9ms | ActiveRecord: 1.0ms | Allocations: 863)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:44:44 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 861)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:44:44 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 12ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 867)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-09 12:45:01 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 201 Created in 310ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 964)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-09 12:45:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-09 12:48:09 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:48:42 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 862)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-09 12:48:45 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 869)
+
+
