@@ -13,7 +13,6 @@ import {
 } from "./Components";
 import { commerce } from "./lib/commerce";
 
-
 function App() {
   //declaring states to manage dynamic data
   const [products, setProducts] = useState([]);
@@ -69,32 +68,63 @@ function App() {
             setAlertMessage("Please verify your email address!");
             setAlertStatus(false);
             setAlertDisplay("block");
-            setTimeout(() => {hideAlert()}, 5000);
+            setTimeout(() => {
+              hideAlert();
+            }, 5000);
           }
         }
       });
   }
 
+  //defining a function to implement automatic login using baker backend session data
+  function isBakerLoggedIn() {
+    //using user session data to retrieve baker data
+    fetch("/baker-logged-in")
+      .then((response) => response.json())
+      .then((BakerData) => {
+        if (BakerData) {
+          setBakerData(BakerData);
+          // localStorage.setItem("bakerData", BakerData);
+          // let data = localStorage.getItem("bakerData")
+          // console.log(data.first_name)
+
+        }
+      });
+  }
+
   //defining a function to implement user logout
-  function handleLogout(setIsLoading){
-    fetch("/customer-logout", {
-        method: "DELETE",
-    }).then(() => {
-      setIsLoading(false);
-      setAlertStatus(true);
-      setAlertMessage("Logout successful!");
-      setAlertDisplay("block");
-      hideAlert()
-      customerData?.verified ? setCustomerData({}):  bakerData?.first_name && setBakerData({});
-      setTimeout(() => navigate("/"), 1500)
-    
-    });
+  function handleLogout(setIsLoading) {
+    customerData?.verified
+      ? fetch("/customer-logout", {
+          method: "DELETE",
+        }).then(() => {
+          setIsLoading(false);
+          setAlertStatus(true);
+          setAlertMessage("Logout successful!");
+          setAlertDisplay("block");
+          hideAlert();
+          setCustomerData({});
+          setTimeout(() => navigate("/"), 1500);
+        })
+      : bakerData?.first_name &&
+        fetch("/baker-logout", {
+          method: "DELETE",
+        }).then(() => {
+          setIsLoading(false);
+          setAlertStatus(true);
+          setAlertMessage("Logout successful!");
+          setAlertDisplay("block");
+          hideAlert();
+          setBakerData({});
+          setTimeout(() => navigate("/"), 1500);
+        });
   }
 
   useEffect(() => {
+    isCustomerLoggedIn();
+    isBakerLoggedIn();
     fetchProducts();
     fetchCart();
-    isCustomerLoggedIn();
   }, []);
 
   return (
@@ -106,9 +136,18 @@ function App() {
           element={
             <>
               <div className="homePageAlertContainer">
-                <Alert display={alertDisplay} requestStatus={alertStatus} alertMessage={alertMessage}/>
+                <Alert
+                  display={alertDisplay}
+                  requestStatus={alertStatus}
+                  alertMessage={alertMessage}
+                />
               </div>
-              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
+              <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+              />
               <Products products={products} onAddToCart={handleAddToCart} />
             </>
           }
@@ -118,7 +157,12 @@ function App() {
           path="/login"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
+              <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+              />
               <CustomerLogin
                 hideAlert={hideAlert}
                 alertDisplay={alertDisplay}
@@ -138,7 +182,12 @@ function App() {
           path="/sign-up"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
+              <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+              />
               <CustomerSignUp
                 hideAlert={hideAlert}
                 alertDisplay={alertDisplay}
@@ -147,7 +196,6 @@ function App() {
                 setAlertMessage={setAlertMessage}
                 alertStatus={alertStatus}
                 setAlertStatus={setAlertStatus}
-                
               />
             </>
           }
@@ -172,7 +220,12 @@ function App() {
           path="/forgot-password"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
+              <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+              />
               <ForgotPassword />
             </>
           }
@@ -182,7 +235,12 @@ function App() {
           path="/admin-forgot-password"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
+              <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+              />
               <ForgotPassword />
             </>
           }
@@ -191,8 +249,13 @@ function App() {
           path="/admin-login"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
-              <BakerLogin  
+              <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+              />
+              <BakerLogin
                 hideAlert={hideAlert}
                 alertDisplay={alertDisplay}
                 setAlertDisplay={setAlertDisplay}
@@ -210,8 +273,15 @@ function App() {
           path="/bakery-portal/*"
           element={
             <>
-              <NavBar totalItems={cart?.total_items} customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/>
-              <BakeryPortal />
+              <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+              />
+              <BakeryPortal
+                bakerData={bakerData}
+              />
             </>
           }
         />

@@ -20,7 +20,7 @@ function NavBar({ totalItems, bakerData, customerData, handleLogout }) {
             <div className="flexibleGrow" />
 
             {
-                customerData?.verified == true || bakerData?.first_name ? 
+                customerData?.verified === true || bakerData?.first_name ? 
                 <UserSignedInDropdown customerData={customerData} bakerData={bakerData} handleLogout={handleLogout}/> : 
                 window.location.href.includes("/login") ||
                 window.location.href.includes("/admin-login") ||

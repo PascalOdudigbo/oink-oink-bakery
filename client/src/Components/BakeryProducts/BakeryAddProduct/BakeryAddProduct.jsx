@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { CheckBox } from "../..";
 import { IconContext } from "react-icons/lib";
@@ -29,6 +29,8 @@ function BakeryAddProduct() {
     const uploadImagesRef = useRef(null)
     const uploadBtnIconStyle = { color: "black", marginTop: "10px" };
     const deleteBtnIconStyle = {color: "black"}
+
+    
 
 
     return (
@@ -77,7 +79,9 @@ function BakeryAddProduct() {
                                         <Tooltip title="delete" arrow>
                                             <button className="deleteImgBtn" onClick={(e) => { 
                                                 e.preventDefault()
-                                                imageFiles.splice(index, 1)
+                                                let newData = imageFiles.filter((image)=>image != imageFiles[index])
+                                                setImageFiles(newData)
+                                                
                                             }}>
                                                 <IconContext.Provider value={{ size: '15px' }}>
                                                     <AiFillDelete  style={deleteBtnIconStyle}/>

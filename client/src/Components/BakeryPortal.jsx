@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { MdDashboard, MdReviews } from 'react-icons/md';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 import { HiUsers } from 'react-icons/hi';
@@ -9,8 +9,14 @@ import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
 import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct } from "../Components";
 
-function BakerHome() {
+function BakeryPortal({bakerData}) {
+    //styling the navbar icons
     const iconStyles = { marginRight: "10px", marginLeft: "6px", color: "black" };
+
+    //declaring and initializing navigate variable function
+    const navigate = useNavigate();
+    typeof(bakerData?.first_name) !== typeof("") && navigate("/");
+
     return (
         <div className="bakeryPortalContainer">
             <div className="bakeryPortalNavBar">
@@ -81,4 +87,4 @@ function BakerHome() {
         </div>
     );
 }
-export default BakerHome;
+export default BakeryPortal;
