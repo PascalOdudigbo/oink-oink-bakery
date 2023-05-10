@@ -14,7 +14,7 @@ function ForgotPassword({hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
     const [isLoading, setIsLoading] = useState(false);
 
     //declaring and initializing link path variable
-    const linkpath = "https://localhost:4000/reset-password"
+    const linkpath = "localhost:4000/reset-password"
 
     //declaring a variable function to navigate to login page on successful signUp
     const navigate = useNavigate();

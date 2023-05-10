@@ -6,6 +6,7 @@ import {
   CustomerLogin,
   CustomerSignUp,
   ForgotPassword,
+  ResetPassword,
   BakerLogin,
   BakeryPortal,
   CustomerConfirmEmail,
@@ -258,6 +259,22 @@ function App() {
             </>
           }
         />
+
+        <Route
+          path="/reset-password/*"
+          element={
+            <ResetPassword
+              hideAlert={hideAlert}
+              alertDisplay={alertDisplay}
+              setAlertDisplay={setAlertDisplay}
+              alertMessage={alertMessage}
+              setAlertMessage={setAlertMessage}
+              alertStatus={alertStatus}
+              setAlertStatus={setAlertStatus}
+            />
+          }
+        />
+
         <Route
           path="/admin-login"
           element={

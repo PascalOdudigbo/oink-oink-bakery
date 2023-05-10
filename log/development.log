@@ -10868,3 +10868,737 @@ Processing by BakersController#account_recovery as HTML
 Completed 202 Accepted in 406ms (Views: 106.0ms | ActiveRecord: 3.6ms | Allocations: 4612)
 
 
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-10 19:19:10 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 294ms (Views: 0.7ms | ActiveRecord: 6.1ms | Allocations: 3003)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:24:18 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:24:18 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 183ms (Views: 1.9ms | ActiveRecord: 170.2ms | Allocations: 5423)
+
+
+Completed 201 Created in 190ms (Views: 0.9ms | ActiveRecord: 177.3ms | Allocations: 6627)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:24:22 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:24:22 +0300
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1093)
+
+
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.9ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 7ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 841)
+
+
+Started DELETE "/baker-logout" for 127.0.0.1 at 2023-05-10 19:24:30 +0300
+Processing by BakersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 189)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:41:19 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:41:19 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 258ms (Views: 0.6ms | ActiveRecord: 185.6ms | Allocations: 4808)
+
+
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 271ms (Views: 0.7ms | ActiveRecord: 186.6ms | Allocations: 6874)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:41:21 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:41:21 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (3.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 3.7ms | Allocations: 1784)
+
+
+  [1m[36mBaker Load (3.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 3.4ms | Allocations: 1767)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:41:26 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:41:26 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+  [1m[36mBaker Load (1.0ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 9ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 1816)
+
+
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 8ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 1797)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:41:32 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:41:32 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 11ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1826)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:42:59 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1252)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:42:59 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 873)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:46:17 +0300
+Processing by BakersController#logged_in as */*
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:46:17 +0300
+  [1m[36mBaker Load (1.1ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 1420)
+
+
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 865)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:49:00 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:49:00 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (5.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 14ms (Views: 1.3ms | ActiveRecord: 5.4ms | Allocations: 1932)
+
+
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 24ms (Views: 1.1ms | ActiveRecord: 9.8ms | Allocations: 3831)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:49:08 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 894)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:49:08 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 848)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:50:17 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.11ms)
+Completed 201 Created in 7ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 864)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:50:17 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 843)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 19:51:13 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 19:51:13 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (5.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 15ms (Views: 2.1ms | ActiveRecord: 5.7ms | Allocations: 1675)
+
+
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 19ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 1760)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:41:02 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:41:02 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 44ms (Views: 0.7ms | ActiveRecord: 31.2ms | Allocations: 4529)
+
+
+  [1m[36mBaker Load (0.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 201 Created in 47ms (Views: 0.9ms | ActiveRecord: 10.7ms | Allocations: 5766)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:41:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:41:04 +0300
+Processing by BakersController#logged_in as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 9ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1703)
+
+
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+Completed 201 Created in 9ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 1247)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:41:59 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:41:59 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 201 Created in 9ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1384)
+
+
+  [1m[36mCustomer Load (3.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 10ms (Views: 0.6ms | ActiveRecord: 3.0ms | Allocations: 1803)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:46:15 +0300
+Processing by BakersController#logged_in as */*
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:46:15 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (1.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 201 Created in 8ms (Views: 1.9ms | ActiveRecord: 1.3ms | Allocations: 1340)
+
+
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 11ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 1834)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:46:46 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:46:46 +0300
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Processing by BakersController#logged_in as */*
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 13ms (Views: 1.5ms | ActiveRecord: 2.0ms | Allocations: 1679)
+
+
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 16ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 1379)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:46:47 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:46:47 +0300
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.12ms)
+Processing by BakersController#logged_in as */*
+Completed 201 Created in 8ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1484)
+
+
+  [1m[36mBaker Load (1.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 8ms (Views: 3.3ms | ActiveRecord: 1.6ms | Allocations: 1174)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:47:57 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:47:57 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 21ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1708)
+
+
+  [1m[36mBaker Load (4.9ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 18ms (Views: 1.2ms | ActiveRecord: 4.9ms | Allocations: 1805)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:48:43 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:48:43 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+  [1m[36mBaker Load (0.8ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+Completed 201 Created in 8ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1672)
+
+
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 9ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 1756)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:49:32 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.15ms)
+Completed 201 Created in 5ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 868)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:49:32 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 846)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:50:05 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:50:05 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.12ms)
+Completed 201 Created in 10ms (Views: 2.3ms | ActiveRecord: 3.5ms | Allocations: 1763)
+
+
+  [1m[36mBaker Load (1.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 20ms (Views: 3.3ms | ActiveRecord: 1.4ms | Allocations: 1776)
+
+
+Started GET "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/tapable/lib/HookCodeFactory.js" for 127.0.0.1 at 2023-05-10 20:51:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/tapable/lib/HookCodeFactory.js"):
+  
+Started GET "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/enhanced-resolve/lib/Resolver.js" for 127.0.0.1 at 2023-05-10 20:51:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/enhanced-resolve/lib/Resolver.js"):
+  
+Started GET "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js" for 127.0.0.1 at 2023-05-10 20:51:40 +0300
+Started GET "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js" for 127.0.0.1 at 2023-05-10 20:51:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/home/pascal/Documents/Development/code/Projects/oink-oink-bakery/client/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:51:55 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:51:55 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 11ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1516)
+
+
+  [1m[36mBaker Load (3.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 13ms (Views: 2.0ms | ActiveRecord: 3.7ms | Allocations: 1811)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:52:29 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 870)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:52:29 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 201 Created in 5ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 848)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:56:26 +0300
+Processing by BakersController#logged_in as */*
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:56:26 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (2.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 201 Created in 9ms (Views: 1.8ms | ActiveRecord: 2.5ms | Allocations: 1839)
+
+
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 10ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 1827)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:58:05 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:58:05 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 844)
+
+
+  [1m[36mCustomer Load (6.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 14ms (Views: 0.8ms | ActiveRecord: 6.8ms | Allocations: 2622)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 20:59:04 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 20:59:04 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (1.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 16ms (Views: 3.7ms | ActiveRecord: 1.7ms | Allocations: 1846)
+
+
+Completed 201 Created in 11ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1546)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:00:08 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:00:08 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 6ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 894)
+
+
+  [1m[36mCustomer Load (4.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 23ms (Views: 0.9ms | ActiveRecord: 4.5ms | Allocations: 2619)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:00:20 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 952)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:00:20 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 864)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:00:41 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:00:41 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 15ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 1671)
+
+
+  [1m[36mBaker Load (0.8ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 20ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 1801)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:01:00 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:01:00 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 6ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1275)
+
+
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 13ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 2666)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:02:41 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:02:41 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (6.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 9ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1385)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 18ms (Views: 4.5ms | ActiveRecord: 6.4ms | Allocations: 2695)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:04:37 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:04:37 +0300
+Processing by BakersController#logged_in as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (4.53ms)
+Completed 201 Created in 9ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 1720)
+
+
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 5ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 1201)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:05:04 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 2.1ms | Allocations: 866)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:05:04 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 5ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 844)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 21:09:26 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 21:09:26 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.16ms)
+Completed 201 Created in 7ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1419)
+
+
+Completed 201 Created in 11ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1986)
+
+
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 21:13:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 22:12:44 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 22:12:44 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 80ms (Views: 0.8ms | ActiveRecord: 34.1ms | Allocations: 5984)
+
+
+Completed 201 Created in 45ms (Views: 1.2ms | ActiveRecord: 30.2ms | Allocations: 4763)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 22:13:28 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 22:13:28 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 1634)
+
+
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 11ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 1744)
+
+
+Started PATCH "/customers/1" for 127.0.0.1 at 2023-05-10 22:13:38 +0300
+Processing by CustomersController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:78:in `set_customer'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:63:in `update'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 AND "customers"."id" != $2 LIMIT $3[0m  [["email", "odudigbopascal@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:63:in `update'
+  [1m[36mCustomer Update (157.8ms)[0m  [1m[33mUPDATE "customers" SET "password_digest" = $1, "updated_at" = $2 WHERE "customers"."id" = $3[0m  [["password_digest", "$2a$12$/7qzmhwLYGR2aIe1XmpEN.0lBkkOJ1eYiC44TKEkCDqDbjZY05QDO"], ["updated_at", "2023-05-10 19:13:38.560142"], ["id", 1]]
+  ↳ app/controllers/customers_controller.rb:63:in `update'
+  [1m[36mTRANSACTION (45.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:63:in `update'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 544ms (Views: 1.0ms | ActiveRecord: 205.0ms | Allocations: 3656)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-10 22:14:13 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 287ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 967)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 22:15:52 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 22:15:52 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (1.2ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 201 Created in 8ms (Views: 1.6ms | ActiveRecord: 1.2ms | Allocations: 1213)
+
+
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 13ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1957)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-10 22:16:02 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 186)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 22:16:14 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 914)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 22:16:14 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 6ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 838)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 22:16:19 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 11ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1245)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 22:16:19 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (1.2ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 8ms (Views: 1.4ms | ActiveRecord: 1.2ms | Allocations: 846)
+
+

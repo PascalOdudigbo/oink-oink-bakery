@@ -7,6 +7,7 @@ export {default as CustomerLogin} from './CustomerLogin';
 export {default as CustomerSignUp} from './CustomerSignUp';
 export {default as CustomerConfirmEmail} from './CustomerConfirmEmail';
 export {default as ForgotPassword} from './ForgotPassword'; 
+export {default as ResetPassword} from './ResetPassword';
 export {default as Alert} from './Alert';
 export {default as BakerLogin} from './BakerLogin';
 export {default as BakeryPortal} from './BakeryPortal';
