@@ -24,6 +24,17 @@ class CustomersController < ApplicationController
     head :no_content
   end
 
+  # POST /customer-account-recovery
+  def account_recovery
+    customer = Customer.find_by(email: params[:email])
+    if customer != nil
+      render json: customer, status: :accepted
+    else
+      render json: {error: "Email isn't linked to any account!"}, status: :unauthorized
+    end
+  
+  end
+
   # GET /customers
   def index
     @customers = Customer.all

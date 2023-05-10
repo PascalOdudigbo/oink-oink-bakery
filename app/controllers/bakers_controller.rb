@@ -24,6 +24,17 @@ class BakersController < ApplicationController
     head :no_content
   end
 
+  # POST /bakerer-account-recovery
+  def account_recovery
+    baker = Baker.find_by(email: params[:email])
+    if baker != nil
+      render json: baker, status: :accepted
+    else
+      render json: {error: "Email isn't linked to any account!"}, status: :unauthorized
+    end
+  
+  end
+
   # GET /bakers
   def index
     @bakers = Baker.all

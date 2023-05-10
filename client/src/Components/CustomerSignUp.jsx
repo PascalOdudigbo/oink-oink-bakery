@@ -59,7 +59,7 @@ function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
                 };
 
                 //sending the email
-                emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, emailValues, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+                emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_VERIFY_EMAIL_TEMPLATE_ID, emailValues, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
                 .then(
                     //on email sent successfully
                     () => {

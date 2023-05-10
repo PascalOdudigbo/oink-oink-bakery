@@ -84,16 +84,13 @@ function App() {
       .then((BakerData) => {
         if (BakerData) {
           setBakerData(BakerData);
-          // localStorage.setItem("bakerData", BakerData);
-          // let data = localStorage.getItem("bakerData")
-          // console.log(data.first_name)
-
         }
       });
   }
 
   //defining a function to implement user logout
   function handleLogout(setIsLoading) {
+    window.scrollTo(0, 0);
     customerData?.verified
       ? fetch("/customer-logout", {
           method: "DELETE",
@@ -226,7 +223,15 @@ function App() {
                 bakerData={bakerData}
                 handleLogout={handleLogout}
               />
-              <ForgotPassword />
+              <ForgotPassword
+                hideAlert={hideAlert}
+                alertDisplay={alertDisplay}
+                setAlertDisplay={setAlertDisplay}
+                alertMessage={alertMessage}
+                setAlertMessage={setAlertMessage}
+                alertStatus={alertStatus}
+                setAlertStatus={setAlertStatus}
+              />
             </>
           }
         />
@@ -241,7 +246,15 @@ function App() {
                 bakerData={bakerData}
                 handleLogout={handleLogout}
               />
-              <ForgotPassword />
+              <ForgotPassword 
+                hideAlert={hideAlert}
+                alertDisplay={alertDisplay}
+                setAlertDisplay={setAlertDisplay}
+                alertMessage={alertMessage}
+                setAlertMessage={setAlertMessage}
+                alertStatus={alertStatus}
+                setAlertStatus={setAlertStatus}
+              />
             </>
           }
         />
