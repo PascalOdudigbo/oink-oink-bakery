@@ -11602,3 +11602,1784 @@ Processing by BakersController#logged_in as */*
 Completed 201 Created in 8ms (Views: 1.4ms | ActiveRecord: 1.2ms | Allocations: 846)
 
 
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:03:04 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:03:04 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 201 Created in 27ms (Views: 1.3ms | ActiveRecord: 14.4ms | Allocations: 4761)
+
+
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 55ms (Views: 0.7ms | ActiveRecord: 11.8ms | Allocations: 6835)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:04:16 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:04:16 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (3.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 11ms (Views: 0.8ms | ActiveRecord: 3.6ms | Allocations: 1755)
+
+
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 12ms (Views: 1.1ms | ActiveRecord: 0.7ms | Allocations: 1788)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:04:24 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 6ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 870)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:04:24 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 5ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 849)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:05:49 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:05:49 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 10ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1676)
+
+
+  [1m[36mBaker Load (2.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 11ms (Views: 1.3ms | ActiveRecord: 2.6ms | Allocations: 1802)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:06:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 872)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:06:49 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 10ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 840)
+
+
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:14:44 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:14:44 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+  [1m[36mBaker Load (1.1ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 201 Created in 92ms (Views: 1.6ms | ActiveRecord: 76.7ms | Allocations: 5482)
+
+
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 89ms (Views: 1.4ms | ActiveRecord: 72.3ms | Allocations: 5673)
+
+
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:21:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:21:47 +0300
+Processing by BakersController#logged_in as */*
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:21:47 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 53ms (Views: 2.0ms | ActiveRecord: 16.3ms | Allocations: 6232)
+
+
+Completed 201 Created in 50ms (Views: 1.1ms | ActiveRecord: 16.6ms | Allocations: 5513)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:22:14 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:22:14 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 162ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1166)
+
+
+  [1m[36mBaker Load (0.9ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 201 Created in 164ms (Views: 1.4ms | ActiveRecord: 0.9ms | Allocations: 1806)
+
+
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/reset-password/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/reset-password/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-10 23:23:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-10 23:23:51 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-10 23:23:51 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 20ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1737)
+
+
+  [1m[36mBaker Load (3.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 20ms (Views: 1.6ms | ActiveRecord: 3.7ms | Allocations: 1793)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:14:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:14:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:14:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:14:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:14:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:14:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:15:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 01:15:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:25:01 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:25:01 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  [1m[36mCustomer Load (4.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 556ms (Views: 1.9ms | ActiveRecord: 389.9ms | Allocations: 5661)
+
+
+Completed 201 Created in 529ms (Views: 0.6ms | ActiveRecord: 460.1ms | Allocations: 5513)
+
+
+Started DELETE "/baker-logout" for 127.0.0.1 at 2023-05-11 13:25:21 +0300
+Processing by BakersController#logout as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 183)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:25:33 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:25:33 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 11ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 1820)
+
+
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 12ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 1752)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:26:00 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:26:00 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 22ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 1833)
+
+
+  [1m[36mBaker Load (0.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 20ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1771)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:27:06 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:27:06 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (6.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 12ms (Views: 0.8ms | ActiveRecord: 6.0ms | Allocations: 1802)
+
+
+  [1m[36mBaker Load (0.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 10ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1766)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:27:21 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:27:21 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 22ms (Views: 1.5ms | ActiveRecord: 3.3ms | Allocations: 1725)
+
+
+  [1m[36mBaker Load (0.8ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.17ms)
+Completed 201 Created in 14ms (Views: 1.3ms | ActiveRecord: 0.8ms | Allocations: 1737)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:27:57 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:27:57 +0300
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.13ms)
+Processing by BakersController#logged_in as */*
+Completed 201 Created in 14ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 1475)
+
+
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 11ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1181)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:28:06 +0300
+Processing by BakersController#logged_in as */*
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:28:06 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (0.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 11ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 1488)
+
+
+Completed 201 Created in 15ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1987)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 13:28:32 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 299ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 716)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 13:28:40 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 301ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 714)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 13:28:46 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 287ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 949)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:33:43 +0300
+Processing by BakersController#logged_in as */*
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:33:43 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (1.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 7ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1422)
+
+
+Completed 201 Created in 11ms (Views: 3.8ms | ActiveRecord: 1.3ms | Allocations: 2316)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 13:34:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 13:34:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 13:34:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 13:34:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 13:34:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 13:34:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:59:52 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:59:52 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 134ms (Views: 1.7ms | ActiveRecord: 73.4ms | Allocations: 5644)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 141ms (Views: 3.8ms | ActiveRecord: 19.0ms | Allocations: 6812)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 13:59:56 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 13:59:56 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.8ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+Completed 201 Created in 6ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 1290)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 12ms (Views: 2.0ms | ActiveRecord: 1.4ms | Allocations: 2622)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:02:49 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:02:49 +0300
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 6ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 1211)
+
+
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 872)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:06:18 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:06:18 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.7ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 276ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 1170)
+
+
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 549ms (Views: 0.7ms | ActiveRecord: 7.8ms | Allocations: 4400)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:06:19 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:06:19 +0300
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 4ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 1193)
+
+
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 866)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:06:20 +0300
+Processing by BakersController#logged_in as */*
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:06:20 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (1.1ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 6ms (Views: 0.9ms | ActiveRecord: 1.1ms | Allocations: 1694)
+
+
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 1756)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:06:20 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 201 Created in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1010)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:06:20 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 865)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 14:06:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 14:06:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:08:19 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:08:19 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 6ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1689)
+
+
+Completed 201 Created in 5ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1507)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:08:35 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:08:35 +0300
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Processing by BakersController#logged_in as */*
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 11ms (Views: 1.4ms | ActiveRecord: 1.3ms | Allocations: 1662)
+
+
+  [1m[36mBaker Load (3.9ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.14ms)
+Completed 201 Created in 19ms (Views: 2.7ms | ActiveRecord: 3.9ms | Allocations: 1387)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 14:09:10 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (27.23ms)
+Completed 201 Created in 359ms (Views: 27.9ms | ActiveRecord: 0.3ms | Allocations: 953)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:09:18 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 9ms (Views: 0.8ms | ActiveRecord: 2.9ms | Allocations: 862)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:09:18 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 5ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 843)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:10:01 +0300
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 7ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 883)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:10:01 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (1.2ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 201 Created in 7ms (Views: 2.0ms | ActiveRecord: 1.2ms | Allocations: 846)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:10:29 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:10:29 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.13ms)
+Completed 201 Created in 11ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1415)
+
+
+Completed 201 Created in 14ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 1956)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:10:40 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:10:40 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 16ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2057)
+
+
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 201 Created in 12ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1810)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:10:44 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:10:44 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 9ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 1734)
+
+
+  [1m[36mBaker Load (1.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 201 Created in 14ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 1725)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:11:36 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:11:36 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 12ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 2281)
+
+
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 201 Created in 11ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1808)
+
+
+Started DELETE "/baker-logout" for 127.0.0.1 at 2023-05-11 14:11:51 +0300
+Processing by BakersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 183)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-11 14:15:01 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 401 Unauthorized in 312ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 718)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-05-11 14:15:08 +0300
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 201 Created in 328ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 960)
+
+
+Started DELETE "/customer-logout" for 127.0.0.1 at 2023-05-11 14:15:20 +0300
+Processing by CustomersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 14:15:34 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 14:15:34 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1792)
+
+
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 7ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1817)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 14:15:57 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 309ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 948)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 15:50:10 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 15:50:10 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (131.0ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (111.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 1132ms (Views: 2.0ms | ActiveRecord: 774.3ms | Allocations: 5903)
+
+
+Completed 201 Created in 965ms (Views: 1.2ms | ActiveRecord: 754.7ms | Allocations: 5514)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 16:13:43 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 16:13:43 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 38ms (Views: 1.6ms | ActiveRecord: 22.8ms | Allocations: 4073)
+
+
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 201 Created in 41ms (Views: 1.9ms | ActiveRecord: 11.9ms | Allocations: 5238)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 16:24:49 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 16:24:49 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 83ms (Views: 1.4ms | ActiveRecord: 69.2ms | Allocations: 5858)
+
+
+Completed 201 Created in 81ms (Views: 1.1ms | ActiveRecord: 23.1ms | Allocations: 5453)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 18:18:55 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 18:18:55 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (15.91ms)
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 201 Created in 1288ms (Views: 40.3ms | ActiveRecord: 71.7ms | Allocations: 5876)
+
+
+Completed 201 Created in 967ms (Views: 12.2ms | ActiveRecord: 137.5ms | Allocations: 5779)
+
+
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:21:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:21:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:21:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:21:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:21:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:29:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:29:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/products/" for 127.0.0.1 at 2023-05-11 18:30:40 +0300
+Processing by ProductsController#index as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink"}
+  [1m[36mProduct Load (112.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.76ms)
+Completed 200 OK in 2765ms (Views: 371.9ms | ActiveRecord: 139.3ms | Allocations: 5159)
+
+
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:32:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:32:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:34:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:34:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:34:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:34:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:35:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:35:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 18:36:19 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 18:36:19 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (2.0ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 201 Created in 89ms (Views: 40.8ms | ActiveRecord: 11.0ms | Allocations: 4697)
+
+
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 165ms (Views: 0.8ms | ActiveRecord: 71.3ms | Allocations: 6854)
+
+
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:48:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:48:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:48:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:48:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:48:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:49:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:49:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:49:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:52:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 18:54:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:50 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:06:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:08:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:08:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:08:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:08:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:08:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:08:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:23 +0300
+Started DELETE "/baker-logout" for 127.0.0.1 at 2023-05-11 19:39:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:33 +0300
+Started DELETE "/baker-logout" for 127.0.0.1 at 2023-05-11 19:39:33 +0300
+Processing by BakersController#logout as */*
+Processing by BakersController#logout as */*
+Completed 204 No Content in 17ms (Allocations: 181)
+
+
+Completed 204 No Content in 138ms (Allocations: 607)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:38 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 19:39:38 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 19:39:44 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 19:39:44 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (40.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (40.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+Completed 201 Created in 1854ms (Views: 41.9ms | ActiveRecord: 365.5ms | Allocations: 8454)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 612ms (Views: 18.8ms | ActiveRecord: 341.6ms | Allocations: 6886)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 19:39:53 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 19:39:53 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1562)
+
+
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 7ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1834)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 19:40:10 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.2ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 659ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 3231)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 19:40:16 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 1534ms (Views: 1243.2ms | ActiveRecord: 0.4ms | Allocations: 2320)
+
+
+Started DELETE "/baker-logout" for 127.0.0.1 at 2023-05-11 19:40:22 +0300
+Processing by BakersController#logout as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 19:41:25 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 19:41:25 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (1.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 1.3ms | Allocations: 911)
+
+
+  [1m[36mCustomer Load (3.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 17ms (Views: 1.1ms | ActiveRecord: 3.9ms | Allocations: 2674)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 19:41:53 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 289ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 949)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 19:42:27 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 19:42:27 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (24.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 28ms (Views: 0.6ms | ActiveRecord: 24.7ms | Allocations: 1799)
+
+
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 201 Created in 31ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1848)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 20:11:55 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 20:11:55 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (30.0ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (87.45ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 1930ms (Views: 1.0ms | ActiveRecord: 1111.2ms | Allocations: 5523)
+
+
+Completed 201 Created in 2156ms (Views: 89.0ms | ActiveRecord: 1141.2ms | Allocations: 6091)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 20:16:21 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 20:16:21 +0300
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+  [1m[36mBaker Load (1.1ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 6ms (Views: 1.0ms | ActiveRecord: 1.1ms | Allocations: 1446)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 9ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2094)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 20:16:41 +0300
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 20:16:41 +0300
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (4.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 4.4ms | Allocations: 1723)
+
+
+  [1m[36mBaker Load (4.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 9ms (Views: 1.2ms | ActiveRecord: 4.3ms | Allocations: 1762)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 20:17:18 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 20:17:18 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.42ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 8ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1897)
+
+
+Completed 201 Created in 7ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 1556)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:07 +0300
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:09 +0300
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/bakery-portal/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/bakery-portal/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-05-11 20:22:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/products" for 127.0.0.1 at 2023-05-11 20:30:41 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+Completed 400 Bad Request in 361ms (Allocations: 2009)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product
+Did you mean?  price
+               discount_id
+               description
+               controller):
+  
+app/controllers/products_controller.rb:49:in `product_params'
+app/controllers/products_controller.rb:18:in `create'
+Started POST "/products" for 127.0.0.1 at 2023-05-11 20:32:48 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (192.86ms)
+Completed 422 Unprocessable Entity in 2818ms (Views: 201.5ms | ActiveRecord: 999.3ms | Allocations: 12354)
+
+
+Started GET "/products/" for 127.0.0.1 at 2023-05-11 20:34:30 +0300
+Processing by ProductsController#index as */*
+  Parameters: {"instagram"=>"instagramLink", "twitter"=>"twitterLink", "tiktok"=>"tiktokLink", "facebook"=>"facebookLink", "youtube"=>"youtubeLink"}
+  [1m[36mProduct Load (31.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 35ms (Views: 2.8ms | ActiveRecord: 31.3ms | Allocations: 862)
+
+
+Started POST "/products" for 127.0.0.1 at 2023-05-11 20:36:52 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (1.22ms)
+Completed 422 Unprocessable Entity in 48ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1020)
+
+
+Started POST "/products/" for 127.0.0.1 at 2023-05-11 20:39:55 +0300
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (116.99ms)
+Completed 422 Unprocessable Entity in 120ms (Views: 117.7ms | ActiveRecord: 0.0ms | Allocations: 1018)
+
+
+Started POST "/products" for 127.0.0.1 at 2023-05-11 20:44:39 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (395.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chocolate Fudge Cake"], ["price", 1800.0], ["description", "A lovely, mouth-watering chocolate fudge delicacy."], ["active", true], ["created_at", "2023-05-11 17:44:43.532121"], ["updated_at", "2023-05-11 17:44:43.532121"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (220.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (339.65ms)
+Completed 500 Internal Server Error in 3419ms (ActiveRecord: 866.5ms | Allocations: 13095)
+
+
+  
+NoMethodError (undefined method `discount' for #<Product:0x0000560cb655efb0>
+Did you mean?  discount_id):
+  
+app/controllers/products_controller.rb:21:in `create'
+Started POST "/products/" for 127.0.0.1 at 2023-05-11 20:45:45 +0300
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chocolate Fudge Cake"], ["price", 1800.0], ["description", "A lovely, mouth-watering chocolate fudge delicacy."], ["active", true], ["created_at", "2023-05-11 17:45:45.806604"], ["updated_at", "2023-05-11 17:45:45.806604"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (121.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (10.13ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 135.6ms | Allocations: 5745)
+
+
+  
+NoMethodError (undefined method `discount' for #<Product:0x00007f0d14297368>
+Did you mean?  discount_id):
+  
+app/controllers/products_controller.rb:21:in `create'
+Started POST "/products/" for 127.0.0.1 at 2023-05-11 20:50:56 +0300
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (14.71ms)
+Completed 422 Unprocessable Entity in 312ms (Views: 15.5ms | ActiveRecord: 52.2ms | Allocations: 8792)
+
+
+  [1m[35m (39.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (65.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (468.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "bakers" DISABLE TRIGGER ALL;ALTER TABLE "product_images" DISABLE TRIGGER ALL;ALTER TABLE "discounts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "variant_groups" DISABLE TRIGGER ALL;ALTER TABLE "customers" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "variant_options" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2375.3ms)[0m  [1m[35mTRUNCATE TABLE "bakers", "product_images", "discounts", "products", "variant_groups", "customers", "reviews", "carts", "variant_options", "line_items"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "bakers" ENABLE TRIGGER ALL;ALTER TABLE "reviews" ENABLE TRIGGER ALL;ALTER TABLE "variant_options" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "product_images" ENABLE TRIGGER ALL;ALTER TABLE "discounts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "variant_groups" ENABLE TRIGGER ALL;ALTER TABLE "customers" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (41.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBaker Exists? (22.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bakers" WHERE "bakers"."email" = $1 LIMIT $2[0m  [["email", "jaynasimiyu@gmail.com"], ["LIMIT", 1]]
+  [1m[36mBaker Create (2.9ms)[0m  [1m[32mINSERT INTO "bakers" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ashley"], ["last_name", "Simiyu"], ["email", "jaynasimiyu@gmail.com"], ["password_digest", "$2a$12$urUqx2R/Pje7X.zqhWttzezDI2ATnKvNLXv4pVcIQ4yAx3m4mc9yK"], ["created_at", "2023-05-11 17:56:43.961533"], ["updated_at", "2023-05-11 17:56:43.961533"]]
+  [1m[36mTRANSACTION (27.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDiscount Create (12.9ms)[0m  [1m[32mINSERT INTO "discounts" ("name", "description", "discount_percent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "No discount"], ["description", "The product has no discount"], ["discount_percent", 0.0], ["created_at", "2023-05-11 17:56:44.032706"], ["updated_at", "2023-05-11 17:56:44.032706"]]
+  [1m[36mTRANSACTION (23.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVariantGroup Create (23.6ms)[0m  [1m[32mINSERT INTO "variant_groups" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "No variant group"], ["created_at", "2023-05-11 17:56:44.081774"], ["updated_at", "2023-05-11 17:56:44.081774"]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/products" for 127.0.0.1 at 2023-05-11 20:57:37 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>1, "variant_group_id"=>1, "active"=>true}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mDiscount Load (0.5ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mVariantGroup Load (0.3ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (36.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "discount_id", "variant_group_id", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chocolate Fudge Cake"], ["price", 1800.0], ["description", "A lovely, mouth-watering chocolate fudge delicacy."], ["discount_id", 1], ["variant_group_id", 1], ["active", true], ["created_at", "2023-05-11 17:57:39.274343"], ["updated_at", "2023-05-11 17:57:39.274343"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (124.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (47.28ms)
+Completed 201 Created in 1904ms (Views: 112.7ms | ActiveRecord: 221.3ms | Allocations: 12883)
+
+
+Started POST "/product_images" for 127.0.0.1 at 2023-05-11 20:57:49 +0300
+Processing by ProductImagesController#create as HTML
+  Parameters: {"image_url"=>"http://res.cloudinary.com/db7dgsxy2/image/upload/v1683827868/Oink_Oink_Product_Images/kvtualjlv3qouosz9wjy.jpg", "image_public_id"=>"Oink_Oink_Product_Images/kvtualjlv3qouosz9wjy"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.7ms)
+Completed 422 Unprocessable Entity in 52ms (Views: 1.2ms | ActiveRecord: 2.7ms | Allocations: 3819)
+
+
+Started POST "/product_images" for 127.0.0.1 at 2023-05-11 20:57:53 +0300
+Processing by ProductImagesController#create as HTML
+  Parameters: {"image_url"=>"http://res.cloudinary.com/db7dgsxy2/image/upload/v1683827867/Oink_Oink_Product_Images/ieznjvvqzgctv1fztg6j.jpg", "image_public_id"=>"Oink_Oink_Product_Images/ieznjvvqzgctv1fztg6j"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (1.13ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 644)
+
+
+Started GET "/products/" for 127.0.0.1 at 2023-05-11 21:00:17 +0300
+Processing by ProductsController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.3ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (33.31ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.8ms | Allocations: 1898)
+
+
+Started GET "/product_images/" for 127.0.0.1 at 2023-05-11 21:00:57 +0300
+Processing by ProductImagesController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProductImage Load (20.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images"[0m
+  ↳ app/controllers/product_images_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 24ms (Views: 2.9ms | ActiveRecord: 20.3ms | Allocations: 760)
+
+
+Started GET "/product_images/" for 127.0.0.1 at 2023-05-11 21:01:18 +0300
+Processing by ProductImagesController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images"[0m
+  ↳ app/controllers/product_images_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 738)
+
+
+Started POST "/products" for 127.0.0.1 at 2023-05-11 21:08:23 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>1, "variant_group_id"=>1, "active"=>true}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mDiscount Load (67.2ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mVariantGroup Load (0.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (78.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "discount_id", "variant_group_id", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chocolate Fudge Cake"], ["price", 1800.0], ["description", "A lovely, mouth-watering chocolate fudge delicacy."], ["discount_id", 1], ["variant_group_id", 1], ["active", true], ["created_at", "2023-05-11 18:08:28.557490"], ["updated_at", "2023-05-11 18:08:28.557490"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (311.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (30.85ms)
+Completed 201 Created in 2591ms (Views: 31.6ms | ActiveRecord: 1252.5ms | Allocations: 5880)
+
+
+Started POST "/product_images" for 127.0.0.1 at 2023-05-11 21:08:38 +0300
+Started POST "/product_images" for 127.0.0.1 at 2023-05-11 21:08:38 +0300
+Processing by ProductImagesController#create as HTML
+Processing by ProductImagesController#create as HTML
+  Parameters: {"image_url"=>"http://res.cloudinary.com/db7dgsxy2/image/upload/v1683828516/Oink_Oink_Product_Images/es2h5gga1dxnl7tfcad1.jpg", "image_public_id"=>"Oink_Oink_Product_Images/es2h5gga1dxnl7tfcad1"}
+  Parameters: {"image_url"=>"http://res.cloudinary.com/db7dgsxy2/image/upload/v1683828516/Oink_Oink_Product_Images/ooxb4comthxlvwoorvzw.jpg", "image_public_id"=>"Oink_Oink_Product_Images/ooxb4comthxlvwoorvzw"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.62ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 965)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.51ms)
+Completed 422 Unprocessable Entity in 841ms (Views: 0.9ms | ActiveRecord: 135.6ms | Allocations: 3376)
+
+
+Started POST "/products" for 127.0.0.1 at 2023-05-11 21:13:08 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>1, "variant_group_id"=>1, "active"=>true}
+  [1m[36mTRANSACTION (88.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mDiscount Load (47.4ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mVariantGroup Load (0.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (254.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "discount_id", "variant_group_id", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chocolate Fudge Cake"], ["price", 1800.0], ["description", "A lovely, mouth-watering chocolate fudge delicacy."], ["discount_id", 1], ["variant_group_id", 1], ["active", true], ["created_at", "2023-05-11 18:13:10.578473"], ["updated_at", "2023-05-11 18:13:10.578473"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (234.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (8.77ms)
+Completed 201 Created in 1546ms (Views: 9.5ms | ActiveRecord: 799.7ms | Allocations: 3901)
+
+
+Started GET "/products/" for 127.0.0.1 at 2023-05-11 21:30:07 +0300
+  [1m[35m (195.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProduct Load (642.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (43.5ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (580.11ms)
+Completed 200 OK in 3065ms (Views: 1269.1ms | ActiveRecord: 1073.8ms | Allocations: 20328)
+
+
+Started DELETE "/products/3" for 127.0.0.1 at 2023-05-11 21:31:03 +0300
+Processing by ProductsController#destroy as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true, "id"=>"3"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProductImage Load (26.0ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (349.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (56.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+Completed 204 No Content in 563ms (ActiveRecord: 434.2ms | Allocations: 5538)
+
+
+Started DELETE "/products/4" for 127.0.0.1 at 2023-05-11 21:31:07 +0300
+Processing by ProductsController#destroy as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true, "id"=>"4"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (0.9ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (60.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+Completed 204 No Content in 81ms (ActiveRecord: 63.5ms | Allocations: 2524)
+
+
+Started DELETE "/products/5" for 127.0.0.1 at 2023-05-11 21:31:11 +0300
+Processing by ProductsController#destroy as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true, "id"=>"5"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProductImage Load (0.6ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (1.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (48.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:38:in `destroy'
+Completed 204 No Content in 77ms (ActiveRecord: 51.1ms | Allocations: 2525)
+
+
+Started GET "/products/" for 127.0.0.1 at 2023-05-11 21:31:19 +0300
+Processing by ProductsController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 744)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 21:32:53 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 21:32:53 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (280.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBaker Load (93.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (124.42ms)
+Completed 201 Created in 1186ms (Views: 0.9ms | ActiveRecord: 277.9ms | Allocations: 7096)
+
+
+Completed 201 Created in 822ms (Views: 428.5ms | ActiveRecord: 296.3ms | Allocations: 6527)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 21:33:41 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 21:33:41 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (1.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 1303)
+
+
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 1720)
+
+
+Started POST "/baker-login" for 127.0.0.1 at 2023-05-11 21:34:00 +0300
+Processing by BakersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mBaker Load (20.2ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:6:in `login'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 201 Created in 568ms (Views: 228.0ms | ActiveRecord: 23.1ms | Allocations: 4954)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-11 21:34:40 +0300
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-11 21:34:40 +0300
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.37ms)
+Completed 201 Created in 6ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 1398)
+
+
+  [1m[36mCustomer Load (9.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 14ms (Views: 0.6ms | ActiveRecord: 9.7ms | Allocations: 1906)
+
+
+Started POST "/products" for 127.0.0.1 at 2023-05-11 21:36:10 +0300
+Processing by ProductsController#create as HTML
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy", "discount_id"=>1, "variant_group_id"=>1, "active"=>true}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mDiscount Load (0.5ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mVariantGroup Load (12.5ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (224.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "description", "discount_id", "variant_group_id", "active", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Chocolate Fudge Cake"], ["price", 1800.0], ["description", "A lovely, mouth-watering chocolate fudge delicacy"], ["discount_id", 1], ["variant_group_id", 1], ["active", true], ["created_at", "2023-05-11 18:36:10.497126"], ["updated_at", "2023-05-11 18:36:10.497126"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (29.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 201 Created in 373ms (Views: 1.4ms | ActiveRecord: 269.9ms | Allocations: 8181)
+
+
+Started POST "/product_images" for 127.0.0.1 at 2023-05-11 21:36:18 +0300
+Processing by ProductImagesController#create as HTML
+  Parameters: {"product_id"=>38, "image_url"=>"http://res.cloudinary.com/db7dgsxy2/image/upload/v1683830177/Oink_Oink_Product_Images/zqyaknflg0019qvtglib.jpg", "image_public_id"=>"Oink_Oink_Product_Images/zqyaknflg0019qvtglib"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+  [1m[36mProductImage Create (26.7ms)[0m  [1m[32mINSERT INTO "product_images" ("product_id", "image_url", "image_public_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 38], ["image_url", "http://res.cloudinary.com/db7dgsxy2/image/upload/v1683830177/Oink_Oink_Product_Images/zqyaknflg0019qvtglib.jpg"], ["image_public_id", "Oink_Oink_Product_Images/zqyaknflg0019qvtglib"], ["created_at", "2023-05-11 18:36:18.220393"], ["updated_at", "2023-05-11 18:36:18.220393"]]
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (129.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductImageSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+Completed 201 Created in 193ms (Views: 19.2ms | ActiveRecord: 159.0ms | Allocations: 5840)
+
+
+Started POST "/product_images" for 127.0.0.1 at 2023-05-11 21:36:18 +0300
+Processing by ProductImagesController#create as HTML
+  Parameters: {"product_id"=>38, "image_url"=>"http://res.cloudinary.com/db7dgsxy2/image/upload/v1683830177/Oink_Oink_Product_Images/wbkprpy1ghaycjjk1kbv.jpg", "image_public_id"=>"Oink_Oink_Product_Images/wbkprpy1ghaycjjk1kbv"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+  [1m[36mProductImage Create (0.7ms)[0m  [1m[32mINSERT INTO "product_images" ("product_id", "image_url", "image_public_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 38], ["image_url", "http://res.cloudinary.com/db7dgsxy2/image/upload/v1683830177/Oink_Oink_Product_Images/wbkprpy1ghaycjjk1kbv.jpg"], ["image_public_id", "Oink_Oink_Product_Images/wbkprpy1ghaycjjk1kbv"], ["created_at", "2023-05-11 18:36:18.899648"], ["updated_at", "2023-05-11 18:36:18.899648"]]
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (120.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/product_images_controller.rb:20:in `create'
+[active_model_serializers] Rendered ProductImageSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 201 Created in 132ms (Views: 1.5ms | ActiveRecord: 122.1ms | Allocations: 2923)
+
+
+Started GET "/products/" for 127.0.0.1 at 2023-05-11 21:36:28 +0300
+Processing by ProductsController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.5ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.25ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.9ms | Allocations: 1862)
+
+
+Started GET "/product_images/" for 127.0.0.1 at 2023-05-11 21:36:51 +0300
+Processing by ProductImagesController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images"[0m
+  ↳ app/controllers/product_images_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/product_images_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/product_images_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.56ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.9ms | Allocations: 2921)
+
+
+Started GET "/products/" for 127.0.0.1 at 2023-05-11 21:38:05 +0300
+Processing by ProductsController#index as */*
+  Parameters: {"name"=>"Chocolate Fudge Cake", "price"=>1800, "description"=>"A lovely, mouth-watering chocolate fudge delicacy.", "discount_id"=>nil, "variant_group_id"=>nil, "active"=>true}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.2ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 38]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (92.54ms)
+Completed 200 OK in 165ms (Views: 127.6ms | ActiveRecord: 11.7ms | Allocations: 16449)
+
+

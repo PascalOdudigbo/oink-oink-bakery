@@ -29,6 +29,8 @@ function CustomerLogin(
     function handleLogin(e){
         setIsLoading(true);
         e.preventDefault();
+        window.scrollTo(0, 0);
+
 
         //creating an object containing the login data
         const customerLoginData = {

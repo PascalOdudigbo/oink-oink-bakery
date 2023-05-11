@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import logo from "../assets/BakeryLogo.jpeg";
 import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
@@ -18,10 +18,11 @@ function BakerLogin({hideAlert, alertDisplay, setAlertDisplay, alertStatus, setA
     const [isLoading, setIsLoading] = useState(false);
 
 
-    //declaring useEffect to navigate already loggedIn users to the home page
-    useEffect(() => {
-        bakerData?.first_name && setTimeout(() => navigate("/bakery-portal"), 500);
-    }, [])
+    //navigate already loggedIn users to the home page
+    bakerData?.first_name && setTimeout(() => navigate("/bakery-portal"), 500);
+    // useEffect(() => {
+        
+    // }, [])
 
 
     //creating function to handle login functionality 

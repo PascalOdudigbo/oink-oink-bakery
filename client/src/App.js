@@ -311,6 +311,13 @@ function App() {
               />
               <BakeryPortal
                 bakerData={bakerData}
+                alertDisplay={alertDisplay}
+                setAlertDisplay={setAlertDisplay}
+                alertMessage={alertMessage}
+                setAlertMessage={setAlertMessage}
+                alertStatus={alertStatus}
+                setAlertStatus={setAlertStatus}
+                hideAlert={hideAlert}
               />
             </>
           }

@@ -33,7 +33,7 @@ function ResetPassword({ hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
                 password: password
             }
             //if a customer is trying to reset their password
-            if (currentLink[currentLink.length - 2] == "customer"){
+            if (currentLink[currentLink.length - 2] === "customer"){
                 axios.patch(`/customers/${currentLink[currentLink.length - 1]}`, userData)
                 .then(res => {
                     //if password update is successful

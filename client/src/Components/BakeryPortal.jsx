@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { MdDashboard, MdReviews } from 'react-icons/md';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
@@ -7,18 +7,28 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { AiFillDiff } from 'react-icons/ai';
 import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
-import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct } from "../Components";
+import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert } from "../Components";
 
-function BakeryPortal({bakerData}) {
+function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
+    alertMessage, setAlertMessage, hideAlert}) {
     //styling the navbar icons
     const iconStyles = { marginRight: "10px", marginLeft: "6px", color: "black" };
 
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
-    typeof(bakerData?.first_name) !== typeof("") && navigate("/");
+    const length = Object.keys(bakerData).length;
+    length < 1 && navigate("/");
+
+    useEffect(()=>{
+       
+    },[])
 
     return (
         <div className="bakeryPortalContainer">
+            <div className="bakeryPortalAlertContainer">
+                <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay}/>
+            </div>
+
             <div className="bakeryPortalNavBar">
                 <div className="buttonsContainer">
                     <IconContext.Provider value={{ size: "25px" }}>
@@ -78,7 +88,12 @@ function BakeryPortal({bakerData}) {
                     } />
 
                     <Route path="/add-product" element={
-                        <BakeryAddProduct />
+                        <BakeryAddProduct 
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                        />
                     } />
 
                 </Routes>

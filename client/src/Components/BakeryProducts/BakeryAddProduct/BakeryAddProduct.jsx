@@ -5,50 +5,155 @@ import { IconContext } from "react-icons/lib";
 import { BsImageFill } from "react-icons/bs";
 import { Tooltip } from "@mui/material";
 import {AiFillDelete} from "react-icons/ai";
+import axios from "axios";
+import cloudinary from "cloudinary/lib/cloudinary";
+ 
+cloudinary.config({
+  cloud_name: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.REACT_APP_CLOUDINARY_API_KEY,
+  api_secret: process.env.REACT_APP_CLOUDINARY_API_SECRET
+});
 
-function BakeryAddProduct() {
-    const testVariantGroups = [
-        { id: 1, name: "Christmass special" },
-        { id: 2, name: "Birthday special" },
-        { id: 3, name: "Grand mass" },
-        { id: 4, name: "Test variant" },
-    ]
 
-    const testdiscounts = [
-        { id: 1, name: "Black friday" },
-        { id: 2, name: "Valentines day" },
-        { id: 3, name: "Terrific tuesday" },
-        { id: 4, name: "Black history month" },
-    ]
-    const [variantGroups, setVariantGroups] = useState(testVariantGroups)
+function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}) {
+    //declaring states for dynamic data
+    const [variantGroups, setVariantGroups] = useState([])
+    const [discounts, setDiscounts] = useState([])
     const [variantGroup, setVariantGroup] = useState({})
-    const [discounts, setDiscounts] = useState(testdiscounts)
+
+    //declaring form controlled input states
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+    const [price, setPrice] = useState("")
     const [discount, setDiscount] = useState({})
     const [isChecked, setIsChecked] = useState(true);
     const [imageFiles, setImageFiles] = useState([])
+
+    //declaring reference function variable
     const uploadImagesRef = useRef(null)
+
+    //declaring and initializing icon styling variables
     const uploadBtnIconStyle = { color: "black", marginTop: "10px" };
     const deleteBtnIconStyle = {color: "black"}
 
-    
+    //creating loading state
+    const [isLoading, setIsLoading] = useState(false);
 
+    //defining a function to upload an image to the cloudinary server
+    const uploadImageToCloudinary = async(imageFile, dataBaseProduct) =>{
+
+        //setting up cloudinary upload data
+        const data = new FormData();
+        data.append("file", imageFile);
+        data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_PRESET_NAME);
+        data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME);
+        data.append("folder", "Oink_Oink_Product_Images");
+
+        //creating a try-catch block to rescue from upload errors
+        try {
+            //sending the upload data to the cloudinary server
+            const uploadedImage = await axios.post(
+                `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`, data);
+                
+            //setting up product_images database table data 
+            const productImageData = {
+                product_id: dataBaseProduct.id,
+                image_url: `${uploadedImage.data.url}`,
+                image_public_id: `${uploadedImage.data.public_id}`,
+            };
+            //calling function for saving uploaded image cloudinary link and data to the database
+            saveProductImage(productImageData);
+        
+        }
+        catch (error) {
+            // if image upload fails this happens
+            setIsLoading(false)
+            setAlertStatus(false);
+            setAlertDisplay("block");
+            setAlertMessage(`${error}`);
+            hideAlert();
+        }
+    }
+
+    //defining a function to save product image in the database
+    function saveProductImage(productImageData){
+        axios.post("/product_images", productImageData)
+        .then(response => {
+            console.log(response)
+        })
+        .catch(error => {
+            if(error.response){
+                setIsLoading(false)
+                setAlertStatus(false);
+                setAlertMessage(error.response.data.error)
+                setAlertDisplay("block");
+                hideAlert();
+            }
+        })
+    }
+
+    //defining a function to add product to the database
+    function handleAddProduct(e){
+        e.preventDefault();
+        window.scrollTo(0,0);
+        setIsLoading(true);
+
+        //setting product data to be sent to the products table in the db
+        const productData = {
+            name: name,
+            price: parseFloat(price),
+            description: description,
+            discount_id: discount?.id ? discount?.id : 1,
+            variant_group_id: variantGroup?.id ? variantGroup?.id : 1,
+            active: isChecked
+        };
+
+        //sending product data to backend
+        axios.post("/products", productData)
+        .then((dataBaseProduct) => {
+            //if data inputted successfully upload the product images
+            //loop through all image files
+            imageFiles.forEach(imageFile => {
+                //call function to upload each image to cloudinary
+                uploadImageToCloudinary(imageFile, dataBaseProduct.data);
+            });
+
+            //when all images have been uploaded to cloudinary and their data saved to database
+            setIsLoading(false);
+            setAlertStatus(true);
+            setAlertMessage("Product Added successfully!")
+            setAlertDisplay("block");
+            hideAlert();
+        })
+        .catch((error) => {
+            setIsLoading(false)
+            if (error.response){
+                setAlertStatus(false);
+                error.response.data.error ? setAlertMessage(error.response.data.error) :
+                setAlertMessage("Adding product unsuccessful, please try again!");
+                setAlertDisplay("block");
+                hideAlert();
+            }
+        })
+
+    }
 
     return (
         <div className="bakeryAddProductContainer">
             <h1 className="bakeryAddProductPageTitle">ADD PRODUCT</h1>
-            <form className="bakeryAddProductForm">
+            <form className="bakeryAddProductForm" onSubmit={handleAddProduct}>
                 <div className="bakeryAddProductFormBody">
                     <div className="bakeryDetailsContainer">
                         <p className="bakeryAddProductFormTitle">DETAILS</p>
 
                         <div className="bakeryAddProductFormNameContainer">
                             <p className="bakeryAddProductFormNameText">Name (required)</p>
-                            <input className="bakeryAddProductFormInput" type="text" required />
+                            <input className="bakeryAddProductFormInput" type="text" required value={name} onChange={e => setName(e.target.value)}/>
                         </div>
 
                         <div className="bakeryAddProductFormDescriptionContainer">
                             <p className="bakeryAddProductFormDescriptionTitle">Description</p>
-                            <textarea className="bakeryAddProductFormDescriptionTextArea" rows="8" cols="75" />
+                            <textarea className="bakeryAddProductFormDescriptionTextArea" rows="8" cols="75" value={description} onChange={e => setDescription(e.target.value)}/>
                         </div>
 
                     </div>
@@ -58,7 +163,7 @@ function BakeryAddProduct() {
 
                         <div className="bakeryAddProductFormPriceInputContainer">
                             <p className="bakeryAddProductFormNameText">Price (required)</p>
-                            <input className="bakeryAddProductFormPriceInput" type="text" required />
+                            <input className="bakeryAddProductFormPriceInput" type="text" required value={price} onChange={(e) => setPrice(e.target.value)} />
                         </div>
                     </div>
 
@@ -79,7 +184,7 @@ function BakeryAddProduct() {
                                         <Tooltip title="delete" arrow>
                                             <button className="deleteImgBtn" onClick={(e) => { 
                                                 e.preventDefault()
-                                                let newData = imageFiles.filter((image)=>image != imageFiles[index])
+                                                let newData = imageFiles.filter((image)=>image !== imageFiles[index])
                                                 setImageFiles(newData)
                                                 
                                             }}>
@@ -180,7 +285,7 @@ function BakeryAddProduct() {
                 </div>
 
                 <div className="bakeryAddProductFormButtonsContainer">
-                    <button className="bakeryAddProductFormSaveButton" type="submit">Save changes</button>
+                    <button className="bakeryAddProductFormSaveButton" type="submit">{isLoading ? "Loading" : "Save"}</button>
                     <CheckBox label={"ACTIVE"} isChecked={isChecked} setIsChecked={setIsChecked} />
                 </div>
 

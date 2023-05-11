@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      render json: @product, status: :created, location: @product
+      render json: @product, status: :created
     else
       render json: @product.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :price, :description, :discount_id, :variant_group_id, :active)
+      params.permit(:name, :price, :description, :discount_id, :variant_group_id, :active)
     end
 end
