@@ -9,11 +9,11 @@ function Product({ product, onAddToCart}) {
 
   return (
     <div className='product'>
-      <img className="productMedia" src={product?.image?.url} alt={product?.name} title={product?.name} />
+      <img className="productMedia" src={product?.product_images[Math.floor(Math.random() * product?.product_images.length)]?.image_url} alt={product?.name} title={product?.name} />
       <div className='productContent'>
         <div className='productNameAndPrice'>
           <h4 className='productName'>{product?.name}</h4>
-          <h4 className='productprice'>{product?.price?.formatted_with_symbol.slice(0, product?.price?.formatted_with_symbol?.length - 3)}</h4>
+          <h4 className='productprice'>{`Ksh ${product?.price}`}</h4>
         </div>
         <p className='productDescription' dangerouslySetInnerHTML={{ __html: product?.description}}/>
           {/* {product.description.slice(3, product.description.length - 4)}</p> */}

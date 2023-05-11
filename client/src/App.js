@@ -13,6 +13,7 @@ import {
   Alert,
 } from "./Components";
 import { commerce } from "./lib/commerce";
+import axios from "axios";
 
 function App() {
   //declaring states to manage dynamic data
@@ -29,9 +30,13 @@ function App() {
   //declarin and initializing navigating function variable
   const navigate = useNavigate();
 
-  const fetchProducts = async () => {
-    const { data } = await commerce?.products?.list();
-    setProducts(data);
+  //defining function to get products from the database
+  function getProducts(){
+    axios.get("/products")
+    .then(response => {
+      console.log(response.data);
+      setProducts(response.data);
+    })
   };
 
   const fetchCart = async () => {
@@ -121,7 +126,7 @@ function App() {
   useEffect(() => {
     isCustomerLoggedIn();
     isBakerLoggedIn();
-    fetchProducts();
+    getProducts();
     fetchCart();
   }, []);
 

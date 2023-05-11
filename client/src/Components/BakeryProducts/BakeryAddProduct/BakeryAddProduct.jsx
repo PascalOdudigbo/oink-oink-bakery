@@ -7,6 +7,7 @@ import { Tooltip } from "@mui/material";
 import {AiFillDelete} from "react-icons/ai";
 import axios from "axios";
 import cloudinary from "cloudinary/lib/cloudinary";
+import { useNavigate } from "react-router-dom";
  
 cloudinary.config({
   cloud_name: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
@@ -38,6 +39,9 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
 
     //creating loading state
     const [isLoading, setIsLoading] = useState(false);
+
+    //declaring and initializing navigate variable function
+    const navigate = useNavigate();
 
     //defining a function to upload an image to the cloudinary server
     const uploadImageToCloudinary = async(imageFile, dataBaseProduct) =>{
@@ -124,6 +128,7 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
             setAlertMessage("Product Added successfully!")
             setAlertDisplay("block");
             hideAlert();
+            setTimeout(() => navigate("/bakery-portal/products"), 2000)
         })
         .catch((error) => {
             setIsLoading(false)
