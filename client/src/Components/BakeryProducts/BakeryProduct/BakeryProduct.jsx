@@ -5,7 +5,7 @@ import { SlOptions } from 'react-icons/sl';
 import { useNavigate } from 'react-router-dom';
 
 
-function BakeryProduct({ product }) {
+function BakeryProduct({ product, handleSearchProducts }) {
     const activeIconStyles = { marginRight: "3px", marginLeft: "6px", color: "green" };
     const notActiveIconStyles = { marginRight: "3px", marginLeft: "6px", color: "red" };
     const [dropdownDisplay, setDropdownDisplay] = useState("none");
@@ -16,12 +16,12 @@ function BakeryProduct({ product }) {
 
             <td className="productsDataCell">
                 <div className='productImageAndNameContainer'>
-                    <img className='productImage' src={product.image} alt={product.name} />
+                    <img className='productImage' src={product?.product_images[Math.floor(Math.random() * product?.product_images.length)]?.image_url} alt={product.name} />
                     <p className='productName'>{product.name}</p>
                 </div>
             </td>
-            <td className="productsDataCell">{product.orders}</td>
-            <td className="productsDataCell">KSH {product.sales}</td>
+            <td className="productsDataCell">{product?.orders ? product?.orders : 0}</td>
+            <td className="productsDataCell">KSH {product?.sales ? product?.sales : 0}</td>
             <td className="productsDataCell">{
                 product.active ?
                     <div className='productActiveIconAndText'>

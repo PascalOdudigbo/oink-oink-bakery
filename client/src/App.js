@@ -123,6 +123,18 @@ function App() {
         });
   }
 
+  //defining a function to handle product searching
+  function handleProductSearch(searchInput){
+    //if the search input is empty reset the data to its original state
+    if (searchInput === ""){
+      getProducts();
+    }
+    else{
+      const filteredData = products.filter((product) => product?.name.toLowerCase().includes(searchInput));
+      setProducts(filteredData)
+    }
+  }
+
   useEffect(() => {
     isCustomerLoggedIn();
     isBakerLoggedIn();
@@ -151,7 +163,7 @@ function App() {
                 bakerData={bakerData}
                 handleLogout={handleLogout}
               />
-              <Products products={products} onAddToCart={handleAddToCart} />
+              <Products products={products} onAddToCart={handleAddToCart} handleProductSearch={handleProductSearch}/>
             </>
           }
         />
@@ -323,6 +335,9 @@ function App() {
                 alertStatus={alertStatus}
                 setAlertStatus={setAlertStatus}
                 hideAlert={hideAlert}
+                getProducts={getProducts}
+                products={products}
+                handleProductSearch={handleProductSearch}
               />
             </>
           }

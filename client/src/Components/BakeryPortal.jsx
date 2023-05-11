@@ -10,7 +10,7 @@ import { IconContext } from "react-icons/lib";
 import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert } from "../Components";
 
 function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
-    alertMessage, setAlertMessage, hideAlert}) {
+    alertMessage, setAlertMessage, hideAlert, getProducts, products, handleProductSearch}) {
     //styling the navbar icons
     const iconStyles = { marginRight: "10px", marginLeft: "6px", color: "black" };
 
@@ -84,7 +84,7 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                     } />
 
                     <Route path="/products" element={
-                        <BakeryProducts />
+                        <BakeryProducts getProducts={getProducts} products={products} handleProductSearch={handleProductSearch}/>
                     } />
 
                     <Route path="/add-product" element={
