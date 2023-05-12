@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { MdDashboard, MdReviews } from 'react-icons/md';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
@@ -8,6 +8,7 @@ import { AiFillDiff } from 'react-icons/ai';
 import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
 import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert } from "../Components";
+import axios from "axios";
 
 function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
     alertMessage, setAlertMessage, hideAlert, getProducts, products, handleProductSearch}) {
@@ -16,10 +17,38 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
 
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
+
+    //if baker isn't logged in send go back to homepage
     const length = Object.keys(bakerData).length;
     length < 1 && navigate("/");
 
+    //declaring state variables for customers data
+    const [customers, setCustomers] = useState();
+
+
+
+    //creating function to get customer data
+    function getCustomers(){
+        axios.get("/customers")
+        .then(response => {
+            setCustomers(response.data)
+
+        })
+    }
+
+    //creating function to handle customer search
+    function handleCustomerSearch(searchInput){
+        if(searchInput === ""){
+            getCustomers();
+        }
+        else{
+            let filteredCustomers = customers.filter(customer => `${customer.first_name} ${customer.last_name}`.toLowerCase().includes(searchInput));
+            setCustomers(filteredCustomers);
+        }
+    }
+
     useEffect(()=>{
+        getCustomers();
        
     },[])
 
@@ -80,7 +109,7 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                     } />
 
                     <Route path="/customers" element={
-                        <BakeryCustomers />
+                        <BakeryCustomers customers={customers} handleCustomerSearch={handleCustomerSearch}/>
                     } />
 
                     <Route path="/products" element={
