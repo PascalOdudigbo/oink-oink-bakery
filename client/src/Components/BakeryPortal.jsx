@@ -18,9 +18,6 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
 
-    //if baker isn't logged in send go back to homepage
-    const length = Object.keys(bakerData).length;
-    length < 1 && navigate("/");
 
     //declaring state variables for customers data
     const [customers, setCustomers] = useState();
@@ -53,6 +50,8 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
     },[])
 
     return (
+        //if customer is logged in display the full page
+        bakerData?.first_name ? 
         <div className="bakeryPortalContainer">
             <div className="bakeryPortalAlertContainer">
                 <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay}/>
@@ -105,7 +104,7 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
             <div className="bakeryPortalPagesContainer">
                 <Routes>
                     <Route path="/" element={
-                        <BakeryDashboard />
+                        <BakeryDashboard products={products} customers={customers}/>
                     } />
 
                     <Route path="/customers" element={
@@ -128,7 +127,11 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                 </Routes>
 
             </div>
-        </div>
+        </div> : 
+        //else display an empty page
+        <>
+            
+        </>
     );
 }
 export default BakeryPortal;

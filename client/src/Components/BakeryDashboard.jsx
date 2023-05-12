@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function BakeryDashboard() {
+function BakeryDashboard({products, customers}) {
     return (
         <div className="bakeryDashboardContainer">
 
@@ -11,7 +11,7 @@ function BakeryDashboard() {
 
                 <div className="bakeryDashboardStatistic">
                     <h3 className="statisticTitle">TOTAL CUSTOMERS</h3>
-                    <p className="statisticValue">{25}</p>
+                    <p className="statisticValue">{customers?.length}</p>
                 </div>
 
                 <div className="bakeryDashboardStatistic">
@@ -21,7 +21,7 @@ function BakeryDashboard() {
 
                 <div className="bakeryDashboardStatistic">
                     <h3 className="statisticTitle">TOTAL PRODUCTS</h3>
-                    <p className="statisticValue">{9}</p>
+                    <p className="statisticValue">{products?.length}</p>
                 </div>
 
                 <div className="bakeryDashboardStatistic">
