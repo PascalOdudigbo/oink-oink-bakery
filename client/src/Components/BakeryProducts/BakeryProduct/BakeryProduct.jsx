@@ -5,7 +5,7 @@ import { SlOptions } from 'react-icons/sl';
 import { useNavigate } from 'react-router-dom';
 
 
-function BakeryProduct({ product, handleSearchProducts }) {
+function BakeryProduct({ product, setTargetProduct }) {
     const activeIconStyles = { marginRight: "3px", marginLeft: "6px", color: "green" };
     const notActiveIconStyles = { marginRight: "3px", marginLeft: "6px", color: "red" };
     const [dropdownDisplay, setDropdownDisplay] = useState("none");
@@ -47,6 +47,7 @@ function BakeryProduct({ product, handleSearchProducts }) {
                     <div className="dropdown-content" style={{ display: dropdownDisplay }}>
                         <p onClick={() => {
                             //set target product here
+                            setTargetProduct(product)
                             navigate("/bakery-portal/edit-product")
                         }}>Edit</p>
                         <p>Delete</p>

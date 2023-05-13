@@ -16,10 +16,7 @@ cloudinary.config({
 });
 
 
-function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}) {
-    //declaring states for dynamic data
-    const [variantGroups, setVariantGroups] = useState([])
-    const [discounts, setDiscounts] = useState([])
+function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, variantGroups, discounts}) {
     const [variantGroup, setVariantGroup] = useState({})
 
     //declaring form controlled input states
@@ -107,8 +104,8 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
             name: name,
             price: parseFloat(price),
             description: description,
-            discount_id: discount?.id ? discount?.id : 1,
-            variant_group_id: variantGroup?.id ? variantGroup?.id : 1,
+            discount_id: discount?.id,
+            variant_group_id: variantGroup?.id,
             active: isChecked
         };
 
@@ -250,7 +247,7 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
                         <p className="bakeryAddProductFormTitle">VARIANT GROUP</p>
 
                         <div className="bakeryAddProductFormVariantGroupDropdownContainer">
-                            <button className="bakeryAddProductFormVariantGroupDropdownBtn">{variantGroup?.name ? variantGroup?.name : "Select variant group"}</button>
+                            <button className="bakeryAddProductFormVariantGroupDropdownBtn" onClick={e => e.preventDefault()}>{variantGroup?.name ? variantGroup?.name : "Select variant group"}</button>
                             <div className="bakeryAddProductFormVariantGroupDropdownItemContainer">
                                 {variantGroups?.map(variantGroup =>
                                     <p
@@ -271,7 +268,7 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
                         <p className="bakeryAddProductFormTitle">DISCOUNT</p>
 
                         <div className="bakeryAddProductFormDiscountDropdownContainer">
-                            <button className="bakeryAddProductFormDiscountDropdownBtn">{discount?.name ? discount?.name : "Select discount"}</button>
+                            <button className="bakeryAddProductFormDiscountDropdownBtn"  onClick={e => e.preventDefault()}>{discount?.name ? discount?.name : "Select discount"}</button>
                             <div className="bakeryAddProductFormDiscountDropdownItemContainer">
                                 {discounts?.map(discount =>
                                     <p

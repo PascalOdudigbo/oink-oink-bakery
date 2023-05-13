@@ -7,7 +7,7 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { AiFillDiff } from 'react-icons/ai';
 import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
-import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert } from "../Components";
+import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert, BakeryEditProduct} from "../Components";
 import axios from "axios";
 
 function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
@@ -18,10 +18,18 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
 
-
     //declaring state variables for customers data
     const [customers, setCustomers] = useState();
 
+    //declaring state variables for variantGroups data
+    const [variantGroups, setVariantGroups] = useState([])
+
+    //declaring state variables for discounts data 
+    const [discounts, setDiscounts] = useState([])
+
+    //declaring state variable for target product (edit/delete)
+    const [targetProduct, setTargetProduct] = useState({})
+ 
 
 
     //creating function to get customer data
@@ -30,6 +38,23 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
         .then(response => {
             setCustomers(response.data)
 
+        })
+    }
+
+    //creating function to get variant_groups 
+    function getVariantGroups(){
+        axios.get("/variant_groups")
+        .then(response => {
+            setVariantGroups(response.data)
+
+        })
+    }
+
+    //creating function to get discounts
+    function getDiscounts(){
+        axios.get("/discounts")
+        .then(response => {
+            setDiscounts(response.data)
         })
     }
 
@@ -46,6 +71,8 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
 
     useEffect(()=>{
         getCustomers();
+        getVariantGroups();
+        getDiscounts();
        
     },[])
 
@@ -112,15 +139,36 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                     } />
 
                     <Route path="/products" element={
-                        <BakeryProducts getProducts={getProducts} products={products} handleProductSearch={handleProductSearch}/>
+                        <BakeryProducts 
+                            getProducts={getProducts} 
+                            products={products} 
+                            handleProductSearch={handleProductSearch} 
+                            setTargetProduct={setTargetProduct}
+                        />
                     } />
 
                     <Route path="/add-product" element={
-                        <BakeryAddProduct 
+                        <BakeryAddProduct
                             setAlertDisplay={setAlertDisplay}
                             setAlertStatus={setAlertStatus}
                             setAlertMessage={setAlertMessage}
                             hideAlert={hideAlert}
+                            variantGroups={variantGroups}
+                            discounts={discounts}
+                        />
+                    } />
+
+
+                    <Route path="/edit-product" element={
+                        <BakeryEditProduct 
+                            targetProduct={targetProduct}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                            variantGroups={variantGroups}
+                            discounts={discounts}
+                            getProducts={getProducts}
                         />
                     } />
 
