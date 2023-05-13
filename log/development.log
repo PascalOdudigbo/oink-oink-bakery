@@ -35468,3 +35468,160 @@ Completed 201 Created in 297ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations
 Completed 200 OK in 1051ms (Views: 1038.0ms | ActiveRecord: 12.5ms | Allocations: 31516)
 
 
+Started DELETE "/baker-logout" for 127.0.0.1 at 2023-05-13 03:02:52 +0300
+Processing by BakersController#logout as */*
+Completed 204 No Content in 1ms (Allocations: 191)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-13 03:06:26 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-13 03:06:26 +0300
+Started GET "/products" for 127.0.0.1 at 2023-05-13 03:06:26 +0300
+Processing by BakersController#logged_in as */*
+Processing by ProductsController#index as HTML
+Processing by CustomersController#logged_in as */*
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  [1m[36mProduct Load (173.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 2713ms (Views: 2.5ms | ActiveRecord: 1466.0ms | Allocations: 8540)
+
+
+Completed 201 Created in 2521ms (Views: 3.2ms | ActiveRecord: 1525.4ms | Allocations: 8566)
+
+
+[active_model_serializers]   [1m[36mDiscount Load (1.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.6ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 38]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 39]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 40]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 41]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 42]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.5ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 43]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 44]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 45]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 46]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 47]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 48]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 49]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 50]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (302.59ms)
+Completed 200 OK in 2824ms (Views: 2823.5ms | ActiveRecord: 1688.2ms | Allocations: 37967)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-05-13 13:31:32 +0300
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-05-13 13:31:32 +0300
+Started GET "/products" for 127.0.0.1 at 2023-05-13 13:31:32 +0300
+Processing by ProductsController#index as HTML
+Processing by CustomersController#logged_in as */*
+Processing by BakersController#logged_in as */*
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+  [1m[36mBaker Load (4.6ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+Completed 201 Created in 821ms (Views: 1.0ms | ActiveRecord: 333.2ms | Allocations: 8416)
+
+
+[active_model_serializers]   [1m[36mDiscount Load (0.5ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 816ms (Views: 62.3ms | ActiveRecord: 360.3ms | Allocations: 9796)
+
+
+[active_model_serializers]   [1m[36mProductImage Load (2.7ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 38]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 39]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 40]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 41]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 42]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 43]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 44]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 45]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 46]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 47]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 48]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 49]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 50]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (138.56ms)
+Completed 200 OK in 1025ms (Views: 1024.4ms | ActiveRecord: 365.2ms | Allocations: 38449)
+
+

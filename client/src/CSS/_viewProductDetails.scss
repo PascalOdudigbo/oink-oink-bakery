@@ -9,16 +9,11 @@
     align-items: center;
     justify-content: center;
     z-index: 99 !important; 
-    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(207, 207, 207);
     overflow-x: hidden;
     overflow-y: scroll;
     border-radius: 5px;
 
-    
-
-    
-
-   
 
     .btn-closePage{
         top: 5px;
@@ -28,7 +23,10 @@
         background: none;
         width: fit-content;
         padding-top: 6px;
-        padding-bottom: 6px;        
+        padding-bottom: 6px;  
+        z-index: 99 !important; 
+        // position: fixed;     
+
     }
 
     .viewProductDetailsImagesViewContainer{
