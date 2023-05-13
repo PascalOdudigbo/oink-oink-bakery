@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import {
   Products,
+  ViewProductDetails,
   NavBar,
   CustomerLogin,
   CustomerSignUp,
@@ -27,6 +28,11 @@ function App() {
   const [alertMessage, setAlertMessage] = useState("");
   const [alertDisplay, setAlertDisplay] = useState("none");
 
+
+  //creating state to manage ViewProductDetails image display url
+  const [imageUrl, setImageUrl] = useState("");
+
+
   //declarin and initializing navigating function variable
   const navigate = useNavigate();
 
@@ -34,7 +40,6 @@ function App() {
   function getProducts(){
     axios.get("/products")
     .then(response => {
-      console.log(response.data);
       setProducts(response.data);
     })
   };
@@ -163,7 +168,12 @@ function App() {
                 bakerData={bakerData}
                 handleLogout={handleLogout}
               />
-              <Products products={products} onAddToCart={handleAddToCart} handleProductSearch={handleProductSearch}/>
+              <Products 
+                products={products} 
+                onAddToCart={handleAddToCart} 
+                handleProductSearch={handleProductSearch}
+              />
+
             </>
           }
         />

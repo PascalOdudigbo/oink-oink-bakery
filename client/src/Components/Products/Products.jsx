@@ -1,15 +1,42 @@
-import React from 'react'
-import {Product, Search} from '../../Components';
+import React, {useState} from 'react'
+import {Product, Search, ViewProductDetails} from '../../Components';
 
 function Products({products, onAddToCart, handleProductSearch}) {
-   
+
+  //creating state to manage product details view component display
+  const [viewProductDetailsPageView, setviewProductDetailsPageView] = useState("none");
+  const [targetProduct, setTargetProduct] = useState({});
+
+  //creating state to manage ViewProductDetails image display url
+  const [imageUrl, setImageUrl] = useState("");
+
   return (
     <>
+      <div className='productsViewProductDetailsContainer'>
+        <ViewProductDetails
+          targetProduct={targetProduct}
+          viewProductDetailsPageView={viewProductDetailsPageView}
+          setviewProductDetailsPageView={setviewProductDetailsPageView}
+          imageUrl={imageUrl}
+          setImageUrl={setImageUrl}
+        />
+      </div>
+      
+      
       <div className='productsSearchContainer'>
         <Search placeholderText={"Search cakes..."} handleSearch={handleProductSearch}/>
       </div>
       <div className='productsContainer'>
-      {products?.map(product=><Product key={product.id} product={product} onAddToCart={onAddToCart}/>)}
+      {products?.map(product => 
+        <Product 
+          key={product.id} 
+          product={product} 
+          onAddToCart={onAddToCart} 
+          setTargetProduct={setTargetProduct} 
+          setviewProductDetailsPageView={setviewProductDetailsPageView}
+          setImageUrl={setImageUrl}
+        />
+      )}
       </div>
     
     </>

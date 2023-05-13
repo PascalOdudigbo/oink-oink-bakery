@@ -1,5 +1,6 @@
 @import "./products";
 @import "./product";
+@import "./viewProductDetails";
 @import "./navbar";
 @import "./loginOrSignUpDropdown";
 @import "./customerLogin";
@@ -30,6 +31,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden; 
+    overflow-y: scroll;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     background-color: #f0f2f5;
     // background-image: url("../assets/BakeryBackground.jpg");
@@ -45,4 +47,11 @@ body{
         margin-top: 30px;
         top: 0%;
     }
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
+
+
+

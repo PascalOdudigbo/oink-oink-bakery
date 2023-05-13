@@ -4,11 +4,15 @@ import { IconContext } from "react-icons/lib";
 import { MdAddShoppingCart } from "react-icons/md";
 
 
-function Product({ product, onAddToCart}) {
+function Product({ product, onAddToCart, setTargetProduct, setviewProductDetailsPageView, setImageUrl}) {
   const ButtonsIconStyle = { color: "black" };
 
   return (
-    <div className='product'>
+    <div className='product' onClick={()=> {
+      setTargetProduct(product);
+      setviewProductDetailsPageView("block");
+      setImageUrl(product?.product_images ? product?.product_images[0]?.image_url : "");
+    }}>
       <img className="productMedia" src={product?.product_images[Math.floor(Math.random() * product?.product_images.length)]?.image_url} alt={product?.name} title={product?.name} />
       <div className='productContent'>
         <div className='productNameAndPrice'>

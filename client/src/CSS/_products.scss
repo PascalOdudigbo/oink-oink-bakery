@@ -1,3 +1,11 @@
+.productsViewProductDetailsContainer{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    // background-color: red;
+}
+
 .productsSearchContainer{
     margin-top: 90px;
     // background-color: red;
@@ -8,7 +16,7 @@
     column-gap: 10px;
     row-gap: 20px;
     grid-template-columns: auto auto auto auto;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 10px;
