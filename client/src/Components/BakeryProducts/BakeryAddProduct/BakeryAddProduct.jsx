@@ -16,7 +16,7 @@ cloudinary.config({
 });
 
 
-function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, variantGroups, discounts}) {
+function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, variantGroups, discounts, getProducts}) {
     const [variantGroup, setVariantGroup] = useState({})
 
     //declaring form controlled input states
@@ -125,6 +125,7 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
             setAlertMessage("Product Added successfully!")
             setAlertDisplay("block");
             hideAlert();
+            getProducts()
             setTimeout(() => navigate("/bakery-portal/products"), 2000)
         })
         .catch((error) => {

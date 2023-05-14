@@ -11,7 +11,7 @@ import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Ale
 import axios from "axios";
 
 function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
-    alertMessage, setAlertMessage, hideAlert, getProducts, products, handleProductSearch}) {
+    alertMessage, setAlertMessage, hideAlert, getProducts, products, setProducts, handleProductSearch}) {
     //styling the navbar icons
     const iconStyles = { marginRight: "10px", marginLeft: "6px", color: "black" };
 
@@ -140,10 +140,14 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
 
                     <Route path="/products" element={
                         <BakeryProducts 
-                            getProducts={getProducts} 
+                            setProducts={setProducts} 
                             products={products} 
                             handleProductSearch={handleProductSearch} 
                             setTargetProduct={setTargetProduct}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertMessage={setAlertMessage}
+                            setAlertStatus={setAlertStatus}
+                            hideAlert={hideAlert}
                         />
                     } />
 
@@ -155,6 +159,7 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                             hideAlert={hideAlert}
                             variantGroups={variantGroups}
                             discounts={discounts}
+                            getProducts={getProducts}
                         />
                     } />
 

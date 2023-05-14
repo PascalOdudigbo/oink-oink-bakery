@@ -13,7 +13,7 @@ function Product({ product, onAddToCart, setTargetProduct, setviewProductDetails
       setviewProductDetailsPageView("block");
       setImageUrl(product?.product_images ? product?.product_images[0]?.image_url : "");
     }}>
-      <img className="productMedia" src={product?.product_images[Math.floor(Math.random() * product?.product_images.length)]?.image_url} alt={product?.name} title={product?.name} />
+      <img className="productMedia" src={product?.product_images[0]?.image_url} alt={product?.name} title={product?.name} />
       <div className='productContent'>
         <div className='productNameAndPrice'>
           <h4 className='productName'>{product?.name}</h4>

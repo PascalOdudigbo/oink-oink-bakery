@@ -337,6 +337,7 @@ function App() {
                 handleLogout={handleLogout}
               />
               <BakeryPortal
+                setProducts={setProducts}
                 bakerData={bakerData}
                 alertDisplay={alertDisplay}
                 setAlertDisplay={setAlertDisplay}

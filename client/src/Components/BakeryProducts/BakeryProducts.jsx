@@ -6,7 +6,7 @@ import { RiAddFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 
-function BakeryProducts({products, handleProductSearch, setTargetProduct}) {
+function BakeryProducts({products, setProducts, handleProductSearch, setTargetProduct, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert }) {
     const iconStyles = { marginRight: "3px", marginLeft: "6px", color: "white" };
 
    
@@ -43,7 +43,19 @@ function BakeryProducts({products, handleProductSearch, setTargetProduct}) {
 
                 <tbody>
                     {
-                        products.map(product => <BakeryProduct key={product.id} product={product} setTargetProduct={setTargetProduct}/>)
+                        products.map(product => 
+                        <BakeryProduct 
+                            key={product.id}
+                            products={products} 
+                            setProducts={setProducts}
+                            product={product} 
+                            setTargetProduct={setTargetProduct}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                        />
+                            )
                     }
                 </tbody>
 

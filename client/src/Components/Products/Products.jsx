@@ -28,6 +28,8 @@ function Products({products, onAddToCart, handleProductSearch}) {
       </div>
       <div className='productsContainer'>
       {products?.map(product => 
+      //display product only if active
+      product?.active &&
         <Product 
           key={product.id} 
           product={product} 
