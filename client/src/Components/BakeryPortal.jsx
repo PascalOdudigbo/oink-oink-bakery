@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { MdDashboard, MdReviews } from 'react-icons/md';
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 import { HiUsers } from 'react-icons/hi';
@@ -14,9 +14,6 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
     alertMessage, setAlertMessage, hideAlert, getProducts, products, setProducts, handleProductSearch}) {
     //styling the navbar icons
     const iconStyles = { marginRight: "10px", marginLeft: "6px", color: "black" };
-
-    //declaring and initializing navigate variable function
-    const navigate = useNavigate();
 
     //declaring state variables for customers data
     const [customers, setCustomers] = useState();

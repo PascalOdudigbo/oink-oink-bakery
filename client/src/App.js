@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import {
   Products,
-  ViewProductDetails,
   NavBar,
   CustomerLogin,
   CustomerSignUp,
@@ -27,10 +26,6 @@ function App() {
   const [alertStatus, setAlertStatus] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertDisplay, setAlertDisplay] = useState("none");
-
-
-  //creating state to manage ViewProductDetails image display url
-  const [imageUrl, setImageUrl] = useState("");
 
 
   //declarin and initializing navigating function variable

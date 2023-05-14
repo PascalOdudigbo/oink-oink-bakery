@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {HiArrowCircleLeft, HiArrowCircleRight} from "react-icons/hi"
 import {AiFillCloseCircle} from "react-icons/ai";
 import { IconContext } from "react-icons/lib";

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IconContext } from 'react-icons/lib';
 import { Search, BakeryProduct } from "../../Components";
 import Tooltip from '@mui/material/Tooltip';
