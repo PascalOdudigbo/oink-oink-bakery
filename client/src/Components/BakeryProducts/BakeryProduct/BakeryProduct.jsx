@@ -135,7 +135,7 @@ function BakeryProduct({products, setProducts, product, setTargetProduct, setAle
                             setTargetProduct(product)
                             navigate("/bakery-portal/edit-product")
                         }}>Edit</button>
-                        <button className="bakeryProductDropdownItem" onClick={() => {handleDeleteProduct(product)}}>Delete</button>
+                        <button className="bakeryProductDropdownItemDelete" onClick={() => {handleDeleteProduct(product)}}>Delete</button>
                     </div>
                 </div>
             </td>

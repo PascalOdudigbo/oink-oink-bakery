@@ -46,6 +46,6 @@ class VariantOptionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def variant_option_params
-      params.require(:variant_option).permit(:variant_group_id, :name, :price)
+      params.permit(:variant_group_id, :name, :price)
     end
 end

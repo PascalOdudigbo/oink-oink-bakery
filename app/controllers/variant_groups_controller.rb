@@ -46,6 +46,6 @@ class VariantGroupsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def variant_group_params
-      params.require(:variant_group).permit(:name)
+      params.permit(:name)
     end
 end

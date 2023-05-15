@@ -7,7 +7,7 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { AiFillDiff } from 'react-icons/ai';
 import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
-import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert, BakeryEditProduct} from "../Components";
+import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert, BakeryEditProduct, BakeryProductVariants} from "../Components";
 import axios from "axios";
 
 function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
@@ -171,6 +171,22 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                             variantGroups={variantGroups}
                             discounts={discounts}
                             getProducts={getProducts}
+                        />
+                    } />
+
+
+                    <Route path="/product-variants" element={
+                        <BakeryProductVariants
+                            variantGroups={variantGroups}
+                            setVariantGroups={setVariantGroups}
+
+
+                            getVariantGroups={getVariantGroups}
+
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
                         />
                     } />
 

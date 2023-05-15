@@ -21,5 +21,7 @@ export {default as BakeryProduct} from './BakeryProducts/BakeryProduct/BakeryPro
 export {default as BakeryAddProduct} from './BakeryProducts/BakeryAddProduct/BakeryAddProduct';
 export {default as CheckBox} from './CheckBox/CheckBox';
 export {default as BakeryEditProduct} from './BakeryProducts/BakeryEditProduct/BakeryEditProduct';
-
+export {default as BakeryProductVariants} from './BakeryProductVariants/BakeryProductVariants';
+export {default as BakeryProductVariantGroup} from './BakeryProductVariants/BakeryProductVariantGroup/BakeryProductVariantGroup';
+export {default as BakeryProductAddAndEditVariantGroup} from './BakeryProductVariants/BakeryProductAddAndEditVariantGroup/BakeryProductAddAndEditVariantGroup';
 
