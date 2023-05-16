@@ -1,0 +1,66 @@
+.bakeryVariantOptionContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98%;
+    margin-left: auto;
+    max-height: 50px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 2px;
+    // border-top: 1px solid rgb(75, 71, 71);
+    box-shadow: 0.5px 1px 1px 1px rgb(75, 71, 71);
+
+    &:hover{
+        border: 1px solid rgb(75, 71, 71);
+    }
+
+
+    .variantOptionName{
+        margin-left: 5px;
+        font-size: 1em;
+        
+    }
+
+    .variantOptionPrice{
+        font-size: 1em;
+    }
+
+    .variantOptionButtonscontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 120px;
+        // background-color: red;
+
+        .variantOptionEditBtn{
+            height: 30px;
+            width: fit-content;
+            border: none;
+            background-color: #9C27B0;
+            // margin-bottom: 3px;
+            &:hover {
+                cursor: pointer;
+                background-color: #FFACFC;
+                border-radius: 50%;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            }
+        }
+
+        .variantOptionDeleteBtn{
+            
+            height: 30px;
+            width: fit-content;
+            border: none;
+            background-color: #9C27B0;
+            // margin-bottom: 3px;
+            &:hover {
+                cursor: pointer;
+                background-color: red;
+                border-radius: 50%;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            }
+        }
+    }
+}

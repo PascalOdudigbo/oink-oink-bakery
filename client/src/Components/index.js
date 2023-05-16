@@ -23,5 +23,8 @@ export {default as CheckBox} from './CheckBox/CheckBox';
 export {default as BakeryEditProduct} from './BakeryProducts/BakeryEditProduct/BakeryEditProduct';
 export {default as BakeryProductVariants} from './BakeryProductVariants/BakeryProductVariants';
 export {default as BakeryProductVariantGroup} from './BakeryProductVariants/BakeryProductVariantGroup/BakeryProductVariantGroup';
-export {default as BakeryProductAddAndEditVariantGroup} from './BakeryProductVariants/BakeryProductAddAndEditVariantGroup/BakeryProductAddAndEditVariantGroup';
-
+export {default as BakeryProductAddVariantGroup} from './BakeryProductVariants/BakeryProductAddVariantGroup/BakeryProductAddVariantGroup';
+export {default as BakeryProductEditVariantGroup} from './BakeryProductVariants/BakeryProductEditVariantGroup/BakeryProductEditVariantGroup';
+export {default as BakeryProductVariantOption} from './BakeryProductVariants/BakeryProductVariantOption/BakeryProductVariantOption';
+export {default as BakeryProductAddVariantOption} from './BakeryProductVariants/BakeryProductAddVariantOption/BakeryProductAddVariantOption';
+export {default as BakeryProductEditVariantOption} from './BakeryProductVariants/BakeryProductEditVariantOption/BakeryProductEditVariantOption';

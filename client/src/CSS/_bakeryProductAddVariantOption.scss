@@ -1,0 +1,124 @@
+.bakeryProductAddVariantOptionContainer{
+    background-color: white;
+    height: fit-content;
+    margin-top: 90px;
+    position: fixed;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99 !important; 
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(207, 207, 207);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 5px;
+
+
+    .btn-closePage{
+        top: 5px;
+        margin-left: 95%;
+        margin-bottom: 10px;
+        border: none;
+        background: none;
+        width: fit-content;
+        padding-top: 6px;
+        padding-bottom: 6px;  
+        z-index: 99 !important; 
+        // position: fixed;     
+    }
+
+    .bakeryProductAddVariantOptionFormContainer{
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        // background-color: red;
+
+        .bakeryProductAddVariantOptionForm{
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-left: 10%;
+            margin-right: 10%;
+            
+            .bakeryProductAddVariantOptionFormTitle {
+                font-weight: bold;
+                font-size: 1.4em;
+                margin-top: 40px;
+                text-align: center;
+                color: #A3006B;
+            }
+
+            .nameLabel {
+                color: black;
+                text-align: left;
+                font-size: 1em;
+                font-weight: 550;
+                margin-bottom: 2px;
+            }
+
+            .nameInput {
+                width: 95%;
+                height: 15px;
+                padding: 10px 0;
+                font-size: 1rem;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+                background-color: transparent;
+                border-radius: 10px;
+            }
+
+            .priceLabel {
+                color: black;
+                text-align: left;
+                font-size: 1em;
+                font-weight: 550;
+                margin-bottom: 2px;
+            }
+
+            .priceInput {
+                width: 95%;
+                height: 15px;
+                padding: 10px 0;
+                font-size: 1rem;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+                background-color: transparent;
+                border-radius: 10px;
+            }
+
+            .forgotPasswordSubmitButton {
+                cursor: pointer;
+                color: #feffff;
+                padding: 10px 12px;
+                border-radius: 10px;
+                text-align: center;
+                margin-top: 10px;
+                text-decoration: none;
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 35%;
+                font-size: 1em;
+                font-weight: 800;
+                background-color: #A3006B;
+                border: none;
+                margin-bottom: 30px;
+
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #FFACFC;
+                    color: black;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                }
+            }
+        }
+    }
+
+
+
+}
+.bakeryProductAddVariantOptionContainer::-webkit-scrollbar{
+    display: none;
+}

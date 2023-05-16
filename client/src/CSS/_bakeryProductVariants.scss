@@ -5,7 +5,7 @@
     overflow-y: scroll;
 
 
-    .bakeryProductVariantsBakeryProductAddAndEditVariantGroupContainer{
+    .bakeryProductVariantsBakeryProductAddAndEditContainer{
         width: 100%;
         align-items: center;
         display: flex;
@@ -92,6 +92,7 @@
         padding-bottom: 10px;
         box-shadow: 0px 2px 2px rgb(75, 71, 71);
         min-height: 200px;
+        height: fit-content;
 
         .bakeryVariantGroupsContainerNameTextContainer{
             height: fit-content;
@@ -113,4 +114,122 @@
         }
     }
 
+
+
+
+
+
+    .bakeryProductVariantsTitleContainer{
+        margin-left: auto;
+        margin-right: auto;
+        width: 96%;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        // background-color: red;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 40px;
+
+        .bakeryProductVariantsPageTitle{
+            font-size: 1.5em;
+            font-weight: 800;
+            padding: none;
+            padding-bottom: 10px;
+        }
+
+    }
+
+
+    .bakeryVariantOptionsNameAndButtonContainer{
+        margin-left: auto;
+        margin-right: auto;
+        width: 96%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        // background-color: red;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 30px;
+        align-items: center;
+
+
+        .bakeryVariantOptionsName{
+            text-align: left;
+            padding-top: 10px;
+            // margin-left: 16px;
+            font-size: 1.2em;
+            font-weight: 800; 
+        }
+
+        .iconAndButtonContainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 30px;
+            width: fit-content;
+            border-radius: 17.5px;
+            background-color: #9C27B0;
+
+            &:hover {
+                background-color: #FFACFC;
+            }
+
+            .addVariantOptionBtn {
+                color: black;
+                font-size: 0.7em;
+                font-weight: 800;
+                margin-right: 10px;
+                border: none;
+                background-color: transparent;
+                color: white;
+            }
+        }
+    }
+
+
+    .bakeryVariantOptionsContainer{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        width: 96%;
+        border-radius: 5px;
+        background-color: white;
+        padding-bottom: 10px;
+        box-shadow: 0px 2px 2px rgb(75, 71, 71);
+        min-height: 200px;
+        height: fit-content;
+
+        .bakeryVariantOptionsContainerTextsContainer{
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+            background-color: #9C27B0;
+            margin-bottom: 10px;
+            padding: 0%;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            border-top: 2px solid rgb(75, 71, 71);
+            border-left: 1px solid rgb(75, 71, 71);
+            border-right: 1px solid rgb(75, 71, 71);
+
+            .bakeryVariantOptionsContainerText{
+                text-align: left;
+                padding-top: 2px;
+                margin-left: 16px;
+                font-size: 0.8em;
+                font-weight: 800;
+                
+            }
+
+            .expandableDiv{
+                width: 39%;
+            }
+        }
+    }
+
+}
+.bakeryProductVariantsContainer::-webkit-scrollbar{
+    display: none;
 }

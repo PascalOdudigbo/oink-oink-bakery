@@ -4,7 +4,7 @@ import { IconContext } from "react-icons/lib";
 import {AiFillDelete} from "react-icons/ai";
 import {FaEdit} from "react-icons/fa";
 
-function BakeryProductVariantGroup({variantGroup, setVariantGroup, setViewBakeryProductAddAndEditVariantGroup, handleDeleteVariantGroup}){
+function BakeryProductVariantGroup({variantGroup, setVariantGroup, setViewBakeryProductEditVariantGroup, handleDeleteVariantGroup}){
     
     return (
         <div className="bakeryVariantGroupContainer" onClick={() => setVariantGroup(variantGroup)}>
@@ -18,7 +18,7 @@ function BakeryProductVariantGroup({variantGroup, setVariantGroup, setViewBakery
                         <Tooltip title="Edit" arrow>
                             <button className="variantGroupEditBtn" onClick={()=> {
                                 setVariantGroup(variantGroup);
-                                setViewBakeryProductAddAndEditVariantGroup("block");
+                                setViewBakeryProductEditVariantGroup("block");
                             }}>
                                 <FaEdit style={{color: "black"}}/>
                             </button>

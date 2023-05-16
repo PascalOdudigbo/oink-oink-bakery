@@ -2,18 +2,21 @@ import React, { useState } from "react";
 import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import {RiAddFill} from "react-icons/ri";
-import {BakeryProductVariantGroup, BakeryProductAddAndEditVariantGroup} from "../../Components";
+import {BakeryProductVariantGroup, BakeryProductAddVariantGroup, BakeryProductEditVariantGroup, BakeryProductVariantOption, BakeryProductAddVariantOption, BakeryProductEditVariantOption} from "../../Components";
 import axios from "axios";
 
-function BakeryProductVariants({variantGroups, setVariantGroups, variantOptions, setVariantOptions, getVariantGroups, getVariantOptions, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
+function BakeryProductVariants({variantGroups, setVariantGroups, getVariantGroups, getVariantOptions, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
 
     //creating state variables to manage target variantGroup and variantOption data
     const [variantGroup, setVariantGroup] = useState({});
     const [variantOption, setVariantOption] = useState({});
 
     //creating state variables to handle page display
-    const [viewBakeryProductAddAndEditVariantGroup, setViewBakeryProductAddAndEditVariantGroup] = useState("none");
-
+    const [viewBakeryProductEditVariantGroup, setViewBakeryProductEditVariantGroup] = useState("none");
+    const [viewBakeryProductAddVariantGroup, setViewBakeryProductAddVariantGroup] = useState("none");
+    const [viewBakeryProductEditVariantOption, setViewBakeryProductEditVariantOption] = useState("none");
+    const [viewBakeryProductAddVariantOption, setViewBakeryProductAddVariantOption] = useState("none");
+    
     //creating variable for styling the add buttons
     const addBtnIconStyle = { marginRight: "3px", marginLeft: "6px", color: "white" };
 
@@ -32,7 +35,7 @@ function BakeryProductVariants({variantGroups, setVariantGroups, variantOptions,
         //changing the variant group of the product
         axios.patch(`/products/${product?.id}`, {variant_group_id: variantGroups[index]?.id})
         .then(response => {
-            console.log(response)
+            console.log(response?.data)
         })
         .catch(error => {
             if(error?.response){
@@ -77,23 +80,77 @@ function BakeryProductVariants({variantGroups, setVariantGroups, variantOptions,
         
     }
 
+    //creating function to handle delete variant option
+    function handleDeleteVariantOption(variantOption){
+        axios.delete(`/variant_options/${variantOption?.id}`)
+        .then(response => {
+            //if deleted successfully
+            setAlertStatus(true);
+            setAlertMessage("Variant option deleted successfully!");
+            getVariantGroups();
+            setAlertDisplay("block");
+            hideAlert();
+        })
+        .catch(error => {
+            if(error?.response){
+                //if delete fails
+                setAlertStatus(false);
+                setAlertMessage("Variant option delete failed, please try again!");
+                setAlertDisplay("block");
+                hideAlert();
+            }
+        })
+    }
+
     return (
         <div className="bakeryProductVariantsContainer">
 
-            <div className="bakeryProductVariantsBakeryProductAddAndEditVariantGroupContainer">
-                <BakeryProductAddAndEditVariantGroup
-                    viewBakeryProductAddAndEditVariantGroup={viewBakeryProductAddAndEditVariantGroup}
-                    setViewBakeryProductAddAndEditVariantGroup={setViewBakeryProductAddAndEditVariantGroup}
+            <div className="bakeryProductVariantsBakeryProductAddAndEditContainer">
+                <BakeryProductEditVariantGroup
+                    viewBakeryProductEditVariantGroup={viewBakeryProductEditVariantGroup}
+                    setViewBakeryProductEditVariantGroup={setViewBakeryProductEditVariantGroup}
                     variantGroup={variantGroup}
                     setVariantGroup={setVariantGroup}
-                    variantGroups={variantGroups}
-                    setVariantGroups={setVariantGroups}
                     getVariantGroups={getVariantGroups}
                     setAlertDisplay={setAlertDisplay}
                     setAlertStatus={setAlertStatus}
                     setAlertMessage={setAlertMessage}
                     hideAlert={hideAlert}
 
+                />
+
+                <BakeryProductAddVariantGroup 
+                    viewBakeryProductAddVariantGroup={viewBakeryProductAddVariantGroup}
+                    setViewBakeryProductAddVariantGroup={setViewBakeryProductAddVariantGroup}
+                    getVariantGroups={getVariantGroups}
+                    setAlertDisplay={setAlertDisplay}
+                    setAlertStatus={setAlertStatus}
+                    setAlertMessage={setAlertMessage}
+                    hideAlert={hideAlert}
+                />
+
+                <BakeryProductAddVariantOption
+                    viewBakeryProductAddVariantOption={viewBakeryProductAddVariantOption}
+                    setViewBakeryProductAddVariantOption={setViewBakeryProductAddVariantOption}
+                    variantGroup={variantGroup}
+                    getVariantGroups={getVariantGroups}
+                    setAlertDisplay={setAlertDisplay}
+                    setAlertStatus={setAlertStatus}
+                    setAlertMessage={setAlertMessage}
+                    hideAlert={hideAlert}
+                />
+
+                <BakeryProductEditVariantOption
+                    viewBakeryProductEditVariantOption={viewBakeryProductEditVariantOption}
+                    setViewBakeryProductEditVariantOption={setViewBakeryProductEditVariantOption}
+                    variantOption={variantOption}
+                    setVariantOption={setVariantOption}
+                    variantGroup={variantGroup}
+                    getVariantGroups={getVariantGroups}
+                    setAlertDisplay={setAlertDisplay}
+                    setAlertStatus={setAlertStatus}
+                    setAlertMessage={setAlertMessage}
+                    hideAlert={hideAlert}
                 />
             </div>
 
@@ -104,7 +161,7 @@ function BakeryProductVariants({variantGroups, setVariantGroups, variantOptions,
             <div className="bakeryVariantGroupsNameAndButtonContainer">
                     <h1 className="bakeryVariantGroupsName">Group</h1>
                     <Tooltip title="Add variant group" arrow>
-                        <div className="iconAndButtonContainer" onClick={() => setViewBakeryProductAddAndEditVariantGroup("block") }>
+                        <div className="iconAndButtonContainer" onClick={() => setViewBakeryProductAddVariantGroup("block") }>
                             <IconContext.Provider value={{ size: '15px' }}>
                                 <RiAddFill style={addBtnIconStyle} />
                             </IconContext.Provider>
@@ -124,8 +181,45 @@ function BakeryProductVariants({variantGroups, setVariantGroups, variantOptions,
                             key={variantGroup?.id} 
                             variantGroup={variantGroup} 
                             setVariantGroup={setVariantGroup} 
-                            setViewBakeryProductAddAndEditVariantGroup={setViewBakeryProductAddAndEditVariantGroup}
+                            setViewBakeryProductEditVariantGroup={setViewBakeryProductEditVariantGroup}
                             handleDeleteVariantGroup={handleDeleteVariantGroup}
+                        />
+                    )
+                }
+
+            </div>
+
+
+
+
+
+            <div className="bakeryVariantOptionsNameAndButtonContainer">
+                    <h1 className="bakeryVariantOptionsName">Options</h1>
+                    <Tooltip title="Add variant option" arrow>
+                        <div className="iconAndButtonContainer" onClick={() => setViewBakeryProductAddVariantOption("block") }>
+                            <IconContext.Provider value={{ size: '15px' }}>
+                                <RiAddFill style={addBtnIconStyle} />
+                            </IconContext.Provider>
+                            <button className="addVariantOptionBtn">ADD</button>
+                        </div>
+                    </Tooltip>
+            </div>
+            <div className="bakeryVariantOptionsContainer">
+                <div className="bakeryVariantOptionsContainerTextsContainer">
+                    <h1 className="bakeryVariantOptionsContainerText">Name</h1>
+                    <div className="expandableDiv"></div>
+                    <h1 className="bakeryVariantOptionsContainerText">Price</h1>
+                </div>
+
+                {   
+                    //looping through each variant group and displaying them
+                    variantGroup?.variant_options && variantGroup?.variant_options.map(variantOption => 
+                        <BakeryProductVariantOption 
+                            key={variantOption?.id} 
+                            variantOption={variantOption} 
+                            setVariantOption={setVariantOption} 
+                            setViewBakeryProductEditVariantOption={setViewBakeryProductEditVariantOption}
+                            handleDeleteVariantOption={handleDeleteVariantOption}
                         />
                     )
                 }
