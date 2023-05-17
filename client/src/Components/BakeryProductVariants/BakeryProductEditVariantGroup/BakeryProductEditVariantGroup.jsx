@@ -7,9 +7,7 @@ import {AiFillCloseCircle} from "react-icons/ai";
 function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setViewBakeryProductEditVariantGroup ,variantGroup, setVariantGroup, getVariantGroups, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
    
     //creating state variables for controlled inputs
-    const [variantGroupName, setVariantGroupName] = useState(variantGroup.name);
-    console.log(variantGroupName)
-    console.log(variantGroup)
+    const [variantGroupName, setVariantGroupName] = useState(variantGroup?.name ? variantGroup?.name : "");
 
     //creating loading state variable
     const [isLoading, setIsLoading] = useState(false);
@@ -51,6 +49,7 @@ function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setVi
             <Tooltip title="close" arrow>
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductEditVariantGroup("none");
+                    setVariantGroup({})
             }}>
                     <IconContext.Provider value={{ size: '25px' }}>
                         <AiFillCloseCircle style={closePageIconStyle} />

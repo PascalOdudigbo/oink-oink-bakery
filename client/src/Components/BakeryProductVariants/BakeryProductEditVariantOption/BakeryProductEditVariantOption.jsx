@@ -31,6 +31,7 @@ function BakeryProductEditVariantOption({viewBakeryProductEditVariantOption, set
             setAlertDisplay("block");
             getVariantGroups();
             setVariantOptionName("");
+            // setViewBakeryProductEditVariantOption("none")
             hideAlert();
         })
         .catch(error => {

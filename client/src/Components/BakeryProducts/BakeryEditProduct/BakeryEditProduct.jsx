@@ -18,7 +18,7 @@ cloudinary.config({
 function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, variantGroups, discounts, getProducts}){
     //declaring states for dynamic data
     const [variantGroup, setVariantGroup] = useState(targetProduct?.variant_group)
-
+    
     //declaring form controlled input states
     const [name, setName] = useState(targetProduct?.name);
     const [description, setDescription] = useState(targetProduct?.description);
@@ -40,6 +40,8 @@ function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setA
 
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
+    !targetProduct?.name && navigate("/bakery-portal/products");
+
 
 
     //creating function to handle deleting product image from cloudinary

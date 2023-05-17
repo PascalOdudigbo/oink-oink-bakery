@@ -28,3 +28,6 @@ export {default as BakeryProductEditVariantGroup} from './BakeryProductVariants/
 export {default as BakeryProductVariantOption} from './BakeryProductVariants/BakeryProductVariantOption/BakeryProductVariantOption';
 export {default as BakeryProductAddVariantOption} from './BakeryProductVariants/BakeryProductAddVariantOption/BakeryProductAddVariantOption';
 export {default as BakeryProductEditVariantOption} from './BakeryProductVariants/BakeryProductEditVariantOption/BakeryProductEditVariantOption';
+export {default as BakeryDiscounts} from './BakeryDiscounts/BakeryDiscounts';
+export {default as BakeryDiscount} from './BakeryDiscounts/BakeryDiscount/BakeryDiscount';
+export {default as BakeryAddDiscount} from './BakeryDiscounts/BakeryAddDiscount/BakeryAddDiscount';

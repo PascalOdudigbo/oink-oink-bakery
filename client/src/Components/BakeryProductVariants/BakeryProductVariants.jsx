@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import {RiAddFill} from "react-icons/ri";
 import {BakeryProductVariantGroup, BakeryProductAddVariantGroup, BakeryProductEditVariantGroup, BakeryProductVariantOption, BakeryProductAddVariantOption, BakeryProductEditVariantOption} from "../../Components";
 import axios from "axios";
 
-function BakeryProductVariants({variantGroups, setVariantGroups, getVariantGroups, getVariantOptions, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
+function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, setVariantOption, variantGroups, setVariantGroups, getVariantGroups, setVariantOptions, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
 
-    //creating state variables to manage target variantGroup and variantOption data
-    const [variantGroup, setVariantGroup] = useState({});
-    const [variantOption, setVariantOption] = useState({});
+   
 
     //creating state variables to handle page display
     const [viewBakeryProductEditVariantGroup, setViewBakeryProductEditVariantGroup] = useState("none");
@@ -20,6 +18,11 @@ function BakeryProductVariants({variantGroups, setVariantGroups, getVariantGroup
     //creating variable for styling the add buttons
     const addBtnIconStyle = { marginRight: "3px", marginLeft: "6px", color: "white" };
 
+
+    useEffect(() => {
+        getVariantGroups();
+    }, [])
+
     //creating a function to change product variant group to No variant group 
     //if its Variant Group is being deleted
     function handleChangeProductsVariantGroup(product){
@@ -28,6 +31,7 @@ function BakeryProductVariants({variantGroups, setVariantGroups, getVariantGroup
         variantGroups.forEach(variantGroup => {
             if (variantGroup?.name === "No variant group"){
                 index = variantGroups.indexOf(variantGroup);
+                // console.log("index:", index)
             }
            
         })
@@ -35,7 +39,8 @@ function BakeryProductVariants({variantGroups, setVariantGroups, getVariantGroup
         //changing the variant group of the product
         axios.patch(`/products/${product?.id}`, {variant_group_id: variantGroups[index]?.id})
         .then(response => {
-            console.log(response?.data)
+            // console.log(response?.data)
+            // console.log("got here")
         })
         .catch(error => {
             if(error?.response){
@@ -50,6 +55,9 @@ function BakeryProductVariants({variantGroups, setVariantGroups, getVariantGroup
 
     //creating a function to handle delete variant group btn clicked
     function handleDeleteVariantGroup(variantGroup){
+        setAlertDisplay("block");
+        setAlertMessage("loading...");
+        setAlertStatus(true);
         //if the variant group is connected to any product 
         if (variantGroup?.products?.length > 0 ){
             variantGroup?.products?.forEach(product => {
@@ -57,26 +65,29 @@ function BakeryProductVariants({variantGroups, setVariantGroups, getVariantGroup
                 handleChangeProductsVariantGroup(product)
             })
         }
-        //delete the variant group from the database
-        axios.delete(`/variant_groups/${variantGroup?.id}`)
-        .then(response => {
-            //if deleted successfully
-            setAlertStatus(true);
-            setAlertMessage("Variant group deleted successfully!");
-            const newData = variantGroups?.filter(vG => vG?.id !== variantGroup?.id) 
-            setVariantGroups(newData);
-            setAlertDisplay("block");
-            hideAlert();
-        })
-        .catch(error => {
-            if(error?.response){
-                //if delete fails
-                setAlertStatus(false);
-                setAlertMessage("Variant group delete failed, please try again!");
+        setTimeout(()=>{
+            //delete the variant group from the database
+            // console.log("got here 2")
+            axios.delete(`/variant_groups/${variantGroup?.id}`)
+            .then(response => {
+                //if deleted successfully
+                setAlertStatus(true);
+                setAlertMessage("Variant group deleted successfully!");
+                const newData = variantGroups?.filter(vG => vG?.id !== variantGroup?.id) 
+                setVariantGroups(newData);
                 setAlertDisplay("block");
                 hideAlert();
-            }
-        })
+            })
+            .catch(error => {
+                if(error?.response){
+                    //if delete fails
+                    setAlertStatus(false);
+                    setAlertMessage("Variant group delete failed, please try again!");
+                    setAlertDisplay("block");
+                    hideAlert();
+                }
+            })
+        }, 3000)
         
     }
 

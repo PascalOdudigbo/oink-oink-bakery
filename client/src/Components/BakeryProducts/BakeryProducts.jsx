@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { IconContext } from 'react-icons/lib';
 import { Search, BakeryProduct } from "../../Components";
 import Tooltip from '@mui/material/Tooltip';
@@ -6,10 +6,12 @@ import { RiAddFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 
-function BakeryProducts({products, setProducts, handleProductSearch, setTargetProduct, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert }) {
+function BakeryProducts({getProducts, products, setProducts, handleProductSearch, setTargetProduct, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert }) {
     const iconStyles = { marginRight: "3px", marginLeft: "6px", color: "white" };
 
-   
+   useEffect(()=>{
+        getProducts();
+   }, [])
 
     return (
         <div className="bakeryProductsContainer">

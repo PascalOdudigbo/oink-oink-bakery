@@ -1,0 +1,90 @@
+.discountsDataRow{
+    .discountsDataCell{
+        padding: 15px;
+        text-align: left;
+        border-bottom: 2px solid #FFACFC;
+
+        .discountImageAndNameContainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .discountImage{
+                height: 50px;
+                width: 50px;
+                border-radius: 5px;
+            }
+
+            .discountName{
+                margin-left: 15px;
+            }
+        }
+
+        .discountActiveIconAndText{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            align-content: center;
+            align-self: center;
+      
+
+            .dropdown-content {
+            //   display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              height: fit-content;
+              z-index: 1;
+              box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+
+              .bakeryDiscountDropdownItem{
+                font-size: 0.9em;
+                font-weight: 800;
+                width: 100%;
+                text-align: center;
+                border: none;
+                border-top: 1px solid black;
+                padding: 12px 16px;
+                background-color: transparent;
+    
+                &:hover {
+                    cursor: pointer;
+                    color: black;
+                    background-color: #FFACFC;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                }
+
+              }
+
+              .bakeryDiscountDropdownItemDelete{
+                font-size: 0.9em;
+                font-weight: 800;
+                width: 100%;
+                text-align: center;
+                border: none;
+                border-top: 1px solid black;
+                padding: 12px 16px;
+                background-color: transparent;
+    
+                &:hover {
+                    cursor: pointer;
+                    color: black;
+                    background-color: red;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                }
+
+              }
+            }
+      
+          }
+      
+    }
+
+    &:nth-child(even) {background-color: rgb(196, 196, 196);}
+    &:hover {background-color: white;}
+}

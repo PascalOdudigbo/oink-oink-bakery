@@ -1,0 +1,237 @@
+.bakeryAddDiscountContainer {
+    width: 100%;
+    height: 100%;
+    // background-color: red;
+    overflow-y: scroll;
+
+    .bakeryAddDiscountPageTitle {
+        margin-left: 23px;
+        font-size: 1.5em;
+        font-weight: 800;
+        margin-bottom: 25px;
+        margin-top: 30px;
+
+    }
+
+    .bakeryAddDiscountForm {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .bakeryAddDiscountFormBody {
+            // background-color: white;
+            margin-left: 23px;
+            border-radius: 5px;
+            width: 60%;
+
+            .bakeryDetailsContainer {
+                // border: solid black 1px;
+                // box-shadow: 5px 10px;
+                border-radius: 5px;
+                background-color: white;
+                padding-bottom: 10px;
+                box-shadow: 0px 2px 2px rgb(75, 71, 71);
+
+
+                .bakeryAddDiscountFormTitle {
+                    text-align: left;
+                    padding-top: 10px;
+                    margin-left: 16px;
+                    font-size: 0.7em;
+                    font-weight: 800;
+                    text-decoration: underline;
+
+                }
+
+                .bakeryAddDiscountFormNameContainer {
+                    width: 96%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    // border: solid rgb(87, 86, 86) 1px;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                    border-radius: 5px;
+
+                    &:hover {
+                        border: solid rgb(240, 240, 240) 2px;
+                    }
+
+                    .bakeryAddDiscountFormNameText {
+                        text-align: left;
+                        margin-top: 5px;
+                        margin-bottom: 0px;
+                        margin-left: 5px;
+                        font-size: 0.8em;
+                        color: rgb(34, 34, 34);
+                        padding: 0%;
+
+
+                    }
+
+                    .bakeryAddDiscountFormInput {
+                        border: none;
+                        height: 30px;
+                        margin-top: none;
+                        width: 99%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 1px;
+                        font-size: 1em;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                }
+
+                .bakeryAddDiscountFormDescriptionContainer {
+                    width: 96%;
+                    margin-top: 25px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    // border: solid rgb(87, 86, 86) 1px;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+
+                    &:hover {
+                        border: solid rgb(240, 240, 240) 2px;
+                    }
+
+                    .bakeryAddDiscountFormDescriptionTitle {
+                        text-align: left;
+                        margin-top: 5px;
+                        margin-bottom: 0px;
+                        margin-left: 5px;
+                        font-size: 0.8em;
+                        color: rgb(34, 34, 34);
+                        padding: 0%;
+
+                    }
+
+                    .bakeryAddDiscountFormDescriptionTextArea {
+                        border: none;
+                        // height: 30px;
+                        margin-top: none;
+                        width: 99%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 1px;
+                        font-size: 1.2em;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            .bakeryAddDiscountFormPercentageContainer {
+                margin-top: 30px;
+                border-radius: 5px;
+                background-color: white;
+                padding-bottom: 10px;
+                box-shadow: 0px 2px 2px rgb(75, 71, 71);
+
+                .bakeryAddDiscountFormTitle {
+                    text-align: left;
+                    padding-top: 10px;
+                    margin-left: 16px;
+                    font-size: 0.7em;
+                    font-weight: 800;
+                    text-decoration: underline;
+
+                }
+
+                .bakeryAddDiscountFormPercentageInputContainer {
+                    width: 96%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    // border: solid rgb(87, 86, 86) 1px;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                    border-radius: 5px;
+
+                    &:hover {
+                        border: solid rgb(240, 240, 240) 2px;
+                    }
+
+                    .bakeryAddDiscountFormNameText {
+                        text-align: left;
+                        margin-top: 5px;
+                        margin-bottom: 0px;
+                        margin-left: 5px;
+                        font-size: 0.8em;
+                        color: rgb(34, 34, 34);
+                        padding: 0%;
+
+                    }
+
+                    .bakeryAddDiscountFormPercentageInput {
+                        border: none;
+                        height: 30px;
+                        margin-top: none;
+                        width: 99%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 1px;
+                        font-size: 1em;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .bakeryAddDiscountFormButtonsContainer {
+            border-radius: 5px;
+            background-color: white;
+            padding-bottom: 10px;
+            box-shadow: 0px 2px 2px rgb(75, 71, 71);
+            width: 30%;
+            margin-right: 23px;
+            height: 80px;
+
+            .bakeryAddDiscountFormSaveButton {
+                cursor: pointer;
+                color: black;
+                padding: 10px 12px;
+                border-radius: 5px;
+                text-align: center;
+                margin-top: 10px;
+                text-decoration: none;
+                display: inline-block;
+                margin-left: 10%;
+                margin-right: 10%;
+                width: 80%;
+                height: 70px;
+                font-size: 1em;
+                font-weight: 800;
+                background-color: #A3006B;
+                border: none;
+
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #FFACFC;
+                    color: white;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+
+                }
+            }
+
+        }
+    }
+
+}
+
+.bakeryAddDiscountContainer::-webkit-scrollbar{
+    display: none;
+}

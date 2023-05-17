@@ -1,0 +1,90 @@
+.bakeryDiscountsContainer {
+    width: 100%;
+    height: 100%;
+    // background-color: red;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .bakeryDiscountsTitleAndAddButtonContainer {
+        margin-left: auto;
+        margin-right: auto;
+        width: 96%;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        // background-color: red;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 40px;
+
+        .bakeryDiscountsPageTitle {
+            font-size: 1.5em;
+            font-weight: 800;
+            padding: none;
+            padding-bottom: 10px;
+
+        }
+
+        .iconAndButtonContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 35px;
+            width: fit-content;
+            border-radius: 17.5px;
+            background-color: #9C27B0;
+
+            &:hover {
+                background-color: #FFACFC;
+            }
+            // &:hover .addProductLink{
+            //     color: black;
+            // }
+
+            .addDiscountLink {
+                text-decoration: none;
+                color: black;
+                font-size: 0.7em;
+                font-weight: 800;
+                margin-right: 10px;
+                color: white;
+            }
+        }
+    }
+
+    .tableSearchContainer {
+        padding-top: 10px;
+        background-color: #9C27B0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 96%;
+        height: 60px;
+        margin-bottom: auto;
+
+
+    }
+
+    .bakeryDiscountsTable {
+        margin-left: auto;
+        margin-right: auto;
+        width: 96%;
+
+        .tableHeadersContainer {
+            border-radius: 5px;
+            background-color: #9C27B0;
+
+            .tableHeader {
+                height: 10px;
+                padding: 10px;
+                background-color: #9C27B0;
+                font-size: 0.9em;
+                color: white;
+            }
+
+        }
+
+    }
+}
+.bakeryDiscountsContainer::-webkit-scrollbar{
+    display: none;
+}

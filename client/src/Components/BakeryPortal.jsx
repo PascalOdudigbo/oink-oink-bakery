@@ -7,7 +7,7 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { AiFillDiff } from 'react-icons/ai';
 import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
-import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert, BakeryEditProduct, BakeryProductVariants} from "../Components";
+import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert, BakeryEditProduct, BakeryProductVariants, BakeryDiscounts, BakeryAddDiscount} from "../Components";
 import axios from "axios";
 
 function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
@@ -19,15 +19,20 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
     const [customers, setCustomers] = useState();
 
     //declaring state variables for variantGroups data
-    const [variantGroups, setVariantGroups] = useState([])
+    const [variantGroups, setVariantGroups] = useState([]);
 
     //declaring state variables for discounts data 
-    const [discounts, setDiscounts] = useState([])
+    const [discounts, setDiscounts] = useState([]);
 
     //declaring state variable for target product (edit/delete)
-    const [targetProduct, setTargetProduct] = useState({})
- 
+    const [targetProduct, setTargetProduct] = useState({});
 
+    //declaring state variable for target discount (edit/delete)
+    const [targetDiscount, setTargetDiscount] = useState({});
+ 
+    //creating state variables to manage target variantGroup and variantOption data
+    const [variantGroup, setVariantGroup] = useState({});
+    const [variantOption, setVariantOption] = useState({});
 
     //creating function to get customer data
     function getCustomers(){
@@ -61,10 +66,22 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
             getCustomers();
         }
         else{
-            let filteredCustomers = customers.filter(customer => `${customer.first_name} ${customer.last_name}`.toLowerCase().includes(searchInput));
+            let filteredCustomers = customers.filter(customer => `${customer.first_name} ${customer.last_name}`.toLowerCase().includes(searchInput.toLowerCase()));
             setCustomers(filteredCustomers);
         }
     }
+
+    //creating function to handle customer search
+    function handleDiscountSearch(searchInput){
+        if(searchInput === ""){
+            getDiscounts();
+        }
+        else{
+            let filteredDiscounts = discounts.filter(discount => discount?.name.toLowerCase().includes(searchInput.toLowerCase()));
+            setDiscounts(filteredDiscounts);
+        }
+    }
+
 
     useEffect(()=>{
         getCustomers();
@@ -137,6 +154,7 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
 
                     <Route path="/products" element={
                         <BakeryProducts 
+                            getProducts={getProducts}
                             setProducts={setProducts} 
                             products={products} 
                             handleProductSearch={handleProductSearch} 
@@ -177,16 +195,42 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
 
                     <Route path="/product-variants" element={
                         <BakeryProductVariants
+                            variantGroup={variantGroup}
+                            setVariantGroup={setVariantGroup}
+                            variantOption={variantOption}
+                            setVariantOption={setVariantOption}
                             variantGroups={variantGroups}
                             setVariantGroups={setVariantGroups}
-
-
                             getVariantGroups={getVariantGroups}
-
                             setAlertDisplay={setAlertDisplay}
                             setAlertStatus={setAlertStatus}
                             setAlertMessage={setAlertMessage}
                             hideAlert={hideAlert}
+                        />
+                    } />
+
+
+                    <Route path="/discounts" element={
+                        <BakeryDiscounts
+                            getDiscounts={getDiscounts}
+                            discounts={discounts}
+                            setDiscounts={setDiscounts}
+                            handleDiscountSearch={handleDiscountSearch}
+                            setTargetDiscount={setTargetDiscount}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertMessage={setAlertMessage}
+                            setAlertStatus={setAlertStatus}
+                            hideAlert={hideAlert}
+                        />
+                    }/>
+
+                        <Route path="/add-discount" element={
+                        <BakeryAddDiscount
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                            getDiscounts={getDiscounts}
                         />
                     } />
 

@@ -14,7 +14,7 @@ function BakeryProductVariantGroup({variantGroup, setVariantGroup, setViewBakery
                 
                 {
                     variantGroup?.name !== "No variant group" && 
-                    <IconContext.Provider value={{size: "20px"}}>
+                    <IconContext.Provider value={{size: "18px"}}>
                         <Tooltip title="Edit" arrow>
                             <button className="variantGroupEditBtn" onClick={()=> {
                                 setVariantGroup(variantGroup);
@@ -30,7 +30,7 @@ function BakeryProductVariantGroup({variantGroup, setVariantGroup, setViewBakery
 
                 {
                     variantGroup?.name !== "No variant group" && 
-                    <IconContext.Provider value={{size: "20px"}}>
+                    <IconContext.Provider value={{size: "18px"}}>
                         <Tooltip title="Delete" arrow> 
                             <button className="variantGroupDeleteBtn" onClick={() => handleDeleteVariantGroup(variantGroup)}>
                                 <AiFillDelete style={{color: "black"}}/>

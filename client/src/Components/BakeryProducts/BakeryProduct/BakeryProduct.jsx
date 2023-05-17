@@ -23,10 +23,10 @@ function BakeryProduct({products, setProducts, product, setTargetProduct, setAle
     const deleteCloudinaryProductImage = async (productImage) => {
           cloudinary.v2.uploader.destroy(productImage.image_public_id, function(error,result) {
             window.scrollTo(0, 0);
-            setAlertStatus(false);
-            setAlertDisplay("block");
-            setAlertMessage(`${result} ${error}`);
-            hideAlert();
+            // setAlertStatus(false);
+            // setAlertDisplay("block");
+            // setAlertMessage(`${result} ${error}`);
+            // hideAlert();
         })
         .then(response => {
             //if deleting image from server is a success
@@ -53,7 +53,7 @@ function BakeryProduct({products, setProducts, product, setTargetProduct, setAle
             if(error?.response){
                 //if deleting image from database fails
                 window.scrollTo(0, 0);
-                setAlertStatus(true);
+                setAlertStatus(false);
                 setAlertDisplay("block");
                 setAlertMessage(error.response.data.error);
                 hideAlert();
@@ -87,7 +87,7 @@ function BakeryProduct({products, setProducts, product, setTargetProduct, setAle
             if(error?.response){
                 //if deleting image from database fails
                 window.scrollTo(0, 0);
-                setAlertStatus(true);
+                setAlertStatus(false);
                 setAlertDisplay("block");
                 setAlertMessage(error.response.data.error);
                 hideAlert();
