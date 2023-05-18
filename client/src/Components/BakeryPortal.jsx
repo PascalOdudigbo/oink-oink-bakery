@@ -7,7 +7,18 @@ import { GiShoppingBag } from 'react-icons/gi';
 import { AiFillDiff } from 'react-icons/ai';
 import { TbDiscount2 } from 'react-icons/tb';
 import { IconContext } from "react-icons/lib";
-import { BakeryDashboard, BakeryCustomers, BakeryProducts, BakeryAddProduct, Alert, BakeryEditProduct, BakeryProductVariants, BakeryDiscounts, BakeryAddDiscount} from "../Components";
+import { 
+    BakeryDashboard, 
+    BakeryCustomers, 
+    BakeryProducts, 
+    BakeryAddProduct, 
+    Alert, 
+    BakeryEditProduct, 
+    BakeryProductVariants, 
+    BakeryDiscounts, 
+    BakeryAddDiscount, 
+    BakeryEditDiscount
+} from "../Components";
 import axios from "axios";
 
 function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
@@ -189,6 +200,8 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                             variantGroups={variantGroups}
                             discounts={discounts}
                             getProducts={getProducts}
+                            getDiscounts={getDiscounts}
+                            getVariantGroups={getVariantGroups}
                         />
                     } />
 
@@ -224,12 +237,25 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                         />
                     }/>
 
-                        <Route path="/add-discount" element={
+                    <Route path="/add-discount" element={
                         <BakeryAddDiscount
                             setAlertDisplay={setAlertDisplay}
                             setAlertStatus={setAlertStatus}
                             setAlertMessage={setAlertMessage}
                             hideAlert={hideAlert}
+                            getDiscounts={getDiscounts}
+                        />
+                    } />
+
+                    <Route path="/edit-discount" element={
+                        <BakeryEditDiscount 
+                            targetDiscount={targetDiscount}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                            variantGroups={variantGroups}
+                            discounts={discounts}
                             getDiscounts={getDiscounts}
                         />
                     } />

@@ -15,7 +15,7 @@ cloudinary.config({
   api_secret: process.env.REACT_APP_CLOUDINARY_API_SECRET
 });
 
-function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, variantGroups, discounts, getProducts}){
+function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, variantGroups, discounts, getProducts, getDiscounts, getVariantGroups}){
     //declaring states for dynamic data
     const [variantGroup, setVariantGroup] = useState(targetProduct?.variant_group)
     
@@ -177,6 +177,8 @@ function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setA
 
             //when all images have been uploaded to cloudinary and their data saved to database
             getProducts();
+            getDiscounts();
+            getVariantGroups()
             setIsLoading(false);
             setAlertStatus(true);
             setAlertMessage("Product updated successfully!")

@@ -31,3 +31,4 @@ export {default as BakeryProductEditVariantOption} from './BakeryProductVariants
 export {default as BakeryDiscounts} from './BakeryDiscounts/BakeryDiscounts';
 export {default as BakeryDiscount} from './BakeryDiscounts/BakeryDiscount/BakeryDiscount';
 export {default as BakeryAddDiscount} from './BakeryDiscounts/BakeryAddDiscount/BakeryAddDiscount';
+export {default as BakeryEditDiscount} from './BakeryDiscounts/BakeryEditDiscount/BakeryEditDiscount';

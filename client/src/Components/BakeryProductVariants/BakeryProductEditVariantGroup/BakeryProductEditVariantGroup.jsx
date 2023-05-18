@@ -50,6 +50,7 @@ function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setVi
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductEditVariantGroup("none");
                     setVariantGroup({})
+                    setVariantGroupName("")
             }}>
                     <IconContext.Provider value={{ size: '25px' }}>
                         <AiFillCloseCircle style={closePageIconStyle} />

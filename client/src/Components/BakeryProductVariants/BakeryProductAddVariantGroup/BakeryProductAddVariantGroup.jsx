@@ -48,6 +48,7 @@ function BakeryProductAddVariantGroup({viewBakeryProductAddVariantGroup, setView
             <Tooltip title="close" arrow>
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductAddVariantGroup("none");
+                    setVariantGroupName("");
                     
             }}>
                     <IconContext.Provider value={{ size: '25px' }}>
