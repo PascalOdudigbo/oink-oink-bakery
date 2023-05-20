@@ -4,11 +4,12 @@ import { IconContext } from "react-icons/lib";
 import {RiAddFill} from "react-icons/ri";
 import {BakeryProductVariantGroup, BakeryProductAddVariantGroup, BakeryProductEditVariantGroup, BakeryProductVariantOption, BakeryProductAddVariantOption, BakeryProductEditVariantOption} from "../../Components";
 import axios from "axios";
+import { useNavigate, Route, Routes } from "react-router-dom";
 
 function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, setVariantOption, variantGroups, setVariantGroups, getVariantGroups, setVariantOptions, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
-
-   
-
+    //creating the navigation function
+    const navigate = useNavigate()
+    
     //creating state variables to handle page display
     const [viewBakeryProductEditVariantGroup, setViewBakeryProductEditVariantGroup] = useState("none");
     const [viewBakeryProductAddVariantGroup, setViewBakeryProductAddVariantGroup] = useState("none");
@@ -117,52 +118,66 @@ function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, se
         <div className="bakeryProductVariantsContainer">
 
             <div className="bakeryProductVariantsBakeryProductAddAndEditContainer">
-                <BakeryProductEditVariantGroup
-                    viewBakeryProductEditVariantGroup={viewBakeryProductEditVariantGroup}
-                    setViewBakeryProductEditVariantGroup={setViewBakeryProductEditVariantGroup}
-                    variantGroup={variantGroup}
-                    setVariantGroup={setVariantGroup}
-                    getVariantGroups={getVariantGroups}
-                    setAlertDisplay={setAlertDisplay}
-                    setAlertStatus={setAlertStatus}
-                    setAlertMessage={setAlertMessage}
-                    hideAlert={hideAlert}
+                <Routes>
+                    <Route path={"/add-variant-group"} element={
+                        <BakeryProductAddVariantGroup 
+                            viewBakeryProductAddVariantGroup={viewBakeryProductAddVariantGroup}
+                            setViewBakeryProductAddVariantGroup={setViewBakeryProductAddVariantGroup}
+                            getVariantGroups={getVariantGroups}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                        />
+                    }/>
 
-                />
+                    <Route path={"/edit-variant-group"} element={
+                        <BakeryProductEditVariantGroup
+                            viewBakeryProductEditVariantGroup={viewBakeryProductEditVariantGroup}
+                            setViewBakeryProductEditVariantGroup={setViewBakeryProductEditVariantGroup}
+                            variantGroup={variantGroup}
+                            setVariantGroup={setVariantGroup}
+                            getVariantGroups={getVariantGroups}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                        />
+                    }/>
 
-                <BakeryProductAddVariantGroup 
-                    viewBakeryProductAddVariantGroup={viewBakeryProductAddVariantGroup}
-                    setViewBakeryProductAddVariantGroup={setViewBakeryProductAddVariantGroup}
-                    getVariantGroups={getVariantGroups}
-                    setAlertDisplay={setAlertDisplay}
-                    setAlertStatus={setAlertStatus}
-                    setAlertMessage={setAlertMessage}
-                    hideAlert={hideAlert}
-                />
 
-                <BakeryProductAddVariantOption
-                    viewBakeryProductAddVariantOption={viewBakeryProductAddVariantOption}
-                    setViewBakeryProductAddVariantOption={setViewBakeryProductAddVariantOption}
-                    variantGroup={variantGroup}
-                    getVariantGroups={getVariantGroups}
-                    setAlertDisplay={setAlertDisplay}
-                    setAlertStatus={setAlertStatus}
-                    setAlertMessage={setAlertMessage}
-                    hideAlert={hideAlert}
-                />
+                    <Route path={"/add-variant-option"} element={
+                        <BakeryProductAddVariantOption
+                            viewBakeryProductAddVariantOption={viewBakeryProductAddVariantOption}
+                            setViewBakeryProductAddVariantOption={setViewBakeryProductAddVariantOption}
+                            variantGroup={variantGroup}
+                            getVariantGroups={getVariantGroups}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                        />
 
-                <BakeryProductEditVariantOption
-                    viewBakeryProductEditVariantOption={viewBakeryProductEditVariantOption}
-                    setViewBakeryProductEditVariantOption={setViewBakeryProductEditVariantOption}
-                    variantOption={variantOption}
-                    setVariantOption={setVariantOption}
-                    variantGroup={variantGroup}
-                    getVariantGroups={getVariantGroups}
-                    setAlertDisplay={setAlertDisplay}
-                    setAlertStatus={setAlertStatus}
-                    setAlertMessage={setAlertMessage}
-                    hideAlert={hideAlert}
-                />
+                    }/>
+
+                    <Route path={"/edit-variant-option"} element={
+                        <BakeryProductEditVariantOption
+                            viewBakeryProductEditVariantOption={viewBakeryProductEditVariantOption}
+                            setViewBakeryProductEditVariantOption={setViewBakeryProductEditVariantOption}
+                            variantOption={variantOption}
+                            setVariantOption={setVariantOption}
+                            variantGroup={variantGroup}
+                            getVariantGroups={getVariantGroups}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                        />
+
+                    }/>
+
+                </Routes>
+                
             </div>
 
             <div className='bakeryProductVariantsTitleContainer'>
@@ -172,7 +187,10 @@ function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, se
             <div className="bakeryVariantGroupsNameAndButtonContainer">
                     <h1 className="bakeryVariantGroupsName">Group</h1>
                     <Tooltip title="Add variant group" arrow>
-                        <div className="iconAndButtonContainer" onClick={() => setViewBakeryProductAddVariantGroup("block") }>
+                        <div className="iconAndButtonContainer" onClick={() => {
+                            setViewBakeryProductAddVariantGroup("block")
+                            navigate("/bakery-portal/product-variants/add-variant-group")
+                        }}>
                             <IconContext.Provider value={{ size: '15px' }}>
                                 <RiAddFill style={addBtnIconStyle} />
                             </IconContext.Provider>
@@ -180,11 +198,13 @@ function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, se
                         </div>
                     </Tooltip>
             </div>
-            <div className="bakeryVariantGroupsContainer">
-                <div className="bakeryVariantGroupsContainerNameTextContainer">
-                    <h1 className="bakeryVariantGroupsContainerNameText">Name</h1>
-                </div>
 
+            <div className="bakeryVariantGroupsContainerNameTextContainer">
+                    <h1 className="bakeryVariantGroupsContainerNameText">Name</h1>
+            </div>
+
+            <div className="bakeryVariantGroupsContainer">
+                
                 {   
                     //looping through each variant group and displaying them
                     variantGroups?.map(variantGroup => 
@@ -207,7 +227,11 @@ function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, se
             <div className="bakeryVariantOptionsNameAndButtonContainer">
                     <h1 className="bakeryVariantOptionsName">Options</h1>
                     <Tooltip title="Add variant option" arrow>
-                        <div className="iconAndButtonContainer" onClick={() => setViewBakeryProductAddVariantOption("block") }>
+                        <div className="iconAndButtonContainer" onClick={() => {
+                            setViewBakeryProductAddVariantOption("block");
+                            navigate("/bakery-portal/product-variants/add-variant-option")
+
+                        }}>
                             <IconContext.Provider value={{ size: '15px' }}>
                                 <RiAddFill style={addBtnIconStyle} />
                             </IconContext.Provider>
@@ -215,12 +239,14 @@ function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, se
                         </div>
                     </Tooltip>
             </div>
-            <div className="bakeryVariantOptionsContainer">
-                <div className="bakeryVariantOptionsContainerTextsContainer">
+
+            <div className="bakeryVariantOptionsContainerTextsContainer">
                     <h1 className="bakeryVariantOptionsContainerText">Name</h1>
                     <div className="expandableDiv"></div>
                     <h1 className="bakeryVariantOptionsContainerText">Price</h1>
-                </div>
+            </div>
+            
+            <div className="bakeryVariantOptionsContainer">
 
                 {   
                     //looping through each variant group and displaying them

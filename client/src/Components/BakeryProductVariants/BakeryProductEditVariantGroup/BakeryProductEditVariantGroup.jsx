@@ -3,6 +3,7 @@ import axios from "axios";
 import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import {AiFillCloseCircle} from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setViewBakeryProductEditVariantGroup ,variantGroup, setVariantGroup, getVariantGroups, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
    
@@ -14,6 +15,9 @@ function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setVi
 
     //declaring icon styling variables
     const closePageIconStyle = {color: "red"};
+
+     //creating the navigation function
+     const navigate = useNavigate();
 
    
     //creating a function to handleEditVariantGroup
@@ -51,6 +55,7 @@ function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setVi
                     setViewBakeryProductEditVariantGroup("none");
                     setVariantGroup({})
                     setVariantGroupName("")
+                    navigate("/bakery-portal/product-variants/")
             }}>
                     <IconContext.Provider value={{ size: '25px' }}>
                         <AiFillCloseCircle style={closePageIconStyle} />

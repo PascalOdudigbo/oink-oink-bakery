@@ -3,6 +3,7 @@ import axios from "axios";
 import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import {AiFillCloseCircle} from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function BakeryProductAddVariantGroup({viewBakeryProductAddVariantGroup, setViewBakeryProductAddVariantGroup, getVariantGroups, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
    
@@ -15,6 +16,9 @@ function BakeryProductAddVariantGroup({viewBakeryProductAddVariantGroup, setView
 
     //declaring icon styling variables
     const closePageIconStyle = {color: "red"};
+
+    //creating the navigate function variable
+    const navigate = useNavigate();
 
     //creating a function to handleAddVariantGroup
     function handleAddVariantGroup(){
@@ -49,7 +53,7 @@ function BakeryProductAddVariantGroup({viewBakeryProductAddVariantGroup, setView
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductAddVariantGroup("none");
                     setVariantGroupName("");
-                    
+                    navigate("/bakery-portal/product-variants/")
             }}>
                     <IconContext.Provider value={{ size: '25px' }}>
                         <AiFillCloseCircle style={closePageIconStyle} />

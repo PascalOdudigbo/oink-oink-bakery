@@ -3,9 +3,12 @@ import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import {AiFillDelete} from "react-icons/ai";
 import {FaEdit} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function BakeryProductVariantOption({variantOption, setVariantOption, setViewBakeryProductEditVariantOption, handleDeleteVariantOption}){
     
+    //creating the navigate function
+    const navigate = useNavigate();
     return (
         <div className="bakeryVariantOptionContainer" onClick={() => setVariantOption(variantOption)}>
             <h1 className="variantOptionName">{variantOption?.name}</h1>
@@ -17,6 +20,7 @@ function BakeryProductVariantOption({variantOption, setVariantOption, setViewBak
                             <button className="variantOptionEditBtn" onClick={()=> {
                                 setVariantOption(variantOption);
                                 setViewBakeryProductEditVariantOption("block");
+                                navigate("/bakery-portal/product-variants/edit-variant-option");
                             }}>
                                 <FaEdit style={{color: "black"}}/>
                             </button>

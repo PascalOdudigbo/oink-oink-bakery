@@ -3,8 +3,12 @@ import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import {AiFillDelete} from "react-icons/ai";
 import {FaEdit} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function BakeryProductVariantGroup({variantGroup, setVariantGroup, setViewBakeryProductEditVariantGroup, handleDeleteVariantGroup}){
+
+    //creating navigate function
+    const navigate = useNavigate();
     
     return (
         <div className="bakeryVariantGroupContainer" onClick={() => setVariantGroup(variantGroup)}>
@@ -19,6 +23,7 @@ function BakeryProductVariantGroup({variantGroup, setVariantGroup, setViewBakery
                             <button className="variantGroupEditBtn" onClick={()=> {
                                 setVariantGroup(variantGroup);
                                 setViewBakeryProductEditVariantGroup("block");
+                                navigate("/bakery-portal/product-variants/edit-variant-group")
                             }}>
                                 <FaEdit style={{color: "black"}}/>
                             </button>

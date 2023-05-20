@@ -206,7 +206,7 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
                     } />
 
 
-                    <Route path="/product-variants" element={
+                    <Route path="/product-variants/*" element={
                         <BakeryProductVariants
                             variantGroup={variantGroup}
                             setVariantGroup={setVariantGroup}

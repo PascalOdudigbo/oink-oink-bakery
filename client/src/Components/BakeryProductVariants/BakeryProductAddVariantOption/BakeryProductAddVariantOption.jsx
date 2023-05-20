@@ -3,6 +3,7 @@ import axios from "axios";
 import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import {AiFillCloseCircle} from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function BakeryProductAddVariantOption({viewBakeryProductAddVariantOption, setViewBakeryProductAddVariantOption ,variantGroup, getVariantGroups, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}){
    
@@ -15,6 +16,9 @@ function BakeryProductAddVariantOption({viewBakeryProductAddVariantOption, setVi
 
     //declaring icon styling variables
     const closePageIconStyle = {color: "red"};
+
+    // creating the navigate function
+    const navigate = useNavigate();
 
     //creating a function to handleAddVariantOption
     function handleAddVariantOption(){
@@ -49,6 +53,9 @@ function BakeryProductAddVariantOption({viewBakeryProductAddVariantOption, setVi
             <Tooltip title="close" arrow>
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductAddVariantOption("none");
+                    setVariantOptionName("");
+                    setVariantOptionPrice("");
+                    navigate("/bakery-portal/product-variants/");
             }}>
                     <IconContext.Provider value={{ size: '25px' }}>
                         <AiFillCloseCircle style={closePageIconStyle} />

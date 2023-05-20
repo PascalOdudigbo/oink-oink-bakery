@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
 
-    render json: @products
+    render json: @products, include: ['product_images', 'discount', ['variant_group', 'variant_group.variant_options']]
   end
 
   # GET /products/1
