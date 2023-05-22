@@ -7,6 +7,18 @@ import { MdAddShoppingCart } from "react-icons/md";
 function Product({ product, onAddToCart, setTargetProduct, setviewProductDetailsPageView, setImageUrl}) {
   const ButtonsIconStyle = { color: "black" };
 
+  //creating a function to calcuate product price
+  function handleCalculatePrice(){
+    let price = 0
+    if (product?.discount?.name !== "No discount"){
+       price = product?.price - ((product?.discount?.discount_percent / 100) * product?.price)
+    }
+    else {
+      price = product?.price
+    }
+    return price
+  }
+
   return (
     <div className='product' onClick={()=> {
       setTargetProduct(product);
@@ -17,7 +29,7 @@ function Product({ product, onAddToCart, setTargetProduct, setviewProductDetails
       <div className='productContent'>
         <div className='productNameAndPrice'>
           <h4 className='productName'>{product?.name}</h4>
-          <h4 className='productprice'>{`Ksh ${product?.price}`}</h4>
+          <h4 className='productprice'>{`Ksh ${handleCalculatePrice()}`}</h4>
         </div>
         <p className='productDescription' dangerouslySetInnerHTML={{ __html: product?.description}}/>
           {/* {product.description.slice(3, product.description.length - 4)}</p> */}

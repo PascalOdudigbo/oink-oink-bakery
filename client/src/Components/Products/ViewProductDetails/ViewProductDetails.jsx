@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {HiArrowCircleLeft, HiArrowCircleRight} from "react-icons/hi"
 import {AiFillCloseCircle} from "react-icons/ai";
 import { IconContext } from "react-icons/lib";
 import Tooltip from "@mui/material/Tooltip";
 
-function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewProductDetailsPageView, imageUrl, setImageUrl}){
+function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewProductDetailsPageView, imageUrl, setImageUrl, selectedOption, setSelectedOption}){
     //declaring icon styling variables
     const arrowIconsStyles = {color: "black"};
     const closePageIconStyle = {color: "red"};
    
-    //creating functions to handle viewing previous image
+    //creating functions to handle viewing previous and nextimage
     function handleImageNavigationLeft(){
         //creating a variable to hold the index of the current image being displayed
         let imageIndex = 0
@@ -47,7 +47,32 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
         } 
     }
 
+    //creating a function to handle price display if product has discount or a variant option is selected
+    function handlePriceDisplay(){
+        let price = 0
+        if (targetProduct?.discount?.name !== "No discount"){
+            if (selectedOption?.price){
+                price = selectedOption?.price - ((targetProduct?.discount?.discount_percent / 100) * selectedOption?.price)
+            }
+            else{
+                price = targetProduct?.price - ((targetProduct?.discount?.discount_percent / 100) * targetProduct?.price)
+            }
+        }
+        else{
+            if (selectedOption?.price){
+                price = selectedOption?.price
+            }
+            else{
+                price = targetProduct?.price
+            }
+        }
+        return price
+    }
     
+    useEffect(() => {
+        setSelectedOption({})
+    }, [targetProduct])
+
     return(
         targetProduct?.product_images ? 
         <div className="viewProductDetailsContainer" style={{display: viewProductDetailsPageView}}>
@@ -82,7 +107,46 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
             <div className="viewProductDetailsTextContainer">
                 <div className="viewProductDetailsTextProductNameAndPriceContainer">
                     <h4 className='viewProductDetailsProductName'>{targetProduct?.name}</h4>
-                    <h4 className='viewProductDetailsProductPrice'>{`Ksh ${targetProduct?.price}`}</h4>
+                    <div className="viewProductDetailsProductPriceContainer">
+                        <h4 className='viewProductDetailsProductPrice'>{`Ksh ${handlePriceDisplay()}`}</h4>
+                        {
+                            targetProduct?.discount?.name !== "No discount" &&
+                            <Tooltip title={targetProduct?.discount?.name} arrow>
+                                <div className="viewProductDetailsProductOriginalPriceAndDiscountPercentContainer">
+                                    <h4 className='viewProductDetailsProductOriginalPrice'>{`Ksh ${selectedOption?.price ? selectedOption?.price : targetProduct?.price}`}</h4>
+                                    <h4 className='viewProductDetailsProductDiscountPercent'>{`-${targetProduct?.discount?.discount_percent}%`}</h4>
+                                </div>
+
+                            </Tooltip>
+                        }
+                    </div>
+                </div>
+
+                <div className="viewProductDetailsVariantOptionsAndAddToCartContainer">
+                    {
+                        //if the product has variant options then display them
+                        targetProduct?.variant_group?.variant_options?.length > 0 &&
+                        <div className="viewProductDetailsVariantOptionsDropdownContainer">
+
+                            <button className="viewProductDetailsVariantOptionsDropdownBtn">{
+                                selectedOption?.name ? selectedOption?.name : "Variations"
+                            }</button>
+           
+                            <div className='viewProductDetailsVariantOptionsDropdownItemsContainer'>
+            
+                                {
+                                    targetProduct?.variant_group?.variant_options?.map(variantOption => 
+                                        <button key={variantOption?.id} className="viewProductDetailsVariantOptionsDropdownItem" onClick={() => setSelectedOption(variantOption)}>{variantOption?.name}</button>
+                                    )
+                                }
+                            
+                            </div>
+
+                        </div> 
+                    }
+
+                    <button className="viewProductDetailsAddToCartButton">ADD TO CART</button>
+
                 </div>
               
                 <p className='viewProductDetailsProductDescription' dangerouslySetInnerHTML={{ __html: targetProduct?.description}}/>
