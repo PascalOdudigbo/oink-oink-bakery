@@ -11,7 +11,8 @@ import {
   BakeryPortal,
   CustomerConfirmEmail,
   Alert,
-  Cart
+  Cart, 
+  AddressBook
 } from "./Components";
 // import { commerce } from "./lib/commerce";
 import axios from "axios";
@@ -659,6 +660,13 @@ function App() {
             />
           </>
           
+        }/>
+
+        <Route path="/customer/address-book" element={
+            <AddressBook
+              customerData={customerData}
+              handleLogout={handleLogout}
+            />
         }/>
       </Routes>
     </div>

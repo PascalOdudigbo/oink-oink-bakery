@@ -1,0 +1,54 @@
+.addressBookContainer{
+    width: 100%;
+    // margin-top: 80px;
+    height: fit-content;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    .addressBookPageTitle{
+        // text-align: left;
+        font-size: 2.5rem;
+        font-weight: 800;
+        padding: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+
+    .addressBookEmptyText{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .addressBookAddAddressBtnContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+
+        .addressBookAddAddressBtn{
+            font-size: 0.9em;
+            font-weight: 800;
+            width: fit-content;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 20px 30px;
+            background-color: #9C27B0;
+    
+            &:hover {
+                cursor: pointer;
+                color: black;
+                background-color: #FFACFC;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            }
+        }
+    }
+    
+
+}
