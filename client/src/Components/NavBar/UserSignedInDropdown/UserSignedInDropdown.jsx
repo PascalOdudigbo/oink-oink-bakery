@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { IconContext } from "react-icons/lib";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +7,9 @@ function UserSignedInDropdown({customerData, bakerData, handleLogout}){
 
     //creating loading state
     const [isLoading, setIsLoading] = useState(false)
+
+    //creating navigation variable function
+    const navigate = useNavigate();
 
 
     return (
@@ -27,9 +29,21 @@ function UserSignedInDropdown({customerData, bakerData, handleLogout}){
            
             <div className='userSignedInDropdownLinksContainer'>
                 {
-                    
+                    customerData?.id && <button className="userSignedInDropdownBtn" onClick={() => navigate()}>{isLoading ? "Loading..." : "Account Management"}</button>
+                }
+
+                {
+                    customerData?.id && <button className="userSignedInDropdownBtn" onClick={() => navigate()}>{isLoading ? "Loading..." : "Address Book"}</button>
+                }
+
+                {
+                    customerData?.id && <button className="userSignedInDropdownBtn" onClick={() => navigate()}>{isLoading ? "Loading..." : "My Orders"}</button>
                 }
                 
+                {
+                    customerData?.id && <button className="userSignedInDropdownBtn" onClick={() => navigate()}>{isLoading ? "Loading..." : "Pending Reviews"}</button>
+                }
+
                 {
                     <button className="userSignedInDropdownLogoutBtn" onClick={() => handleLogout(setIsLoading)}>{isLoading ? "Loading..." : "Logout"}</button>
                 }
