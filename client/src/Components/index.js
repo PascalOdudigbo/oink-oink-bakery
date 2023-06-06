@@ -35,3 +35,4 @@ export {default as BakeryEditDiscount} from './BakeryDiscounts/BakeryEditDiscoun
 export {default as Cart} from './Cart/Cart';
 export {default as CartItem} from './Cart/CartItem/CartItem';
 export {default as EditCartItem} from './Cart/EditCartItem/EditCartItem';
+export {default as AddressBook} from './AddressBook/AddressBook';
