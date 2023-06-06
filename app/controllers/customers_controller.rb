@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :set_customer, only: [:show, :update, :destroy]
+  before_action :set_customer, only: [:show, :update, :destroy, :my_carts]
 
   # POST /customer-login
   def login
@@ -33,6 +33,13 @@ class CustomersController < ApplicationController
       render json: {error: "Email isn't linked to any account!"}, status: :unauthorized
     end
   
+  end
+
+  #GET /customer-carts/1
+  def my_carts
+    carts = @customer.carts
+
+    render json: carts, include: ['line_items', ['line_items.product', 'line_items.product.product_images', 'line_items.product.discount'], ['line_items.variant_option']], status: :created
   end
 
   # GET /customers

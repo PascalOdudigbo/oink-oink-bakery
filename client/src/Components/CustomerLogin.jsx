@@ -6,7 +6,7 @@ import axios from "axios";
 
 function CustomerLogin(
     {hideAlert, alertDisplay, setAlertDisplay, alertStatus, setAlertStatus, 
-    alertMessage, setAlertMessage, customerData, setCustomerData}
+    alertMessage, setAlertMessage, customerData, setCustomerData, getCarts}
 ) {
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
@@ -43,7 +43,8 @@ function CustomerLogin(
         .then(response => {
             //if authentication successful
             setIsLoading(false);
-            setCustomerData(response.data);
+            setCustomerData(response?.data);
+            getCarts(response?.data?.id)
             setAlertStatus(true);
             setAlertMessage("Login Successful!");
             setAlertDisplay("block");

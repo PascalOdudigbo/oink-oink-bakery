@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {HiArrowCircleLeft, HiArrowCircleRight} from "react-icons/hi"
 import {AiFillCloseCircle} from "react-icons/ai";
 import { IconContext } from "react-icons/lib";
 import Tooltip from "@mui/material/Tooltip";
 
-function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewProductDetailsPageView, imageUrl, setImageUrl, selectedOption, setSelectedOption}){
+function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewProductDetailsPageView, imageUrl, setImageUrl, selectedOption, setSelectedOption, handleAddToCart, cakeColor, setCakeColor, cakeText, setCakeText}){
     //declaring icon styling variables
     const arrowIconsStyles = {color: "black"};
     const closePageIconStyle = {color: "red"};
+
    
     //creating functions to handle viewing previous and nextimage
     function handleImageNavigationLeft(){
@@ -71,6 +72,8 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
     
     useEffect(() => {
         setSelectedOption({})
+        setCakeText("")
+        setCakeColor("")
     }, [targetProduct])
 
     return(
@@ -121,6 +124,26 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
                         }
                     </div>
                 </div>
+                
+                <div className="viewProductDetailsColorAndCakeTextContainer">
+                        <div className="viewProductDetailsColorContainer">
+                            <p className="viewProductDetailsColorText">Cake colour</p>
+                            <input className="viewProductDetailsColorInput" type="text" required value={cakeColor} onChange={e => setCakeColor(e.target.value)}/>
+                        </div>
+
+                        <div className="viewProductDetailsCakeTextContainer">
+                            <p className="viewProductDetailsCakeTextTitle">Cake text (required)</p>
+                            <textarea className="viewProductDetailsCakeTextTextArea" rows="2" cols="75" value={cakeText} 
+                            onChange={(e)=>{
+                                if (e.target?.value?.length <= 50){
+                                    setCakeText(e.target.value);
+                                }
+                            }}/>
+                            <p className="viewProductDetailsCakeTextMaxInput">{`${cakeText.length}/50`}</p>
+
+                        </div>
+
+                </div>
 
                 <div className="viewProductDetailsVariantOptionsAndAddToCartContainer">
                     {
@@ -145,7 +168,10 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
                         </div> 
                     }
 
-                    <button className="viewProductDetailsAddToCartButton">ADD TO CART</button>
+                    <button className="viewProductDetailsAddToCartButton" onClick={()=> {
+                        // console.log(selectedOption)
+                        handleAddToCart(targetProduct, selectedOption, cakeColor===""? "Any color" : cakeColor, cakeText==="" ? "No text" : cakeText)
+                    }}>ADD TO CART</button>
 
                 </div>
               

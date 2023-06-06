@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :customer_addresses
   resources :variant_options
   resources :variant_groups
   resources :line_items
@@ -20,7 +21,8 @@ Rails.application.routes.draw do
   post "/customer-login", to: "customers#login"
   get "/customer-logged-in", to: "customers#logged_in"
   delete "/customer-logout", to: "customers#logout"
-  post "/customer-account-recovery", to: "customers#account_recovery"
+  post "/customer-account-recovery", to: "customers#account_recovery" 
+  get "/customer-carts/:id", to: "customers#my_carts"
 
    #adding custom action routes for baker(s)
    post "/baker-login", to: "bakers#login"

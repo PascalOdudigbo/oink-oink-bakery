@@ -7,7 +7,9 @@ import { Badge } from '@mui/material';
 import { MdShoppingCart } from 'react-icons/md';
 import {LoginOrSignUpDropdown, UserSignedInDropdown} from '../../Components';
 function NavBar({ totalItems, bakerData, customerData, handleLogout }) {
+    //styling the icons
     const ButtonsIconStyle = { color: "black" };
+    //creating the navigation function variable
     const navigate = useNavigate();
 
     return (
@@ -37,7 +39,7 @@ function NavBar({ totalItems, bakerData, customerData, handleLogout }) {
                     window.location.href.includes("admin") ||
                     window.location.href.includes("bakery-portal") ? null :
                     <Tooltip title="Show cart items" arrow>
-                        <button className="btn-showCartItems">
+                        <button className="btn-showCartItems" onClick={() => navigate("/cart")}>
                             <IconContext.Provider value={{ size: '26px' }}>
                                 <Badge badgeContent={totalItems} color="secondary">
                                     <MdShoppingCart style={ButtonsIconStyle} />

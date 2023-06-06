@@ -275,6 +275,111 @@
         }
     }
 
+    .viewProductDetailsColorAndCakeTextContainer{
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        background-color: white;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        box-shadow: 0px 2px 2px rgb(75, 71, 71);
+        height: fit-content;
+
+        .viewProductDetailsColorContainer{
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            border-radius: 5px;
+            // background-color: red;
+
+            &:hover {
+                border: solid rgb(240, 240, 240) 2px;
+            }
+
+            .viewProductDetailsColorText{
+                text-align: left;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+
+            }
+
+            .viewProductDetailsColorInput{
+                border: none;
+                height: 30px;
+                // margin-top: none;
+                width: 99%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1px;
+                font-size: 1.2em;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            
+        }
+
+
+        .viewProductDetailsCakeTextContainer{
+            width: 96%;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            &:hover {
+                border: solid rgb(240, 240, 240) 2px;
+            }
+
+            .viewProductDetailsCakeTextTitle{
+                text-align: left;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+
+            }  
+            
+            .viewProductDetailsCakeTextTextArea{
+                border: none;
+                margin-top: none;
+                width: 99%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1px;
+                font-size: 1.4em;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+
+            .viewProductDetailsCakeTextMaxInput{
+                text-align: right;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+
+            }
+        }
+    }
+
 }
 .viewProductDetailsContainer::-webkit-scrollbar{
     display: none;

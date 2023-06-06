@@ -32,3 +32,6 @@ export {default as BakeryDiscounts} from './BakeryDiscounts/BakeryDiscounts';
 export {default as BakeryDiscount} from './BakeryDiscounts/BakeryDiscount/BakeryDiscount';
 export {default as BakeryAddDiscount} from './BakeryDiscounts/BakeryAddDiscount/BakeryAddDiscount';
 export {default as BakeryEditDiscount} from './BakeryDiscounts/BakeryEditDiscount/BakeryEditDiscount';
+export {default as Cart} from './Cart/Cart';
+export {default as CartItem} from './Cart/CartItem/CartItem';
+export {default as EditCartItem} from './Cart/EditCartItem/EditCartItem';

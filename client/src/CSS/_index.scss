@@ -30,7 +30,9 @@
 @import "./bakeryDiscount";
 @import "./bakeryDiscounts";
 @import "./bakeryAddDiscount";
-
+@import "./cart";
+@import "./cartItem";
+@import "./editCartItem";
 
 body{
     top: 0;
@@ -44,7 +46,8 @@ body{
     overflow-x: hidden; 
     overflow-y: scroll;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    background-color: #f0f2f5;
+    // background-color: #f0f2f5;
+    background-color: white;
     // background-image: url("../assets/BakeryBackground.jpg");
 
     .homePageAlertContainer{

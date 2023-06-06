@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
 import {Product, Search, ViewProductDetails} from '../../Components';
 
-function Products({products, onAddToCart, handleProductSearch}) {
+function Products({products, handleAddToCart, handleProductSearch, selectedOption, setSelectedOption, cakeColor, setCakeColor, cakeText, setCakeText}) {
 
   //creating state to manage product details view component display
   const [viewProductDetailsPageView, setviewProductDetailsPageView] = useState("none");
   const [targetProduct, setTargetProduct] = useState({});
-  const [selectedOption, setSelectedOption] = useState({});
 
   //creating state to manage ViewProductDetails image display url
   const [imageUrl, setImageUrl] = useState("");
@@ -22,6 +21,11 @@ function Products({products, onAddToCart, handleProductSearch}) {
           setImageUrl={setImageUrl}
           selectedOption={selectedOption}
           setSelectedOption={setSelectedOption}
+          handleAddToCart={handleAddToCart}
+          cakeColor={cakeColor}
+          setCakeColor={setCakeColor}
+          cakeText={cakeText}
+          setCakeText={setCakeText}
         />
       </div>
       
@@ -36,10 +40,11 @@ function Products({products, onAddToCart, handleProductSearch}) {
         <Product 
           key={product.id} 
           product={product} 
-          onAddToCart={onAddToCart} 
+          handleAddToCart={handleAddToCart} 
           setTargetProduct={setTargetProduct} 
           setviewProductDetailsPageView={setviewProductDetailsPageView}
           setImageUrl={setImageUrl}
+          setSelectedOption={setSelectedOption}
         />
       )}
       </div>
