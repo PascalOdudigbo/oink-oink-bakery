@@ -1,0 +1,392 @@
+.EditAddressFormContainer{
+    background-color: white;
+    height: 500px;
+    margin-top: 90px;
+    position: fixed;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 99 !important; 
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(207, 207, 207);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 5px;
+
+    .btn-closePage{
+        top: 5px;
+        margin-left: 95%;
+        margin-bottom: 10px;
+        border: none;
+        background: none;
+        width: fit-content;
+        padding-top: 6px;
+        padding-bottom: 6px;  
+        z-index: 99 !important; 
+        // position: fixed;     
+    }
+    
+
+    .EditAddressForm{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        // background-color: red;
+        overflow-y: scroll;
+
+        .EditAddressFormTitle{
+            font-weight: bold;
+            font-size: 1.4em;
+            margin-top: 40px;
+            text-align: center;
+            color: #A3006B;
+
+        }
+
+        .EditAddressFormPhoneContainer{
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            border-radius: 5px;
+            margin-bottom: 20px;
+
+            &:hover {
+                border: solid rgb(240, 240, 240) 2px;
+            }
+
+            .EditAddressFormPhoneText{
+                text-align: left;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+
+            }
+
+            .EditAddressFormInput{
+                border: none;
+                height: 30px;
+                // margin-top: none;
+                width: 99%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1px;
+                font-size: 1.2em;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+        }
+
+        .EditAddressFormAddressContainer{
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            border-radius: 5px;
+            margin-bottom: 20px;
+
+            &:hover {
+                border: solid rgb(240, 240, 240) 2px;
+            }
+
+            .EditAddressFormAddressText{
+                text-align: left;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+            }
+
+            .EditAddressFormInput{
+                border: none;
+                height: 30px;
+                // margin-top: none;
+                width: 99%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1px;
+                font-size: 1.2em;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+
+        .EditAddressFormAdditionalInformationContainer{
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            border-radius: 5px;
+            margin-bottom: 20px;
+
+            &:hover {
+                border: solid rgb(240, 240, 240) 2px;
+            }
+
+            .EditAddressFormAdditionalInformationText{
+                text-align: left;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+            }
+
+            .EditAddressFormAdditionalInformationTextArea{
+                border: none;
+                margin-top: none;
+                width: 99%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1px;
+                font-size: 1.4em;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+
+            .EditAddressFormAdditionalInformationMaxInput{
+                text-align: right;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+
+            }
+        }
+
+
+        .EditAddressFormRegionTextAndDropdownContainer{
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            min-height: 200px;
+            height: fit-content;
+
+
+            &:hover {
+                border: solid rgb(240, 240, 240) 2px;
+            }
+
+            .EditAddressFormRegionText{
+                text-align: left;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+
+            }
+
+            .EditAddressFormRegionsDropdownContainer{
+                position: relative;
+                display: inline-block;
+                margin-right: auto;
+                margin-top: 10px;
+                width: 96%;
+                height: 60%;
+                margin-left: 2%;
+                margin-right: 2%;
+
+
+                &:hover .EditAddressFormRegionsDropdownItemsContainer{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .EditAddressFormRegionsDropdownBtn{
+                    background-color: rgb(240, 240, 240);
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                    border-radius: 5px;
+                    font-size: 0.9em;
+                    font-weight: 800;
+                    width: 100%;
+                    text-align: center;
+                    padding: 12px 16px;
+                    border: none;
+                }
+
+                .EditAddressFormRegionsDropdownItemsContainer{
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #f1f1f1;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    align-items: center;
+                    overflow-y: scroll;
+                    z-index: 1;
+
+                    .EditAddressFormRegionsDropdownItem{
+                        font-size: 0.9em;
+                        font-weight: 500;
+                        width: 100%;
+                        text-align: left;
+                        border: none;
+                        border-top: 1px solid black;
+                        padding: 12px 16px;
+                        background-color: transparent;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: black;
+                            background-color: #FFACFC;
+                            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+
+        .EditAddressFormCityTextAndDropdownContainer{
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            min-height: 200px;
+            height: fit-content;
+
+
+            &:hover {
+                border: solid rgb(240, 240, 240) 2px;
+            }
+
+            .EditAddressFormCityText{
+                text-align: left;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                margin-left: 5px;
+                font-size: 0.8em;
+                color: rgb(34, 34, 34);
+                padding: 0%;
+
+            }
+
+            .EditAddressFormCityDropdownContainer{
+                position: relative;
+                display: inline-block;
+                margin-right: auto;
+                margin-top: 10px;
+                width: 96%;
+                height: 60%;
+                margin-left: 2%;
+                margin-right: 2%;
+
+
+                &:hover .EditAddressFormCityDropdownItemsContainer{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .EditAddressFormCityDropdownBtn{
+                    background-color: rgb(240, 240, 240);
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                    border-radius: 5px;
+                    font-size: 0.9em;
+                    font-weight: 800;
+                    width: 100%;
+                    text-align: center;
+                    padding: 12px 16px;
+                    border: none;
+
+                }
+
+                .EditAddressFormCityDropdownItemsContainer{
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #f1f1f1;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    align-items: center;
+                    overflow-y: scroll;
+                    z-index: 1;
+
+                    .EditAddressFormCityDropdownItem{
+                        font-size: 0.9em;
+                        font-weight: 500;
+                        width: 100%;
+                        text-align: left;
+                        border: none;
+                        border-top: 1px solid black;
+                        padding: 12px 16px;
+                        background-color: transparent;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: black;
+                            background-color: #FFACFC;
+                            box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                        }
+                        
+                    }
+                }
+            }
+
+        }
+
+        .EditAddressFormSubmitButton{
+            cursor: pointer;
+            color: #feffff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+            font-size: 1em;
+            font-weight: 800;
+            background-color: #A3006B;
+            border: none;
+            margin-bottom: 30px;
+
+
+            &:hover {
+                cursor: pointer;
+                background-color: #FFACFC;
+                color: black;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            }
+        }
+
+
+    }
+
+    .EditAddressForm::-webkit-scrollbar{
+        display: none;
+    }
+
+
+}

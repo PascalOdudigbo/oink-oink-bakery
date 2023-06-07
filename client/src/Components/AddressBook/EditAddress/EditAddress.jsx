@@ -6,16 +6,16 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
 
-function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
-
+function EditAddress({targetAddress, customerData ,setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
+    console.log(targetAddress)
     //declaring form controlled input states
-    const [phone, setPhone] = useState("+254");
-    const [address, setAddress] = useState("");
-    const [additionalInfo, setAdditionalInfo] = useState("");
+    const [phone, setPhone] = useState(targetAddress?.phone);
+    const [address, setAddress] = useState(targetAddress?.address);
+    const [additionalInfo, setAdditionalInfo] = useState(targetAddress?.aditional_information);
     const [counties, setCounties] = useState([])
-    const [region, setRegion] = useState("");
-    const [cities, setCities] = useState([]);
-    const [city, setCity] = useState("");
+    const [region, setRegion] = useState(targetAddress?.region);
+    const [cities, setCities] = useState();
+    const [city, setCity] = useState(targetAddress?.city);
 
     //creating loading state variable
      const [isLoading, setIsLoading] = useState(false);
@@ -33,11 +33,12 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
         .then(res => res.json())
         .then(counties => {
             setCounties(counties);
+            getTargetAddressCities(counties);
         })
     }
 
-    //creating a function to handle adding the address
-    function handleAddAddress(e){
+    //creating a function to handle editing the address
+    function handleEditAddress(e){
         e.preventDefault();
         setIsLoading(true);
 
@@ -74,12 +75,12 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
     
             console.log(addressData)
     
-            axios.post("/customer_addresses", addressData)
+            axios.put(`/customer_addresses/${targetAddress?.id}`, addressData)
             .then(address =>{
                 setIsLoading(false);
                 isCustomerLoggedIn();
                 setAlertStatus(true);
-                setAlertMessage("Address saved successfully!");
+                setAlertMessage("Address updated successfully!");
                 setAlertDisplay("block");
                 hideAlert();
     
@@ -96,14 +97,23 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
         }
     }
 
+    //get the targetAddress cities
+    function getTargetAddressCities(counties){
+        counties?.length > 0 && counties?.forEach(county => {
+            if (county?.name === targetAddress?.region){
+                setCities(county?.sub_counties);
+            }
+        })
+    }
+
     useEffect(() => {
-        getCounties();
+        getCounties();   
     }, []);
 
    
 
     return(
-       <div className="AddAddressFormContainer"> 
+       <div className="EditAddressFormContainer"> 
 
             <Tooltip title="close" arrow>
                 <button className="btn-closePage" onClick={() => {
@@ -122,43 +132,43 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
                 </button>
             </Tooltip>
 
-            <form className="AddAddressForm" onSubmit={handleAddAddress}>
-                <h1 className="AddAddressFormTitle">{"ADD ADDRESS"}</h1>
+            <form className="EditAddressForm" onSubmit={handleEditAddress}>
+                <h1 className="EditAddressFormTitle">{"EDIT ADDRESS"}</h1>
 
-                <div className="AddAddressFormPhoneContainer">
-                    <p className="AddAddressFormPhoneText">Phone (required)</p>
-                    <input className="AddAddressFormInput" type="text" required value={phone} onChange={e => {e.target.value.length >= 4 && setPhone(e.target.value)}}/>
+                <div className="EditAddressFormPhoneContainer">
+                    <p className="EditAddressFormPhoneText">Phone (required)</p>
+                    <input className="EditAddressFormInput" type="text" required value={phone} onChange={e => {e.target.value.length >= 4 && setPhone(e.target.value)}}/>
                 </div>
 
-                <div className="AddAddressFormAddressContainer">
-                    <p className="AddAddressFormAddressText">Address (required)</p>
-                    <input className="AddAddressFormInput" type="text" required value={address} onChange={e => setAddress(e.target.value)}/>
+                <div className="EditAddressFormAddressContainer">
+                    <p className="EditAddressFormAddressText">Address (required)</p>
+                    <input className="EditAddressFormInput" type="text" required value={address} onChange={e => setAddress(e.target.value)}/>
                 </div>
 
-                <div className="AddAddressFormAdditionalInformationContainer">
-                    <p className="AddAddressFormAdditionalInformationText">Additional information</p>
-                    <textarea className="AddAddressFormAdditionalInformationTextArea" rows="3" cols="75" value={additionalInfo} 
+                <div className="EditAddressFormAdditionalInformationContainer">
+                    <p className="EditAddressFormAdditionalInformationText">Additional information</p>
+                    <textarea className="EditAddressFormAdditionalInformationTextArea" rows="3" cols="75" value={additionalInfo} 
                         onChange={(e)=>{
                             if (e.target?.value?.length <= 120){
                                 setAdditionalInfo(e.target.value);
                             }
                     }}/>
-                    <p className="AddAddressFormAdditionalInformationMaxInput">{`${additionalInfo.length}/120`}</p>
+                    <p className="EditAddressFormAdditionalInformationMaxInput">{`${additionalInfo.length}/120`}</p>
                 </div>
 
-                <div className="AddAddressFormRegionTextAndDropdownContainer">
-                    <p className="AddAddressFormRegionText">Region (required)</p>
-                    <div className="AddAddressFormRegionsDropdownContainer">
+                <div className="EditAddressFormRegionTextAndDropdownContainer">
+                    <p className="EditAddressFormRegionText">Region (required)</p>
+                    <div className="EditAddressFormRegionsDropdownContainer">
 
-                        <button className="AddAddressFormRegionsDropdownBtn">{
+                        <button className="EditAddressFormRegionsDropdownBtn">{
                             region !== "" ? region : "Select Region"
                         }</button>
         
-                        <div className='AddAddressFormRegionsDropdownItemsContainer'>
+                        <div className='EditAddressFormRegionsDropdownItemsContainer'>
         
                             {
                                 counties.map(countyData => 
-                                    <button key={counties?.indexOf(countyData)} className="AddAddressFormRegionsDropdownItem" 
+                                    <button key={counties?.indexOf(countyData)} className="EditAddressFormRegionsDropdownItem" 
                                         onClick={(e) => {
                                             e.preventDefault()
                                             setRegion(countyData?.name)
@@ -174,27 +184,26 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
                     
                 </div>
 
-                <div className="AddAddressFormCityTextAndDropdownContainer">
-                    <p className="AddAddressFormCityText">City (required)</p>
-                    <div className="AddAddressFormCityDropdownContainer">
+                <div className="EditAddressFormCityTextAndDropdownContainer">
+                    <p className="EditAddressFormCityText">City (required)</p>
+                    <div className="EditAddressFormCityDropdownContainer">
 
-                        <button className="AddAddressFormCityDropdownBtn">{
+                        <button className="EditAddressFormCityDropdownBtn">{
                             city !== "" ? city : "Select City"
                         }</button>
         
-                        <div className='AddAddressFormCityDropdownItemsContainer'>
+                        <div className='EditAddressFormCityDropdownItemsContainer'>
         
                             {
                                cities?.map(subCounty =>
-                                    <button key={cities?.indexOf(subCounty)} className="AddAddressFormCityDropdownItem" 
+                                    <button key={cities?.indexOf(subCounty)} className="EditAddressFormCityDropdownItem" 
                                         onClick={(e) => {
                                             e.preventDefault()
                                             setCity(subCounty)
                                         }}
                                     >{subCounty}</button> 
                             
-                                )
-                                
+                                )  
                             }
                         
                         </div>
@@ -203,7 +212,7 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
                     
                 </div>
 
-                <button className="addAddressFormSubmitButton" type="submit">{isLoading ? "Loading..." : "SAVE"}</button>
+                <button className="EditAddressFormSubmitButton" type="submit">{isLoading ? "Loading..." : "UPDATE"}</button>
 
 
             </form>
@@ -214,4 +223,4 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
 
 }
 
-export default AddAddress
+export default EditAddress

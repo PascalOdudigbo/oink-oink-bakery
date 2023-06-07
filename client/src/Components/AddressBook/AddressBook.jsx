@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import {NavBar, AddAddress} from "../../Components";
+import {NavBar, AddAddress, EditAddress} from "../../Components";
 
 function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
-    console.log(customerData)
+    const[targetAddress, setTargetAddress] = useState({});
 
     //creating navigation variable function
     const navigate = useNavigate();
+
+    useEffect(() => {
+        isCustomerLoggedIn();
+    }, [])
     
     return (
         <div className="addressBookContainer">
@@ -15,6 +19,18 @@ function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStat
                 <Routes>
                     <Route path={"/add-address"} element={
                         <AddAddress
+                            customerData={customerData}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                            isCustomerLoggedIn={isCustomerLoggedIn}
+                        />
+                    }/>
+
+                    <Route path={"/edit-address"} element={
+                        <EditAddress
+                            targetAddress={targetAddress}
                             customerData={customerData}
                             setAlertDisplay={setAlertDisplay}
                             setAlertStatus={setAlertStatus}
@@ -39,8 +55,8 @@ function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStat
                 //display this
                 <p className="addressBookEmptyText">There're no addresses linked to this account, please add an address!</p> :
                 //else display addresses
-                <div> 
-                    {customerData?.customer_addresses?.map(address => <></>)}
+                <div className="addressBookAddressesGrid"> 
+                    {customerData?.customer_addresses?.map(address => {})}
                 </div>
             }
             <div className="addressBookAddAddressBtnContainer">
