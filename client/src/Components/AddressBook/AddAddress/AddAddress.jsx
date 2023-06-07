@@ -4,8 +4,9 @@ import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { set } from "react-hook-form";
 
-function AddAddress({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
+function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
 
     //declaring form controlled input states
     const [phone, setPhone] = useState("+254");
@@ -39,6 +40,60 @@ function AddAddress({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert
     function handleAddAddress(e){
         e.preventDefault();
         setIsLoading(true);
+
+        if (phone.length !== 13){
+            setIsLoading(false);
+            setAlertStatus(false);
+            setAlertMessage("Invalid phone number!");
+            setAlertDisplay("block");
+            hideAlert();
+        }
+        else if(region === ""){
+            setIsLoading(false);
+            setAlertStatus(false);
+            setAlertMessage("Region is a required field!");
+            setAlertDisplay("block");
+            hideAlert();
+        }
+        else if(city === ""){
+            setIsLoading(false);
+            setAlertStatus(false);
+            setAlertMessage("City is a required field!");
+            setAlertDisplay("block");
+            hideAlert();
+        }
+        else{
+            const addressData = {
+                customer_id: customerData?.id,
+                phone: phone,
+                address: address.trim()?.charAt(0)?.toUpperCase() + address?.slice(1),
+                aditional_information: additionalInfo.trim()?.charAt(0)?.toUpperCase() + additionalInfo?.slice(1),
+                region: region,
+                city: city
+            }
+    
+            console.log(addressData)
+    
+            axios.post("/customer_addresses", addressData)
+            .then(address =>{
+                setIsLoading(false);
+                isCustomerLoggedIn();
+                setAlertStatus(true);
+                setAlertMessage("Address saved successfully!");
+                setAlertDisplay("block");
+                hideAlert();
+    
+            })
+            .catch(error => {
+                if(error?.response){
+                    setIsLoading(false);
+                    setAlertStatus(false);
+                    setAlertMessage("Something went wrong, please try again!");
+                    setAlertDisplay("block");
+                    hideAlert();
+                }
+            })
+        }
     }
 
     useEffect(() => {
@@ -67,7 +122,7 @@ function AddAddress({setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert
                 </button>
             </Tooltip>
 
-            <form className="AddAddressForm">
+            <form className="AddAddressForm" onSubmit={handleAddAddress}>
                 <h1 className="AddAddressFormTitle">{"ADD ADDRESS"}</h1>
 
                 <div className="AddAddressFormPhoneContainer">

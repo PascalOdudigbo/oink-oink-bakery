@@ -15,6 +15,7 @@ function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStat
                 <Routes>
                     <Route path={"/add-address"} element={
                         <AddAddress
+                            customerData={customerData}
                             setAlertDisplay={setAlertDisplay}
                             setAlertStatus={setAlertStatus}
                             setAlertMessage={setAlertMessage}
@@ -29,7 +30,7 @@ function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStat
                 customerData={customerData}
                 handleLogout={handleLogout}
             />
-            
+
             <h1 className="addressBookPageTitle">ADDRESS BOOK</h1>
 
             {

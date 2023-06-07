@@ -663,10 +663,27 @@ function App() {
         }/>
 
         <Route path="/customer/address-book/*" element={
+          <>
+            <div className="homePageAlertContainer">
+                <Alert
+                  display={alertDisplay}
+                  requestStatus={alertStatus}
+                  alertMessage={alertMessage}
+                />
+            </div>
+
             <AddressBook
               customerData={customerData}
               handleLogout={handleLogout}
+              setAlertDisplay={setAlertDisplay}
+              setAlertMessage={setAlertMessage}
+              setAlertStatus={setAlertStatus}
+              hideAlert={hideAlert}
+              isCustomerLoggedIn={isCustomerLoggedIn}
             />
+          
+          </>
+            
         }/>
       </Routes>
     </div>
