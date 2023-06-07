@@ -662,7 +662,7 @@ function App() {
           
         }/>
 
-        <Route path="/customer/address-book" element={
+        <Route path="/customer/address-book/*" element={
             <AddressBook
               customerData={customerData}
               handleLogout={handleLogout}

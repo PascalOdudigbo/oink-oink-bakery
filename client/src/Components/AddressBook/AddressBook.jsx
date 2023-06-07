@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import {NavBar} from "../../Components";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import {NavBar, AddAddress} from "../../Components";
 
-function AddressBook( {customerData, handleLogout}){
+function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
     console.log(customerData)
 
     //creating navigation variable function
@@ -10,10 +10,26 @@ function AddressBook( {customerData, handleLogout}){
     
     return (
         <div className="addressBookContainer">
+
+            <div className="addressBookAddAddressContainer"> 
+                <Routes>
+                    <Route path={"/add-address"} element={
+                        <AddAddress
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                            isCustomerLoggedIn={isCustomerLoggedIn}
+                        />
+                    }/>
+                </Routes>
+            </div>
+
             <NavBar
                 customerData={customerData}
                 handleLogout={handleLogout}
             />
+            
             <h1 className="addressBookPageTitle">ADDRESS BOOK</h1>
 
             {
@@ -27,7 +43,7 @@ function AddressBook( {customerData, handleLogout}){
                 </div>
             }
             <div className="addressBookAddAddressBtnContainer">
-                <button className="addressBookAddAddressBtn">ADD NEW ADDRESS</button>
+                <button className="addressBookAddAddressBtn" onClick={() => navigate("/customer/address-book/add-address")}>ADD NEW ADDRESS</button>
             </div>
 
         </div>

@@ -36,3 +36,4 @@ export {default as Cart} from './Cart/Cart';
 export {default as CartItem} from './Cart/CartItem/CartItem';
 export {default as EditCartItem} from './Cart/EditCartItem/EditCartItem';
 export {default as AddressBook} from './AddressBook/AddressBook';
+export {default as AddAddress} from './AddressBook/AddAddress/AddAddress';
