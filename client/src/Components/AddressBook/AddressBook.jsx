@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import {NavBar, AddAddress, EditAddress} from "../../Components";
+import {NavBar, AddAddress, EditAddress, Address} from "../../Components";
 
-function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
+function AddressBook( {customerData, handleLogout, cart,  setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}){
     const[targetAddress, setTargetAddress] = useState({});
 
     //creating navigation variable function
@@ -45,9 +45,13 @@ function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStat
             <NavBar
                 customerData={customerData}
                 handleLogout={handleLogout}
+                totalItems={cart?.line_items?.length}
             />
 
-            <h1 className="addressBookPageTitle">ADDRESS BOOK</h1>
+            <div className="addressBookPageTitleAddAddressBtnContainer">
+                <h1 className="addressBookPageTitle">ADDRESS BOOK</h1>
+                <button className="addressBookAddAddressBtn" onClick={() => navigate("/customer/address-book/add-address")}>ADD NEW ADDRESS</button>
+            </div>
 
             {
                 //if the address book is empty 
@@ -56,12 +60,19 @@ function AddressBook( {customerData, handleLogout, setAlertDisplay, setAlertStat
                 <p className="addressBookEmptyText">There're no addresses linked to this account, please add an address!</p> :
                 //else display addresses
                 <div className="addressBookAddressesGrid"> 
-                    {customerData?.customer_addresses?.map(address => {})}
+                    {customerData?.customer_addresses?.map(address => 
+                        <Address
+                            address={address}
+                            setTargetAddress={setTargetAddress}
+                            setAlertDisplay={setAlertDisplay}
+                            setAlertStatus={setAlertStatus}
+                            setAlertMessage={setAlertMessage}
+                            hideAlert={hideAlert}
+                            isCustomerLoggedIn={isCustomerLoggedIn}
+                        />)
+                    }
                 </div>
             }
-            <div className="addressBookAddAddressBtnContainer">
-                <button className="addressBookAddAddressBtn" onClick={() => navigate("/customer/address-book/add-address")}>ADD NEW ADDRESS</button>
-            </div>
 
         </div>
     )

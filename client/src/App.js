@@ -50,7 +50,7 @@ function App() {
 
   //creating function to get customer carts
   function getCarts(id){
-    fetch(`customer-carts/${id}`)
+    fetch(`/customer-carts/${id}`)
     .then(response => response.json())
     .then(carts => {
       //if successfully found
@@ -114,7 +114,7 @@ function App() {
 
   //creating a function to update cart total
   function updateCartTotal(cart){
-    axios.patch(`carts/${cart?.id}`, {total: parseFloat(calculateCartTotal(cart))})
+    axios.patch(`/carts/${cart?.id}`, {total: parseFloat(calculateCartTotal(cart))})
     .then(response => {
       //if the total is updated successfully get the new cart data
       fetch(`customer-carts/${customerData?.id}`)
@@ -675,6 +675,7 @@ function App() {
             <AddressBook
               customerData={customerData}
               handleLogout={handleLogout}
+              cart={cart}
               setAlertDisplay={setAlertDisplay}
               setAlertMessage={setAlertMessage}
               setAlertStatus={setAlertStatus}

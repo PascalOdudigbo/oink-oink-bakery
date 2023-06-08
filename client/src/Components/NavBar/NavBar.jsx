@@ -37,7 +37,7 @@ function NavBar({ totalItems, bakerData, customerData, handleLogout }) {
                     window.location.href.includes("sign-up") ||
                     window.location.href.includes("forgot-password") ||
                     window.location.href.includes("admin") ||
-                    window.location.href.includes("customer") ||
+                    // window.location.href.includes("customer") ||
                     window.location.href.includes("bakery-portal") ? null :
                     <Tooltip title="Show cart items" arrow>
                         <button className="btn-showCartItems" onClick={() => navigate("/cart")}>

@@ -38,3 +38,4 @@ export {default as EditCartItem} from './Cart/EditCartItem/EditCartItem';
 export {default as AddressBook} from './AddressBook/AddressBook';
 export {default as AddAddress} from './AddressBook/AddAddress/AddAddress';
 export {default as EditAddress} from './AddressBook/EditAddress/EditAddress';
+export {default as Address} from './AddressBook/Address/Address';
