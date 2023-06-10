@@ -8,10 +8,9 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
     //declaring icon styling variables
     const arrowIconsStyles = {color: "black"};
     const closePageIconStyle = {color: "red"};
-
-   
-    //creating functions to handle viewing previous and nextimage
-    function handleImageNavigationLeft(){
+    
+    //creating a function to get image index
+    function getImageIndex(){
         //creating a variable to hold the index of the current image being displayed
         let imageIndex = 0
         //looping through all product images to find the index of the image being displayed
@@ -19,12 +18,20 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
             //if the product image is that being displayed currently
             if (productImage?.image_url === imageUrl){
                 //assign its index to the imageIndex variable
-                imageIndex = targetProduct?.product_images?.indexOf(productImage)
+                imageIndex = targetProduct?.product_images?.indexOf(productImage);
             } 
         })
+
+        return imageIndex; 
+    }
+    //creating functions to handle viewing previous and nextimage
+    function handleImageNavigationLeft(){
+        //creating a variable to hold the index of the current image being displayed
+        let imageIndex = getImageIndex();
+        
         //if the current image is not the first image
         if (imageIndex !== 0){
-                setImageUrl(targetProduct?.product_images[imageIndex -1]?.image_url)
+                setImageUrl(targetProduct?.product_images[imageIndex -1]?.image_url);
                 console.log("right called, new link: ", targetProduct?.product_images[imageIndex - 1]?.image_url);
         }
        
@@ -32,18 +39,10 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
 
     function handleImageNavigationRight(){
         //creating a variable to hold the index of the current Image being displayed
-        let imageIndex = 0
+        let imageIndex = getImageIndex();
 
-        //looping through all product images to find the index of the image being displayed
-        targetProduct?.product_images?.forEach(productImage => {
-            //if the product image is that being displayed currently
-            if (productImage?.image_url === imageUrl){
-                //assign its index to the imageIndex variable
-                imageIndex = targetProduct?.product_images?.indexOf(productImage)
-            } 
-        })
         //if the current image is not the last image
-        if (imageIndex !== targetProduct?.product_images.length - 1){
+        if (imageIndex !== targetProduct?.product_images?.length - 1){
             setImageUrl(targetProduct?.product_images[imageIndex + 1]?.image_url)
         } 
     }
@@ -105,7 +104,7 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
                 </button>
 
             </div>
-
+            <p className="currentImageIndex"> {getImageIndex() + 1}/{targetProduct?.product_images?.length}</p>
             
             <div className="viewProductDetailsTextContainer">
                 <div className="viewProductDetailsTextProductNameAndPriceContainer">
