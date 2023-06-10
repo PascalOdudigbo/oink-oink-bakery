@@ -15,7 +15,9 @@ class StripeCustomersController < ApplicationController
 
   # POST /stripe_customers
   def create
-    @stripe_customer = StripeCustomer.new(stripe_customer_params)
+    # creating the stripe customer
+    response = Stripe::Customer.create(email: params[:email], name: params[:fullname])
+    @stripe_customer = StripeCustomer.new(customer_id: params[:customer_id], stripe_customer_id: response.id)
 
     if @stripe_customer.save
       render json: @stripe_customer, status: :created, location: @stripe_customer
@@ -35,6 +37,8 @@ class StripeCustomersController < ApplicationController
 
   # DELETE /stripe_customers/1
   def destroy
+    #delete the customer from stripe with the stripe customer ID
+    Stripe::Customer.delete(@stripe_customer.stripe_customer_id)
     @stripe_customer.destroy
   end
 
@@ -46,6 +50,6 @@ class StripeCustomersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def stripe_customer_params
-      params.permit(:customer_id, :stripe_customer_id)
+      params.permit(:customer_id, :fullname, :email, :stripe_customer_id)
     end
 end
