@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :orders
   resources :customer_addresses
   resources :variant_options
   resources :variant_groups

@@ -62,6 +62,7 @@ function AddressBook( {customerData, handleLogout, cart,  setAlertDisplay, setAl
                 <div className="addressBookAddressesGrid"> 
                     {customerData?.customer_addresses?.map(address => 
                         <Address
+                            key={address?.id}
                             address={address}
                             setTargetAddress={setTargetAddress}
                             setAlertDisplay={setAlertDisplay}

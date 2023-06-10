@@ -16,14 +16,14 @@ class StripeChargesController < ApplicationController
             }, 
             receipt_email: params[:customer_email],
             shipping: {
-                name: params[:customer_fullname],
-                phone: params[:customer_phone], 
+                name: params[:fullname],
+                phone: params[:phone], 
 
                 address: {
-                    city: ,
-                    country: ,
-                    line1: ,
-                    region: ,
+                    city: params[:city],
+                    country: 'ke',
+                    line1: params[:address],
+                    region: params[:region],
 
                 },
             }  

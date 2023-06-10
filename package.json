@@ -24,6 +24,6 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.1",
     "sass": "^1.57.1",
-    "stripe": "^12.7.0"
+    "stripe": "^12.9.0"
   }
 }

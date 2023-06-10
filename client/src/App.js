@@ -58,8 +58,8 @@ function App() {
       //looking for the active cart
       cartsArray?.forEach(cart => {
         if (cart?.active === true){
-          updateCartTotal(cart)
-          setCart(cart)
+          updateCartTotal(cart, id)
+          setCart(cart);
           
         }
       }); 
@@ -113,11 +113,11 @@ function App() {
   }
 
   //creating a function to update cart total
-  function updateCartTotal(cart){
+  function updateCartTotal(cart, customerId){
     axios.patch(`/carts/${cart?.id}`, {total: parseFloat(calculateCartTotal(cart))})
     .then(response => {
       //if the total is updated successfully get the new cart data
-      fetch(`customer-carts/${customerData?.id}`)
+      fetch(`/customer-carts/${customerId}`)
       .then(response => response.json())
       .then(carts => {
         //if successfully found
