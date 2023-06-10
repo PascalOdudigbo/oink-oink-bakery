@@ -16,7 +16,8 @@ class StripeCustomersController < ApplicationController
   # POST /stripe_customers
   def create
     # creating the stripe customer
-    response = Stripe::Customer.create(email: params[:email], name: params[:fullname])
+    customer = Customer.find(params[:customer_id])
+    response = Stripe::Customer.create(email: customer.email, name: "#{customer.first_name} #{customer.last_name}")
     @stripe_customer = StripeCustomer.new(customer_id: params[:customer_id], stripe_customer_id: response.id)
 
     if @stripe_customer.save
@@ -50,6 +51,6 @@ class StripeCustomersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def stripe_customer_params
-      params.permit(:customer_id, :fullname, :email, :stripe_customer_id)
+      params.permit(:customer_id, :stripe_customer_id)
     end
 end
