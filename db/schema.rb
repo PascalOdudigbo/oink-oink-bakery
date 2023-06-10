@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_06_125852) do
+ActiveRecord::Schema.define(version: 2023_06_10_163214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,22 @@ ActiveRecord::Schema.define(version: 2023_06_06_125852) do
     t.index ["variant_option_id"], name: "index_line_items_on_variant_option_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.bigint "cart_id", null: false
+    t.integer "payment_method"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.string "payment_stripe_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_payments_on_order_id"
+  end
+
   create_table "product_images", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.string "image_url"
@@ -110,6 +126,14 @@ ActiveRecord::Schema.define(version: 2023_06_06_125852) do
     t.index ["product_id"], name: "index_reviews_on_product_id"
   end
 
+  create_table "stripe_customers", force: :cascade do |t|
+    t.bigint "customer_id", null: false
+    t.string "stripe_customer_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_stripe_customers_on_customer_id"
+  end
+
   create_table "variant_groups", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -130,10 +154,13 @@ ActiveRecord::Schema.define(version: 2023_06_06_125852) do
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "products"
   add_foreign_key "line_items", "variant_options"
+  add_foreign_key "orders", "carts"
+  add_foreign_key "payments", "orders"
   add_foreign_key "product_images", "products"
   add_foreign_key "products", "discounts"
   add_foreign_key "products", "variant_groups"
   add_foreign_key "reviews", "customers"
   add_foreign_key "reviews", "products"
+  add_foreign_key "stripe_customers", "customers"
   add_foreign_key "variant_options", "variant_groups"
 end
