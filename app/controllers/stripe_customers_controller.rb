@@ -46,6 +46,6 @@ class StripeCustomersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def stripe_customer_params
-      params.require(:stripe_customer).permit(:customer_id, :stripe_customer_id)
+      params.permit(:customer_id, :stripe_customer_id)
     end
 end
