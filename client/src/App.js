@@ -45,6 +45,7 @@ function App() {
     axios.get("/products")
     .then(response => {
       setProducts(response.data);
+      // console.log("called")
     })
   };
 

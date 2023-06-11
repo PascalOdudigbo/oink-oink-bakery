@@ -46,7 +46,7 @@ function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
                 //if saved successfully
                 setIsLoading(false);
                 setAlertStatus(true);
-                console.log(response);
+                // console.log(response);
                 setAlertMessage("Signup successful!");
                 setAlertDisplay("block")
                 hideAlert();

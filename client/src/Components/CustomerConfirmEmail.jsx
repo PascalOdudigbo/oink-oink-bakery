@@ -31,7 +31,7 @@ function CustomerConfirmEmail({hideAlert, alertDisplay, setAlertDisplay, alertSt
         .catch(error => {
             setIsLoading(false);
             if(error.response){
-                console.log(error)
+                // console.log(error)
                 setAlertStatus(false);
                 setAlertMessage(`${error.message}`);
                 setAlertDisplay("block");

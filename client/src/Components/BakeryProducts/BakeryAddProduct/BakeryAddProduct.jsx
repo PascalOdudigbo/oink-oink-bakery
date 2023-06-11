@@ -80,7 +80,7 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
     function saveProductImage(productImageData){
         axios.post("/product_images", productImageData)
         .then(response => {
-            console.log(response)
+            // console.log(response)
         })
         .catch(error => {
             if(error.response){

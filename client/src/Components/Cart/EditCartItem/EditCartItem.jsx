@@ -39,7 +39,7 @@ function EditCartItem({ targetLineItem, setTargetLineItem, setAlertDisplay, setA
             getCarts(customerData?.id)
             hideAlert();
             navigate("/cart")
-            window.location.reload()
+            // window.location.reload()
         })
         .catch(error => {
             if (error?.response) {

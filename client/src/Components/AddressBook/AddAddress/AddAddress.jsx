@@ -72,7 +72,7 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
                 city: city
             }
     
-            console.log(addressData)
+            // console.log(addressData)
     
             axios.post("/customer_addresses", addressData)
             .then(address =>{

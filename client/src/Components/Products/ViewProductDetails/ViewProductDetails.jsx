@@ -32,7 +32,7 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
         //if the current image is not the first image
         if (imageIndex !== 0){
                 setImageUrl(targetProduct?.product_images[imageIndex -1]?.image_url);
-                console.log("right called, new link: ", targetProduct?.product_images[imageIndex - 1]?.image_url);
+                // console.log("right called, new link: ", targetProduct?.product_images[imageIndex - 1]?.image_url);
         }
        
     }

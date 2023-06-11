@@ -46,13 +46,13 @@ function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setA
 
     //creating function to handle deleting product image from cloudinary
     const deleteCloudinaryProductImage = async (productImage, index) => {
-        console.log(productImage)
+        // console.log(productImage)
           cloudinary.v2.uploader.destroy(productImage.image_public_id, function(error,result) {
             window.scrollTo(0, 0);
-            setAlertStatus(false);
-            setAlertDisplay("block");
-            setAlertMessage(`${result} ${error}`);
-            hideAlert();
+            // setAlertStatus(false);
+            // setAlertDisplay("block");
+            // setAlertMessage(`${result} ${error}`);
+            // hideAlert();
         })
         .then(response => {
             //if deleting image from server is a success
@@ -136,7 +136,7 @@ function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setA
     function saveProductImage(productImageData){
         axios.post("/product_images", productImageData)
         .then(response => {
-            console.log(response)
+            // console.log(response)
         })
         .catch(error => {
             if(error.response){
