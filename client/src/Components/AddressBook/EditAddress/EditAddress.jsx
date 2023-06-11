@@ -212,7 +212,7 @@ function EditAddress({targetAddress, customerData ,setAlertDisplay, setAlertStat
                     
                 </div>
 
-                <button className="EditAddressFormSubmitButton" type="submit">{isLoading ? "Loading..." : "UPDATE"}</button>
+                <button className="EditAddressFormSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "UPDATE"}</button>
 
 
             </form>

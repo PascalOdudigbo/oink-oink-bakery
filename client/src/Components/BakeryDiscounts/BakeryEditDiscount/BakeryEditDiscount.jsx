@@ -86,7 +86,7 @@ function BakeryAddDiscount({targetDiscount, setAlertDisplay, setAlertStatus, set
                 </div>
 
                 <div className="bakeryAddDiscountFormButtonsContainer">
-                    <button className="bakeryAddDiscountFormSaveButton" type="submit">{isLoading ? "Loading" : "Save"}</button>
+                    <button className="bakeryAddDiscountFormSaveButton" type="submit">{isLoading ? <div class="loader"></div> : "Save"}</button>
                 </div>
             </form>
         

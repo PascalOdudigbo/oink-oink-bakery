@@ -288,7 +288,7 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
                 </div>
 
                 <div className="bakeryAddProductFormButtonsContainer">
-                    <button className="bakeryAddProductFormSaveButton" type="submit">{isLoading ? "Loading" : "Save"}</button>
+                    <button className="bakeryAddProductFormSaveButton" type="submit">{isLoading ? <div class="loader"></div> : "Save"}</button>
                     <CheckBox label={"ACTIVE"} isChecked={isChecked} setIsChecked={setIsChecked} />
                 </div>
 

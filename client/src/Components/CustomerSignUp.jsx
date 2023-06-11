@@ -129,7 +129,7 @@ function CustomerSignUp({hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
                     <input className="customerSignUpFormInput" type="password" required  value={password} onChange={e => setPassword(e.target.value)}/>
                     <label className="customerSignUpFormLabel">Confirm Password:</label>
                     <input className="customerSignUpFormInput" type="password" required value={passwordConfirmation} onChange={e => setPasswordConfirmation(e.target.value)}/>
-                    <button className="customerSignUpButton" type="submit">{isLoading ? "Loading..." : "Create Account"}</button>
+                    <button className="customerSignUpButton" type="submit">{isLoading ? <div class="loader"> </div> : "Create Account"}</button>
                 </form>
 
             </div>

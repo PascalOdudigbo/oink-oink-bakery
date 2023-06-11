@@ -73,7 +73,7 @@ function BakeryProductAddVariantOption({viewBakeryProductAddVariantOption, setVi
                     <input className="nameInput" type="text" required value={variantOptionName} onChange={e => setVariantOptionName(e.target.value)}/>
                     <label className="priceLabel">Price:</label>
                     <input className="priceInput" type="text" required value={variantOptionPrice} onChange={e => setVariantOptionPrice(e.target.value)}/>
-                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? "Loading..." : "Save"}</button>
+                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Save"}</button>
                 </form>
             </div>
         </div>

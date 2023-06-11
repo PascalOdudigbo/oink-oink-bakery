@@ -92,7 +92,7 @@ function EditCartItem({ targetLineItem, setTargetLineItem, setAlertDisplay, setA
                         <p className="editCartItemCakeTextMaxInput">{`${cakeText.length}/50`}</p>
 
                     </div>
-                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? "Loading..." : "Update"}</button>
+                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Update"}</button>
                 </form>
             </div>
         </div>

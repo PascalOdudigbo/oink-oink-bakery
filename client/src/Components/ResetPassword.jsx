@@ -121,7 +121,7 @@ function ResetPassword({ hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
                    
 
                     <button className="resetPasswordBtn" type="submit">
-                        {isLoading ? "Loading..." : "Confirm"}
+                        {isLoading ? <div class="loader"></div> : "Confirm"}
                     </button>
                 </form>
             </div>

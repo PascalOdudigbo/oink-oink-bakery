@@ -85,7 +85,7 @@ function CustomerLogin(
                     <label className="customerLoginFormLabel">Password:</label>
                     <input className="customerLoginFormInput" type="password" required value={password} onChange={e => setPassword(e.target.value)}/>
                     <Link className="forgotPasswordLink" to={"/forgot-password"}>forgot password?</Link>
-                    <button className="customerLoginButton" type="submit">{isLoading ? "Loading..." : "Login"}</button>
+                    <button className="customerLoginButton" type="submit">{isLoading ? <div class="loader"></div> : "Login"}</button>
                     <p>or</p>
                     <button className="customerSignUpButton" onClick={()=>{navigate("/sign-up")}}>Sign Up</button>
                 </form>

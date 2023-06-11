@@ -84,7 +84,7 @@ function BakerLogin({hideAlert, alertDisplay, setAlertDisplay, alertStatus, setA
                     <Link className="forgotPasswordLink" to={"/admin-forgot-password"}>
                         forgot password?
                     </Link>
-                    <button className="bakerLoginButton" type="submit">{isLoading ? "Loading..." : "Login"}</button>
+                    <button className="bakerLoginButton" type="submit">{isLoading ? <div class="loader"></div> : "Login"}</button>
                 </form>
             </div>
 

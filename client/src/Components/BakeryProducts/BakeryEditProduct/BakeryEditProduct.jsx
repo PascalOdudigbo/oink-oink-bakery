@@ -376,7 +376,7 @@ function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setA
             </div>
 
             <div className="bakeryEditProductFormButtonsContainer">
-                <button className="bakeryEditProductFormSaveButton" type="submit">{isLoading ? "Loading" : "Save Changes"}</button>
+                <button className="bakeryEditProductFormSaveButton" type="submit">{isLoading ? <div class="loader"></div> : "Save Changes"}</button>
                 <CheckBox label={"ACTIVE"} isChecked={isChecked} setIsChecked={setIsChecked} />
             </div>
 

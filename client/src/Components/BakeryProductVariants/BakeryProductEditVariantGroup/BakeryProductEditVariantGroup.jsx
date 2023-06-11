@@ -71,7 +71,7 @@ function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setVi
                     <h1 className="bakeryProductEditVariantGroupFormTitle">{"EDIT VARIANT GROUP"}</h1>
                     <label className="nameLabel">Name:</label>
                     <input className="nameInput" type="text" required value={variantGroupName} onChange={e => setVariantGroupName(e.target.value)}/>
-                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? "Loading..." : "Update"}</button>
+                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Update"}</button>
                 </form>
             </div>
         </div>

@@ -157,7 +157,7 @@ function ForgotPassword({hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
                     <h1 className="forgotPasswordformTitle">ACCOUNT RECOVERY</h1>
                     <label className="emailLabel">Email:</label>
                     <input className="emailInput" type="email" name="email" required value={email} onChange={e => setEmail(e.target.value)}/>
-                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? "Loading..." : "Submit"}</button>
+                    <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Submit"}</button>
                 </form>
             </div>
             
