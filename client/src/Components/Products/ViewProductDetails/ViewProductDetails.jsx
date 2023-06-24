@@ -4,10 +4,12 @@ import {AiFillCloseCircle} from "react-icons/ai";
 import { IconContext } from "react-icons/lib";
 import Tooltip from "@mui/material/Tooltip";
 
-function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewProductDetailsPageView, imageUrl, setImageUrl, selectedOption, setSelectedOption, handleAddToCart, cakeColor, setCakeColor, cakeText, setCakeText}){
+function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewProductDetailsPageView, imageUrl, setImageUrl, selectedOption, setSelectedOption, handleAddToCart, cakeColor, setCakeColor, cakeText, setCakeText, isLoading}){
     //declaring icon styling variables
     const arrowIconsStyles = {color: "black"};
     const closePageIconStyle = {color: "red"};
+
+    //creating loading state
     
     //creating a function to get image index
     function getImageIndex(){
@@ -170,7 +172,7 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
                     <button className="viewProductDetailsAddToCartButton" onClick={()=> {
                         // console.log(selectedOption)
                         handleAddToCart(targetProduct, selectedOption, cakeColor===""? "Any color" : cakeColor, cakeText==="" ? "No text" : cakeText)
-                    }}>ADD TO CART</button>
+                    }}>{isLoading ? <div className="loader"></div> : "ADD TO CART"}</button>
 
                 </div>
               

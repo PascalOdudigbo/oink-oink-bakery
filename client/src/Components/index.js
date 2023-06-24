@@ -39,3 +39,5 @@ export {default as AddressBook} from './AddressBook/AddressBook';
 export {default as AddAddress} from './AddressBook/AddAddress/AddAddress';
 export {default as EditAddress} from './AddressBook/EditAddress/EditAddress';
 export {default as Address} from './AddressBook/Address/Address';
+export {default as CheckoutForm} from './Checkout/CheckoutForm/CheckoutForm';
+export {default as Checkout} from './Checkout/Checkout';

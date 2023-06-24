@@ -1,9 +1,12 @@
 import React, {useState} from "react";
-import {Link, Route, Routes} from "react-router-dom";
+import {Link, Route, Routes, useNavigate} from "react-router-dom";
 import {CartItem, EditCartItem} from "../../Components";
 
 
 function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemFromCart, setAlertDisplay, setAlertMessage, setAlertStatus, hideAlert , customerData, getCarts, handleEmptyCart}){
+
+    //declaring and initializing navigate variable function
+    const navigate = useNavigate();
 
     //creating states for controlled inputs
     const [cakeColor, setCakeColor] = useState("");
@@ -59,7 +62,7 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
 
                     <div className="filledCartEmptyCartAndCheckoutContainer">
                         <button className="filledCartEmptyCartButton" onClick={() => {handleEmptyCart()}}>EMPTY CART</button>
-                        <button className="filledCartCheckoutButton">CHECKOUT</button>
+                        <button className="filledCartCheckoutButton" onClick={navigate("/customer/checkout/")}>CHECKOUT</button>
                     </div>
 
                 </div>

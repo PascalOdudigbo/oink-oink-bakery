@@ -11,8 +11,9 @@ import {
   BakeryPortal,
   CustomerConfirmEmail,
   Alert,
-  Cart, 
-  AddressBook
+  Cart,
+  AddressBook,
+  Checkout
 } from "./Components";
 // import { commerce } from "./lib/commerce";
 import axios from "axios";
@@ -39,37 +40,40 @@ function App() {
   const [cakeColor, setCakeColor] = useState("");
   const [cakeText, setCakeText] = useState("");
 
+  //creating loading state
+  const [isLoading, setIsLoading] = useState(false);
+
 
   //defining function to get products from the database
-  function getProducts(){
+  function getProducts() {
     axios.get("/products")
-    .then(response => {
-      setProducts(response.data);
-      // console.log("called")
-    })
+      .then(response => {
+        setProducts(response.data);
+        // console.log("called")
+      })
   };
 
   //creating function to get customer carts
-  function getCarts(id){
+  function getCarts(id) {
     fetch(`/customer-carts/${id}`)
-    .then(response => response.json())
-    .then(carts => {
-      //if successfully found
-      let cartsArray = Array.from(carts)
-      //looking for the active cart
-      cartsArray?.forEach(cart => {
-        if (cart?.active === true){
-          updateCartTotal(cart, id)
-          setCart(cart);
-          
-        }
-      }); 
-    })
-    
+      .then(response => response.json())
+      .then(carts => {
+        //if successfully found
+        let cartsArray = Array.from(carts)
+        //looking for the active cart
+        cartsArray?.forEach(cart => {
+          if (cart?.active === true) {
+            updateCartTotal(cart, id)
+            setCart(cart);
+
+          }
+        });
+      })
+
   }
 
   //creating a function to calculate cart total
-  function calculateCartTotal(cart){
+  function calculateCartTotal(cart) {
     let total = 0;
     //loop through all the cart products
     cart?.line_items?.forEach(lineItem => {
@@ -79,31 +83,31 @@ function App() {
   }
 
   //creating a function to calculate line item total
-  function calculateLineItemPrice(product, selectedOption, quantity=1){
+  function calculateLineItemPrice(product, selectedOption, quantity = 1) {
     //creating return variable
     let price = 0;
-    
+
     //if an option was selected
-    if(selectedOption?.id){
+    if (selectedOption?.id) {
       //if the product has an active discount
-      if(product?.discount?.name !== "No discount"){
+      if (product?.discount?.name !== "No discount") {
         price = selectedOption?.price - ((product?.discount?.discount_percent / 100) * selectedOption?.price);
         price = price * quantity;
       }
       //if the product doesn't have an active discount
-      else{
+      else {
         price = selectedOption?.price * quantity;
       }
     }
     //if no variant option was selected
-    else{
+    else {
       //if the product has an active discount
-      if(product?.discount?.name !== "No discount"){
+      if (product?.discount?.name !== "No discount") {
         price = product?.variant_group?.variant_options[0]?.price - ((product?.discount?.discount_percent / 100) * product?.variant_group?.variant_options[0]?.price);
         price = price * quantity;
       }
       //if the product doesn't have an active discount
-      else{
+      else {
         price = product?.variant_group?.variant_options[0]?.price * quantity;
       }
     }
@@ -114,63 +118,64 @@ function App() {
   }
 
   //creating a function to update cart total
-  function updateCartTotal(cart, customerId){
-    axios.patch(`/carts/${cart?.id}`, {total: parseFloat(calculateCartTotal(cart))})
-    .then(response => {
-      //if the total is updated successfully get the new cart data
-      fetch(`/customer-carts/${customerId}`)
-      .then(response => response.json())
-      .then(carts => {
-        //if successfully found
-        let cartsArray = Array.from(carts)
-        //looking for the active cart
-        cartsArray?.forEach(cart => {
-          if (cart?.active === true){
-            setCart(cart)
-          }
-        }); 
-      })
+  function updateCartTotal(cart, customerId) {
+    axios.patch(`/carts/${cart?.id}`, { total: parseFloat(calculateCartTotal(cart)) })
+      .then(response => {
+        //if the total is updated successfully get the new cart data
+        fetch(`/customer-carts/${customerId}`)
+          .then(response => response.json())
+          .then(carts => {
+            //if successfully found
+            let cartsArray = Array.from(carts)
+            //looking for the active cart
+            cartsArray?.forEach(cart => {
+              if (cart?.active === true) {
+                setCart(cart)
+              }
+            });
+          })
 
-    })
-    .catch(error => {
-      if (error?.response){
-        setAlertStatus(false);
-        setAlertMessage("Cart total update failed!")
-        setAlertDisplay("block");
-        hideAlert();
-      }
-    })
+      })
+      .catch(error => {
+        if (error?.response) {
+          setAlertStatus(false);
+          setAlertMessage("Cart total update failed!")
+          setAlertDisplay("block");
+          hideAlert();
+        }
+      })
   }
 
   //creating a function to handle add to cart
-  function handleAddToCart(targetProduct, selectedOption, cakeColor="Any color", cakeText="No text"){
+  function handleAddToCart(targetProduct, selectedOption, cakeColor = "Any color", cakeText = "No text") {
+    setIsLoading(true);
     //if there's no selected option
-    if (selectedOption?.id === undefined){
+    if (selectedOption?.id === undefined) {
       selectedOption = targetProduct?.variant_group?.variant_options[0];
     }
     //scroll to top
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     //if customer is logged in
-    if (customerData?.id){
+    if (customerData?.id) {
       //if customer has a cart
-      if (cart?.id){
+      if (cart?.id) {
         let existingLineItem = {};
         //loop through the cart line items
         cart?.line_items?.forEach(lineItem => {
           //check if the lineItem's product is similar to the product being added
-          if(lineItem.product?.id === targetProduct?.id && lineItem?.variant_option?.id === selectedOption?.id && lineItem?.color.toLowerCase() === cakeColor.toLowerCase() && lineItem?.cake_text.toLowerCase() === cakeText.toLowerCase()){
+          if (lineItem.product?.id === targetProduct?.id && lineItem?.variant_option?.id === selectedOption?.id && lineItem?.color.toLowerCase() === cakeColor.toLowerCase() && lineItem?.cake_text.toLowerCase() === cakeText.toLowerCase()) {
             existingLineItem = lineItem;
           }
         })
 
         //if the product exists in the cart
-        if (existingLineItem?.id){
+        if (existingLineItem?.id) {
           //increase lineItem quantity
           increaseOrDecreaseLineItemQuantityAndPrice(existingLineItem, existingLineItem?.quantity + 1);
           updateCartTotal(cart)
         }
         //if product doesnt exist in cart
-        else{
+        else {
           //add line-item to cart
           AddLineItemToCart(targetProduct, cart?.id, selectedOption, cakeText, cakeColor);
           updateCartTotal(cart)
@@ -178,7 +183,7 @@ function App() {
 
       }
       //if customer doesn't have a cart
-      else{
+      else {
         //create the customer cart data
         const cartData = {
           customer_id: customerData?.id,
@@ -187,67 +192,69 @@ function App() {
         }
         //save the data in the database
         axios.post("carts", cartData)
-        .then(response => {
-          //if the cart was created successfully add the product to it
-          AddLineItemToCart(targetProduct, response?.data?.id, selectedOption, cakeText, cakeColor);
-          // updateCartTotal();
-        })
-        .catch(error => {
-          if (error?.response){
-            //if product not added successfully
-            setAlertStatus(false);
-            setAlertMessage("Something went wrong, product not added to cart!");
-            setAlertDisplay("block");
-            hideAlert();
-            
-          }
-        });
-        
+          .then(response => {
+            //if the cart was created successfully add the product to it
+            AddLineItemToCart(targetProduct, response?.data?.id, selectedOption, cakeText, cakeColor);
+            // updateCartTotal();
+          })
+          .catch(error => {
+            if (error?.response) {
+              //if product not added successfully
+              setAlertStatus(false);
+              setAlertMessage("Something went wrong, product not added to cart!");
+              setAlertDisplay("block");
+              hideAlert();
+
+            }
+          });
+
       }
 
     }
-    else{
+    else {
       //if customer isn't logged in
       setAlertStatus(false);
       setAlertMessage("Please login!");
       setAlertDisplay("block")
       hideAlert();
-      setTimeout(()=> navigate("/login"), 2000)
+      setTimeout(() => navigate("/login"), 2000)
     }
 
   }
 
   //creating a function to increase lineItem quantity
-  function increaseOrDecreaseLineItemQuantityAndPrice(lineItem, quantity){
-    window.scrollTo(0,0);
-    if (quantity > 0){
+  function increaseOrDecreaseLineItemQuantityAndPrice(lineItem, quantity) {
+    window.scrollTo(0, 0);
+    if (quantity > 0) {
       axios.patch(`line_items/${lineItem?.id}`, {
         quantity: quantity,
         price: calculateLineItemPrice(lineItem?.product, lineItem?.variant_option, quantity)
-  
+
       })
-      .then(response => {
-        //if quantity increased successfully
-        setAlertMessage(lineItem?.quantity < quantity ? "Product quantity increased successfully!" : "Product quantity decreased successfully!")
-        setAlertStatus(true)
-        setAlertDisplay("block");
-        getCarts(customerData?.id);
-        hideAlert();
-        // setTimeout(()=>{ window.location.reload()}, 1000);
-      })
-      .catch(error => {
-        if (error?.response){
-          //if quantity not increased successfully
-          setAlertStatus(false);
-          setAlertMessage(error?.message);
+        .then(response => {
+          //if quantity increased successfully
+          setIsLoading(false);
+          setAlertMessage(lineItem?.quantity < quantity ? "Product quantity increased successfully!" : "Product quantity decreased successfully!")
+          setAlertStatus(true)
           setAlertDisplay("block");
+          getCarts(customerData?.id);
           hideAlert();
-          
-        }
-      })
+          // setTimeout(()=>{ window.location.reload()}, 1000);
+        })
+        .catch(error => {
+          if (error?.response) {
+            //if quantity not increased successfully
+            setIsLoading(false);
+            setAlertStatus(false);
+            setAlertMessage(error?.message);
+            setAlertDisplay("block");
+            hideAlert();
+
+          }
+        })
 
     }
-    else{
+    else {
       setAlertStatus(false);
       setAlertMessage("Product quantity can't be less than 1!");
       setAlertDisplay("block");
@@ -256,10 +263,10 @@ function App() {
   }
 
   //creating a function to add line item to cart
-  function AddLineItemToCart(product, cartId, selectedOption, cakeText, cakeColor){
+  function AddLineItemToCart(product, cartId, selectedOption, cakeText, cakeColor) {
     const lineItemData = {
       cart_id: cartId,
-      product_id: product?.id, 
+      product_id: product?.id,
       quantity: 1,
       variant_option_id: selectedOption?.id,
       color: cakeColor?.trim()?.charAt(0)?.toUpperCase() + cakeColor?.slice(1),
@@ -268,31 +275,33 @@ function App() {
     }
 
     axios.post("/line_items", lineItemData)
-    .then(response => {
-      //if line item added successfully
-      setAlertMessage("Product added to cart successfully!")
-      setAlertStatus(true)
-      setAlertDisplay("block");
-      getCarts(customerData?.id);
-      hideAlert();
-    })
-    .catch(error => {
-      if (error?.response){
-        //if product not added successfully
-        setAlertStatus(false);
-        setAlertMessage("Product not added to cart!");
+      .then(response => {
+        //if line item added successfully
+        setIsLoading(false);
+        setAlertMessage("Product added to cart successfully!")
+        setAlertStatus(true)
         setAlertDisplay("block");
+        getCarts(customerData?.id);
         hideAlert();
-        
-      }
-    })
+      })
+      .catch(error => {
+        if (error?.response) {
+          //if product not added successfully
+          setIsLoading(false);
+          setAlertStatus(false);
+          setAlertMessage("Product not added to cart!");
+          setAlertDisplay("block");
+          hideAlert();
+
+        }
+      })
   }
-  
+
   //creating a function ro remove line item from cart
-  function removeLineItemFromCart(lineItem){
-    window.scrollTo(0,0)
+  function removeLineItemFromCart(lineItem) {
+    window.scrollTo(0, 0)
     axios.delete(`/line_items/${lineItem?.id}`)
-    .then(response => {
+      .then(response => {
         //if deleted successfully
         setAlertStatus(true);
         setAlertMessage("Product removed from cart successfully!");
@@ -300,20 +309,20 @@ function App() {
         setAlertDisplay("block");
         hideAlert();
         // setTimeout(()=>{ window.location.reload()}, 1000) 
-    })
-    .catch(error => {
-        if(error?.response){
-            //if delete fails
-            setAlertStatus(false);
-            setAlertMessage("Product removal failed, please try again!");
-            setAlertDisplay("block");
-            hideAlert();
+      })
+      .catch(error => {
+        if (error?.response) {
+          //if delete fails
+          setAlertStatus(false);
+          setAlertMessage("Product removal failed, please try again!");
+          setAlertDisplay("block");
+          hideAlert();
         }
-    })
+      })
   }
 
   //creating a function to empty cart
-  function handleEmptyCart(){
+  function handleEmptyCart() {
     //loop through all line items
     cart?.line_items?.forEach(lineItem => {
       removeLineItemFromCart(lineItem);
@@ -373,38 +382,38 @@ function App() {
     window.scrollTo(0, 0);
     customerData?.verified
       ? fetch("/customer-logout", {
-          method: "DELETE",
-        }).then(() => {
-          setIsLoading(false);
-          setAlertStatus(true);
-          setAlertMessage("Logout successful!");
-          setAlertDisplay("block");
-          setCart({})
-          hideAlert();
-          setCustomerData({});
-          setTimeout(() => navigate("/"), 1500);
-        })
+        method: "DELETE",
+      }).then(() => {
+        setIsLoading(false);
+        setAlertStatus(true);
+        setAlertMessage("Logout successful!");
+        setAlertDisplay("block");
+        setCart({})
+        hideAlert();
+        setCustomerData({});
+        setTimeout(() => navigate("/"), 1500);
+      })
       : bakerData?.first_name &&
-        fetch("/baker-logout", {
-          method: "DELETE",
-        }).then(() => {
-          setIsLoading(false);
-          setAlertStatus(true);
-          setAlertMessage("Logout successful!");
-          setAlertDisplay("block");
-          hideAlert();
-          setBakerData({});
-          setTimeout(() => navigate("/"), 1500);
-        });
+      fetch("/baker-logout", {
+        method: "DELETE",
+      }).then(() => {
+        setIsLoading(false);
+        setAlertStatus(true);
+        setAlertMessage("Logout successful!");
+        setAlertDisplay("block");
+        hideAlert();
+        setBakerData({});
+        setTimeout(() => navigate("/"), 1500);
+      });
   }
 
   //defining a function to handle product searching
-  function handleProductSearch(searchInput){
+  function handleProductSearch(searchInput) {
     //if the search input is empty reset the data to its original state
-    if (searchInput === ""){
+    if (searchInput === "") {
       getProducts();
     }
-    else{
+    else {
       const filteredData = products.filter((product) => product?.name.toLowerCase().includes(searchInput));
       setProducts(filteredData)
     }
@@ -437,9 +446,9 @@ function App() {
                 bakerData={bakerData}
                 handleLogout={handleLogout}
               />
-              <Products 
-                products={products} 
-                handleAddToCart={handleAddToCart} 
+              <Products
+                products={products}
+                handleAddToCart={handleAddToCart}
                 handleProductSearch={handleProductSearch}
                 selectedOption={selectedOption}
                 setSelectedOption={setSelectedOption}
@@ -447,6 +456,7 @@ function App() {
                 setCakeColor={setCakeColor}
                 cakeText={cakeText}
                 setCakeText={setCakeText}
+                isLoading={isLoading}
               />
 
             </>
@@ -550,7 +560,7 @@ function App() {
                 bakerData={bakerData}
                 handleLogout={handleLogout}
               />
-              <ForgotPassword 
+              <ForgotPassword
                 hideAlert={hideAlert}
                 alertDisplay={alertDisplay}
                 setAlertDisplay={setAlertDisplay}
@@ -633,11 +643,11 @@ function App() {
         <Route path="/cart/*" element={
           <>
             <div className="homePageAlertContainer">
-                <Alert
-                  display={alertDisplay}
-                  requestStatus={alertStatus}
-                  alertMessage={alertMessage}
-                />
+              <Alert
+                display={alertDisplay}
+                requestStatus={alertStatus}
+                alertMessage={alertMessage}
+              />
             </div>
 
             <NavBar
@@ -660,17 +670,17 @@ function App() {
               handleEmptyCart={handleEmptyCart}
             />
           </>
-          
-        }/>
+
+        } />
 
         <Route path="/customer/address-book/*" element={
           <>
             <div className="homePageAlertContainer">
-                <Alert
-                  display={alertDisplay}
-                  requestStatus={alertStatus}
-                  alertMessage={alertMessage}
-                />
+              <Alert
+                display={alertDisplay}
+                requestStatus={alertStatus}
+                alertMessage={alertMessage}
+              />
             </div>
 
             <AddressBook
@@ -683,10 +693,41 @@ function App() {
               hideAlert={hideAlert}
               isCustomerLoggedIn={isCustomerLoggedIn}
             />
-          
+
           </>
-            
-        }/>
+
+        } />
+
+        <Route path="/customer/checkout/*" element={
+          <>
+            <div className="homePageAlertContainer">
+              <Alert
+                display={alertDisplay}
+                requestStatus={alertStatus}
+                alertMessage={alertMessage}
+              />
+            </div>
+            <NavBar
+                totalItems={cart?.line_items?.length}
+                customerData={customerData}
+                bakerData={bakerData}
+                handleLogout={handleLogout}
+            />
+
+            <Checkout
+              customerData={customerData}
+              handleLogout={handleLogout}
+              cart={cart}
+              setAlertDisplay={setAlertDisplay}
+              setAlertMessage={setAlertMessage}
+              setAlertStatus={setAlertStatus}
+              hideAlert={hideAlert}
+              isCustomerLoggedIn={isCustomerLoggedIn}
+            />
+
+          </>
+
+        } />
       </Routes>
     </div>
   );

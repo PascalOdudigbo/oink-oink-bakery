@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Product, Search, ViewProductDetails} from '../../Components';
 
-function Products({products, handleAddToCart, handleProductSearch, selectedOption, setSelectedOption, cakeColor, setCakeColor, cakeText, setCakeText}) {
+function Products({products, handleAddToCart, handleProductSearch, selectedOption, setSelectedOption, cakeColor, setCakeColor, cakeText, setCakeText, isLoading}) {
 
   //creating state to manage product details view component display
   const [viewProductDetailsPageView, setviewProductDetailsPageView] = useState("none");
@@ -26,6 +26,7 @@ function Products({products, handleAddToCart, handleProductSearch, selectedOptio
           setCakeColor={setCakeColor}
           cakeText={cakeText}
           setCakeText={setCakeText}
+          isLoading={isLoading}
         />
       </div>
       

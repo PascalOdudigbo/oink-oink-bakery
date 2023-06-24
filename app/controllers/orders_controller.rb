@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
 
   # POST /orders
   def create
-    @order = Order.new(order_params.merge(cart_total_cents: Cart.find(params[:cart_id]).total * 100, payment_method: 'credit_card'))
+    @order = Order.new(order_params.merge(payment_method: 'credit_card'))
 
     if @order.save
       render json: @order, status: :created, location: @order
@@ -46,6 +46,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.permit(:cart_id, :credit_card_number, :credit_card_exp_month, :credit_card_exp_year, :credit_card_cvv)
+      params.permit(:cart_id,  :customer_id, :credit_card_number, :credit_card_exp_month, :credit_card_exp_year, :credit_card_cvv, :billing_city, :billing_line1, :billing_region, :billing_postal_code, :billing_name, :billing_email)
     end
 end
