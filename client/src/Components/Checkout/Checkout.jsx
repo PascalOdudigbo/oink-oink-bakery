@@ -11,6 +11,9 @@ function Checkout({ customerData, cart, getCarts }) {
     function handleCheckout() { }
     return (
         <div className="checkoutContainer">
+            <div className="checkoutPageTitleContainer">
+                <h1 className="checkoutPageTitle">CHECKOUT</h1>
+            </div>
             <Routes>
                 <Route path="/" element={
                     <CheckoutForm

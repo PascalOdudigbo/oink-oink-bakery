@@ -62,7 +62,7 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
 
                     <div className="filledCartEmptyCartAndCheckoutContainer">
                         <button className="filledCartEmptyCartButton" onClick={() => {handleEmptyCart()}}>EMPTY CART</button>
-                        <button className="filledCartCheckoutButton" onClick={navigate("/customer/checkout/")}>CHECKOUT</button>
+                        <button className="filledCartCheckoutButton" onClick={()=> navigate("/customer/checkout/")}>CHECKOUT</button>
                     </div>
 
                 </div>

@@ -28,7 +28,9 @@ function CheckoutForm({ customerData, cart, handleSubmit}) {
 
 
 	return (
-		<form id="checkoutForm" onSubmormt={() => { handleSubmit() }}>
+		customerData?.id && cart?.id ?
+		<form className="checkoutForm" onSubmormt={() => { handleSubmit()}}>
+			<div className="checkoutformGridContainer">
 			<div className="checkoutFormPaymentContainer">
 				<h3 className="checkoutFormTitle">PAYMENT</h3>
 
@@ -150,12 +152,17 @@ function CheckoutForm({ customerData, cart, handleSubmit}) {
 				</div>
 
 			</div>
+			</div>
+
+			
+				<button className="paymentButton" disabled={isLoading}>
+					{isLoading ? <div className="loader"></div> : "PAY NOW"}
+				</button>
+			
 
 
-			<button className="paymentButton" disabled={isLoading}>
-				{isLoading ? <div className="loader"></div> : "PAY NOW"}
-			</button>
-		</form>
+			
+		</form> : null
 	)
 }
 export default CheckoutForm;
