@@ -5,6 +5,7 @@ class Customer < ApplicationRecord
     has_many :orders, through: :carts, dependent: :destroy
     has_many :customer_addresses, dependent: :destroy
     has_one :stripe_customer, dependent: :destroy
+    has_many :orders
 
     validates :first_name, presence: true
     validates :last_name, presence: true

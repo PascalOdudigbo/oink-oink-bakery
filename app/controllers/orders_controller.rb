@@ -46,6 +46,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.permit(:cart_id,  :customer_id, :credit_card_number, :credit_card_exp_month, :credit_card_exp_year, :credit_card_cvv, :billing_city, :billing_line1, :billing_region, :billing_postal_code, :billing_name, :billing_email)
+      params.permit(:cart_id,  :customer_id, :status, :customer_address_id, :credit_card_number, :credit_card_exp_month, :credit_card_exp_year, :credit_card_cvv, :billing_city, :billing_line1, :billing_region, :billing_postal_code, :billing_name, :billing_email)
     end
 end

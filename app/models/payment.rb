@@ -24,7 +24,7 @@ class Payment < ApplicationRecord
         },
         name: billing_name,
         email: billing_email, 
-      } 
+      }, 
       source: token
     }
     response = Stripe::Charge.create(params)

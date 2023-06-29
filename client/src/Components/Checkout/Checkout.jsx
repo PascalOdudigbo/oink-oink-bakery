@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { CheckoutForm } from "../../Components";
 
-function Checkout({ customerData, cart, getCarts }) {
+function Checkout({ customerData, cart, getCarts, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn}) {
 
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
@@ -20,6 +20,12 @@ function Checkout({ customerData, cart, getCarts }) {
                         customerData={customerData}
                         cart={cart}
                         handleSubmit={handleCheckout}
+                        getCarts={getCarts}
+                        setAlertDisplay={setAlertDisplay}
+                        setAlertMessage={setAlertMessage}
+                        setAlertStatus={setAlertStatus}
+                        hideAlert={hideAlert}
+                        isCustomerLoggedIn={isCustomerLoggedIn}
                     />
                 } />
 

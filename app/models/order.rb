@@ -2,6 +2,8 @@ class Order < ApplicationRecord
   attr_accessor :credit_card_number, :credit_card_exp_month, :credit_card_exp_year, :credit_card_cvv, :billing_city, :billing_line1, :billing_region, :billing_postal_code, :billing_name, :billing_email
   
   belongs_to :cart
+  belongs_to :customer
+  belongs_to :customer_address
   has_one :payment, dependent: :destroy
   after_create :create_payment
 
@@ -12,7 +14,7 @@ class Order < ApplicationRecord
       credit_card_number: credit_card_number,
       credit_card_exp_month: credit_card_exp_month,
       credit_card_exp_year: credit_card_exp_year,
-      credit_card_cvv: credit_card_cvv
+      credit_card_cvv: credit_card_cvv,
       billing_city: billing_city, 
       billing_line1: billing_line1,
       billing_region: billing_region,

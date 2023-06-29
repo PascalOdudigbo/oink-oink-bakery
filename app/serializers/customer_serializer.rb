@@ -3,4 +3,5 @@ class CustomerSerializer < ActiveModel::Serializer
   has_many :carts
   has_many :customer_addresses
   has_one :stripe_customer
+  has_many :orders
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_10_163214) do
+ActiveRecord::Schema.define(version: 2023_06_25_155045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,7 +83,12 @@ ActiveRecord::Schema.define(version: 2023_06_10_163214) do
     t.integer "payment_method"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.bigint "customer_id", null: false
+    t.bigint "customer_address_id", null: false
     t.index ["cart_id"], name: "index_orders_on_cart_id"
+    t.index ["customer_address_id"], name: "index_orders_on_customer_address_id"
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -114,6 +119,26 @@ ActiveRecord::Schema.define(version: 2023_06_10_163214) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["discount_id"], name: "index_products_on_discount_id"
     t.index ["variant_group_id"], name: "index_products_on_variant_group_id"
+  end
+
+  create_table "project_videos", force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.string "video_title"
+    t.string "video_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_project_videos_on_project_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.bigint "artist_id", null: false
+    t.string "title"
+    t.string "project_url"
+    t.string "cover_art"
+    t.string "cover_art_public_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_projects_on_artist_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -149,16 +174,22 @@ ActiveRecord::Schema.define(version: 2023_06_10_163214) do
     t.index ["variant_group_id"], name: "index_variant_options_on_variant_group_id"
   end
 
+  add_foreign_key "artists_profiles", "artists"
+  add_foreign_key "artists_socials", "artists"
   add_foreign_key "carts", "customers"
   add_foreign_key "customer_addresses", "customers"
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "products"
   add_foreign_key "line_items", "variant_options"
   add_foreign_key "orders", "carts"
+  add_foreign_key "orders", "customer_addresses"
+  add_foreign_key "orders", "customers"
   add_foreign_key "payments", "orders"
   add_foreign_key "product_images", "products"
   add_foreign_key "products", "discounts"
   add_foreign_key "products", "variant_groups"
+  add_foreign_key "project_videos", "projects"
+  add_foreign_key "projects", "artists"
   add_foreign_key "reviews", "customers"
   add_foreign_key "reviews", "products"
   add_foreign_key "stripe_customers", "customers"
