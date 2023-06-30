@@ -908,3 +908,218 @@ Processing by ProductsController#index as */*
 Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.0ms | Allocations: 867)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "bakers" DISABLE TRIGGER ALL;ALTER TABLE "product_images" DISABLE TRIGGER ALL;ALTER TABLE "discounts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "variant_groups" DISABLE TRIGGER ALL;ALTER TABLE "customers" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "variant_options" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "customer_addresses" DISABLE TRIGGER ALL;ALTER TABLE "stripe_customers" DISABLE TRIGGER ALL;ALTER TABLE "payments" DISABLE TRIGGER ALL;ALTER TABLE "orders" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (43.2ms)[0m  [1m[35mTRUNCATE TABLE "bakers", "product_images", "discounts", "products", "variant_groups", "customers", "reviews", "carts", "variant_options", "line_items", "customer_addresses", "stripe_customers", "payments", "orders"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "bakers" ENABLE TRIGGER ALL;ALTER TABLE "reviews" ENABLE TRIGGER ALL;ALTER TABLE "variant_options" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "product_images" ENABLE TRIGGER ALL;ALTER TABLE "discounts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "variant_groups" ENABLE TRIGGER ALL;ALTER TABLE "customers" ENABLE TRIGGER ALL;ALTER TABLE "customer_addresses" ENABLE TRIGGER ALL;ALTER TABLE "stripe_customers" ENABLE TRIGGER ALL;ALTER TABLE "payments" ENABLE TRIGGER ALL;ALTER TABLE "orders" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBaker Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bakers" WHERE "bakers"."email" = $1 LIMIT $2[0m  [["email", "jaynasimiyu@gmail.com"], ["LIMIT", 1]]
+  [1m[36mBaker Create (0.4ms)[0m  [1m[32mINSERT INTO "bakers" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ashley"], ["last_name", "Simiyu"], ["email", "jaynasimiyu@gmail.com"], ["password_digest", "$2a$12$PJPD3sp/zIwZWSDMHHI0JeNiXQjWIJy0w.CVC0.iN6Bgks8GZmDXK"], ["created_at", "2023-06-30 14:54:49.863501"], ["updated_at", "2023-06-30 14:54:49.863501"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDiscount Create (0.5ms)[0m  [1m[32mINSERT INTO "discounts" ("name", "description", "discount_percent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "No discount"], ["description", "The product has no discount"], ["discount_percent", 0.0], ["created_at", "2023-06-30 14:54:49.890468"], ["updated_at", "2023-06-30 14:54:49.890468"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVariantGroup Create (0.5ms)[0m  [1m[32mINSERT INTO "variant_groups" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "No variant group"], ["created_at", "2023-06-30 14:54:49.902410"], ["updated_at", "2023-06-30 14:54:49.902410"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/bakers" for 127.0.0.1 at 2023-06-30 15:55:41 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BakersController#index as */*
+  [1m[36mBaker Load (1.2ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers"[0m
+  ↳ app/controllers/bakers_controller.rb:42:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 37ms (Views: 19.6ms | ActiveRecord: 9.1ms | Allocations: 8334)
+
+
+Started POST "/customers" for 127.0.0.1 at 2023-06-30 15:56:34 +0100
+Processing by CustomersController#create as HTML
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "verified"=>false, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+  [1m[36mCustomer Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", false], ["password_digest", "$2a$12$t1t68oRS..5KvzUFjxj59.lejn5Pukd5LfK4JskwStsdIUHEY5Mr6"], ["created_at", "2023-06-30 14:56:34.987205"], ["updated_at", "2023-06-30 14:56:34.987205"]]
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+[active_model_serializers]   [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.5ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.9ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers]   [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (91.88ms)
+Completed 201 Created in 343ms (Views: 82.9ms | ActiveRecord: 27.8ms | Allocations: 24174)
+
+
+Started GET "/customers" for 127.0.0.1 at 2023-06-30 15:57:22 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.3ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.4ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (58.75ms)
+Completed 200 OK in 101ms (Views: 65.2ms | ActiveRecord: 18.6ms | Allocations: 25117)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "bakers" DISABLE TRIGGER ALL;ALTER TABLE "reviews" DISABLE TRIGGER ALL;ALTER TABLE "variant_options" DISABLE TRIGGER ALL;ALTER TABLE "carts" DISABLE TRIGGER ALL;ALTER TABLE "line_items" DISABLE TRIGGER ALL;ALTER TABLE "product_images" DISABLE TRIGGER ALL;ALTER TABLE "discounts" DISABLE TRIGGER ALL;ALTER TABLE "products" DISABLE TRIGGER ALL;ALTER TABLE "variant_groups" DISABLE TRIGGER ALL;ALTER TABLE "customers" DISABLE TRIGGER ALL;ALTER TABLE "customer_addresses" DISABLE TRIGGER ALL;ALTER TABLE "stripe_customers" DISABLE TRIGGER ALL;ALTER TABLE "payments" DISABLE TRIGGER ALL;ALTER TABLE "orders" DISABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (99.5ms)[0m  [1m[35mTRUNCATE TABLE "bakers", "reviews", "variant_options", "carts", "line_items", "product_images", "discounts", "products", "variant_groups", "customers", "customer_addresses", "stripe_customers", "payments", "orders"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "bakers" ENABLE TRIGGER ALL;ALTER TABLE "reviews" ENABLE TRIGGER ALL;ALTER TABLE "variant_options" ENABLE TRIGGER ALL;ALTER TABLE "carts" ENABLE TRIGGER ALL;ALTER TABLE "line_items" ENABLE TRIGGER ALL;ALTER TABLE "product_images" ENABLE TRIGGER ALL;ALTER TABLE "discounts" ENABLE TRIGGER ALL;ALTER TABLE "products" ENABLE TRIGGER ALL;ALTER TABLE "variant_groups" ENABLE TRIGGER ALL;ALTER TABLE "customers" ENABLE TRIGGER ALL;ALTER TABLE "customer_addresses" ENABLE TRIGGER ALL;ALTER TABLE "stripe_customers" ENABLE TRIGGER ALL;ALTER TABLE "payments" ENABLE TRIGGER ALL;ALTER TABLE "orders" ENABLE TRIGGER ALL[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBaker Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bakers" WHERE "bakers"."email" = $1 LIMIT $2[0m  [["email", "jaynasimiyu@gmail.com"], ["LIMIT", 1]]
+  [1m[36mBaker Create (0.4ms)[0m  [1m[32mINSERT INTO "bakers" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ashley"], ["last_name", "Simiyu"], ["email", "jaynasimiyu@gmail.com"], ["password_digest", "$2a$12$6sWj0A.TgWtxA110urdsheeegEiHgeKsgeQsuYd3DjDCM0AezeYKW"], ["created_at", "2023-06-30 14:57:53.257295"], ["updated_at", "2023-06-30 14:57:53.257295"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDiscount Create (0.4ms)[0m  [1m[32mINSERT INTO "discounts" ("name", "description", "discount_percent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "No discount"], ["description", "The product has no discount"], ["discount_percent", 0.0], ["created_at", "2023-06-30 14:57:53.268853"], ["updated_at", "2023-06-30 14:57:53.268853"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVariantGroup Create (0.4ms)[0m  [1m[32mINSERT INTO "variant_groups" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "No variant group"], ["created_at", "2023-06-30 14:57:53.276994"], ["updated_at", "2023-06-30 14:57:53.276994"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/customers" for 127.0.0.1 at 2023-06-30 15:57:59 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 19ms (Views: 6.1ms | ActiveRecord: 0.6ms | Allocations: 7574)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBaker Load (1.1ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers"[0m
+Started POST "/customers" for 127.0.0.1 at 2023-06-30 16:09:07 +0100
+Processing by CustomersController#create as */*
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "verified"=>true}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+  [1m[36mCustomer Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "odudigbopascal@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "email", "verified", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "Pascal"], ["last_name", "Odudigbo"], ["email", "odudigbopascal@gmail.com"], ["verified", true], ["password_digest", "$2a$12$Lmi5W3MjcWCQ0.UEVKyQSu39ZsP4cAnCwq3gyU9XpRNMRHPVBeJeu"], ["created_at", "2023-06-30 15:09:08.079475"], ["updated_at", "2023-06-30 15:09:08.079475"]]
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customers_controller.rb:61:in `create'
+[active_model_serializers]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.6ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.7ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers]   [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:62:in `create'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (30.02ms)
+Completed 201 Created in 273ms (Views: 30.2ms | ActiveRecord: 13.4ms | Allocations: 21078)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers"[0m
+  [1m[36mDiscount Load (0.4ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts"[0m
+  [1m[36mVariantGroup Load (0.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups"[0m
+Started GET "/customers" for 127.0.0.1 at 2023-06-30 16:10:54 +0100
+Processing by CustomersController#index as */*
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "verified"=>true}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.4ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.7ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.35ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 2.0ms | Allocations: 4608)
+
+
+Started GET "/customers" for 127.0.0.1 at 2023-06-30 16:10:56 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#index as */*
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "verified"=>true}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.6ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.4ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.18ms)
+Completed 200 OK in 77ms (Views: 49.0ms | ActiveRecord: 14.4ms | Allocations: 25109)
+
+
+Started GET "/discounts" for 127.0.0.1 at 2023-06-30 16:11:16 +0100
+Processing by DiscountsController#index as */*
+  Parameters: {"first_name"=>"Pascal", "last_name"=>"Odudigbo", "email"=>"odudigbopascal@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "verified"=>true}
+  [1m[36mDiscount Load (0.6ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts"[0m
+  ↳ app/controllers/discounts_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."discount_id" = $1[0m  [["discount_id", 3]]
+[active_model_serializers]   ↳ app/controllers/discounts_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.21ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 18.3ms | Allocations: 11198)
+
+
+Started POST "/customer-login" for 127.0.0.1 at 2023-06-30 16:12:24 +0100
+Processing by CustomersController#login as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `login'
+[active_model_serializers]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:9:in `login'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.3ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:9:in `login'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.9ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:9:in `login'
+[active_model_serializers]   [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:9:in `login'
+[active_model_serializers] Rendered CustomerSerializer with ActiveModelSerializers::Adapter::Attributes (22.36ms)
+Completed 201 Created in 248ms (Views: 21.6ms | ActiveRecord: 2.1ms | Allocations: 15832)
+
+
+Started GET "/customer-carts/2" for 127.0.0.1 at 2023-06-30 16:12:24 +0100
+Processing by CustomersController#my_carts as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:85:in `set_customer'
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 2]]
+  ↳ app/controllers/customers_controller.rb:42:in `my_carts'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 8ms (Views: 3.5ms | ActiveRecord: 1.0ms | Allocations: 1547)
+
+
