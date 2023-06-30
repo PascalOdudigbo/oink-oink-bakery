@@ -121,26 +121,6 @@ ActiveRecord::Schema.define(version: 2023_06_25_155045) do
     t.index ["variant_group_id"], name: "index_products_on_variant_group_id"
   end
 
-  create_table "project_videos", force: :cascade do |t|
-    t.bigint "project_id", null: false
-    t.string "video_title"
-    t.string "video_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_project_videos_on_project_id"
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.bigint "artist_id", null: false
-    t.string "title"
-    t.string "project_url"
-    t.string "cover_art"
-    t.string "cover_art_public_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["artist_id"], name: "index_projects_on_artist_id"
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "customer_id", null: false
@@ -174,8 +154,6 @@ ActiveRecord::Schema.define(version: 2023_06_25_155045) do
     t.index ["variant_group_id"], name: "index_variant_options_on_variant_group_id"
   end
 
-  add_foreign_key "artists_profiles", "artists"
-  add_foreign_key "artists_socials", "artists"
   add_foreign_key "carts", "customers"
   add_foreign_key "customer_addresses", "customers"
   add_foreign_key "line_items", "carts"
@@ -188,8 +166,6 @@ ActiveRecord::Schema.define(version: 2023_06_25_155045) do
   add_foreign_key "product_images", "products"
   add_foreign_key "products", "discounts"
   add_foreign_key "products", "variant_groups"
-  add_foreign_key "project_videos", "projects"
-  add_foreign_key "projects", "artists"
   add_foreign_key "reviews", "customers"
   add_foreign_key "reviews", "products"
   add_foreign_key "stripe_customers", "customers"
