@@ -1,18 +1,18 @@
 databases:
-  - name: oink_oink_bakery_KE
-    databaseName: oink_oink_bakery_KE
-    user: oink_oink_bakery_KE
+  - name: oink_oink_bakery_ke
+    databaseName: oink_oink_bakery_ke
+    user: oink_oink_bakery_ke
 
 services:
   - type: web
-    name: oink_oink_bakery_KE
+    name: oink_oink_bakery_ke
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: oink_oink_bakery_KE
+          name: oink_oink_bakery_ke
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
