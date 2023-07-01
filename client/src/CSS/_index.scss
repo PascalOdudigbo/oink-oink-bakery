@@ -89,16 +89,31 @@ body{
         100% { transform: rotate(360deg); }
       }
 
-      .footerContainer {
+      .container{
+        min-height: 100vh;
         display: flex;
-        align-items: center;
-        width: 100%;
-        height: fit-content;
-        position: absolute;
-        // align-self: flex-start;
-        bottom: 0;
-        align-self: flex-end;
+        flex-direction: column;
+
+        .footerContainer {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin-top: auto;
+        }
       }
+
+      // .footerContainer {
+      //   // display: flex;
+      //   // align-items: center;
+      //   // width: 100%;
+      //   // height: fit-content;
+      //   // // position: relative;
+      //   // align-self: flex-end;
+      //   // bottom: 0;
+      //   // align-self: flex-end;
+      //   margin-top: auto;
+        
+      // }
 }
 
 

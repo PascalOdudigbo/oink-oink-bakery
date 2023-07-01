@@ -433,7 +433,7 @@ function App() {
         <Route
           path="/"
           element={
-            <>
+            <div className="container">
               <div className="homePageAlertContainer">
                 <Alert
                   display={alertDisplay}
@@ -464,14 +464,14 @@ function App() {
                 <Footer />
               </div>
 
-            </>
+            </div>
           }
         />
 
         <Route
           path="/login"
           element={
-            <>
+            <div className="container">
               <NavBar
                 totalItems={cart?.total_items}
                 customerData={customerData}
@@ -494,14 +494,14 @@ function App() {
               <div className="footerContainer">
                 <Footer />
               </div>
-            </>
+            </div>
           }
         />
 
         <Route
           path="/sign-up"
           element={
-            <>
+            <div className="container">
               <NavBar
                 totalItems={cart?.total_items}
                 customerData={customerData}
@@ -521,7 +521,7 @@ function App() {
               <div className="footerContainer">
                 <Footer />
               </div>
-            </>
+            </div>
           }
         />
 
@@ -543,7 +543,7 @@ function App() {
         <Route
           path="/forgot-password"
           element={
-            <>
+            <div className="container">
               <NavBar
                 totalItems={cart?.total_items}
                 customerData={customerData}
@@ -563,14 +563,14 @@ function App() {
               <div className="footerContainer">
                 <Footer />
               </div>
-            </>
+            </div>
           }
         />
 
         <Route
           path="/admin-forgot-password"
           element={
-            <>
+            <div className="container">
               <NavBar
                 totalItems={cart?.total_items}
                 customerData={customerData}
@@ -590,7 +590,7 @@ function App() {
               <div className="footerContainer">
                 <Footer />
               </div>
-            </>
+            </div>
           }
         />
 
@@ -612,7 +612,7 @@ function App() {
         <Route
           path="/admin-login"
           element={
-            <>
+            <div className="container">
               <NavBar
                 totalItems={cart?.total_items}
                 customerData={customerData}
@@ -634,13 +634,13 @@ function App() {
               <div className="footerContainer">
                 <Footer />
               </div>
-            </>
+            </div>
           }
         />
         <Route
           path="/bakery-portal/*"
           element={
-            <>
+            <div className="container">
               <NavBar
                 totalItems={cart?.total_items}
                 customerData={customerData}
@@ -665,12 +665,12 @@ function App() {
               <div className="footerContainer">
                 <Footer />
               </div>
-            </>
+            </div>
           }
         />
 
         <Route path="/cart/*" element={
-          <>
+          <div className="container">
             <div className="homePageAlertContainer">
               <Alert
                 display={alertDisplay}
@@ -702,12 +702,12 @@ function App() {
             <div className="footerContainer">
               <Footer />
             </div>
-          </>
+          </div>
 
         } />
 
         <Route path="/customer/address-book/*" element={
-          <>
+          <div className="container">
             <div className="homePageAlertContainer">
               <Alert
                 display={alertDisplay}
@@ -731,12 +731,12 @@ function App() {
               <Footer />
             </div>
 
-          </>
+          </div>
 
         } />
 
         <Route path="/customer/checkout/*" element={
-          <>
+          <div className="container">
             <div className="homePageAlertContainer">
               <Alert
                 display={alertDisplay}
@@ -766,7 +766,7 @@ function App() {
               <Footer />
             </div>
 
-          </>
+          </div>
 
         } />
       </Routes>

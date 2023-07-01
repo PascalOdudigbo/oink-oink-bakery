@@ -3,14 +3,14 @@
     flex-direction: column;
     border-radius: 5px;
     border-bottom: 1px solid rgb(196, 196, 196);
-    width: 100%;
+    // width: 44%;
     background-color: white;
     justify-content: space-between;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 
     .productMedia{
-        width: 100%;
-        height: 200px;
+        // width: 100%;
+        height: 240px;
         object-fit: cover;
         border-radius: 5px;
         border-bottom-left-radius: 0px;
@@ -19,10 +19,6 @@
         &:hover{
             cursor: zoom-in;
         }
-        // &:active{
-        //     width: 420px;
-        //     height: 420px;
-        // }
     }
 
     .productContent{
