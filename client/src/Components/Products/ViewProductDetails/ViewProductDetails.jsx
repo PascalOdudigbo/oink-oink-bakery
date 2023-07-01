@@ -175,6 +175,8 @@ function ViewProductDetails({targetProduct, viewProductDetailsPageView, setviewP
                     }}>{isLoading ? <div className="loader"></div> : "ADD TO CART"}</button>
 
                 </div>
+
+                <h1 className='viewProductDetailsProductDescriptionTitle'>Description</h1>
               
                 <p className='viewProductDetailsProductDescription' dangerouslySetInnerHTML={{ __html: targetProduct?.description}}/>
 

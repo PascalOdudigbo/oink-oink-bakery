@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import {Product, Search, ViewProductDetails} from '../../Components';
+import React, { useState } from 'react'
+import { Product, Search, ViewProductDetails } from '../../Components';
 
-function Products({products, handleAddToCart, handleProductSearch, selectedOption, setSelectedOption, cakeColor, setCakeColor, cakeText, setCakeText, isLoading}) {
+function Products({ products, handleAddToCart, handleProductSearch, selectedOption, setSelectedOption, cakeColor, setCakeColor, cakeText, setCakeText, isLoading }) {
 
   //creating state to manage product details view component display
   const [viewProductDetailsPageView, setviewProductDetailsPageView] = useState("none");
@@ -29,29 +29,33 @@ function Products({products, handleAddToCart, handleProductSearch, selectedOptio
           isLoading={isLoading}
         />
       </div>
-      
-      
+
+
       <div className='productsSearchContainer'>
-        <Search placeholderText={"Search cakes..."} handleSearch={handleProductSearch}/>
+        <Search placeholderText={"Search cakes..."} handleSearch={handleProductSearch} />
       </div>
+
       <div className='productsContainer'>
-      {products?.map(product => 
-      //display product only if active
-      product?.active &&
-        <Product 
-          key={product.id} 
-          product={product} 
-          handleAddToCart={handleAddToCart} 
-          setTargetProduct={setTargetProduct} 
-          setviewProductDetailsPageView={setviewProductDetailsPageView}
-          setImageUrl={setImageUrl}
-          setSelectedOption={setSelectedOption}
-        />
-      )}
+        <div className='productsGridContainer'>
+            {products?.map(product =>
+              //display product only if active
+              product?.active &&
+              <Product
+                key={product.id}
+                product={product}
+                handleAddToCart={handleAddToCart}
+                setTargetProduct={setTargetProduct}
+                setviewProductDetailsPageView={setviewProductDetailsPageView}
+                setImageUrl={setImageUrl}
+                setSelectedOption={setSelectedOption}
+              />
+            )}
+          </div>
       </div>
-    
+        
+
     </>
-    
+
   )
 }
 
