@@ -46,6 +46,8 @@
         width: 35%;
         border-radius: 10px;
         justify-content: center;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
 
         .signUpLogo {
             display: none;
@@ -75,29 +77,53 @@
                 
             }
 
-            .customerSignUpFormLabel {
-                color: black;
-                text-align: left;
-                font-size: 1em;
-                font-weight: 550;
-                margin-bottom: 2px;
+            .signUpFormTextAndInputContainer{
+                width: 96%;
+                margin-left: auto;
+                margin-right: auto;
+                // box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+                border-radius: 5px;
+                margin-bottom: 20px;
+        
+                &:hover {
+                    border: solid rgb(240, 240, 240) 2px;
+                }
+        
+                .signUpFormText{
+                    text-align: left;
+                    margin-top: 5px;
+                    margin-bottom: 0px;
+                    margin-left: 5px;
+                    font-size: 0.8em;
+                    color: rgb(34, 34, 34);
+                    padding: 0%;
+        
+                }
+        
+                .signUpFormInput{
+                    border: none;
+                    height: 30px;
+                    // margin-top: none;
+                    width: 95%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 1px;
+                    font-size: 1.2em;
+                    background-color: transparent;
+        
+                    &:focus {
+                        outline: none;
+                    }
+        
+                }
             }
-
-            .customerSignUpFormInput{
-                width: 95%;
-                height: 15px;
-                padding: 10px 0;
-                font-size: 1rem;
-                letter-spacing: 1px;
-                margin-bottom: 10px;
-                background-color: transparent;
-                border-radius: 10px;
-            }
+        
 
             .customerSignUpButton{
                 cursor: pointer;
                 color: #feffff;
-                padding: 10px 12px;
+                padding: 15px 12px;
                 border-radius: 10px;
                 text-align: center;
                 margin-top: 10px;

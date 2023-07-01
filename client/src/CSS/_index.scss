@@ -39,6 +39,7 @@
 @import "./address";
 @import "./checkout";
 @import "./checkoutForm";
+@import "./footer";
 
 body{
     top: 0;
@@ -86,6 +87,17 @@ body{
       @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
+      }
+
+      .footerContainer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        // align-self: flex-start;
+        bottom: 0;
+        align-self: flex-end;
       }
 }
 

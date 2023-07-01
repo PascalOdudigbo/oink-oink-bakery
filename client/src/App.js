@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import {
   Products,
+  Footer,
   NavBar,
   CustomerLogin,
   CustomerSignUp,
@@ -459,6 +460,10 @@ function App() {
                 isLoading={isLoading}
               />
 
+              <div className="footerContainer">
+                <Footer />
+              </div>
+
             </>
           }
         />
@@ -485,6 +490,10 @@ function App() {
                 setCustomerData={setCustomerData}
                 getCarts={getCarts}
               />
+
+              <div className="footerContainer">
+                <Footer />
+              </div>
             </>
           }
         />
@@ -508,6 +517,10 @@ function App() {
                 alertStatus={alertStatus}
                 setAlertStatus={setAlertStatus}
               />
+
+              <div className="footerContainer">
+                <Footer />
+              </div>
             </>
           }
         />
@@ -546,6 +559,10 @@ function App() {
                 alertStatus={alertStatus}
                 setAlertStatus={setAlertStatus}
               />
+
+              <div className="footerContainer">
+                <Footer />
+              </div>
             </>
           }
         />
@@ -569,6 +586,10 @@ function App() {
                 alertStatus={alertStatus}
                 setAlertStatus={setAlertStatus}
               />
+
+              <div className="footerContainer">
+                <Footer />
+              </div>
             </>
           }
         />
@@ -609,6 +630,10 @@ function App() {
                 bakerData={bakerData}
                 setBakerData={setBakerData}
               />
+
+              <div className="footerContainer">
+                <Footer />
+              </div>
             </>
           }
         />
@@ -636,6 +661,10 @@ function App() {
                 products={products}
                 handleProductSearch={handleProductSearch}
               />
+
+              <div className="footerContainer">
+                <Footer />
+              </div>
             </>
           }
         />
@@ -669,6 +698,10 @@ function App() {
               getCarts={getCarts}
               handleEmptyCart={handleEmptyCart}
             />
+
+            <div className="footerContainer">
+              <Footer />
+            </div>
           </>
 
         } />
@@ -694,6 +727,10 @@ function App() {
               isCustomerLoggedIn={isCustomerLoggedIn}
             />
 
+            <div className="footerContainer">
+              <Footer />
+            </div>
+
           </>
 
         } />
@@ -708,10 +745,10 @@ function App() {
               />
             </div>
             <NavBar
-                totalItems={cart?.line_items?.length}
-                customerData={customerData}
-                bakerData={bakerData}
-                handleLogout={handleLogout}
+              totalItems={cart?.line_items?.length}
+              customerData={customerData}
+              bakerData={bakerData}
+              handleLogout={handleLogout}
             />
 
             <Checkout
@@ -724,6 +761,10 @@ function App() {
               hideAlert={hideAlert}
               isCustomerLoggedIn={isCustomerLoggedIn}
             />
+
+            <div className="footerContainer">
+              <Footer />
+            </div>
 
           </>
 

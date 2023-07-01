@@ -1,0 +1,44 @@
+.footerContainer{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    margin-top: auto;
+    border-top: 1px solid rgb(196, 196, 196);
+    bottom: 0;
+
+    .footerLogo{
+        width: 50px;
+        // top: 7px;
+        border-radius: 50%;
+        margin-right: 10px;
+        box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+        cursor: pointer;
+    }
+
+    .copywrightText{
+        color: black;
+        font-weight: lighter;
+        font-size: 0.9em;
+
+    }
+
+    .followUsContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .followUsText{
+            color: black;
+            font-weight: lighter;
+            font-size: 0.9em;
+            text-align: center;
+            margin-right: 10px;
+        }
+        
+    }
+}

@@ -77,10 +77,26 @@ function BakerLogin({hideAlert, alertDisplay, setAlertDisplay, alertStatus, setA
                 <img className="loginLogo" src={logo} alt="logo"/>
                 <form className="bakerLoginForm" onSubmit={handleLogin}>
                     <h1 className="formTitle">LOGIN</h1>
-                    <label className="bakerLoginFormLabel">Email:</label>
-                    <input className="bakerLoginFormInput" type="email" required value={email} onChange={e => setEmail(e.target.value)}/>
-                    <label className="bakerLoginFormLabel">Password:</label>
-                    <input className="bakerLoginFormInput" type="password" required value={password} onChange={e => setPassword(e.target.value)}/>
+
+                    <div className="loginFormTextAndInputContainer">
+                        <p className="loginFormText">Email</p>
+                        <input className="loginFormInput"
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="loginFormTextAndInputContainer">
+                        <p className="loginFormText">Password (required)</p>
+                        <input className="loginFormInput"
+                            type="password"
+                            value={password}
+                            required
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    
                     <Link className="forgotPasswordLink" to={"/admin-forgot-password"}>
                         forgot password?
                     </Link>

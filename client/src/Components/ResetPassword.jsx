@@ -102,23 +102,25 @@ function ResetPassword({ hideAlert, alertDisplay, setAlertDisplay, alertStatus, 
                 />
                 <h1 className="resetPasswordText">RESET PASSWORD</h1>
                 <form className={"resetPasswordForm"} onSubmit={handleOnSubmit}>
-                    <label className="labelPassword">Password</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                    <label className="labelPasswordConfirmation">
-                        Confirm Password
-                    </label>
-                    <input
-                        type="password"
-                        value={passwordConfirmation}
-                        onChange={(e) => setPasswordConfirmation(e.target.value)}
-                        required
-                    />
-                   
+                <div className="resetPasswordFormTextAndInputContainer">
+                        <p className="resetPasswordFormText">Password (required)</p>
+                        <input className="resetPasswordFormInput"
+                            required
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="resetPasswordFormTextAndInputContainer">
+                        <p className="resetPasswordFormText">Password Confirmation (required)</p>
+                        <input className="resetPasswordFormInput"
+                            required
+                            type="password"
+                            value={passwordConfirmation}
+                            onChange={(e) => setPasswordConfirmation(e.target.value)}
+                        />
+                    </div>
 
                     <button className="resetPasswordBtn" type="submit">
                         {isLoading ? <div class="loader"></div> : "Confirm"}
