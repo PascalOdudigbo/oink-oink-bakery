@@ -29,7 +29,7 @@ function Product({ product, handleAddToCart, setTargetProduct, setviewProductDet
       <div className='productContent'>
         <div className='productNameAndPrice'>
           <h4 className='productName'>{product?.name}</h4>
-          <h4 className='productprice'>{`Ksh ${handleCalculatePrice()}`}</h4>
+          <h4 className='productprice'>{`Ksh ${handleCalculatePrice() !== 0 ? handleCalculatePrice() : "Varies"}`}</h4>
         </div>
         <p className='productDescription' dangerouslySetInnerHTML={{ __html: product?.description}}
           onClick={()=> {
