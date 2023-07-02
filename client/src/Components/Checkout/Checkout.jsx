@@ -10,7 +10,7 @@ function Checkout({ customerData, cart, getCarts, setAlertDisplay, setAlertStatu
 
     function handleCheckout() { }
     return (
-        <div className="checkoutContainer">
+        <div className="checkoutContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
             <div className="checkoutPageTitleContainer">
                 <h1 className="checkoutPageTitle">CHECKOUT</h1>
             </div>

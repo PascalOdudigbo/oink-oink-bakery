@@ -62,7 +62,7 @@ function BakerLogin({hideAlert, alertDisplay, setAlertDisplay, alertStatus, setA
     }
     
     return (
-        <div className="bakerLoginContainer">
+        <div className="bakerLoginContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
             <div className="bakerLoginAlertContainer">
                 <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay}/>
             </div>

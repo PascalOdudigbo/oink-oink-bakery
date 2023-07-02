@@ -90,7 +90,7 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
 
 
     return (
-        <div className="cartContainer">
+        <div className="cartContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
             {/* <h1 className="cartPageTitle">YOUR SHOPPING CART</h1> */}
 
             {/* if the cart is not empty display filled cart else display empty cart */}

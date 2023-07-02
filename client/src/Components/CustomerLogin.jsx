@@ -65,7 +65,7 @@ function CustomerLogin(
     }
 
     return (
-        <div className="customerLoginContainer">
+        <div className="customerLoginContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
             <div className="customerLoginAlertContainer">
                 <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay} />
             </div>

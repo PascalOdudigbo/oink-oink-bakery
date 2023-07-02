@@ -104,7 +104,7 @@ function BakeryPortal({bakerData, alertDisplay, setAlertDisplay, alertStatus, se
     return (
         //if customer is logged in display the full page
         bakerData?.first_name ? 
-        <div className="bakeryPortalContainer">
+        <div className="bakeryPortalContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
             <div className="bakeryPortalAlertContainer">
                 <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay}/>
             </div>

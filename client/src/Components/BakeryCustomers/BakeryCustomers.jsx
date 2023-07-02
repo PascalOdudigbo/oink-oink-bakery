@@ -49,7 +49,7 @@ function BakeryCustomers({customers, handleCustomerSearch}){
                 </thead>
                 
                 <tbody>
-                    {customers.map(customer => 
+                    {customers?.map(customer => 
                     <BakeryCustomer 
                         key={customer.id}
                         customer={customer}

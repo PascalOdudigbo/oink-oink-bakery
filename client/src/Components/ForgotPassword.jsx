@@ -139,7 +139,7 @@ function ForgotPassword({ hideAlert, alertDisplay, setAlertDisplay, alertStatus,
 
 
     return (
-        <div className="forgotPasswordContainer">
+        <div className="forgotPasswordContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
             <div className="forgotPasswordAlertContainer">
                 <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay} />
             </div>

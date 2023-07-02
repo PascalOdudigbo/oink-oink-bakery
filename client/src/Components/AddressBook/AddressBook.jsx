@@ -13,7 +13,7 @@ function AddressBook( {customerData, handleLogout, cart,  setAlertDisplay, setAl
     }, [])
     
     return (
-        <div className="addressBookContainer">
+        <div className="addressBookContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
 
             <div className="addressBookAddAddressContainer"> 
                 <Routes>

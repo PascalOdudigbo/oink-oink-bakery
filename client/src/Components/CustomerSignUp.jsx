@@ -104,7 +104,7 @@ function CustomerSignUp({ hideAlert, alertDisplay, setAlertDisplay, alertStatus,
     }
 
     return (
-        <div className="customerSignUpContainer">
+        <div className="customerSignUpContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
             <div className="customerSignUpAlertContainer">
                 <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay} />
             </div>
