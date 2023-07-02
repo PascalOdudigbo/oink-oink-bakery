@@ -69,8 +69,14 @@ function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setVi
                     handleEditVariantGroup()
                 }}>
                     <h1 className="bakeryProductEditVariantGroupFormTitle">{"EDIT VARIANT GROUP"}</h1>
-                    <label className="nameLabel">Name:</label>
-                    <input className="nameInput" type="text" required value={variantGroupName} onChange={e => setVariantGroupName(e.target.value)}/>
+                    <div className="bakeryProductEditVariantGroupFormTextAndInputContainer">
+                        <p className="bakeryProductEditVariantGroupFormText">Name</p>
+                        <input className="bakeryProductEditVariantGroupFormInput"
+                            required
+                            value={variantGroupName}
+                            onChange={(e) => setVariantGroupName(e.target.value)}
+                        />
+                    </div>
                     <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Update"}</button>
                 </form>
             </div>

@@ -71,10 +71,23 @@ function BakeryProductEditVariantOption({viewBakeryProductEditVariantOption, set
                     handleEditVariantOption();
                 }}>
                     <h1 className="bakeryProductEditVariantOptionFormTitle">{"EDIT VARIANT OPTION"}</h1>
-                    <label className="nameLabel">Name:</label>
-                    <input className="nameInput" type="text" required value={variantOptionName } onChange={e => setVariantOptionName(e.target.value)}/>
-                    <label className="priceLabel">Price:</label>
-                    <input className="priceInput" type="text" required value={variantOptionPrice} onChange={e => setVariantOptionPrice(e.target.value)}/>
+                    <div className="bakeryProductEditVariantOptionFormTextAndInputContainer">
+                        <p className="bakeryProductEditVariantOptionFormText">Name</p>
+                        <input className="bakeryProductEditVariantOptionFormInput"
+                            required
+                            value={variantOptionName}
+                            onChange={(e) => setVariantOptionName(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="bakeryProductEditVariantOptionFormTextAndInputContainer">
+                        <p className="bakeryProductEditVariantOptionFormText">Price</p>
+                        <input className="bakeryProductEditVariantOptionFormInput"
+                            required
+                            value={variantOptionPrice}
+                            onChange={(e) => setVariantOptionPrice(e.target.value)}
+                        />
+                    </div>
                     <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Update"}</button>
                 </form>
             </div>

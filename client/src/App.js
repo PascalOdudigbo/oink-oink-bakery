@@ -201,6 +201,7 @@ function App() {
           .catch(error => {
             if (error?.response) {
               //if product not added successfully
+              setIsLoading(false);
               setAlertStatus(false);
               setAlertMessage("Something went wrong, product not added to cart!");
               setAlertDisplay("block");
@@ -215,6 +216,7 @@ function App() {
     else {
       //if customer isn't logged in
       setAlertStatus(false);
+      setIsLoading(false);
       setAlertMessage("Please login!");
       setAlertDisplay("block")
       hideAlert();

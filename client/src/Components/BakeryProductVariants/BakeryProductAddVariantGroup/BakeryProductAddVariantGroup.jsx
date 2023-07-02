@@ -66,9 +66,16 @@ function BakeryProductAddVariantGroup({viewBakeryProductAddVariantGroup, setView
                     e.preventDefault();
                     handleAddVariantGroup()
                 }}>
-                    <h1 className="bakeryProductAddVariantGroupFormTitle">{"ADD VARIANT GROUP"}</h1>
-                    <label className="nameLabel">Name:</label>
-                    <input className="nameInput" type="text" required value={variantGroupName} onChange={e => setVariantGroupName(e.target.value)}/>
+                    <h1 className="bakeryProductAddVariantGroupFormTitle">ADD VARIANT GROUP</h1>
+
+                    <div className="bakeryProductAddVariantGroupFormTextAndInputContainer">
+                        <p className="bakeryProductAddVariantGroupFormText">Name</p>
+                        <input className="bakeryProductAddVariantGroupFormInput"
+                            required
+                            value={variantGroupName}
+                            onChange={(e) => setVariantGroupName(e.target.value)}
+                        />
+                    </div>
                     <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Save"}</button>
                 </form>
             </div>

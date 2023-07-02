@@ -69,10 +69,25 @@ function BakeryProductAddVariantOption({viewBakeryProductAddVariantOption, setVi
                     handleAddVariantOption()
                 }}>
                     <h1 className="bakeryProductAddVariantOptionFormTitle">{"ADD VARIANT OPTION"}</h1>
-                    <label className="nameLabel">Name:</label>
-                    <input className="nameInput" type="text" required value={variantOptionName} onChange={e => setVariantOptionName(e.target.value)}/>
-                    <label className="priceLabel">Price:</label>
-                    <input className="priceInput" type="text" required value={variantOptionPrice} onChange={e => setVariantOptionPrice(e.target.value)}/>
+                    
+                    <div className="bakeryProductAddVariantOptionFormTextAndInputContainer">
+                        <p className="bakeryProductAddVariantOptionFormText">Name</p>
+                        <input className="bakeryProductAddVariantOptionFormInput"
+                            required
+                            value={variantOptionName}
+                            onChange={(e) => setVariantOptionName(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="bakeryProductAddVariantOptionFormTextAndInputContainer">
+                        <p className="bakeryProductAddVariantOptionFormText">Price</p>
+                        <input className="bakeryProductAddVariantOptionFormInput"
+                            required
+                            value={variantOptionPrice}
+                            onChange={(e) => setVariantOptionPrice(e.target.value)}
+                        />
+                    </div>
+                    
                     <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Save"}</button>
                 </form>
             </div>
