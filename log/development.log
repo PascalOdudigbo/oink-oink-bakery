@@ -23059,3 +23059,45 @@ Completed 201 Created in 27ms (Views: 0.5ms | ActiveRecord: 11.8ms | Allocations
 Completed 200 OK in 81ms (Views: 81.0ms | ActiveRecord: 21.9ms | Allocations: 14819)
 
 
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 09:59:57 +0100
+Processing by CustomersController#logged_in as */*
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 26ms (Views: 0.5ms | ActiveRecord: 14.6ms | Allocations: 3622)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 09:59:58 +0100
+Started GET "/products" for 127.0.0.1 at 2023-07-03 09:59:58 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 201 Created in 38ms (Views: 3.7ms | ActiveRecord: 5.9ms | Allocations: 8729)
+
+
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.3ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (0.3ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (1.4ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.3ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.11ms)
+Completed 200 OK in 138ms (Views: 96.3ms | ActiveRecord: 31.5ms | Allocations: 34654)
+
+

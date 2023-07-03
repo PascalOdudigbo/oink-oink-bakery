@@ -44,12 +44,16 @@ function App() {
   //creating loading state
   const [isLoading, setIsLoading] = useState(false);
 
+  //creating a function to order data (array of objects)
+  function orderData(data){
+    return data.sort((a, b) => a.id - b.id)
+  }
 
   //defining function to get products from the database
   function getProducts() {
     axios.get("/products")
       .then(response => {
-        setProducts(response.data);
+        setProducts(orderData(response.data));
         // console.log("called")
       })
   };
