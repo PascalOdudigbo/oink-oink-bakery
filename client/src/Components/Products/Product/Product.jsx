@@ -45,7 +45,7 @@ function Product({ product, handleAddToCart, setTargetProduct, setviewProductDet
         //don't display add to cart icon if cake is a theme cake
         product?.name?.toLowerCase().includes("theme") !== true &&
         <div className='productButtonsAndIconsContainer'>
-          <Tooltip title="Add to cart" arrow>
+          <Tooltip title={<p className='tooltipText'>Add to cart</p>} arrow>
             <button className="btn-addToCart" onClick={() => {
               setSelectedOption(product?.variant_group?.variant_options[0])
               handleAddToCart(product, product?.variant_group?.variant_options[0])

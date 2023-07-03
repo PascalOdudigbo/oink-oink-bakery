@@ -23101,3 +23101,158 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 138ms (Views: 96.3ms | ActiveRecord: 31.5ms | Allocations: 34654)
 
 
+Started GET "/customers" for 127.0.0.1 at 2023-07-03 10:26:28 +0100
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 10:26:28 +0100
+Processing by BakersController#logged_in as */*
+Started GET "/variant_groups" for 127.0.0.1 at 2023-07-03 10:26:29 +0100
+Started GET "/products" for 127.0.0.1 at 2023-07-03 10:26:29 +0100
+Processing by ProductsController#index as HTML
+Processing by VariantGroupsController#index as HTML
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Processing by CustomersController#index as HTML
+Completed 201 Created in 28ms (Views: 5.5ms | ActiveRecord: 10.2ms | Allocations: 5267)
+
+
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+  [1m[36mVariantGroup Load (0.6ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups"[0m
+  ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.8ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (0.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.4ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   [1m[36mProductImage Load (0.8ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.68ms)
+Completed 200 OK in 74ms (Views: 73.8ms | ActiveRecord: 33.6ms | Allocations: 12114)
+
+
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+[active_model_serializers]   [1m[36mProductImage Load (3.1ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (3.4ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (54.99ms)
+Completed 200 OK in 95ms (Views: 94.3ms | ActiveRecord: 28.2ms | Allocations: 14095)
+
+
+[active_model_serializers]   [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.4ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.4ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (65.25ms)
+Completed 200 OK in 165ms (Views: 150.4ms | ActiveRecord: 51.7ms | Allocations: 29432)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 10:26:29 +0100
+Started GET "/discounts" for 127.0.0.1 at 2023-07-03 10:26:29 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DiscountsController#index as HTML
+Processing by CustomersController#logged_in as */*
+  [1m[36mDiscount Load (7.3ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts"[0m
+  ↳ app/controllers/discounts_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."discount_id" = $1[0m  [["discount_id", 3]]
+[active_model_serializers]   ↳ app/controllers/discounts_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.46ms)
+Completed 200 OK in 53ms (Views: 32.1ms | ActiveRecord: 15.5ms | Allocations: 26364)
+
+
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 51ms (Views: 1.5ms | ActiveRecord: 18.4ms | Allocations: 23958)
+
+
+Started GET "/variant_groups" for 127.0.0.1 at 2023-07-03 10:26:42 +0100
+Processing by VariantGroupsController#index as HTML
+  [1m[36mVariantGroup Load (0.9ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups"[0m
+  ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.5ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.02ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.9ms | Allocations: 3047)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 10:31:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
