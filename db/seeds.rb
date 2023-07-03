@@ -12,4 +12,8 @@ if VariantGroup.all.length < 1
     noVariantGroup = VariantGroup.create(name: "No variant group")
 end
 
-puts "Done seeding!"
+if Customer.all.length < 1
+    pascal = Customer.create(first_name: "Pascal", last_name: "Odudigbo", email: "odudigbopascal@gmail.com", password: "1234567890", password_confirmation: "1234567890", verified: true)
+end
+
+puts "Done seeding 🪴🪴🪴!"
