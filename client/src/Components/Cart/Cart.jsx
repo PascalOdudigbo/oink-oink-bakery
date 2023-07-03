@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link, Route, Routes, useNavigate} from "react-router-dom";
 import {CartItem, EditCartItem} from "../../Components";
+import { GiShoppingCart } from "react-icons/gi";
+import { IconContext } from "react-icons/lib";
 
 
 function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemFromCart, setAlertDisplay, setAlertMessage, setAlertStatus, hideAlert , customerData, getCarts, handleEmptyCart}){
@@ -14,6 +16,13 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
 
     //creating state to manage target line item ID
     const [targetLineItem, setTargetLineItem] = useState({})
+
+    //creating state to hold title size
+    const [titleSize, setTitleSize] = useState("30px")
+
+    useEffect(() => {
+        setTitleSize(getComputedStyle(document?.getElementsByClassName("cartPageTitle")[0])?.fontSize);
+    }, [titleSize])
 
     //component to be displayed when cart has items
     function FilledCart(){
@@ -36,9 +45,6 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
                         }/>
                     </Routes>
                 </div>
-
-
-                <h1 className="cartPageTitle">YOUR SHOPPING CART</h1>
 
                 <div className="filledCartCartItemGrid">
                     { 
@@ -76,12 +82,9 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
     function EmptyCart(){
         return(
             <div className="emptyCartContainer">
-                <h1 className="cartPageTitle">YOUR SHOPPING CART</h1>
-
                 <p className="cartEmptyText">You have no items in your shopping cart, 
                             <Link to="/" className="cartEmptyLink"> start adding some</Link>!
                 </p>
-
             </div>
 
         )
@@ -91,7 +94,17 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
 
     return (
         <div className="cartContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
-            {/* <h1 className="cartPageTitle">YOUR SHOPPING CART</h1> */}
+            <div className="cartPageTitleAndIconContainer">
+                    <h1 className="cartPageTitle">YOUR SHOPPING CART</h1>
+                    &nbsp;
+                    <IconContext.Provider value={{
+                        //make the icon size the size of the elements
+                        size: `calc(${titleSize} - 6px)`
+                    }}>
+                        <GiShoppingCart />
+                    </IconContext.Provider>
+
+            </div>
 
             {/* if the cart is not empty display filled cart else display empty cart */}
             {(cart?.line_items?.length > 0 ? false : true) ? <EmptyCart/> : <FilledCart/>}

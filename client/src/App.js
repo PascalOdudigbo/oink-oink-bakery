@@ -714,6 +714,11 @@ function App() {
 
         <Route path="/customer/address-book/*" element={
           <div className="container">
+            <NavBar
+                totalItems={cart?.total_items}
+                customerData={customerData}
+                handleLogout={handleLogout}
+            />
             <div className="homePageAlertContainer">
               <Alert
                 display={alertDisplay}
@@ -724,8 +729,6 @@ function App() {
 
             <AddressBook
               customerData={customerData}
-              handleLogout={handleLogout}
-              cart={cart}
               setAlertDisplay={setAlertDisplay}
               setAlertMessage={setAlertMessage}
               setAlertStatus={setAlertStatus}

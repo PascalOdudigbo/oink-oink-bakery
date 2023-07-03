@@ -5,6 +5,24 @@
     margin-top: 70px;
     height: fit-content;
 
+    .cartPageTitleAndIconContainer{
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        .cartPageTitle{
+            font-size: 2.5rem;
+            font-weight: 800;
+            padding: none;
+            margin-right: 10px;
+            // margin-top: 20px;
+           
+        }
+    }
+
 
     .filledCartContainer{
 
@@ -13,16 +31,6 @@
             align-items: center;
             display: flex;
             flex-direction: column;
-        }
-
-        .cartPageTitle{
-            font-size: 2.5rem;
-            font-weight: 800;
-            padding: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            // margin-top: 20px;
-            margin-left: 10px;
         }
 
         .filledCartCartItemGrid{
@@ -101,15 +109,6 @@
     }
 
     .emptyCartContainer{
-        .cartPageTitle{
-            font-size: 2.5rem;
-            font-weight: 800;
-            padding: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-top: 20px;
-            margin-left: 10px;
-        }
 
         .cartEmptyText{
             margin-top: 100px;
