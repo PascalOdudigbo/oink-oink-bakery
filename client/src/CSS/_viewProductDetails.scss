@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 99 !important; 
+    z-index: 50 !important; 
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -306,9 +306,10 @@
             margin-left: 10px;
             margin-right: 10px;
             color: rgb(15, 15, 15);
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-family: "Roboto", "Helvetica", "Arial", sans-serif;
             font-weight: 400;
+            line-height: 1.6;
             text-align: left;
         }
     }
