@@ -205,11 +205,14 @@ function ViewProductDetails({ targetProduct, viewProductDetailsPageView, setview
                         }
 
                     </div>
+                    
+                    <div className="viewProductDetailsProductDescriptionContainer">
+                        <h1 className='viewProductDetailsProductDescriptionTitle'>Description</h1>
 
-                    <h1 className='viewProductDetailsProductDescriptionTitle'>Description</h1>
-
-                    <p className='viewProductDetailsProductDescription' dangerouslySetInnerHTML={{ __html: targetProduct?.description }} />
-
+                        <pre className='viewProductDetailsProductDescription' dangerouslySetInnerHTML={{ __html: targetProduct?.description }} />
+                        
+                    </div>
+                    
                 </div>
 
             </div> :

@@ -291,27 +291,33 @@
 
         }
 
-        .viewProductDetailsProductDescriptionTitle{
-            margin-top: 40px;
-            margin-bottom: 5px;
-            margin-left: 10px;
-            font-size: 1.6em;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-            font-weight: 700;
-            text-align: left;
-        }
-
-        .viewProductDetailsProductDescription{
-            margin-bottom: 30px;
+        .viewProductDetailsProductDescriptionContainer{
             margin-left: 10px;
             margin-right: 10px;
-            color: rgb(15, 15, 15);
-            font-size: 1.1rem;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-            font-weight: 400;
-            line-height: 1.6;
-            text-align: left;
+            margin-bottom: 30px;
+            // background-color: red;
+
+            .viewProductDetailsProductDescriptionTitle{
+                margin-top: 40px;
+                margin-bottom: 5px;
+                font-size: 1.6em;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-weight: 700;
+                text-align: left;
+            }
+    
+            .viewProductDetailsProductDescription{
+                white-space: pre-wrap;
+                color: rgb(15, 15, 15);
+                font-size: 1.1rem;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-weight: 400;
+                line-height: 1.6;
+                text-align: left;
+            }
         }
+
+        
     }
 
     .viewProductDetailsColorAndCakeTextContainer{

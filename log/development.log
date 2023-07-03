@@ -23296,3 +23296,377 @@ Completed 201 Created in 40ms (Views: 0.6ms | ActiveRecord: 14.6ms | Allocations
 Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 15.2ms | Allocations: 11743)
 
 
+Started GET "/customers" for 127.0.0.1 at 2023-07-03 11:38:36 +0100
+Processing by CustomersController#index as HTML
+Started GET "/variant_groups" for 127.0.0.1 at 2023-07-03 11:38:36 +0100
+Processing by VariantGroupsController#index as HTML
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/controllers/customers_controller.rb:49:in `index'
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 11:38:36 +0100
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:38:36 +0100
+[active_model_serializers]   [1m[36mCart Load (1.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = $1[0m  [["customer_id", 2]]
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 11:38:36 +0100
+Started GET "/discounts" for 127.0.0.1 at 2023-07-03 11:38:36 +0100
+Processing by CustomersController#logged_in as */*
+Processing by DiscountsController#index as HTML
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+  [1m[36mVariantGroup Load (3.7ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups"[0m
+  ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+Processing by ProductsController#index as HTML
+Processing by BakersController#logged_in as */*
+[active_model_serializers]   [1m[36mProduct Load (10.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCustomerAddress Load (0.5ms)[0m  [1m[34mSELECT "customer_addresses".* FROM "customer_addresses" WHERE "customer_addresses"."customer_id" = $1[0m  [["customer_id", 2]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.4ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+  [1m[36mDiscount Load (12.2ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts"[0m
+  ↳ app/controllers/discounts_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mStripeCustomer Load (0.4ms)[0m  [1m[34mSELECT "stripe_customers".* FROM "stripe_customers" WHERE "stripe_customers"."customer_id" = $1 LIMIT $2[0m  [["customer_id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.1ms)
+Completed 201 Created in 55ms (Views: 1.9ms | ActiveRecord: 11.4ms | Allocations: 8183)
+
+
+[active_model_serializers]   [1m[36mProduct Load (3.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."discount_id" = $1[0m  [["discount_id", 3]]
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (0.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mVariantOption Load (0.4ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   ↳ app/controllers/variant_groups_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (49.41ms)
+Completed 200 OK in 92ms (Views: 91.4ms | ActiveRecord: 38.0ms | Allocations: 15070)
+
+
+[active_model_serializers]   ↳ app/controllers/discounts_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.61ms)
+Completed 200 OK in 75ms (Views: 74.3ms | ActiveRecord: 26.1ms | Allocations: 16059)
+
+
+[active_model_serializers]   [1m[36mProductImage Load (3.5ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   [1m[36mOrder Load (12.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = $1[0m  [["customer_id", 2]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   ↳ app/controllers/customers_controller.rb:49:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (102.52ms)
+Completed 200 OK in 132ms (Views: 131.2ms | ActiveRecord: 23.2ms | Allocations: 20275)
+
+
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 201 Created in 102ms (Views: 3.1ms | ActiveRecord: 17.2ms | Allocations: 13200)
+
+
+[active_model_serializers]   [1m[36mProductImage Load (1.0ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.4ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (106.6ms)
+Completed 200 OK in 133ms (Views: 132.2ms | ActiveRecord: 26.9ms | Allocations: 24726)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:38:37 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.4ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (1.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (1.0ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.5ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (5.1ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (37.08ms)
+Completed 200 OK in 40ms (Views: 31.0ms | ActiveRecord: 8.7ms | Allocations: 8963)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:38:45 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.4ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (0.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.1ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.3ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.75ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 2.1ms | Allocations: 8938)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 11:40:38 +0100
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:40:38 +0100
+Processing by ProductsController#index as HTML
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 11:40:38 +0100
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Processing by CustomersController#logged_in as */*
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Processing by BakersController#logged_in as */*
+[active_model_serializers]   [1m[36mDiscount Load (13.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (0.8ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+  [1m[36mCustomer Load (14.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+Completed 201 Created in 36ms (Views: 0.9ms | ActiveRecord: 14.1ms | Allocations: 4885)
+
+
+[active_model_serializers]   [1m[36mProductImage Load (3.9ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.6ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.2ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.1ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (66.41ms)
+Completed 200 OK in 77ms (Views: 56.6ms | ActiveRecord: 19.8ms | Allocations: 14987)
+
+
+  [1m[36mBaker Load (0.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 201 Created in 88ms (Views: 3.5ms | ActiveRecord: 21.3ms | Allocations: 16619)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 11:45:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2023-07-03 11:45:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:48:35 +0100
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 11:48:35 +0100
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 11:48:35 +0100
+Processing by ProductsController#index as HTML
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.5ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 26ms (Views: 0.6ms | ActiveRecord: 8.0ms | Allocations: 3616)
+
+
+[active_model_serializers]   [1m[36mVariantGroup Load (1.2ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 34ms (Views: 1.7ms | ActiveRecord: 11.0ms | Allocations: 3572)
+
+
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (1.1ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (1.4ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (1.4ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (49.53ms)
+Completed 200 OK in 69ms (Views: 69.1ms | ActiveRecord: 12.6ms | Allocations: 11744)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 11:49:16 +0100
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 11:49:16 +0100
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:49:16 +0100
+Processing by BakersController#logged_in as */*
+Processing by ProductsController#index as HTML
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers]   [1m[36mDiscount Load (0.6ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (0.3ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (3.9ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.83ms)
+Completed 201 Created in 30ms (Views: 17.5ms | ActiveRecord: 0.6ms | Allocations: 2512)
+
+
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+  [1m[36mBaker Load (1.5ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.69ms)
+Completed 201 Created in 29ms (Views: 1.7ms | ActiveRecord: 17.0ms | Allocations: 3577)
+
+
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.6ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.5ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (80.9ms)
+Completed 200 OK in 89ms (Views: 82.1ms | ActiveRecord: 6.6ms | Allocations: 8984)
+
+
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 11:53:14 +0100
+Processing by CustomersController#logged_in as */*
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 11:53:14 +0100
+Processing by BakersController#logged_in as */*
+  [1m[36mBaker Load (0.3ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 201 Created in 6ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 838)
+
+
+Completed 201 Created in 9ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 857)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:53:14 +0100
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.4ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (0.4ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.4ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.3ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.4ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (104.55ms)
+Completed 200 OK in 147ms (Views: 107.0ms | ActiveRecord: 28.7ms | Allocations: 30498)
+
+
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 11:54:20 +0100
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:54:20 +0100
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 11:54:20 +0100
+Processing by ProductsController#index as HTML
+Processing by BakersController#logged_in as */*
+Processing by CustomersController#logged_in as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mDiscount Load (0.3ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+[active_model_serializers]   [1m[36mVariantGroup Load (0.3ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 201 Created in 9ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 836)
+
+
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.2ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.0ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCustomer Load (4.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.08ms)
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 201 Created in 19ms (Views: 2.2ms | ActiveRecord: 4.1ms | Allocations: 882)
+
+
+[active_model_serializers]   [1m[36mProductImage Load (0.9ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.5ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.52ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 2.7ms | Allocations: 8938)
+
+
+Started GET "/products" for 127.0.0.1 at 2023-07-03 11:54:57 +0100
+Processing by ProductsController#index as HTML
+Started GET "/customer-logged-in" for 127.0.0.1 at 2023-07-03 11:54:57 +0100
+Started GET "/baker-logged-in" for 127.0.0.1 at 2023-07-03 11:54:57 +0100
+Processing by CustomersController#logged_in as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Processing by BakersController#logged_in as */*
+  ↳ app/controllers/products_controller.rb:8:in `index'
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 1.2ms | Allocations: 2094)
+
+
+[active_model_serializers]   [1m[36mDiscount Load (0.5ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantGroup Load (2.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+  [1m[36mBaker Load (0.4ms)[0m  [1m[34mSELECT "bakers".* FROM "bakers" WHERE "bakers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bakers_controller.rb:17:in `logged_in'
+[active_model_serializers] Rendered BakerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 201 Created in 20ms (Views: 1.0ms | ActiveRecord: 8.0ms | Allocations: 4533)
+
+
+[active_model_serializers]   [1m[36mProductImage Load (1.7ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 6]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Discount Load (0.1ms)[0m  [1m[34mSELECT "discounts".* FROM "discounts" WHERE "discounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantGroup Load (0.0ms)[0m  [1m[34mSELECT "variant_groups".* FROM "variant_groups" WHERE "variant_groups"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mProductImage Load (0.7ms)[0m  [1m[34mSELECT "product_images".* FROM "product_images" WHERE "product_images"."product_id" = $1[0m  [["product_id", 7]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mVariantOption Load (0.4ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE VariantOption Load (0.0ms)[0m  [1m[34mSELECT "variant_options".* FROM "variant_options" WHERE "variant_options"."variant_group_id" = $1[0m  [["variant_group_id", 3]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (56.83ms)
+Completed 200 OK in 66ms (Views: 59.8ms | ActiveRecord: 6.0ms | Allocations: 8985)
+
+
