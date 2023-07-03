@@ -18,7 +18,7 @@ function BakeryProducts({getProducts, products, setProducts, handleProductSearch
 
             <div className='bakeryProductsTitleAndAddButtonContainer'>
                 <h1 className="bakeryProductsPageTitle">PRODUCTS</h1>
-                <Tooltip title="Add product" arrow>
+                <Tooltip title={<p className="tooltipText">Add product</p>} arrow>
                     <div className="iconAndButtonContainer">
                         <IconContext.Provider value={{ size: '15px' }}>
                             <RiAddFill style={iconStyles} />

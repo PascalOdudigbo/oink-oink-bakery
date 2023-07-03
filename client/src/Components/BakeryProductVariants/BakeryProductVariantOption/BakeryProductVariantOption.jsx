@@ -16,7 +16,7 @@ function BakeryProductVariantOption({variantOption, setVariantOption, setViewBak
             <div className="variantOptionButtonscontainer">
                 
                     <IconContext.Provider value={{size: "20px"}}>
-                        <Tooltip title="Edit" arrow>
+                        <Tooltip title={<p className="tooltipText">Edit</p>} arrow>
                             <button className="variantOptionEditBtn" onClick={()=> {
                                 setVariantOption(variantOption);
                                 setViewBakeryProductEditVariantOption("block");
@@ -29,7 +29,7 @@ function BakeryProductVariantOption({variantOption, setVariantOption, setViewBak
             
 
                     <IconContext.Provider value={{size: "20px"}}>
-                        <Tooltip title="Delete" arrow> 
+                        <Tooltip title={<p className="tooltipText">Delete</p>} arrow> 
                             <button className="variantOptionDeleteBtn" onClick={() => handleDeleteVariantOption(variantOption)}>
                                 <AiFillDelete style={{color: "black"}}/>
                             </button>

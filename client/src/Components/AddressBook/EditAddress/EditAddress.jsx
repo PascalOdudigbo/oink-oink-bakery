@@ -115,7 +115,7 @@ function EditAddress({targetAddress, customerData ,setAlertDisplay, setAlertStat
     return(
        <div className="EditAddressFormContainer"> 
 
-            <Tooltip title="close" arrow>
+            <Tooltip title={<p className="tooltipText">close</p>} arrow>
                 <button className="btn-closePage" onClick={() => {
                     setPhone("+254");
                     setAddress("");

@@ -37,7 +37,7 @@ function CartItem({lineItem, setTargetLineItem, setCakeColor, setCakeText, incre
                 </div>
 
                 <IconContext.Provider value={{size: "13px"}}>
-                    <Tooltip title="Edit" arrow>
+                    <Tooltip title={<p className="tooltipText">Edit</p>} arrow>
                         <button className="cartItemEditButton" onClick={()=> {
                             setCakeColor(lineItem?.color);
                             setCakeText(lineItem?.cake_text);

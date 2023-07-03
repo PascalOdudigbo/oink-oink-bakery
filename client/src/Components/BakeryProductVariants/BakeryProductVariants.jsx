@@ -186,7 +186,7 @@ function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, se
 
             <div className="bakeryVariantGroupsNameAndButtonContainer">
                     <h1 className="bakeryVariantGroupsName">Group</h1>
-                    <Tooltip title="Add variant group" arrow>
+                    <Tooltip title={<p className="tooltipText">Add variant group</p>} arrow>
                         <div className="iconAndButtonContainer" onClick={() => {
                             setViewBakeryProductAddVariantGroup("block")
                             navigate("/bakery-portal/product-variants/add-variant-group")
@@ -226,7 +226,7 @@ function BakeryProductVariants({variantGroup, setVariantGroup, variantOption, se
 
             <div className="bakeryVariantOptionsNameAndButtonContainer">
                     <h1 className="bakeryVariantOptionsName">Options</h1>
-                    <Tooltip title="Add variant option" arrow>
+                    <Tooltip title={<p className="tooltipText">Add variant option</p>} arrow>
                         <div className="iconAndButtonContainer" onClick={() => {
                             setViewBakeryProductAddVariantOption("block");
                             navigate("/bakery-portal/product-variants/add-variant-option")

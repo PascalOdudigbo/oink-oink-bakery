@@ -50,7 +50,7 @@ function BakeryProductAddVariantOption({viewBakeryProductAddVariantOption, setVi
 
     return(
         <div className="bakeryProductAddVariantOptionContainer" style={{display: viewBakeryProductAddVariantOption}}>
-            <Tooltip title="close" arrow>
+            <Tooltip title={<p className="tooltipText">close</p>} arrow>
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductAddVariantOption("none");
                     setVariantOptionName("");
@@ -87,7 +87,7 @@ function BakeryProductAddVariantOption({viewBakeryProductAddVariantOption, setVi
                             onChange={(e) => setVariantOptionPrice(e.target.value)}
                         />
                     </div>
-                    
+
                     <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Save"}</button>
                 </form>
             </div>

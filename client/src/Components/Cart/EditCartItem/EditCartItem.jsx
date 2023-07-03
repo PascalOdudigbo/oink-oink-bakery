@@ -55,7 +55,7 @@ function EditCartItem({ targetLineItem, setTargetLineItem, setAlertDisplay, setA
 
     return (
         <div className="editCartItemContainer">
-            <Tooltip title="close" arrow>
+            <Tooltip title={<p className="tooltipText">close</p>} arrow>
                 <button className="btn-closePage" onClick={() => {
                     // setVariantOption({});
                     setTargetLineItem({});

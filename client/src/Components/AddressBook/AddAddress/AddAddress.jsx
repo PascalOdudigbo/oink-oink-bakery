@@ -105,7 +105,7 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
     return(
        <div className="AddAddressFormContainer"> 
 
-            <Tooltip title="close" arrow>
+            <Tooltip title={<p className="tooltipText">close</p>} arrow>
                 <button className="btn-closePage" onClick={() => {
                     setPhone("+254");
                     setAddress("");

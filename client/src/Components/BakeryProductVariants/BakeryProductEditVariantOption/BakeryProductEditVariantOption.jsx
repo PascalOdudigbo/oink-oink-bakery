@@ -52,7 +52,7 @@ function BakeryProductEditVariantOption({viewBakeryProductEditVariantOption, set
 
     return(
         <div className="bakeryProductEditVariantOptionContainer" style={{display: viewBakeryProductEditVariantOption}}>
-            <Tooltip title="close" arrow>
+            <Tooltip title={<p className="tooltipText">close</p>} arrow>
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductEditVariantOption("none");
                     setVariantOption({});

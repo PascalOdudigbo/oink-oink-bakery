@@ -39,7 +39,7 @@ function NavBar({ totalItems, bakerData, customerData, handleLogout }) {
                     window.location.href.includes("admin") ||
                     // window.location.href.includes("customer") ||
                     window.location.href.includes("bakery-portal") ? null :
-                    <Tooltip title="Show cart items" arrow>
+                    <Tooltip title={<p className="tooltipText">Show cart items</p>} arrow>
                         <button className="btn-showCartItems" onClick={() => navigate("/cart")}>
                             <IconContext.Provider value={{ size: '26px' }}>
                                 <Badge badgeContent={totalItems} color="secondary">

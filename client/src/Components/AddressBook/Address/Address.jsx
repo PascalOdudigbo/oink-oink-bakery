@@ -47,7 +47,7 @@ function Address({address, setTargetAddress, setAlertStatus, setAlertMessage, se
                 
                 {
                     <IconContext.Provider value={{size: "18px"}}>
-                        <Tooltip title="Edit" arrow>
+                        <Tooltip title={<p className="tooltipText">Edit</p>} arrow>
                             <button className="addressEditBtn" onClick={()=> {
                                 setTargetAddress(address);
                                 navigate("/customer/address-book/edit-address")
@@ -62,7 +62,7 @@ function Address({address, setTargetAddress, setAlertStatus, setAlertMessage, se
 
                 {
                     <IconContext.Provider value={{size: "18px"}}>
-                        <Tooltip title="Delete" arrow> 
+                        <Tooltip title={<p className="tooltipText">Delete</p>} arrow> 
                             <button className="addressDeleteBtn" onClick={() => {handleDeleteAddress()}}>
                                 <AiFillDelete style={{color: "black"}}/>
                             </button>

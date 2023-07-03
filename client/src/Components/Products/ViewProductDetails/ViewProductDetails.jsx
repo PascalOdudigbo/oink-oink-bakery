@@ -88,7 +88,7 @@ function ViewProductDetails({ targetProduct, viewProductDetailsPageView, setview
     return (
         targetProduct?.product_images ?
             <div className="viewProductDetailsContainer" style={{ display: viewProductDetailsPageView }}>
-                <Tooltip title="close" arrow>
+                <Tooltip title={<p className="tooltipText">close</p>} arrow>
                     <button className="btn-closePage" onClick={() => setviewProductDetailsPageView("none")}>
                         <IconContext.Provider value={{ size: '25px' }}>
                             <AiFillCloseCircle style={closePageIconStyle} />
@@ -123,7 +123,7 @@ function ViewProductDetails({ targetProduct, viewProductDetailsPageView, setview
                             <h4 className='viewProductDetailsProductPrice'>{`Ksh ${handlePriceDisplay() !== 0 ? handlePriceDisplay() : "Varies"}`}</h4>
                             {
                                 targetProduct?.discount?.name !== "No discount" &&
-                                <Tooltip title={targetProduct?.discount?.name} arrow>
+                                <Tooltip title={<p className="tooltipText">{targetProduct?.discount?.name}</p>} arrow>
                                     <div className="viewProductDetailsProductOriginalPriceAndDiscountPercentContainer">
                                         <h4 className='viewProductDetailsProductOriginalPrice'>{`Ksh ${selectedOption?.price ? selectedOption?.price : targetProduct?.price}`}</h4>
                                         <h4 className='viewProductDetailsProductDiscountPercent'>{`-${targetProduct?.discount?.discount_percent}%`}</h4>
@@ -191,7 +191,7 @@ function ViewProductDetails({ targetProduct, viewProductDetailsPageView, setview
 
                             : 
                                 <div className="socialsContainer">
-                                    <Tooltip title="place order on instagram" arrow>
+                                    <Tooltip title={<p className="tooltipText">Place order on instagram</p>} arrow>
                                         <button className="btn-SocialIcon" onClick={() =>(window.location = `${socialsLinks.instagram}`)}>
                                             <IconContext.Provider value={{ size: '40px' }}>
                                                 <FaInstagram style={instagramIconStyle}/>

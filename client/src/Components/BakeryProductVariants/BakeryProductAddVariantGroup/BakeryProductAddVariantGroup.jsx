@@ -49,7 +49,7 @@ function BakeryProductAddVariantGroup({viewBakeryProductAddVariantGroup, setView
 
     return(
         <div className="bakeryProductAddVariantGroupContainer" style={{display: viewBakeryProductAddVariantGroup}}>
-            <Tooltip title="close" arrow>
+            <Tooltip  title={<p className="tooltipText">close</p>}  arrow>
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductAddVariantGroup("none");
                     setVariantGroupName("");

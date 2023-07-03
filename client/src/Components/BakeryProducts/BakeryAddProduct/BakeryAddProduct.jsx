@@ -184,7 +184,7 @@ function BakeryAddProduct({setAlertDisplay, setAlertStatus, setAlertMessage, hid
                                                 className="imageAndDeleteBtnContainer"
                                                 key={index}
                                     >
-                                        <Tooltip title="delete" arrow>
+                                        <Tooltip title={<p className="tooltipText">Delete</p>} arrow>
                                             <button className="deleteImgBtn" onClick={(e) => { 
                                                 e.preventDefault()
                                                 let newData = imageFiles.filter((image)=>image !== imageFiles[index])

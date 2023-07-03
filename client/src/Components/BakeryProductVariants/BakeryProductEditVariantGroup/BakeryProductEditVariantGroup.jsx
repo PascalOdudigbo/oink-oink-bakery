@@ -50,7 +50,7 @@ function BakeryProductEditVariantGroup({viewBakeryProductEditVariantGroup, setVi
 
     return(
         <div className="bakeryProductEditVariantGroupContainer" style={{display: viewBakeryProductEditVariantGroup}}>
-            <Tooltip title="close" arrow>
+            <Tooltip title={<p className="tooltipText">close</p>} arrow>
                 <button className="btn-closePage" onClick={()=>{
                     setViewBakeryProductEditVariantGroup("none");
                     setVariantGroup({})

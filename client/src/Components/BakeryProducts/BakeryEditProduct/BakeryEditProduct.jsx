@@ -244,7 +244,7 @@ function BakeryEditProduct({targetProduct, setAlertDisplay, setAlertStatus, setA
                                             className="imageAndDeleteBtnContainer"
                                             key={index}
                                 >
-                                    <Tooltip title="delete" arrow>
+                                    <Tooltip title={<p className="tooltipText">Delete</p>} arrow>
                                         <button className="deleteImgBtn" onClick={(e) => { 
                                             e.preventDefault();
                                             deleteCloudinaryProductImage(productImage, index);
