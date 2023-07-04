@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FaCcVisa, FaCcAmex, FaCcMastercard, FaCcDiscover } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
-function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn }) {
+function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert}) {
 	//creating loading state
 	const [isLoading, setIsLoading] = useState(false);
 

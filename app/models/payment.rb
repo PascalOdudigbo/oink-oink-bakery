@@ -7,7 +7,10 @@ class Payment < ApplicationRecord
   def create_on_stripe
     token = get_token
     customer = Customer.find(order.cart.customer.id)
-    stripe_customer_id = customer.stripe_customer.stripe_customer_id
+    @stripe_customer = Stripe::Customer.create(email: customer.email, name: "#{customer.first_name} #{customer.last_name}", source: token)
+    @db_stripe_customer = StripeCustomer.new(customer_id: customer.id, stripe_customer_id: @stripe_customer.id)
+    
+    # stripe_customer_id = customer.stripe_customer.stripe_customer_id
     description = "Thank you #{customer.first_name} #{customer.last_name} for shopping at Oink Oink, the home of flavour. Your order is being processed and you'll be updated on the progress. Your order details are available on your Oink Oink Account."
     params = { 
       amount: order.cart.total.to_i * 100, 
@@ -24,7 +27,8 @@ class Payment < ApplicationRecord
         },
         name: billing_name,
         email: billing_email, 
-      }, 
+      },
+      customer: @stripe_customer.id,
       source: token
     }
     response = Stripe::Charge.create(params)
@@ -32,13 +36,21 @@ class Payment < ApplicationRecord
   end
 
   def get_token
-    Stripe::Token.create({
-      card: {
-        number: credit_card_number,
-        exp_month: credit_card_exp_month,
-        exp_year: credit_card_exp_year,
-        cvc: credit_card_cvv,
-      }
-    })
+    begin
+      Stripe::Token.create({
+        card: {
+          number: credit_card_number,
+          exp_month: credit_card_exp_month,
+          exp_year: credit_card_exp_year,
+          cvc: credit_card_cvv,
+        }
+      })
+    rescue Stripe::CardError => e
+      puts "A payment error occurred: #{e.error.message}"
+    else
+      puts "No error."
+      @db_stripe_customer.save
+    end
+
   end
 end
