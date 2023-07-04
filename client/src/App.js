@@ -344,7 +344,7 @@ function App() {
         setAlertDisplay("none");
         clearTimeout(timeOut);
       },
-      1500,
+      1800,
       setAlertDisplay
     );
   }
@@ -436,8 +436,7 @@ function App() {
     <div>
       {/* <NavBar totalItems={cart?.total_items}/> */}
       <Routes>
-        <Route
-          path="/"
+        <Route path="/"
           element={
             <div className="container">
               <div className="homePageAlertContainer">
@@ -474,8 +473,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/login"
+        <Route path="/login"
           element={
             <div className="container">
               <NavBar
@@ -504,8 +502,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/sign-up"
+        <Route path="/sign-up"
           element={
             <div className="container">
               <NavBar
@@ -531,8 +528,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/confirm-email/*"
+        <Route path="/confirm-email/*"
           element={
             <CustomerConfirmEmail
               hideAlert={hideAlert}
@@ -546,8 +542,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/forgot-password"
+        <Route path="/forgot-password"
           element={
             <div className="container">
               <NavBar
@@ -573,8 +568,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/admin-forgot-password"
+        <Route path="/admin-forgot-password"
           element={
             <div className="container">
               <NavBar
@@ -693,6 +687,7 @@ function App() {
             />
 
             <Cart
+              isCustomerLoggedIn={isCustomerLoggedIn}
               cart={cart}
               increaseOrDecreaseLineItemQuantityAndPrice={increaseOrDecreaseLineItemQuantityAndPrice}
               removeLineItemFromCart={removeLineItemFromCart}
@@ -715,8 +710,9 @@ function App() {
         <Route path="/customer/address-book/*" element={
           <div className="container">
             <NavBar
-                totalItems={cart?.total_items}
+                totalItems={cart?.line_items?.length}
                 customerData={customerData}
+                bakerData={bakerData}
                 handleLogout={handleLogout}
             />
             <div className="homePageAlertContainer">

@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaCcVisa, FaCcAmex, FaCcMastercard, FaCcDiscover } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
 
 function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertStatus, setAlertMessage, hideAlert, isCustomerLoggedIn }) {
 	//creating loading state
@@ -24,89 +26,93 @@ function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertS
 	//creating navigation variable function
 	const navigate = useNavigate();
 
-	//creating a function to to handle creating a stripe customer
-	function createStripeCustomer(){
-		axios.post("/stripe_customers", {customer_id: customerData?.id})
-		.then(stripeCustomer => {
+	//creating state to hold the form icons size
+	const [iconSize, setIconSize] = useState("36px");
 
-		})
-		.catch(err => {
-			console.log(err)
-		})
+	//creating a function to to handle creating a stripe customer
+	function createStripeCustomer() {
+		axios.post("/stripe_customers", { customer_id: customerData?.id })
+			.then(stripeCustomer => {
+
+			})
+			.catch(err => {
+				console.log(err)
+			})
 	}
-	// console.log(customerData)
 
 	//creating a function to deactivate the cart
-	function deactivateCart(){
-		axios.patch(`/carts/${cart?.id}`, {active: false})
-		.then(cartData => {
-			getCarts();
-		})
-		.catch(err => {
-			if(err.response){
-				setIsLoading(false);
-                setAlertMessage(err.response.data.error);
-                setAlertStatus(false);
-                setAlertDisplay("block");
-                hideAlert();
-			}
-		})
+	function deactivateCart() {
+		axios.patch(`/carts/${cart?.id}`, { active: false })
+			.then(cartData => {
+				getCarts();
+			})
+			.catch(err => {
+				if (err.response) {
+					setIsLoading(false);
+					setAlertMessage(err.response.data.error);
+					setAlertStatus(false);
+					setAlertDisplay("block");
+					hideAlert();
+				}
+			})
 	}
 
 	//creating a function to handle placing the order
-	function handlePlacingOrder(e){
+	function handlePlacingOrder(e) {
 		e.preventDefault();
 		setIsLoading(true);
 
 		//if stripe customer hasn't been created do that
-		if(customerData?.stripe_customer?.id){
+		if (customerData?.stripe_customer?.id) {
 			//do nothing
 		}
-		else{
+		else {
 			createStripeCustomer();
 		}
 
 		//creating the data object to be sent to the backend
 		const orderData = {
 			cart_id: cart?.id,
-			customer_id: customerData?.id, 
-			status: "Unprocessed", 
-			customer_address_id: targetAddress?.id, 
-			credit_card_number: cardNumber, 
-			credit_card_exp_month: expMonth, 
-			credit_card_exp_year: expYear, 
-			credit_card_cvv: cvv, 
-			billing_city: city, 
-			billing_line1: address, 
-			billing_region: region, 
-			billing_postal_code: zip, 
-			billing_name: nameOnCard, 
+			customer_id: customerData?.id,
+			status: "Unprocessed",
+			customer_address_id: targetAddress?.id,
+			credit_card_number: cardNumber,
+			credit_card_exp_month: expMonth,
+			credit_card_exp_year: expYear,
+			credit_card_cvv: cvv,
+			billing_city: city,
+			billing_line1: address,
+			billing_region: region,
+			billing_postal_code: zip,
+			billing_name: nameOnCard,
 			billing_email: email
 		}
 
 		// starting the post request
 		axios.post("/orders", orderData)
-		.then(order => {
-			//if order payment is successful
-			setIsLoading(false);
-			setAlertMessage("Order placed successfully!")
-			setAlertStatus(true);
-			setAlertDisplay("block");
-			hideAlert();
-			deactivateCart();
+			.then(order => {
+				//if order payment is successful
+				setIsLoading(false);
+				setAlertMessage("Order placed successfully!")
+				setAlertStatus(true);
+				setAlertDisplay("block");
+				hideAlert();
+				deactivateCart();
 
-			//send invoice email here
-		})
-		.catch(err => {
-			console.log(err)
-		})
+				//send invoice email here
+			})
+			.catch(err => {
+				console.log(err)
+			})
 
 	}
 
 	useEffect(() => {
+		//set icon size to the size of the form title
+		// setIconSize(getComputedStyle(document?.getElementsByClassName("checkoutFormTitle")[0])?.fontSize);
+	}, [iconSize])
 
 
-	}, [])
 
 
 
@@ -120,10 +126,43 @@ function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertS
 						<div className="checkoutFormAcceptedCardsTextAndIconsContainer">
 							<p className="checkoutFormAcceptedCardsText">Accepted Cards</p>
 							<div className="checkoutFormAcceptedCardsIconsContainer">
-								<i class="fa fa-cc-visa" style={{color: "navy"}}></i>
-								<i class="fa fa-cc-amex" style={{color:"blue"}}></i>
-								<i class="fa fa-cc-mastercard" style={{color:"red"}}></i>
-								<i class="fa fa-cc-discover" style={{color:"orange"}}></i>
+							{/* FaCcVisa, FaCcAmex, FaCcMastercard, FaCcDiscover */}
+
+								<IconContext.Provider value={{
+									//make the icon size the size of the page title elements - 6 
+									size: `calc(${iconSize} - 6px)`,
+									color: "navy",
+								}}>
+									<FaCcVisa style={{marginRight: "5px"}}/>
+								</IconContext.Provider>
+
+								<IconContext.Provider value={{
+									//make the icon size the size of the page title elements - 6 
+									size: `calc(${iconSize} - 6px)`,
+									color: "blue"
+								}}>
+									<FaCcAmex style={{marginRight: "5px"}}/>
+								</IconContext.Provider>
+
+								<IconContext.Provider value={{
+									//make the icon size the size of the page title elements - 6 
+									size: `calc(${iconSize} - 6px)`,
+									color: "red"
+								}}>
+									<FaCcMastercard style={{marginRight: "5px"}}/>
+								</IconContext.Provider>
+
+								<IconContext.Provider value={{
+									//make the icon size the size of the page title elements - 6 
+									size: `calc(${iconSize} - 6px)`,
+									color: "orange"
+								}}>
+									<FaCcDiscover />
+								</IconContext.Provider>
+
+
+
+
 							</div>
 						</div>
 
@@ -188,11 +227,11 @@ function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertS
 
 						<div className="checkoutFormBillingAddressDeliveryAddressTextAndDropdownContainer">
 							<p className="deliveryAddressText">Delivery Address</p>
-	
+
 							<div className="checkoutFormBillingAddressDeliveryAddressDropdownContainer">
 
 								<button className="checkoutFormBillingAddressDeliveryAddressDropdownBtn">{
-									targetAddress ?.id ? targetAddress?.address : "Select Address"
+									targetAddress?.id ? targetAddress?.address : "Select Address"
 								}</button>
 
 								<div className='checkoutFormBillingAddressDeliveryAddressDropdownItemsContainer'>
@@ -206,7 +245,7 @@ function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertS
 													setAddress(address?.address)
 													setCity(address?.city)
 													setRegion(address?.region)
-													
+
 												}}>{address?.address}
 											</button>
 										)
@@ -216,7 +255,7 @@ function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertS
 
 							</div>
 
-							
+
 
 						</div>
 						<div className="checkoutFormTextAndInputContainer">
@@ -286,8 +325,8 @@ function CheckoutForm({ customerData, cart, getCarts, setAlertDisplay, setAlertS
 
 
 
-			</form> : null 
-			
+			</form> : null
+
 	)
 }
 export default CheckoutForm;

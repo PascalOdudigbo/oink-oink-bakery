@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import {Link, Route, Routes, useNavigate} from "react-router-dom";
 import {CartItem, EditCartItem} from "../../Components";
-import { GiShoppingCart } from "react-icons/gi";
+import { RiShoppingCartFill } from "react-icons/ri";
 import { IconContext } from "react-icons/lib";
 
 
-function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemFromCart, setAlertDisplay, setAlertMessage, setAlertStatus, hideAlert , customerData, getCarts, handleEmptyCart}){
+function Cart({isCustomerLoggedIn, cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemFromCart, setAlertDisplay, setAlertMessage, setAlertStatus, hideAlert , customerData, getCarts, handleEmptyCart}){
 
     //declaring and initializing navigate variable function
     const navigate = useNavigate();
@@ -21,13 +21,14 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
     const [titleSize, setTitleSize] = useState("30px")
 
     useEffect(() => {
+        isCustomerLoggedIn();
         setTitleSize(getComputedStyle(document?.getElementsByClassName("cartPageTitle")[0])?.fontSize);
     }, [titleSize])
 
     //component to be displayed when cart has items
     function FilledCart(){
         return(
-            <div className="filledCartContainer">
+            <div className="filledCartContainer" >
 
                 <div className="cartLineItemEditContainer">
                     <Routes>
@@ -68,7 +69,19 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
 
                     <div className="filledCartEmptyCartAndCheckoutContainer">
                         <button className="filledCartEmptyCartButton" onClick={() => {handleEmptyCart()}}>EMPTY CART</button>
-                        <button className="filledCartCheckoutButton" onClick={()=> navigate("/customer/checkout/")}>CHECKOUT</button>
+                        <button className="filledCartCheckoutButton" onClick={()=> {
+                            if (customerData?.customer_addresses?.length > 0){
+                                navigate("/customer/checkout/")
+                            }
+                            else{
+                                setAlertStatus(false);
+                                setAlertMessage("Please add an address first!");
+                                setAlertDisplay("block");
+                                hideAlert();
+                                navigate("/customer/address-book");
+                            }
+                            
+                            }}>CHECKOUT</button>
                     </div>
 
                 </div>
@@ -93,15 +106,14 @@ function Cart({cart, increaseOrDecreaseLineItemQuantityAndPrice, removeLineItemF
 
 
     return (
-        <div className="cartContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
+        <div className="cartContainer" style={{height: `calc("100vh" - ${100 * 130/window.innerHeight}vh)`}}>
             <div className="cartPageTitleAndIconContainer">
                     <h1 className="cartPageTitle">YOUR SHOPPING CART</h1>
-                    &nbsp;
                     <IconContext.Provider value={{
-                        //make the icon size the size of the elements
+                        //make the icon size the size of the page title elements - 6 
                         size: `calc(${titleSize} - 6px)`
                     }}>
-                        <GiShoppingCart />
+                        <RiShoppingCartFill />
                     </IconContext.Provider>
 
             </div>

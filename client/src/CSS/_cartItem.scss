@@ -9,14 +9,14 @@
     flex-direction: column;
     border-radius: 5px;
     border-bottom: 1px solid rgb(196, 196, 196);
-    width: fit-content;
+    // width: fit-content;
     background-color: white;
     justify-content: space-between;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 
     .cartItemImage{
-        width: 328px;
-        height: 180px;
+        // width: 328px;
+        height: 250px;
         object-fit: cover;
         border-radius: 5px;
         border-bottom-left-radius: 0px;
@@ -117,8 +117,8 @@
         .cartItemColorAndCakeTextContainer{
             display: flex;
             flex-direction: column;
-            min-width: 280px;
-            max-width: 280px;
+            min-width: 90%;
+            max-width: 90%;
             
 
             .cartItemCakeColorContainer{
@@ -145,10 +145,10 @@
                 .cartItemColor{
                     height: fit-content;
                     text-align: right;
-                    margin-right: 10px;
+                    // margin-right: 10px;
                     margin-top: 7px;
                     margin-bottom: auto;
-                    font-size: 0.8rem;
+                    font-size: 0.9rem;
                     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
                     font-weight: 500;
                     padding: none;
@@ -158,7 +158,9 @@
 
             .cartItemCakeTextContainer{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
 
                 .cartItemTextTitle{
                     text-align: left;
@@ -175,9 +177,9 @@
                 .cartItemCakeText{
                     margin-top: -6px;
                     margin-left: 5px;
-                    margin-right: 5px;
+                    // margin-right: 5px;
                     color: rgb(146, 146, 146);
-                    font-size: 0.8rem;
+                    font-size: 0.9rem;
                     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
                     font-weight: 400;
                 }
