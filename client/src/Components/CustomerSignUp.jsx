@@ -23,6 +23,14 @@ function CustomerSignUp({ hideAlert, alertDisplay, setAlertDisplay, alertStatus,
     //declaring a variable function to navigate to login page on successful signUp
     const navigate = useNavigate();
 
+    //creating email data variables
+    const emailTitle = "Oink Oink Bakery Email Confirmation";
+    const helloText = `Hello ${firstName.trim().charAt(0).toUpperCase() + firstName.slice(1)} ${lastName.trim().charAt(0).toUpperCase() + lastName.slice(1)}`;
+    const friendlyText = "Thank you for signing up on Oink Oink Bakery! We're excited to have you on board and will be happy to help you set everything up.";
+    const instructionsText = `Please confirm your email (${email}) by clicking the link below.`;
+    const emailBtnLink = "http://localhost:4000";
+    const buttonText = "Verify email"; 
+
     function handleSignUp(e) {
         //preventing default, scrolling to the top of the page and making button display loading
         e.preventDefault();
@@ -53,13 +61,17 @@ function CustomerSignUp({ hideAlert, alertDisplay, setAlertDisplay, alertStatus,
 
                     //setting up the email verification data
                     const emailValues = {
-                        customer_name: `${response.data.first_name} ${response.data.last_name}`,
+                        email_title: emailTitle,
                         customer_email: response.data.email,
-                        confirmation_link: `http://localhost:4000/confirm-email/${response.data.id}`
+                        hello_text: helloText,
+                        thanks_text: friendlyText,
+                        instructions_text: instructionsText,
+                        button_link: `${emailBtnLink}/confirm-email/${response.data.id}`,
+                        button_text: buttonText,
                     };
 
                     //sending the email
-                    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_VERIFY_EMAIL_TEMPLATE_ID, emailValues, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+                    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_VERIFY_EMAIL_AND_RESET_PASSWORD_TEMPLATE_ID, emailValues, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
                         .then(
                             //on email sent successfully
                             () => {

@@ -13,11 +13,15 @@ function ForgotPassword({ hideAlert, alertDisplay, setAlertDisplay, alertStatus,
     //creating loading state
     const [isLoading, setIsLoading] = useState(false);
 
-    //declaring and initializing link path variable
-    const linkpath = "localhost:4000/reset-password"
-
     //declaring a variable function to navigate to login page on successful signUp
     const navigate = useNavigate();
+
+    //creating email data variables
+    const emailTitle = "Oink Oink Bakery Password Reset";
+    const friendlyText = "No need to worry, you can reset your password by clicking the link below. If you didn't request a password reset, feel free to delete this email and carry on enjoying your day!";
+    const instructionsText = `All the best, Oink Onik Bakery.`;
+    const emailBtnLink = "http://localhost:4000";
+    const buttonText = "Reset password"; 
 
 
     //function to handle emailing recovery link
@@ -39,14 +43,18 @@ function ForgotPassword({ hideAlert, alertDisplay, setAlertDisplay, alertStatus,
 
                     //defining email template values
                     const emailValues = {
-                        user_name: `${res.data.first_name} ${res.data.last_name}`,
-                        user_email: email,
-                        reset_password_link: `${linkpath}/admin/${res.data.id}`
+                        email_title: emailTitle,
+                        customer_email: email,
+                        hello_text: `Hello ${res?.data.first_name} ${res?.data?.last_name}`,
+                        thanks_text: friendlyText,
+                        instructions_text: instructionsText,
+                        button_link: `${emailBtnLink}/reset-password/admin/${res.data.id}`,
+                        button_text: buttonText,
                     };
 
                     //sending the recovery email
                     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                        process.env.REACT_APP_EMAILJS_RESET_PASSWORD_TEMPLATE_ID,
+                        process.env.REACT_APP_EMAILJS_VERIFY_EMAIL_AND_RESET_PASSWORD_TEMPLATE_ID,
                         emailValues, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
                         .then(
                             //on email sent successfully
@@ -93,14 +101,19 @@ function ForgotPassword({ hideAlert, alertDisplay, setAlertDisplay, alertStatus,
 
                     //defining email template values
                     const emailValues = {
-                        user_name: `${res.data.first_name} ${res.data.last_name}`,
-                        user_email: email,
-                        reset_password_link: `${linkpath}/customer/${res.data.id}`
+                        email_title: emailTitle,
+                        customer_email: email,
+                        hello_text: `Hello ${res?.data.first_name} ${res?.data?.last_name}`,
+                        thanks_text: friendlyText,
+                        instructions_text: instructionsText,
+                        button_link: `${emailBtnLink}/reset-password/customer/${res.data.id}`,
+                        button_text: buttonText,
+                        reset_password_link: `${emailBtnLink}/reset-password/customer/${res.data.id}`
                     };
 
                     //sending the recovery email
                     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                        process.env.REACT_APP_EMAILJS_RESET_PASSWORD_TEMPLATE_ID,
+                        process.env.REACT_APP_EMAILJS_VERIFY_EMAIL_AND_RESET_PASSWORD_TEMPLATE_ID,
                         emailValues, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
                         .then(
                             //on email sent successfully
