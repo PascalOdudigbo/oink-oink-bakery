@@ -151,3 +151,65 @@
         }
     }
 }
+
+@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge){
+
+    .customerSignUpContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: 75px;
+    
+        .textContainer {
+            display: none;
+        }
+    
+        .customerSignUpFormContainer {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: auto;
+            margin-bottom: auto;
+    
+    
+            .customerSignUpForm {
+                margin-left: 5%;
+                margin-right: 5%;
+    
+    
+                .formTitle {
+                    font-size: 1.4em;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+    
+                .SignUpFormTextAndInputContainer {
+                  
+                    .SignUpFormText {
+                        font-size: 0.7em;
+    
+                    }
+    
+                    .SignUpFormInput {
+                        font-size: 1em;
+    
+                    }
+                }
+    
+                .customerSignUpButton {
+                    padding: 15px 10px;
+                    font-size: 0.8em;
+                    width: 50%;
+                }
+    
+               
+            }
+    
+    
+        }
+    
+    }
+    
+
+    
+}

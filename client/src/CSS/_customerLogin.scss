@@ -205,3 +205,81 @@
     }
 
 }
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge){
+
+    .customerLoginContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: 74px;
+    
+        .textContainer {
+            display: none;
+        }
+    
+        .customerLoginFormContainer {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: auto;
+            margin-bottom: auto;
+    
+    
+            .customerLoginForm {
+                margin-left: 5%;
+                margin-right: 5%;
+    
+    
+                .formTitle {
+                    font-size: 1.4em;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+    
+                .loginFormTextAndInputContainer {
+                  
+                    .loginFormText {
+                        font-size: 0.7em;
+    
+                    }
+    
+                    .loginFormInput {
+                        font-size: 1em;
+    
+                    }
+                }
+    
+    
+                .forgotPasswordLink {
+                    font-size: 0.8em;
+                }
+    
+                .customerLoginButton {
+                    padding: 13px 10px;
+                    font-size: 0.8em;
+                }
+    
+                p {
+                    font-size: 0.8em;
+                }
+    
+                .customerSignUpButton {
+                    padding: 13px 12px;
+                    font-size: 0.8em;
+                }
+            }
+    
+    
+        }
+    
+    }
+    
+
+    
+}
