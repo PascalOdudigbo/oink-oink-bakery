@@ -15,7 +15,9 @@
         display: flex;
         flex-direction: row;
         width: fit-content;
+        height: 35px;
         border: 1px solid black;
+        align-items: center;
 
         &:hover {
             cursor: pointer;
@@ -24,6 +26,7 @@
 
         .userSignedInDropdownBtn{
             background-color: #FFACFC;
+            height: 35px;
 
         }
 
@@ -103,6 +106,65 @@
                 box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
             }
         }
+    }
+
+}
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $tablet){
+
+    // .loginAndSignUpLinksDropdownContainer{
+    
+    //     .loginAndSignUpLinkDropdownBtn{
+    //         padding-top: 3px;
+    //         padding-bottom: 3px;
+    //     }
+    
+    //     .loginAndSignUpLinksContainer{
+    //         min-width: 80px;
+          
+    //         .loginAndSignUpLinks{
+    //             font-size: 0.7em;
+    //             width: 60px;
+    //             height: 20px;
+    //             padding: 12px 16px;
+    //         }
+    
+    //     }
+    // }
+
+
+    .userSignedInDropdownContainer{
+        margin-right: 10px;
+
+        .userSignedInDropdownBtnAndNameContainer{
+            max-width: 100px;
+
+            .userSignedInDropdownName{
+                font-size: 0.5em;
+            }
+    
+        }
+    
+        .userSignedInDropdownLinksContainer{
+            width: 100%;
+          
+            .userSignedInDropdownBtn{
+                font-size: 0.6em;
+                padding: 10px 14px;
+            }
+    
+            .userSignedInDropdownLogoutBtn{
+                font-size: 0.6em;
+                padding: 10px 14px;
+            }
+        }
+    
     }
 
 }
