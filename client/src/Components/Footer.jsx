@@ -23,7 +23,7 @@ function Footer(){
             <h4 className="copywrightText">{`©${new Date().getFullYear()} Oink Oink Bakery KE`}</h4>
 
             <div className="followUsContainer">
-                <pre>                   </pre>
+                {/* <pre>                   </pre> */}
                 <h4 className="followUsText">follow us: </h4>
                 <IconContext.Provider value={{ size: "25px" }}>
                     <FaInstagram

@@ -42,3 +42,45 @@
         
     }
 }
+
+
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge){
+    .footerContainer{
+        height: 50px;
+    
+        .footerLogo{
+            width: 30px;
+        }
+    
+        .copywrightText{
+            font-size: 0.6em;
+            margin-right: 10%;
+    
+        }
+    
+        .followUsContainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            // height: fit-content;
+    
+            .followUsText{
+                color: black;
+                font-weight: lighter;
+                font-size: 0.6em;
+                text-align: center;
+                margin-right: 10px;
+            }
+            
+        }
+    }  
+   
+    
+}
