@@ -421,7 +421,7 @@ function App() {
       getProducts();
     }
     else {
-      const filteredData = products.filter((product) => product?.name.toLowerCase().includes(searchInput));
+      const filteredData = products.filter((product) => product?.name.toLowerCase().includes(searchInput.toLowerCase()));
       setProducts(filteredData)
     }
   }
