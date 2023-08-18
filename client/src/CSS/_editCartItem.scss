@@ -196,3 +196,84 @@
 .editCartItemContainer::-webkit-scrollbar{
     display: none;
 }
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge) {
+   
+    .editCartItemContainer{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 90%;
+    
+        .btn-closePage{
+            margin-left: 91%;
+        }
+    
+        .editCartItemFormContainer{
+            width: 100%;
+            // background-color: red;
+    
+            .editCartItemForm{
+                margin-left: 5%;
+                margin-right: 5%;
+                
+                .editCartItemFormTitle {
+                    font-size: 1.4em;
+                }
+    
+                .nameInput {
+                    font-size: 5em;
+                }
+    
+                .editCartItemColorContainer{
+                    width: 96%;
+        
+                    .editCartItemColorText{
+                        font-size: 0.7em;
+        
+                    }
+        
+                    .editCartItemColorInput{
+                        width: 100%;
+                        font-size: 1em;
+                    }
+        
+                    
+                }
+        
+        
+                .editCartItemCakeTextContainer{
+                    width: 96%;
+        
+                    .editCartItemCakeTextTitle{
+                        font-size: 0.7em;
+                    }  
+                    
+                    .editCartItemCakeTextTextArea{
+                        font-size: 1em;
+                    }
+        
+                    .editCartItemCakeTextMaxInput{
+                        font-size: 0.7em;
+    
+                    }
+                }
+    
+                
+                .forgotPasswordSubmitButton {
+                    padding: 13px 12px;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    
+    
+    
+    }
+
+}

@@ -2,7 +2,8 @@
     margin-top: 10px;
     position: absolute;
     display: inline-block;
-    height: 40px;
+    min-height: 45px;
+    height: fit-content;
     border-radius: 15px;
     color: white;
     z-index: 99 !important; 
@@ -12,15 +13,14 @@
     .iconAndMessageContainer{
         display: flex;
         flex-direction: row;
+        align-items: center;
+
         .alertIcon{
-            margin-top: 10px;
-            margin-bottom: 10px;
             margin-left: 5px;
             margin-right: 10px;
         }
 
         .alertMessage{
-            margin-top: 7.5px;
             margin-left: 10px;
             margin-right: 10px;
             font-size: 1.2em;
@@ -31,3 +31,26 @@
     
 
 }
+
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $tablet){
+    .alertContainer{
+        
+        .iconAndMessageContainer{
+    
+            .alertMessage{
+                font-size: 0.9em;
+            }
+        }
+    
+    }
+    
+}
+
+

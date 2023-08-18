@@ -65,7 +65,7 @@ function CustomerLogin(
     }
 
     return (
-        <div className="customerLoginContainer" style={{height: `calc(100vh - ${100 * 130/window.innerHeight}vh)`}}>
+        <div className="customerLoginContainer" style={{height: `calc(100vh - ${100 * 125/window.innerHeight}vh)`}}>
             <div className="customerLoginAlertContainer">
                 <Alert requestStatus={alertStatus} alertMessage={alertMessage} display={alertDisplay} />
             </div>
@@ -90,7 +90,7 @@ function CustomerLogin(
                     </div>
 
                     <div className="loginFormTextAndInputContainer">
-                        <p className="loginFormText">Password (required)</p>
+                        <p className="loginFormText">Password</p>
                         <input className="loginFormInput"
                             type="password"
                             value={password}

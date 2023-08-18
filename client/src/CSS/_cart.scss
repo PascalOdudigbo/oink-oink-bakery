@@ -159,26 +159,28 @@ $desktop: 1024px;
 
     
                 .filledCartSubtotal {
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                 }
     
                 .filledCartEmptyCartAndCheckoutContainer {
-                    margin-right: 5px;
+                    flex-direction: column;
+                    margin-right: 10px;
                     margin-left: 10px;
                     width: fit-content;
 
                     .filledCartEmptyCartButton {
                         padding: 13px 12px;
+                        margin-bottom: 10px;
                         font-size: 0.6em;
                         width: 90px;
-                        margin-right: 10px;
+                        margin-right: 0px;
                     }
     
                     .filledCartCheckoutButton {
                         padding: 13px 12px;
                         font-size: 0.6em;
-                        width: 80px;
-                        margin-right: 5px;
+                        width: 90px;
+                        margin-right: 0px;
                     }
                 }
     

@@ -82,7 +82,7 @@ function EditCartItem({ targetLineItem, setTargetLineItem, setAlertDisplay, setA
                     </div>
 
                     <div className="editCartItemCakeTextContainer">
-                        <p className="editCartItemCakeTextTitle">Cake text (required)</p>
+                        <p className="editCartItemCakeTextTitle">Cake text</p>
                         <textarea className="editCartItemCakeTextTextArea" rows="2" cols="75" value={cakeText}
                             onChange={(e) => {
                                 if (e.target?.value?.length <= 50) {
