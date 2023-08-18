@@ -117,8 +117,8 @@
         .cartItemColorAndCakeTextContainer{
             display: flex;
             flex-direction: column;
-            min-width: 90%;
-            max-width: 90%;
+            min-width: 89%;
+            max-width: 89%;
             
 
             .cartItemCakeColorContainer{
@@ -290,4 +290,87 @@
         }
     }
 
+}
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge){
+    
+    .cartItemContainer{
+      
+        .cartItemNameAndPriceContainer{
+    
+            .cartItemName{
+                font-size: 1.1em;
+                font-weight: 800;
+                margin-left: 5px;
+            }
+    
+            .cartItemPrice{
+                margin-right: 5px;
+                font-size: 0.9em;
+                font-weight: 500;
+            }
+        }
+    
+        .cartItemCakeSizeContainer{
+    
+            .cartItemTextTitle{
+                font-size: 0.8em;
+    
+            }
+    
+            .cartItemCakeSize{
+                font-size: 0.8rem;
+            }
+        }
+    
+        .cartItemColorCakeTextAndEditButtonContainer{ 
+    
+            .cartItemColorAndCakeTextContainer{
+    
+                .cartItemCakeColorContainer{
+    
+                    .cartItemTextTitle{
+                        font-size: 0.8rem;
+                        
+                    }
+    
+                    .cartItemColor{
+                        font-size: 0.8rem;
+                        
+                    }
+                }
+    
+                .cartItemCakeTextContainer{
+    
+                    .cartItemTextTitle{
+                        font-size: 0.8rem;
+                        
+                    }
+    
+                    .cartItemCakeText{
+                        font-size: 0.8rem;
+                
+                    }
+                }
+    
+            }
+    
+        }
+    
+        .productQuantityIncreaseDeacreaseAndRemoveCartItemContainer{
+    
+            .cartItemRemoveButton{
+                padding: 13px 12px;
+                font-size: 0.8em;
+                width: 90px;
+            }
+        }
+    
+    }
+    
 }
