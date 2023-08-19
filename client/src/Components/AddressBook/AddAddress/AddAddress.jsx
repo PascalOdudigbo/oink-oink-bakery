@@ -150,7 +150,7 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
                     <p className="AddAddressFormRegionText">Region (required)</p>
                     <div className="AddAddressFormRegionsDropdownContainer">
 
-                        <button className="AddAddressFormRegionsDropdownBtn">{
+                        <button className="AddAddressFormRegionsDropdownBtn" onClick={e => e.preventDefault()}>{
                             region !== "" ? region : "Select Region"
                         }</button>
         
@@ -178,7 +178,7 @@ function AddAddress({customerData ,setAlertDisplay, setAlertStatus, setAlertMess
                     <p className="AddAddressFormCityText">City (required)</p>
                     <div className="AddAddressFormCityDropdownContainer">
 
-                        <button className="AddAddressFormCityDropdownBtn">{
+                        <button className="AddAddressFormCityDropdownBtn" onClick={e => e.preventDefault()}>{
                             city !== "" ? city : "Select City"
                         }</button>
         

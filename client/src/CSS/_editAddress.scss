@@ -397,3 +397,134 @@
 
 
 }
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $tablet) {
+   
+    .EditAddressFormContainer{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 90%;
+        height: 90%;
+    
+        .btn-closePage{
+            margin-left: 90%;
+        }
+        
+    
+        .EditAddressForm{
+            width: 100%;
+            // background-color: red;
+    
+            .EditAddressFormTitle{
+                font-size: 1.4em;
+            }
+    
+            .EditAddressFormPhoneContainer{
+                width: 90%;
+    
+                .EditAddressFormPhoneText{
+                    font-size: 0.7em;
+                }
+    
+                .EditAddressFormInput{
+                    font-size: 1em;
+                }
+            }
+    
+            .EditAddressFormAddressContainer{
+                width: 90%;
+    
+                .EditAddressFormAddressText{
+                    font-size: 0.7em;
+                }
+    
+                .EditAddressFormInput{
+                    font-size: 1em;
+                }
+            }
+    
+    
+            .EditAddressFormAdditionalInformationContainer{
+                width: 90%;
+    
+                .EditAddressFormAdditionalInformationText{
+                    font-size: 0.7em;
+                   
+                }
+    
+                .EditAddressFormAdditionalInformationTextArea{
+                    font-size: 1em;
+                }
+    
+                .EditAddressFormAdditionalInformationMaxInput{
+                    font-size: 0.7em;
+    
+                }
+            }
+    
+    
+            .EditAddressFormRegionTextAndDropdownContainer{
+                width: 90%;
+    
+                .EditAddressFormRegionText{
+                    font-size: 0.7em;
+                }
+    
+                .EditAddressFormRegionsDropdownContainer{
+    
+                    .EditAddressFormRegionsDropdownBtn{
+                        font-size: 0.8em;
+                    }
+    
+                    .EditAddressFormRegionsDropdownItemsContainer{
+                       
+                        .EditAddressFormRegionsDropdownItem{
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+    
+            }
+    
+    
+            .EditAddressFormCityTextAndDropdownContainer{
+                width: 90%;
+    
+                .EditAddressFormCityText{
+                    font-size: 0.7em;
+    
+                }
+    
+                .EditAddressFormCityDropdownContainer{
+    
+                    .EditAddressFormCityDropdownBtn{
+                        font-size: 0.8em;
+                    }
+    
+                    .EditAddressFormCityDropdownItemsContainer{
+    
+                        .EditAddressFormCityDropdownItem{
+                            font-size: 0.8em; 
+                        }
+                    }
+                }
+    
+            }
+    
+            .EditAddressFormSubmitButton{
+                padding: 13px 12px;
+                font-size: 0.8em;
+            }
+    
+    
+        }
+    
+    
+    }
+}

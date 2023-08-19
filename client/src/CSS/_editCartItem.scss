@@ -203,7 +203,7 @@ $phoneLarge: 640px;
 $tablet: 768px;
 $desktop: 1024px;
 
-@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge) {
+@media screen and (min-width: $phoneSmall) and (max-width: $tablet) {
    
     .editCartItemContainer{
         margin-top: auto;

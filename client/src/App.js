@@ -49,6 +49,9 @@ function App() {
     return data.sort((a, b) => a.id - b.id)
   }
 
+  //creating a function to order data
+
+
   //defining function to get products from the database
   function getProducts() {
     axios.get("/products")
@@ -69,6 +72,7 @@ function App() {
         cartsArray?.forEach(cart => {
           if (cart?.active === true) {
             updateCartTotal(cart, id)
+            cart.line_items = orderData(cart?.line_items)
             setCart(cart);
 
           }
@@ -135,8 +139,8 @@ function App() {
             //looking for the active cart
             cartsArray?.forEach(cart => {
               if (cart?.active === true) {
-                setCart(cart)
-              }
+                cart.line_items = orderData(cart?.line_items)
+                setCart(cart);              }
             });
           })
 

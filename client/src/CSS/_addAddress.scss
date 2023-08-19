@@ -7,8 +7,8 @@
 .AddAddressFormContainer{
     background-color: white;
     height: 90%;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin-top: auto;
+    margin-bottom: auto;
     position: fixed;
     width: 50%;
     display: flex;
@@ -396,4 +396,141 @@
     }
 
 
+}
+
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $tablet) {
+   
+    .AddAddressFormContainer{
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 90%;
+        height: 90%;
+    
+        .btn-closePage{
+            margin-left: 90%;
+        }
+        
+    
+        .AddAddressForm{
+            width: 100%;
+            // background-color: red;
+    
+            .AddAddressFormTitle{
+                font-size: 1.4em;
+            }
+    
+            .AddAddressFormPhoneContainer{
+                width: 90%;
+    
+                .AddAddressFormPhoneText{
+                    font-size: 0.7em;
+                }
+    
+                .AddAddressFormInput{
+                    font-size: 1em;
+                }
+            }
+    
+            .AddAddressFormAddressContainer{
+                width: 90%;
+    
+                .AddAddressFormAddressText{
+                    font-size: 0.7em;
+                }
+    
+                .AddAddressFormInput{
+                    font-size: 1em;
+                }
+            }
+    
+    
+            .AddAddressFormAdditionalInformationContainer{
+                width: 90%;
+    
+                .AddAddressFormAdditionalInformationText{
+                    font-size: 0.7em;
+                   
+                }
+    
+                .AddAddressFormAdditionalInformationTextArea{
+                    font-size: 1em;
+                }
+    
+                .AddAddressFormAdditionalInformationMaxInput{
+                    font-size: 0.7em;
+    
+                }
+            }
+    
+    
+            .AddAddressFormRegionTextAndDropdownContainer{
+                width: 90%;
+    
+                .AddAddressFormRegionText{
+                    font-size: 0.7em;
+                }
+    
+                .AddAddressFormRegionsDropdownContainer{
+    
+                    &:hover .AddAddressFormRegionsDropdownItemsContainer{
+                        display: flex;
+                        flex-direction: column;
+                    }
+    
+                    .AddAddressFormRegionsDropdownBtn{
+                        font-size: 0.8em;
+                    }
+    
+                    .AddAddressFormRegionsDropdownItemsContainer{
+                       
+                        .AddAddressFormRegionsDropdownItem{
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+    
+            }
+    
+    
+            .AddAddressFormCityTextAndDropdownContainer{
+                width: 90%;
+    
+                .AddAddressFormCityText{
+                    font-size: 0.7em;
+    
+                }
+    
+                .AddAddressFormCityDropdownContainer{
+    
+                    .AddAddressFormCityDropdownBtn{
+                        font-size: 0.8em;
+                    }
+    
+                    .AddAddressFormCityDropdownItemsContainer{
+    
+                        .AddAddressFormCityDropdownItem{
+                            font-size: 0.8em; 
+                        }
+                    }
+                }
+    
+            }
+    
+            .addAddressFormSubmitButton{
+                padding: 13px 12px;
+                font-size: 0.8em;
+            }
+    
+    
+        }
+    
+    
+    }
 }

@@ -85,6 +85,10 @@ function AddressBook({ customerData, setAlertDisplay, setAlertStatus, setAlertMe
                     </div>
             }
 
+            <div className="addressBookAddAddressBtnContainerMobile">
+                <button className="addressBookAddAddressBtn" onClick={() => navigate("/customer/address-book/add-address")}>ADD NEW ADDRESS</button>
+            </div>
+
         </div>
     )
 

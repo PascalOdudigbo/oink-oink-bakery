@@ -107,7 +107,8 @@ function EditAddress({targetAddress, customerData ,setAlertDisplay, setAlertStat
     }
 
     useEffect(() => {
-        getCounties();   
+        getCounties(); 
+        targetAddress?.id === undefined && navigate("/customer/address-book/")
     }, []);
 
    
@@ -153,14 +154,14 @@ function EditAddress({targetAddress, customerData ,setAlertDisplay, setAlertStat
                                 setAdditionalInfo(e.target.value);
                             }
                     }}/>
-                    <p className="EditAddressFormAdditionalInformationMaxInput">{`${additionalInfo.length}/120`}</p>
+                    <p className="EditAddressFormAdditionalInformationMaxInput">{`${additionalInfo?.length}/120`}</p>
                 </div>
 
                 <div className="EditAddressFormRegionTextAndDropdownContainer">
                     <p className="EditAddressFormRegionText">Region (required)</p>
                     <div className="EditAddressFormRegionsDropdownContainer">
 
-                        <button className="EditAddressFormRegionsDropdownBtn">{
+                        <button className="EditAddressFormRegionsDropdownBtn" onClick={e => e.preventDefault()}>{
                             region !== "" ? region : "Select Region"
                         }</button>
         
@@ -188,7 +189,7 @@ function EditAddress({targetAddress, customerData ,setAlertDisplay, setAlertStat
                     <p className="EditAddressFormCityText">City (required)</p>
                     <div className="EditAddressFormCityDropdownContainer">
 
-                        <button className="EditAddressFormCityDropdownBtn">{
+                        <button className="EditAddressFormCityDropdownBtn" onClick={e => e.preventDefault()}>{
                             city !== "" ? city : "Select City"
                         }</button>
         

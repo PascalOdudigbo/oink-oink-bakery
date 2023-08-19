@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Tooltip } from "@mui/material";
 import { IconContext } from "react-icons/lib";
@@ -52,6 +52,10 @@ function EditCartItem({ targetLineItem, setTargetLineItem, setAlertDisplay, setA
         })
     }
 
+    useEffect(() => {
+        targetLineItem?.id === undefined && navigate("/cart/")
+    })
+
 
     return (
         <div className="editCartItemContainer">
@@ -89,7 +93,7 @@ function EditCartItem({ targetLineItem, setTargetLineItem, setAlertDisplay, setA
                                     setCakeText(e.target.value);
                                 }
                             }} />
-                        <p className="editCartItemCakeTextMaxInput">{`${cakeText.length}/50`}</p>
+                        <p className="editCartItemCakeTextMaxInput">{`${cakeText?.length}/50`}</p>
 
                     </div>
                     <button className="forgotPasswordSubmitButton" type="submit">{isLoading ? <div class="loader"></div> : "Update"}</button>

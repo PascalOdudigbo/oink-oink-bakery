@@ -83,6 +83,89 @@
         
     }
 
+    .addressBookAddAddressBtnContainerMobile{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        .addressBookAddAddressBtn{
+            font-size: 0.9em;
+            font-weight: 800;
+            width: fit-content;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            margin-right: 15px;
+            color: white;
+            padding: 20px 30px;
+            background-color: #9C27B0;
+    
+            &:hover {
+                cursor: pointer;
+                color: black;
+                background-color: #FFACFC;
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+            }
+        }
+    }
+
+}
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge){
+
+    .addressBookContainer{
+        width: 100%;
+        
+    
+        .addressBookPageTitleAddAddressBtnContainer{
+            justify-content: space-between;
+    
+            .addressBookPageTitleAndIconContainer{
+    
+    
+                .addressBookPageTitle{
+                    font-size: 1.5rem;
+                }
+            }
+            
+    
+            .addressBookAddAddressBtn{
+                display: none;
+            }
+        }
+    
+        .addressBookEmptyText{
+            font-size: 1.2rem;
+        }
+    
+        .addressBookAddressesGrid{
+            width: 92%;
+            margin-left: auto;
+            margin-right: auto;
+            row-gap: 25px;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            margin-bottom: 35px;
+        }
+    
+        .addressBookAddAddressBtnContainerMobile{
+            display: flex;
+    
+            .addressBookAddAddressBtn{
+                padding: 13px 12px;
+                font-size: 0.8em;
+            }
+        }
+    
+    }
     
 
 }
