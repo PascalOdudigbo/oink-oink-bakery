@@ -51,16 +51,58 @@
                 margin-bottom: 10px;
                 height: fit-content;
             }
-            .productprice{
-                height: fit-content;
-                text-align: right;
-                margin-right: 10px;
-                margin-top: 7px;
-                margin-bottom: auto;
-                font-size: 1rem;
-                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-                font-weight: 500;
+
+
+            .productPriceContainer {
+                display: flex;
+                flex-direction: column;
+                // background-color: red;
+
+                .productprice{
+                    height: fit-content;
+                    text-align: right;
+                    margin-right: 10px;
+                    margin-top: 7px;
+                    margin-bottom: auto;
+                    font-size: 1rem;
+                    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                    font-weight: 500;
+                }
+
+                .productOriginalPriceAndDiscountPercentContainer {
+                    display: flex;
+                    flex-direction: row;
+
+                    .productOriginalPrice {
+                        height: fit-content;
+                        text-align: right;
+                        margin-right: 8px;
+                        margin-top: 5px;
+                        margin-bottom: auto;
+                        font-size: 0.9rem;
+                        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                        font-weight: 300;
+                        color: red;
+                        text-decoration: line-through;
+                    }
+
+                    .productDiscountPercent {
+                        height: fit-content;
+                        text-align: right;
+                        margin-right: 10px;
+                        margin-top: 5px;
+                        margin-bottom: auto;
+                        font-size: 0.9rem;
+                        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                        font-weight: 300;
+                        color: red;
+                    }
+
+
+                }
+
             }
+            
         }
 
         .productDescription{
@@ -123,10 +165,30 @@ $desktop: 1024px;
                     margin-left: 5px;
                 }
 
-                .productprice{
-                    margin-right: 5px;
-                    font-size: 0.9em;
-                    font-weight: 500;
+                .productPriceContainer {
+                    // background-color: red;
+    
+
+                    .productprice{
+                        margin-right: 5px;
+                        font-size: 0.9em;
+                        font-weight: 500;
+                    }
+
+
+                    .productOriginalPriceAndDiscountPercentContainer {
+
+                        .productOriginalPrice {
+                            font-size: 0.8rem;
+                        }
+
+                        .productDiscountPercent {
+                            margin-right: 5px;
+                            font-size: 0.8rem;
+                        }
+
+
+                    }
                 }
             }
     

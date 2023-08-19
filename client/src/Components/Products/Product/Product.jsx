@@ -29,9 +29,22 @@ function Product({ product, handleAddToCart, setTargetProduct, setviewProductDet
       <div className='productContent'>
         <div className='productNameAndPrice'>
           <h4 className='productName'>{product?.name}</h4>
-          <h4 className='productprice'>{`Ksh ${handleCalculatePrice() !== 0 ? handleCalculatePrice() : "Varies"}`}</h4>
+         
+          <div className="productPriceContainer">
+             <h4 className='productprice'>{`Ksh ${handleCalculatePrice() !== 0 ? handleCalculatePrice() : "Varies"}`}</h4>
+            {
+              product?.discount?.name !== "No discount" &&
+              <Tooltip title={<p className="tooltipText">{product?.discount?.name}</p>} arrow>
+                <div className="productOriginalPriceAndDiscountPercentContainer">
+                  <h4 className='productOriginalPrice'>{`Ksh ${product?.price}`}</h4>
+                  <h4 className='productDiscountPercent'>{`-${product?.discount?.discount_percent}%`}</h4>
+                </div>
+
+              </Tooltip>
+            }
+          </div>
         </div>
-        <p className='productDescription' dangerouslySetInnerHTML={{ __html: product?.description?.length > 82 ? `${product?.description?.slice(0, 82)}...` : product?.description}}
+        <p className='productDescription' dangerouslySetInnerHTML={{ __html: product?.description?.length > 82 ? `${product?.description?.slice(0, 82)}...` : product?.description }}
           onClick={() => {
             setTargetProduct(product);
             setviewProductDetailsPageView("block");

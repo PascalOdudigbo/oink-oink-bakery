@@ -8,7 +8,7 @@
     background-color: white;
     height: 90%;
     margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin-bottom: auto;
     position: fixed;
     width: 50%;
     display: flex;
@@ -407,8 +407,8 @@ $desktop: 1024px;
 @media screen and (min-width: $phoneSmall) and (max-width: $tablet) {
    
     .EditAddressFormContainer{
-        margin-top: auto;
-        margin-bottom: auto;
+        // margin-top: auto;
+        // margin-bottom: auto;
         width: 90%;
         height: 90%;
     
