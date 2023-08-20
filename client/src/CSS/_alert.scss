@@ -8,12 +8,15 @@
     color: white;
     z-index: 99 !important; 
     box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+  
     
 
     .iconAndMessageContainer{
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
 
         .alertIcon{
             margin-left: 5px;
@@ -45,7 +48,7 @@ $desktop: 1024px;
         .iconAndMessageContainer{
     
             .alertMessage{
-                font-size: 0.9em;
+                font-size: 0.7em;
             }
         }
     
