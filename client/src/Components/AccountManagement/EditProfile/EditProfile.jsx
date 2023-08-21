@@ -142,7 +142,7 @@ function EditProfile({ customerData, bakerData, isCustomerLoggedIn, isBakerLogge
                         />
                     </div>
 
-                    <button className="editProfileButton" type="submit">{isLoading ? <div class="loader"> </div> : "Create Account"}</button>
+                    <button className="editProfileButton" type="submit">{isLoading ? <div class="loader"> </div> : "Update"}</button>
                 </form>
 
             </div>
