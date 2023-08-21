@@ -1,0 +1,178 @@
+.editProfileContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // min-height: 100vh;
+    width: 100%;
+    margin-top: 70px;
+    align-items: center;
+    background-image: url("../assets/BakeryBackground2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+    .editProfileFormContainer {
+        background-color: white;
+        align-items: center;
+        width: 35%;
+        border-radius: 10px;
+        justify-content: center;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+       
+
+        .editProfileForm {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+       
+            .formTitle {
+                font-weight: bold;
+                font-size: 1.5em;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                text-align: center;
+                color: #A3006B;
+
+            }
+
+            .editProfileFormTextAndInputContainer {
+                width: 96%;
+                margin-left: auto;
+                margin-right: auto;
+                // box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+                border-radius: 5px;
+                margin-bottom: 20px;
+
+                &:hover {
+                    border: solid rgb(240, 240, 240) 2px;
+                }
+
+                .editProfileFormText {
+                    text-align: left;
+                    margin-top: 5px;
+                    margin-bottom: 0px;
+                    margin-left: 5px;
+                    font-size: 0.8em;
+                    color: rgb(34, 34, 34);
+                    padding: 0%;
+
+                }
+
+                .editProfileFormInput {
+                    border: none;
+                    height: 30px;
+                    // margin-top: none;
+                    width: 95%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 1px;
+                    font-size: 1.2em;
+                    background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                }
+            }
+
+
+            .editProfileButton {
+                cursor: pointer;
+                color: #feffff;
+                padding: 15px 12px;
+                border-radius: 10px;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                text-decoration: none;
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40%;
+                font-size: 1em;
+                font-weight: 800;
+                background-color: #A3006B;
+                border: none;
+
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #FFACFC;
+                    color: black;
+                    box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $phoneLarge){
+
+    .editProfileContainer{
+
+        .editProfileFormContainer {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: auto;
+            margin-bottom: auto;
+    
+    
+            .editProfileForm {
+                margin-left: 5%;
+                margin-right: 5%;
+    
+    
+                .formTitle {
+                    font-size: 1.4em;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+    
+                .editProfileFormTextAndInputContainer {
+                  
+                    .editProfileFormText {
+                        font-size: 0.7em;
+    
+                    }
+    
+                    .editProfileFormInput {
+                        font-size: 1em;
+    
+                    }
+                }
+    
+                .editProfileButton {
+                    padding: 15px 10px;
+                    font-size: 0.8em;
+                    width: 50%;
+                }
+    
+               
+            }
+    
+    
+        }
+    
+
+    }
+
+}

@@ -14,6 +14,7 @@ import {
   Alert,
   Cart,
   AddressBook,
+  EditProfile,
   Checkout
 } from "./Components";
 // import { commerce } from "./lib/commerce";
@@ -48,9 +49,6 @@ function App() {
   function orderData(data) {
     return data.sort((a, b) => a.id - b.id)
   }
-
-  //creating a function to order data
-
 
   //defining function to get products from the database
   function getProducts() {
@@ -599,8 +597,7 @@ function App() {
           }
         />
 
-        <Route
-          path="/reset-password/*"
+        <Route path="/reset-password/*"
           element={
             <div className="container">
               <div className="homePageAlertContainer">
@@ -611,6 +608,8 @@ function App() {
                 />
               </div>
               <ResetPassword
+                customerData={customerData}
+                bakerData={bakerData}
                 hideAlert={hideAlert}
                 setAlertDisplay={setAlertDisplay}
                 setAlertMessage={setAlertMessage}
@@ -751,7 +750,42 @@ function App() {
 
         } />
 
-        <Route path="/customer/change-password/*" element={
+        <Route path="/account-management/customer/edit-profile/" element={
+          <div className="container">
+            <NavBar
+              totalItems={cart?.line_items?.length}
+              customerData={customerData}
+              bakerData={bakerData}
+              handleLogout={handleLogout}
+            />
+            <div className="homePageAlertContainer">
+              <Alert
+                display={alertDisplay}
+                requestStatus={alertStatus}
+                alertMessage={alertMessage}
+              />
+            </div>
+
+            <EditProfile
+              customerData={customerData}
+              bakerData={bakerData}
+              isCustomerLoggedIn={isCustomerLoggedIn}
+              isBakerLoggedIn={isBakerLoggedIn}
+              hideAlert={hideAlert}
+              setAlertDisplay={setAlertDisplay}
+              setAlertMessage={setAlertMessage}
+              setAlertStatus={setAlertStatus}
+            />
+
+            <div className="footerContainer">
+              <Footer />
+            </div>
+
+          </div>
+
+        } />
+
+        <Route path="/account-management/customer/change-password/" element={
           <div className="container">
             <NavBar
               totalItems={cart?.line_items?.length}
@@ -769,12 +803,10 @@ function App() {
 
             <ResetPassword
               customerData={customerData}
+              bakerData={bakerData}
               hideAlert={hideAlert}
-              alertDisplay={alertDisplay}
               setAlertDisplay={setAlertDisplay}
-              alertMessage={alertMessage}
               setAlertMessage={setAlertMessage}
-              alertStatus={alertStatus}
               setAlertStatus={setAlertStatus}
             />
 
