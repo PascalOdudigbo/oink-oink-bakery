@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import logo from "../assets/BakeryLogo.jpeg";
 import { useNavigate } from "react-router-dom";
+import Tooltip from '@mui/material/Tooltip';
+import { IconContext } from "react-icons/lib";
+import {BiArrowBack} from "react-icons/bi";
+
 
 function ResetPassword({ customerData, bakerData, hideAlert, setAlertDisplay, setAlertStatus, setAlertMessage }) {
     //declaring state variables for controlled form input
@@ -13,6 +17,9 @@ function ResetPassword({ customerData, bakerData, hideAlert, setAlertDisplay, se
 
     //declaring a variable function to navigate to login page on successful password reset
     const navigate = useNavigate();
+
+    //styling the icons
+    const ButtonsIconStyle = { color: "white" };
 
     //creating variables to help calcilate componenent height style when navbar and footer are present or not
     const marginTop = window.location.href.includes("change-password") ? "70px" : "0px"
@@ -96,6 +103,19 @@ function ResetPassword({ customerData, bakerData, hideAlert, setAlertDisplay, se
 
     return (
         <div className="resetPasswordContainer" style={{ height: `calc(100vh - ${100 * heightDeduction}vh)`, marginTop: marginTop }}>
+
+            {
+                window.location.href.includes("change-password") &&
+                <div className="backButtonContainer">
+                    <Tooltip title={<p className="tooltipText">Back</p>} arrow>
+                        <button className="backButton" onClick={() => navigate("/account-management/")}>
+                            <IconContext.Provider value={{ size: '35px' }}>
+                                <BiArrowBack style={ButtonsIconStyle} />
+                            </IconContext.Provider>
+                        </button>
+                    </Tooltip>
+                </div>
+            }
 
             <div className="resetPasswordFormContainer">
                 {

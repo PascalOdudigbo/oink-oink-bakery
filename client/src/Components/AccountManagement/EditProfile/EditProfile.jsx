@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Tooltip from '@mui/material/Tooltip';
+import { useNavigate } from "react-router-dom";
+import { IconContext } from "react-icons/lib";
+import {BiArrowBack} from "react-icons/bi";
 
 
 function EditProfile({ customerData, bakerData, isCustomerLoggedIn, isBakerLoggedIn, hideAlert, setAlertStatus, setAlertMessage, setAlertDisplay }) {
@@ -13,6 +17,12 @@ function EditProfile({ customerData, bakerData, isCustomerLoggedIn, isBakerLogge
 
     //creating loading state
     const [isLoading, setIsLoading] = useState(false);
+
+    //styling the icons
+    const ButtonsIconStyle = { color: "white" };
+
+    //creating the navigation function variable
+    const navigate = useNavigate();
 
     //creating a function to handle edit profile
     function handleEditProfile(e) {
@@ -85,7 +95,17 @@ function EditProfile({ customerData, bakerData, isCustomerLoggedIn, isBakerLogge
     }, [customerData, bakerData]);
 
     return (
-        <div className="editProfileContainer" style={{height: `calc(100vh - ${100 * 125/window.innerHeight}vh)`}}>
+        <div className="editProfileContainer" style={{ height: `calc(100vh - ${100 * 125 / window.innerHeight}vh)` }}>
+
+            <div className="backButtonContainer">
+                <Tooltip title={<p className="tooltipText">Back</p>} arrow>
+                    <button className="backButton" onClick={() => navigate("/account-management/")}>
+                        <IconContext.Provider value={{ size: '35px' }}>
+                            <BiArrowBack style={ButtonsIconStyle} />
+                        </IconContext.Provider>
+                    </button>
+                </Tooltip>
+            </div>
 
             <div className="editProfileFormContainer">
 
