@@ -29,7 +29,7 @@ function UserSignedInDropdown({customerData, bakerData, handleLogout}){
            
             <div className='userSignedInDropdownLinksContainer'>
                 {
-                    customerData?.id && <button className="userSignedInDropdownBtn" onClick={() => navigate()}>{isLoading ? "Loading..." : "Account Management"}</button>
+                    customerData?.id && <button className="userSignedInDropdownBtn" onClick={() => navigate("/account-management")}>{isLoading ? "Loading..." : "Account Management"}</button>
                 }
 
                 {

@@ -1,0 +1,118 @@
+.accountManagementContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // min-height: 100vh;
+    width: 100%;
+    margin-top: 70px;
+    align-items: center;
+    background-image: url("../assets/BakeryBackground2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+
+    .accountManagementIconAndTextContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+
+        .accountManagementText{
+            font-size: 2.5rem;
+            font-weight: 800;
+            padding: none;
+            color: white;
+        }
+    }
+
+    .accountManagementButtonsContainer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: auto;
+        background-color: white;
+        align-items: center;
+        width: 35%;
+        height: 35%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+
+        .accountManagementIconAndButtonContainer{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 15px 10px;
+            height: 55px;
+            width: 220px;
+            border-radius: 5px;
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+            
+            &:active{
+                background-color: rgb(240, 240, 240);
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+
+            }
+
+            &:hover{
+                background-color: rgb(240, 240, 240);
+                box-shadow: 1px 1px 1px 1px rgb(207, 207, 207);
+
+            }
+
+            .accountManagementNavigationButtons{
+                border: none;
+                background-color: transparent;
+                font-size: 0.95em;
+                text-decoration: none;
+                color: black;
+
+                &:active{
+                    color: #FFACFC;
+                }
+
+            }
+        }
+
+    }
+}
+
+
+
+$phoneSmall: 320px;
+$phoneLarge: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media screen and (min-width: $phoneSmall) and (max-width: $tablet){
+
+    .accountManagementContainer{
+    
+    
+        .accountManagementIconAndTextContainer{
+    
+            .accountManagementText{
+                font-size: 1.5rem;
+            }
+        }
+    
+        .accountManagementButtonsContainer{
+            width: 90%;
+    
+            .accountManagementIconAndButtonContainer{
+                font-size: 0.8em;
+                width: 50%;
+    
+            }
+    
+        }
+    }
+    
+
+}

@@ -14,6 +14,7 @@ import {
   Alert,
   Cart,
   AddressBook,
+  AccountManagement,
   EditProfile,
   Checkout
 } from "./Components";
@@ -740,6 +741,35 @@ function App() {
               setAlertStatus={setAlertStatus}
               hideAlert={hideAlert}
               isCustomerLoggedIn={isCustomerLoggedIn}
+            />
+
+            <div className="footerContainer">
+              <Footer />
+            </div>
+
+          </div>
+
+        } />
+
+        <Route path="/account-management" element={
+          <div className="container">
+            <NavBar
+              totalItems={cart?.line_items?.length}
+              customerData={customerData}
+              bakerData={bakerData}
+              handleLogout={handleLogout}
+            />
+            <div className="homePageAlertContainer">
+              <Alert
+                display={alertDisplay}
+                requestStatus={alertStatus}
+                alertMessage={alertMessage}
+              />
+            </div>
+
+            <AccountManagement
+              customerData={customerData}
+              bakerData={bakerData}
             />
 
             <div className="footerContainer">
